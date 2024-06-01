@@ -8,7 +8,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <>
     <App />
   </>,
-//    <BrowserRouter>
+//    <BrowserRouter basename={'/TeamPeriod'}>
 //    <App />
 //  </BrowserRouter>
 )
