@@ -1,4 +1,3 @@
-import './reset.css'
 import Header from './components/common/header/header'
 
 function App() {
