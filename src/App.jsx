@@ -1,10 +1,11 @@
 import './reset.css'
+import InforStart from './pages/main/infoStart'
 
 function App() {
 
   return (
     <>
-    <h3>APP</h3>
+    <InforStart/>
     </>
   )
 }
