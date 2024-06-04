@@ -1,10 +1,11 @@
 import './reset.css'
+import Header from './components/common/header/header'
 
 function App() {
 
   return (
     <>
-    <h3>APP</h3>
+    <Header />
     </>
   )
 }
