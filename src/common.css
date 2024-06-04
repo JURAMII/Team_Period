@@ -1,0 +1,86 @@
+:root {
+    --mirage: #1E2F35;
+    --salomie: #FFDB88;
+    --silver: #BDBDBD;
+    --line-silver: #BCBCBC;
+    --btn-silver: #999;
+    --back-silver: #F2F2F2;
+    --font-black: #1E1E23;
+    --level_animation_color: #dbdbdb;
+    --listening_icon_color: var(--light_red);
+    --text_link_color: rgb(17, 85, 204);
+}
+
+.flex{
+	display: flex;
+}
+/* Sub Page font */
+.mFont{
+    font-size: 24px;
+}
+.sFont{
+    font-size: 18px;
+}
+.cFont{
+    font-size: 16px;
+}
+
+/* main 반응형 */
+@media screen and (max-width : 1920px) {
+	.default_content {
+		margin: 110px 120px;
+	}
+}
+@media screen and (max-width : 1280px) {
+	.default_content {
+		margin: 110px 80px;
+	}
+}
+
+@media screen and (max-width : 1024px) {
+	.default_content {
+		margin: 65px 80px;
+	}
+}
+
+@media screen and (max-width : 768px) {
+	.default_content {
+		margin: 65px px;
+	}
+}
+
+@media screen and (max-width : 500px) {}
+
+/* Sub Page 반응형*/
+@media screen and (max-width : 1440px) {
+	.default_content {
+		margin: 65px 0;
+	}
+
+	.calcWidth {
+		width: calc(100% - 30px);
+	}
+}
+
+@media screen and (max-width : 1024px) {
+	.default_content {
+		margin: 65px 0;
+	}
+}
+
+@media screen and (max-width : 768px) {
+	.default_content {
+		margin: 28px 0;
+	}
+    .mFont{
+        font-size: 18px;
+    }
+    .sFont{
+        font-size: 16px;
+    }
+    .cFont{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width : 500px) {}
