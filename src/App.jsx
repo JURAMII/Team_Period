@@ -1,12 +1,11 @@
 import './reset.css'
-import MainNoti from './pages/main/Sec6 NotiList/mainNoti'
+import Header from './components/common/header/header'
 
 function App() {
 
   return (
     <>
-    <h3>APP</h3>
-	<MainNoti/>
+    <Header />
     </>
   )
 }
