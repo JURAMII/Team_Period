@@ -1,11 +1,11 @@
 import './reset.css'
-import InforStart from './pages/main/infoStart'
+import Header from './components/common/header/header'
 
 function App() {
 
   return (
     <>
-    <InforStart/>
+    <Header />
     </>
   )
 }
