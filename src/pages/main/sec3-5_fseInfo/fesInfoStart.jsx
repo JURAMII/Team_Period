@@ -1,4 +1,3 @@
-import '../../../common.css'
 import './fesInfo.css'
 
 const FesInfoStart = () => {
