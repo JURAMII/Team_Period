@@ -8,7 +8,7 @@ header{
 
 .test1{
     width: 100%; height: 80px;
-    position: fixed;
+    position: relative;
     left: 0; top: 0;
     box-sizing: border-box;
     display: flex;
@@ -37,7 +37,9 @@ header{
 
 .test1>.test3>.test31{
     display: flex;
+    align-items: center;
     gap: 28px;
+    margin-right: 60px;
 }
 
 .test1>.test3>.test31 img{
@@ -48,8 +50,9 @@ header{
 /* menu */
 
 .test1>.test3>.test31>.menu{
-    width: 33px; height: 33px;
-    position: relative;
+    width: 26px; height: 26px;
+    position: fixed;
+    right: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,7 +61,8 @@ header{
 }
 
 .test1>.test3>.test31>.menu>.dotWrap{
-    width: 13px; height: 13px;
+    cursor: pointer;
+    width: 10px; height: 10px;
     position: absolute;
     left: 50%; top: 50%;
     transform: translate(-50%, -50%) scale(0) rotate(-360deg);
@@ -99,4 +103,20 @@ header{
     0% {transform: translate(-50%, -50%) scale(0) rotate(-360deg);}
     80% {transform: translate(-50%, -50%) scale(1.1) rotate(40deg);}
     100% {transform: translate(-50%, -50%) scale(1) rotate(0deg);}
+}
+
+select {
+    width: 30px; height: 30px;
+    -webkit-appearance: none;
+    -moz-appearance:none;
+    appearance:none;
+    text-indent: 100%;
+    outline: none;
+    border: none;
+    background: url(../../../assets/icons8-earth-50.png) no-repeat top center;
+    background-size: 100%;
+    }
+
+select>option{
+    margin-top: 30px;
 }

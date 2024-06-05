@@ -13,4 +13,4 @@ const MainNoti = ()=>{
 	)
 }
 
-export default MainNoti
+export default MainNoti;
