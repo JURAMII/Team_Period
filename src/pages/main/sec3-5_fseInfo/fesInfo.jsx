@@ -12,7 +12,8 @@ const FesInfo = () => {
             fText1: `별 가득한밤,`,
             fText2: `경복궁 별빛야행에 여러분을 초대합니다.`,
             fImg: kPoster,
-            id:'1'
+            id:'1',
+            fCla:'fesInfo1'
         },
         {
             fTitle1: `창덕궁`,
@@ -20,7 +21,8 @@ const FesInfo = () => {
             fText1: `은은한 달빛 아래,`,
             fText2: `창덕궁 달빛기행에 여러분을 초대합니다.`,
             fImg: cPoster,
-            id:'2'
+            id:'2',
+            fCla:'fesInfo2'
         },
     ]
     return(
@@ -29,7 +31,8 @@ const FesInfo = () => {
         fTitle2={fesInfoCont.fTitle2} 
         fText1={fesInfoCont.fText1} 
         fText2={fesInfoCont.fText2} 
-        fImg={fesInfoCont.fImg}/>)}
+        fImg={fesInfoCont.fImg}
+        fCla={fesInfoCont.fCla}/>)}
         </>
     )
 }

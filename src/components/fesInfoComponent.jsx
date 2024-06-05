@@ -1,9 +1,10 @@
 import '../pages/main/sec3-5_fseInfo/fesInfo.css'
 
-const FesInfoComponent = ({fTitle1, fTitle2, fText1, fText2, fImg}) => {
+const FesInfoComponent = ({fTitle1, fTitle2, fText1, fText2, fImg, fCla}) => {
+    
     return(    
     <section className='defaultContent fesInfoSec fesInfoSec2'>
-        <div className='flex fesInfoWrap'>
+        <div className={`flex fesInfoWrap ${fCla}`}>
         <div><img src={fImg} alt="포스터"/></div>
         <div className='fesInfoTxt'>
             <div>
@@ -14,6 +15,7 @@ const FesInfoComponent = ({fTitle1, fTitle2, fText1, fText2, fImg}) => {
             <p>{fText1}</p>
             <p>{fText2}</p>
             </div>
+            <input className="mainBtnSalomie fesInfoBtn" type ="button" value="자세히 보기"/>
         </div>
        </div>
     </section>

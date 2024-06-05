@@ -1,4 +1,7 @@
 /* sec3 */
+*{
+    box-sizing: border-box;
+}
 .fesInfoSec{
     height: 100vh;
 }
@@ -52,6 +55,9 @@
 .fesInfoWrap img{
     width: 648px;
 }
+.fesInfoTxt{
+    position: relative;
+}
 .fesInfoTxt h2{
     color: var(--salomie);
     font-size: 100px;
@@ -61,14 +67,42 @@
     padding-bottom: 20px;
 }
 .fesInfoTxt p{
-    padding-top: 15px;
+    padding-left: 20px;
     color: white;
     font-size: 18px;
 }
-
+.fesInfoTxt p:first-child{
+    padding-top: 30px;
+}
+.fesInfoTxt p:last-child{
+    padding-top: 10px;
+}
+.fesInfo2>div:first-child{
+    order: 2;
+}
+.fesInfo2 .fesInfoTxt h2:first-child{
+    text-align: right;
+}
+.fesInfo2 .fesInfoTxt p{
+    text-align: right;
+}
+.fesInfoBtn{
+    margin-top: 80px;
+    margin-left: 20px;
+}
+.fesInfo2 .fesInfoBtn{
+    position: absolute;
+    right: 0;
+}
 
 
 /* 반응형 */
+@media screen and (max-width : 1920px) {
+    .fesInfoSec{
+        height: 100%;
+    }
+}
+
 @media screen and (max-width : 1280px) {
     .infoStart h3{
         font-size: 85px;
@@ -89,6 +123,16 @@
     .infoArraw div:nth-child(2){
         bottom: -38px;
     }
+    .fesInfoTxt h2{
+        font-size: 70px;
+    }
+    .fesInfo2 h2:last-child{
+        text-align: end;
+    }
+    .fesInfoWrap img{
+        width: 485px;
+        height: 629px;
+    }
 }
 
 @media screen and (max-width : 1024px) {
@@ -102,6 +146,16 @@
     .infoArraw div:nth-child(2){
         width: 130px;
         bottom: -38px;
+    }
+    .fesInfoWrap img{
+        width: 400px;
+        height: 519px;
+    }
+    .fesInfoTxt h2{
+        font-size: 55px;
+    }
+    .fesInfoTxt p{
+        font-size: 16px;
     }
 }
 
@@ -130,6 +184,12 @@
         width: 100px;
         left: 2px;
         bottom: -18px;
+    }
+    .fesInfoWrap{
+       flex-direction: column;
+    }
+    .fesInfo2>div:last-child{
+        order: 2;
     }
 	
 }
