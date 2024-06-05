@@ -1,8 +1,7 @@
-import './header.css'
-import icon1 from '../../../assets/로고 최종.png'
-import icon2 from '../../../assets/icons8-account-72.png'
-import icon3 from '../../../assets/icons8-earth-50.png'
-import icon4 from '../../../assets/icons8-magnifying-glass-48.png'
+import './header.css';
+import icon1 from '../../../assets/로고 최종.png';
+import icon2 from '../../../assets/icons8-account-72.png';
+import icon3 from '../../../assets/icons8-earth-50.png';
 
 const Header = ()=>{
     return(
@@ -21,10 +20,17 @@ const Header = ()=>{
                     </ul>
                 </div>
                 <div className='test3'>
-                    <ul className='test3-1'>
+                    <ul className='test31'>
                         <li><img src={icon2} alt="" /></li>
                         <li><img src={icon3} alt="" /></li>
-                        <li><img src={icon4} alt="" /></li>
+                        <li className='menu'>
+                            <div className='dotWrap'>
+                                <div className='dot'></div>
+                                <div className='dot'></div>
+                                <div className='dot'></div>
+                                <div className='dot'></div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
