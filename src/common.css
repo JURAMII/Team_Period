@@ -82,8 +82,6 @@
 .twoDepthBtn{
 	width: 187px;
 	height: 45px;
-}
-.twoDepthBtnText{
 	font-size: 18px;
 	color: #FFF;
 	line-height: 45px;
@@ -148,6 +146,16 @@
 	background-size: 24px;
 	background-position: center;
 	border: 0;
+}
+
+.subBtn{
+	width: 124px;
+	height: 39px;
+	font-size: 17px;
+	color: #fff;
+	background-color: var(--mirage);
+	border: none;
+	cursor: pointer;
 }
 
 
@@ -238,7 +246,7 @@
 
 @media screen and (max-width : 768px) {
 	.subDefaultContent {
-		padding: 28px 0;
+		padding: 65px 20px;
 	}
     .mFont{
         font-size: 18px;
@@ -249,14 +257,6 @@
     .cFont{
         font-size: 14px;
     }
-	.subButton{
-		width: 150px;
-		height: 40px;
-	}
-	.subButtonText{
-		font-size: 14px;
-		font-weight: bold;
-	}
 	.subTop{
 		height: 210px;
 	}
@@ -269,10 +269,13 @@
 	.twoDepthBtn{
 		width: 150px;
 		height: 40px;
-	}
-	.twoDepthBtnText{
 		font-size: 14px;
 		line-height: 40px;
+	}
+	.subBtn{
+		width: 100px;
+		height: 32px;
+		font-size: 14px;
 	}
 }
 
