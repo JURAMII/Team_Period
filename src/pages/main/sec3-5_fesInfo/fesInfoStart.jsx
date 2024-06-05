@@ -10,6 +10,7 @@ const FesInfoStart = () => {
             { duration: 1200,
               once: false,
               mirror: true,
+              disable: window.innerWidth < 768,
             }
         );
         AOS.refresh();

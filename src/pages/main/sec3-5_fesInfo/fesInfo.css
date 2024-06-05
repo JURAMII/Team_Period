@@ -244,6 +244,11 @@
     .fesInfo2 .fesInfoBtn{
         position: relative;
     }
+    /* [data-aos] {
+        pointer-events: auto !important;
+        opacity: 1 !important;
+        transform: none !important;
+      } */
 }
 
 @media screen and (max-width : 500px) {

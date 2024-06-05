@@ -10,6 +10,7 @@ const FesInfoComponent = ({fTitle1, fTitle2, fText1, fText2, fImg, fCla}) => {
             { duration: 1200,
               once: false,
               mirror: true,
+              disable: window.innerWidth < 768,
             }
         );
         AOS.refresh();
