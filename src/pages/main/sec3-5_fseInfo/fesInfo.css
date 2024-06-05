@@ -1,6 +1,6 @@
-.infoStart{
+/* sec3 */
+.fesInfoSec{
     height: 100vh;
-    background-color: wheat;
 }
 .infoStart h3{
     font-weight: 300;
@@ -42,6 +42,17 @@
     bottom: -57px;
     z-index: 1;
 }
+/* sec4 */
+.fesInfoSec2{
+    background-color: var(--mirage);
+}
+.fesInfoWrap{
+    justify-content: space-between;
+}
+.fesInfoWrap img{
+    width: 648px;
+}
+
 
 /* 반응형 */
 @media screen and (max-width : 1280px) {
