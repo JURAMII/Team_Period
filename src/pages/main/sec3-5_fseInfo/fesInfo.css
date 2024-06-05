@@ -1,5 +1,6 @@
 .infoStart{
     height: 100vh;
+    background-color: wheat;
 }
 .infoStart h3{
     font-weight: 300;
@@ -38,6 +39,71 @@
     transform: translateY(50%) rotate(-45deg);
     position: absolute;
     left: 2px;
-    bottom: 17px;
+    bottom: -57px;
+    /* bottom: 17px; */
     z-index: 1;
+}
+
+/* 반응형 */
+@media screen and (max-width : 1280px) {
+    .infoStart h3{
+        font-size: 85px;
+    }
+    .infoStart h4{
+        font-size: 85px;
+        padding-top: 15px;
+    }
+    .startWrap{
+        padding-top: 100px;
+    }
+    .startWrap h5{
+        font-size: 85px;
+    }
+}
+
+@media screen and (max-width : 1024px) {
+    .infoArraw div:first-child{
+        width: 85px;
+        height: 85px;
+    }
+    .infoArraw div:nth-child(2){
+        bottom: -48px;
+    }
+}
+
+@media screen and (max-width : 768px) {
+    .infoStart h3{
+        font-size: 60px;
+    }
+    .infoStart h4{
+        font-size: 60px;
+    }
+    .startWrap{
+        padding-top: 50px;
+    }
+    .startWrap h5{
+        font-size: 60px;
+    }
+    .infoArraw div:first-child{
+        width: 55px;
+        height: 55px;
+    }
+    .infoArraw div:nth-child(2){
+        width: 100px;
+        bottom: -17px;
+    }
+	
+}
+
+@media screen and (max-width : 500px) {
+    .infoStart h3{
+        font-size: 36px;
+    }
+    .infoStart h4{
+        font-size: 36px;
+        padding-top: 10px;
+    }
+    .startWrap h5{
+        font-size: 36px;
+    }
 }
