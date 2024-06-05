@@ -40,7 +40,6 @@
     position: absolute;
     left: 2px;
     bottom: -57px;
-    /* bottom: 17px; */
     z-index: 1;
 }
 
@@ -84,13 +83,17 @@
     .startWrap h5{
         font-size: 60px;
     }
+    .infoArraw{
+        padding-top: 40px;
+    }
     .infoArraw div:first-child{
         width: 55px;
         height: 55px;
     }
     .infoArraw div:nth-child(2){
         width: 100px;
-        bottom: -17px;
+        left: 2px;
+        bottom: 22px;
     }
 	
 }

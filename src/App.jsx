@@ -8,7 +8,8 @@ function App() {
     <>
     <Header />
 	{/* <MainNoti /> */}
-    </>
+  <FesInfoStart/>
+  </>
   )
 }
 

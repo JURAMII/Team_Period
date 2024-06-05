@@ -3,7 +3,7 @@ import './fesInfo.css'
 const FesInfoStart = () => {
 
     return(
-        <section className="default_content infoStart">
+        <section className="defaultContent infoStart">
             <h3>어둠 속 고궁</h3>
             <h4>빛으로 피어나다</h4>
             <div className='startWrap flex'>
