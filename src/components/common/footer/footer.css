@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap');
+footer{
+    width: calc(100%-240px);
+    background-color: #000;
+    color: #fff;
+    padding: 65px 120px;
+}
+footer>h2{
+    color: #fff;
+    font-size: 90px;
+    font-family: "Noto Serif KR", serif;
+    line-height: 130px;
+    font-weight: 300;
+}
+.footerWrap{
+    display: flex;
+    justify-content: flex-end;
+    vertical-align: bottom;
+}
+.footerBox p{
+    padding-top: 60px;
+    color: #bcbcbc;
+    font-size: 18px;
+}
+.footerBox span{
+    color: #bcbcbc;
+    font-size: 15px;
+    margin: 20px 0;
+}
+.footerBox ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 17px;
+}
+.footerBox img{
+    width: 100px;
+}
+h1 img{
+    width: 100px;
+    padding-top: 50px;
+}
