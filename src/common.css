@@ -130,7 +130,7 @@
 
 @media screen and (max-width : 768px) {
 	.default_content {
-		margin: 65px;
+		margin: 65px 20px;
 	}
 	.mainButtonSalomie{
 		width: 120px;
