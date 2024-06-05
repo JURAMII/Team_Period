@@ -42,7 +42,7 @@
     bottom: -57px;
     z-index: 1;
 }
-/* sec4 */
+/* sec4-5 */
 .fesInfoSec2{
     background-color: var(--mirage);
 }
@@ -51,6 +51,16 @@
 }
 .fesInfoWrap img{
     width: 648px;
+}
+.fesInfoTxt h2{
+    color: var(--salomie);
+    font-size: 100px;
+    font-weight: 300;
+}
+.fesInfoTxt p{
+    padding-top: 15px;
+    color: white;
+    font-size: 18px;
 }
 
 
