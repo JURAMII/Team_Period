@@ -1,15 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import './reset.css'
-import './common.css'
 import { BrowserRouter } from 'react-router-dom';
+import "./reset.css"
+import "./common.css"
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <>
-    <App />
-  </>
-//  <BrowserRouter basename={'/TeamPeriod'}>
-//    <App />
-//  </BrowserRouter>
+  // <>
+  //   <App />
+  // </>
+ <BrowserRouter basename={'/TeamPeriod'}>
+   <App />
+ </BrowserRouter>
 )
