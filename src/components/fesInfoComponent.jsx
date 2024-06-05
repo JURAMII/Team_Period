@@ -1,15 +1,19 @@
 import '../pages/main/sec3-5_fseInfo/fesInfo.css'
 
-const FesInfoComponent = ({fTitle, fText, fImg}) => {
-
-
+const FesInfoComponent = ({fTitle1, fTitle2, fText1, fText2, fImg}) => {
     return(    
     <section className='defaultContent fesInfoSec fesInfoSec2'>
         <div className='flex fesInfoWrap'>
         <div><img src={fImg} alt="포스터"/></div>
         <div className='fesInfoTxt'>
-            <h2>{fTitle}</h2>
-            <p>{fText}</p>
+            <div>
+            <h2>{fTitle1}</h2>
+            <h2>{fTitle2}</h2>
+            </div>
+            <div>
+            <p>{fText1}</p>
+            <p>{fText2}</p>
+            </div>
         </div>
        </div>
     </section>
