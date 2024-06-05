@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap');
 
 :root {
@@ -9,6 +10,10 @@
     --btn-silver: #999;
     --back-silver: #F2F2F2;
     --font-black: #1E1E23;
+}
+
+*{
+	font-family: "Noto Sans", sans-serif;
 }
 
 
@@ -26,14 +31,14 @@
     font-size: 16px;
 }
 
-.mainButtonSalomie{
+.mainBtnSalomie{
 	width: 160px;
 	height: 50px;
 	border-radius: 50px;
 	background-color: none;
 	border: 2px solid var(--salomie);
 }
-.mainBtnTextSilver{
+.mainBtnTextSalomie{
 	font-size: 18px;
 	color: var(--salomie);
 }
@@ -49,19 +54,28 @@
 	color: var(--font-silber);
 }
 
+.textEllipsis{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
 /* 여기서부터 Sub */
 
-.subBtn{
+.oneDepthBtn{
+	cursor: pointer;
+	font-size: 24px;
+	font-weight: bold;
+}
+.twoDepthBtn{
 	width: 187px;
 	height: 45px;
 }
-.subBtnText{
+.twoDepthBtnText{
 	font-size: 18px;
 	color: #FFF;
-}
-.subOneDepthBtn{
-	font-size: 24px;
-	font-weight: bold;
+	line-height: 45px;
+	text-align: center;
 }
 
 .subTop{
@@ -70,7 +84,7 @@
 	width: 100%;
 	height: 400px;
 }
-.subPageTopText{
+.subTopText{
 	display: block;
 	text-align: center;
 	line-height: 400px;
@@ -82,57 +96,72 @@
 }
 
 /* 서브페이지 이미지를 개인 파트에 가져가 주세요. */
-.SubFesInfoImage{
+.subFesInfoImage{
 	background-image: url(./assets/SubFesInfoTop.png);
-	background-repeat: none;
+	background-repeat: no-repeat;
 	background-position: center;
 }
-.SubNotiTop{
+.subNotiTop{
 	background-image: url(./assets/);
-	background-repeat: none;
+	background-repeat: no-repeat;
 	background-position: center;
 }
-.SubGalleryTop{
+.subGalleryTop{
 	background-image: url(./assets/);
-	background-repeat: none;
+	background-repeat: no-repeat;
 	background-position: center;
 }
-.SubTourInfoTop{
+.subTourInfoTop{
 	background-image: url(./assets/);
-	background-repeat: none;
+	background-repeat: no-repeat;
 	background-position: center;
 }
-.SubSupportTop{
+.subSupportTop{
 	background-image: url(./assets/);
-	background-repeat: none;
+	background-repeat: no-repeat;
 	background-position: center;
 }
 /* 여기까지 이미지 */
 
+.subSearch{
+	width: 350px;
+	height: 40px;
+}
+.subSearchBtn{
+	width: 40px;
+	height: 40px;
+	background-color: var(--mirage);
+	background-image: url(./assets/searchWhite.svg);
+	background-repeat: no-repeat;
+	background-size: 24px;
+	background-position: center;
+	border: 0;
+}
+
 
 /* main 반응형 */
 @media screen and (max-width : 1920px) {
-	.default_content {
+	.defaultContent {
 		margin: 110px 120px;
 	}
 }
 @media screen and (max-width : 1280px) {
-	.default_content {
+	.defaultContent {
 		margin: 110px 80px;
 	}
 }
 
 @media screen and (max-width : 1024px) {
-	.default_content {
+	.defaultContent {
 		margin: 65px 80px;
 	}
 }
 
 @media screen and (max-width : 768px) {
-	.default_content {
+	.defaultContent {
 		margin: 65px;
 	}
-	.mainButtonSalomie{
+	.mainBtnSalomie{
 		width: 120px;
 		height: 36px;
 		border-radius: 50px;
@@ -163,8 +192,13 @@
 
 
 /* Sub Page 반응형*/
+@media screen and (max-width : 1920px) {
+	.subDefaultContent {
+		margin: 110px 120px;
+	}
+}
 @media screen and (max-width : 1440px) {
-	.default_content {
+	.subDefaultContent {
 		margin: 65px 0;
 	}
 	.calcWidth {
@@ -173,7 +207,7 @@
 	.subTop{
 		height: 300px;
 	}
-	.subPageTopText{
+	.subTopText{
 		font-size: 45px;
 		line-height: 300px;
 	}
@@ -181,13 +215,13 @@
 }
 
 @media screen and (max-width : 1024px) {
-	.default_content {
+	.subDefaultContent {
 		margin: 65px 0;
 	}
 	.subTop{
 		height: 210px;
 	}
-	.subPageTopText{
+	.subTopText{
 		font-size: 38px;
 		line-height: 210px;
 	}
@@ -195,7 +229,7 @@
 }
 
 @media screen and (max-width : 768px) {
-	.default_content {
+	.subDefaultContent {
 		margin: 28px 0;
 	}
     .mFont{
@@ -218,8 +252,19 @@
 	.subTop{
 		height: 210px;
 	}
-	.subPageTopText{
+	.subTopText{
 		font-size: 30px;
+	}
+	.oneDepthBtn{
+		font-size: 18px;
+	}
+	.twoDepthBtn{
+		width: 150px;
+		height: 40px;
+	}
+	.twoDepthBtnText{
+		font-size: 14px;
+		line-height: 40px;
 	}
 }
 
