@@ -45,6 +45,7 @@
     bottom: -57px;
     z-index: 1;
 }
+
 /* sec4-5 */
 .fesInfoSec2{
     background-color: var(--mirage);
@@ -54,6 +55,18 @@
 }
 .fesInfoWrap img{
     width: 648px;
+}
+.fesInfo1>div:first-child{
+    order: 2;
+}
+.fesInfo1 .fesInfoTxt p{
+    padding-left: 15px;
+}
+.fesInfo2 .fesInfoTxt h2:first-child{
+    text-align: right;
+}
+.fesInfo2 .fesInfoTxt p{
+    text-align: right;
 }
 .fesInfoTxt{
     position: relative;
@@ -67,28 +80,18 @@
     padding-bottom: 20px;
 }
 .fesInfoTxt p{
-    padding-left: 20px;
     color: white;
     font-size: 18px;
 }
 .fesInfoTxt p:first-child{
     padding-top: 30px;
-}
-.fesInfoTxt p:last-child{
-    padding-top: 10px;
-}
-.fesInfo2>div:first-child{
-    order: 2;
-}
-.fesInfo2 .fesInfoTxt h2:first-child{
-    text-align: right;
-}
-.fesInfo2 .fesInfoTxt p{
-    text-align: right;
+    padding-bottom: 10px;
 }
 .fesInfoBtn{
     margin-top: 80px;
-    margin-left: 20px;
+}
+.fesInfo1 .fesInfoBtn{
+   margin-left: 15px;
 }
 .fesInfo2 .fesInfoBtn{
     position: absolute;
@@ -123,15 +126,15 @@
     .infoArraw div:nth-child(2){
         bottom: -38px;
     }
-    .fesInfoTxt h2{
-        font-size: 70px;
-    }
-    .fesInfo2 h2:last-child{
-        text-align: end;
-    }
     .fesInfoWrap img{
         width: 485px;
         height: 629px;
+    }
+    .fesInfoTxt h2{
+        font-size: 70px;
+    }
+    .fesInfo2 .fesInfoTxt h2:last-child {
+        text-align: right;
     }
 }
 
@@ -148,14 +151,21 @@
         bottom: -38px;
     }
     .fesInfoWrap img{
-        width: 400px;
-        height: 519px;
+        width: 350px;
+        height: 450px;
     }
     .fesInfoTxt h2{
         font-size: 55px;
     }
+    .fesInfoTxt h2:first-child{
+        padding-bottom: 7px;
+    }
     .fesInfoTxt p{
         font-size: 16px;
+    }
+    .fesInfoTxt p:first-child{
+        padding-top: 20px;
+        padding-bottom: 7px;
     }
 }
 
@@ -186,12 +196,54 @@
         bottom: -18px;
     }
     .fesInfoWrap{
-       flex-direction: column;
+        flex-direction: column;
     }
-    .fesInfo2>div:last-child{
-        order: 2;
+    .fesInfo1>div:first-child{
+        order: 0;
     }
-	
+    .fesInfoWrap>div:first-child{
+        width: 250px;
+        margin: 0 auto;
+    }
+    .fesInfoWrap img{
+        width: 250px;
+        height: 300px;
+    }
+    .fesInfoTxt h2{
+        font-size: 40px;
+        text-align: center;
+    }
+    .fesInfoTxt h2:first-child{
+        padding-top: 30px;
+    }
+    .fesInfoTxt p{
+        font-size: 14px;
+        text-align: center;
+    }
+    .fesInfo1 .fesInfoTxt p{
+        padding-left: 0;
+    }
+    .fesInfo2 .fesInfoTxt h2:first-child {
+        text-align: center;
+    }
+    .fesInfo2 .fesInfoTxt h2:last-child {
+        text-align: center;
+    }
+    .fesInfo2 .fesInfoTxt p {
+        text-align: center;
+    }
+    .fesInfoBtnWrap{
+        justify-content: center;
+    }
+    .fesInfoBtn{
+        margin-top: 50px;
+    }
+    .fesInfo1 .fesInfoBtn{
+       margin-left: 0;
+    }
+    .fesInfo2 .fesInfoBtn{
+        position: relative;
+    }
 }
 
 @media screen and (max-width : 500px) {
