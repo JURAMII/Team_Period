@@ -6,6 +6,7 @@ footer{
     padding: 65px 120px;
 }
 footer>h2{
+    width: 263px;
     color: #fff;
     font-size: 90px;
     font-family: "Noto Serif KR", serif;
@@ -39,4 +40,43 @@ footer>h2{
 h1 img{
     width: 100px;
     padding-top: 50px;
+    padding-left: 24px;
 }
+
+@media screen and (max-width: 1280px) {
+    footer>h2{
+        width: 173px;
+        font-size: 60px;
+        line-height: 100px;
+    }
+    .footerBox p{
+        padding-top: 60px;
+        font-size: 16px;
+    }
+    .footerBox span{
+        color: #bcbcbc;
+        font-size: 12px;
+        margin: 20px 0;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    footer>h2{
+        font-size: 28px;
+        line-height: 50px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .footerBox{
+        margin: 0 auto;
+        text-align: center;
+    }
+    .footerBox p{
+        padding-top: 20px;
+        font-size: 14px;
+        order: 2;
+    }
+    .footerBox img{
+        order: 1;
+    }
+  }

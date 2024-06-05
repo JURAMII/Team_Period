@@ -5,7 +5,7 @@ const Footer = ()=>{
     return(
         <>
         <footer>
-            <h2>고궁의<br/>밤</h2>
+            <h2>고궁의밤</h2>
             <div className='footerWrap'>
                 <div className='footerBox'>
                     <p>서울특별시 강남구 봉은사로 406(삼성동 112-2)</p>
