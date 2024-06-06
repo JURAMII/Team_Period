@@ -1,7 +1,7 @@
 import './fesInfo.css'
 import FesInfoComponent from '../../../components/fesInfoComponent'
-import kPoster from '../../../assets/kPoster.png'
-import cPoster from '../../../assets/cPoster.png'
+import Kposter from '../../../assets/kPoster.png'
+import Cposter from '../../../assets/cPoster.png'
 
 const FesInfo = () => {
 
@@ -11,7 +11,7 @@ const FesInfo = () => {
             fTitle2:`별빛야행`,
             fText1: `별 가득한밤,`,
             fText2: `경복궁 별빛야행에 여러분을 초대합니다.`,
-            fImg: kPoster,
+            fImg: Kposter,
             id:'1',
             fCla:'fesInfo1'
         },
@@ -20,7 +20,7 @@ const FesInfo = () => {
             fTitle2: `달빛기행`,
             fText1: `은은한 달빛 아래,`,
             fText2: `창덕궁 달빛기행에 여러분을 초대합니다.`,
-            fImg: cPoster,
+            fImg: Cposter,
             id:'2',
             fCla:'fesInfo2'
         },
