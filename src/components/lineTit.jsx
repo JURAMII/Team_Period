@@ -4,7 +4,7 @@ const LineTit = (props) =>{
 
     return(
         <div className='greenWrap'>
-            <div className='greenLine calcWidth'>
+            <div className='greenLine'>
             <p className='greenTit'>{props.subtit}</p>
             </div>
         </div>
