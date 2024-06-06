@@ -1,10 +1,15 @@
+.greenWrap{
+    margin: 0;
+    padding-bottom: 65px;
+    
+}
+
 .greenLine{
     margin: 0 auto;
     width: 1440px;
     border-top: 2px solid var(--mirage);
     border-bottom: 2px solid var(--mirage);
     position: relative;
-    top: 15px;
 }
 .greenLine::before{
     content: '';
