@@ -1,6 +1,6 @@
 .greenLine{
     margin: 0 auto;
-    width: 90%;
+    width: 1440px;
     border-top: 2px solid var(--mirage);
     border-bottom: 2px solid var(--mirage);
     position: relative;

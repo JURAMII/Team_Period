@@ -3,7 +3,7 @@ import './lineTit.css'
 const LineTit = (props) =>{
 
     return(
-        <div className='greenLine'>
+        <div className='greenLine calcWidth'>
              <p className='greenTit'>{props.subtit}</p>
         </div>
     )
