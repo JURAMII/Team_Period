@@ -1,7 +1,6 @@
 .greenWrap{
     margin: 0;
     padding-bottom: 65px;
-    
 }
 
 .greenLine{
@@ -41,6 +40,9 @@
 
 /* 반응형 */
 @media screen and (max-width : 768px) {
+    .greenWrap{
+        padding-bottom: 28px;
+    }
     .greenLine::before{
         width: 10px;
         height: 10px;
