@@ -93,9 +93,64 @@
 .CtalkWrap{
     gap: 30px;
 }
+
+/* 예매안내 */
+.ticketWrap{
+    justify-content: space-around;
+    gap: 15px;
+}
+.ticketWrap ul li{
+    padding-bottom: 28px;
+}
+.ticketWrap ul li span{
+    font-weight: bold;
+    padding-right: 10px;
+}
+.ticDate{
+    text-align: end;
+    padding-right: 9px;
+    padding-top: 10px;
+}
+.ticDate2{
+    padding-right: 52px;
+}
+.ticID{
+    font-size: 14px;
+    padding-top: 5px;
+}
+.ticWay{
+    padding-left: 72px;
+}
+.ticWay>div{
+    padding-top: 10px;
+}
+.ticBtnWrap{
+    padding-top: 110px;
+    justify-content: center;
+}
+.ticBtn{
+    background-color: var(--mirage);
+    color: white;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    width: 160px;
+    line-height: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
 /* 반응형*/
 @media screen and (max-width : 1440px) {
 
+}
+@media screen and (max-width : 1280px) {
+    .ticketWrap{
+        justify-content: space-between;
+    }
+    .ticBtnWrap{
+        padding-top: 65px;
+    }
 }
 @media screen and (max-width : 768px) {
     .subInfoWrap{
@@ -150,6 +205,32 @@
     .CtalkWrap{
         flex-direction: column;
         gap: 20px;
+    }
+    .ticketWrap{
+        flex-direction: column;
+    }
+    .ticketWrap ul li{
+        font-size: 14px;
+        padding-bottom: 15px;
+    }
+    .ticDate{
+        text-align: start;
+        padding-right: 0;
+        padding-left: 65px;
+    }
+    .ticDate2{
+        padding-right: 0;
+    }
+    .ticWay{
+        padding-left: 65px;
+    }
+    .ticBtnWrap{
+        padding-top: 28px;
+    }
+    .ticBtn{
+        font-size: 16px;
+        width: 120px;
+        line-height: 36px;
     }
 }
 @media screen and (max-width : 500px) {

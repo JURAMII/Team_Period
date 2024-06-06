@@ -162,6 +162,36 @@ const TicketK = () =>{
     return(
         <section className="subDefaultContent calcWidth">
         <LineTit subtit={'예매 안내'}/>
+        <div className='flex ticketWrap'>
+        <div>
+        <p className='sFont pTit'>온라인 예매</p>
+            <ul>
+            <li><span>예매기간</span>1차) 2024년 3월 22일(금) 14시 ~ (행사일: 2024년 4월 3일 ~ 4월 21일)
+            <div className='ticDate ticDate2'>2차) 2024년 4월 12일(금) 14시 ~ (행사일: 2024년 4월 24일 ~ )</div>
+            </li>
+                <li><span>참가비</span>1인 기준 60,000원</li>
+                <li><span>예매처</span>티켓링크(www.ticketlink.co.kr)
+                <div className='ticID'>*아이디당 2매 예약가능</div></li>
+            </ul>
+        </div>
+        <div>
+            <p className='sFont pTit'>전화 예매</p>
+            <ul>
+            <li><span>예매기간</span>1차) 2024년 3월 22일(금) 14시 ~ (행사일: 2024년 4월 3일 ~ 4월 21일)
+            <div className='ticDate ticDate2'>2차) 2024년 4월 12일(금) 14시 ~ (행사일: 2024년 4월 24일 ~ )</div>
+            </li>
+            <li><span>예매방법</span>·티켓링크 콜센터 1588 - 7890
+                <div className='ticWay'>
+                <div>·평일 10:00 ~ 19:00 / 토, 일, 공휴일 휴무</div>
+                <div>·1인 최대 2매까지 예매 가능</div>
+                </div></li>
+                <li><span>예매대상</span>만 65세 이상, 국가유공자, 장애인</li>
+            </ul>
+        </div>
+        </div>
+        <div className='ticBtnWrap flex'>
+        <button className='ticBtn'>예매하기</button>
+        </div>
         </section>
     )
 
@@ -170,6 +200,37 @@ const TicketC = () =>{
     return(
         <section className="subDefaultContent calcWidth">
         <LineTit subtit={'예매 안내'}/>
+        <div className='flex ticketWrap'>
+        <div>
+            <p className='sFont pTit'>온라인 예매</p>
+            <ul>
+            <li><span>예매기간</span>
+            1차) 2024년 3월 22일(목) 14시 ~ (행사일: 2024년 4월 11일 ~ 4월 26일)
+            <div className='ticDate'>2차) 2024년 4월 17일(수) 14시 ~ (행사일: 2024년 5월 26일 ~ 6월 2일)</div>
+            </li>
+                <li><span>참가비</span>1인 기준 30,000원</li>
+                <li><span>예매처</span>티켓링크(www.ticketlink.co.kr)
+                <div className='ticID'>*아이디당 2매 예약가능</div></li>
+            </ul>
+        </div>
+        <div>
+            <p className='sFont pTit'>전화 예매</p>
+            <ul>
+            <li><span>예매기간</span>1차) 2024년 3월 22일(목) 14시 ~ (행사일: 2024년 4월 11일 ~ 4월 26일)
+            <div className='ticDate'>2차) 2024년 4월 17일(수) 14시 ~ (행사일: 2024년 5월 26일 ~ 6월 2일)</div>
+            </li>
+                <li><span>예매방법</span>·티켓링크 콜센터 1588 - 7890
+                <div className='ticWay'>
+                <div>·평일 10:00 ~ 19:00 / 토, 일, 공휴일 휴무</div>
+                <div>·1인 최대 2매까지 예매 가능</div>
+                </div></li>
+                <li><span>예매대상</span>만 65세 이상, 국가유공자, 장애인</li>
+            </ul>
+        </div>
+        </div>
+        <div className='ticBtnWrap flex'>
+        <button className='ticBtn'>예매하기</button>
+        </div>
         </section>
     )
 
