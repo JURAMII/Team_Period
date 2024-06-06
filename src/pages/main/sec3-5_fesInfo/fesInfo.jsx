@@ -1,7 +1,6 @@
 import './fesInfo.css'
 import FesInfoComponent from '../../../components/fesInfoComponent'
-import Kposter from '../../../assets/fesinfo_images/kPoster.png'
-import Cposter from '../../../assets/fesinfo_images/cPoster.png'
+import {Kposter, Cposter} from '../../../components/fesInfoimgs'
 
 const FesInfo = () => {
 
