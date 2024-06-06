@@ -1,9 +1,10 @@
 import './fesInfo.css'
 import FesInfoComponent from '../../../components/fesInfoComponent'
-import Kposter from '../../../assets/kPoster.png'
-import Cposter from '../../../assets/cPoster.png'
+import Kposter from '../../../assets/fesinfo_images/kPoster.png'
+import Cposter from '../../../assets/fesinfo_images/cPoster.png'
 
 const FesInfo = () => {
+
 
     let fesInfoConts = [
         {
