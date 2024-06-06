@@ -210,7 +210,8 @@
 /* Sub Page 반응형*/
 @media screen and (max-width : 1920px) {
 	.subDefaultContent {
-		padding: 110px 120px;
+		padding: 65px 0;
+		width: 1440px;
 	}
 }
 @media screen and (max-width : 1440px) {
