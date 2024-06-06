@@ -207,7 +207,7 @@ const TicketK = () =>{
         </div>
         </div>
         <div className='ticBtnWrap flex'>
-        <button className='ticBtn'>예매하기</button>
+        <button className='ticBtn'><a href="https://www.ticketlink.co.kr/product/49248" target='_blank'>예매하기</a></button>
         </div>
         </section>
     )
@@ -263,7 +263,7 @@ const TicketC = () =>{
         </div>
         </div>
         <div className='ticBtnWrap flex'>
-        <button className='ticBtn'>예매하기</button>
+        <button className='ticBtn'><a href="https://www.ticketlink.co.kr/product/49306" target='_blank'>예매하기</a></button>
         </div>
         </section>
     )
