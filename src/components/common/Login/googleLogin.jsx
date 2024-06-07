@@ -1,37 +1,53 @@
-// import { GoogleLogin } from "@react-oauth/google";
+import { GoogleLogin } from "@react-oauth/google";
 // import { GoogleOAuthProvider } from "@react-oauth/google";
 
-// const GoogleLoginButton = () => {
-//   const clientId =
-//     "300552730883-jiclu9ee2p9f2quvk6rqn1vq1u4gqkca.apps.googleusercontent.com";
-    
+const GoogleLoginButton = () => {
+  const clientId =
+    "300552730883-jiclu9ee2p9f2quvk6rqn1vq1u4gqkca.apps.googleusercontent.com";
 
-//   return (
-//     <>
-//       <GoogleOAuthProvider clientId={clientId}>
-//         <GoogleLogin
-//           onSuccess={(res) => {
-//             console.log(res);
-//           }}
-//           onFailure={(err) => { 
-//             console.log(err);
-//           }}
-//         />
-//         {/* <GoogleLogin
-//           onSuccess={(credentialResponse) => {
-//             console.log(credentialResponse);
-//           }}
-//           onError={() => {
-//             console.log("Login Failed");
-//           }}
-//           useOneTap
-//         /> */}
-//       </GoogleOAuthProvider>
-//     </>
-//   );
-// };
+  const onSuccess = (res) => {
+    console.log("LOGIN SUCCESS! Current user: ", res.profileObj);
+  }
+  const onFailure = (res) => {
+    console.log("LOGIN FAILED! res: ", res);
+  }
 
-// export default GoogleLoginButton;
+  return (
+    <>
+      {/* <GoogleOAuthProvider clientId={clientId}>
+        <GoogleLogin
+          onSuccess={(res) => {
+            console.log(res);
+          }}
+          onFailure={(err) => { 
+            console.log(err);
+          }}
+        />
+        {/* <GoogleLogin
+          onSuccess={(credentialResponse) => {
+            console.log(credentialResponse);
+          }}
+          onError={() => {
+            console.log("Login Failed");
+          }}
+          useOneTap
+        />
+      </GoogleOAuthProvider> */}
+      <div id="signInButton">
+        <GoogleLogin
+            clientId={clientId}
+            buttonText="Login"
+            onSuccess={onSuccess}
+            onFailure={onFailure}
+            cookiePolicy={"single_host_origin"}
+            isSingnedIn={true}
+        />
+      </div>
+    </>
+  );
+};
+
+export default GoogleLoginButton;
 
 // import { useGoogleLogin } from "@react-oauth/google";
 // import axios from "axios";
@@ -63,14 +79,9 @@
 
 // export default GoogleLoginButton;
 
-
-      
-      
 // import {GoogleLogin} from "@react-oauth/google";
 
 // const GoogleLoginButton = () => {
-
-
 
 //     return (
 //         <div>
