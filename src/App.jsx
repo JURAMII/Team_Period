@@ -1,7 +1,7 @@
 import Header from './components/common/header/header'
 import FesInfoStart from './pages/main/sec3-5_fesInfo/fesInfoStart'
 import FesInfo from './pages/main/sec3-5_fesInfo/fesInfo'
-import SubFesInfo from './pages/subPages/subFesInfo'
+import SubFesInfo from './pages/subpages/subFesInfo'
 import Faq from './pages/subPages/faq'
 
 
