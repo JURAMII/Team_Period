@@ -14,12 +14,6 @@ function App() {
   return (
     <>
     <Header />
-    <main>
-      <Canvas><Sec3D /></Canvas>
-      
-    </main>
-    <Footer />
-
     </>
   )
 }

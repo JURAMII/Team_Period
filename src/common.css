@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap');
 
 :root {
@@ -10,7 +11,6 @@
     --back-silver: #F2F2F2;
     --font-black: #1E1E23;
 }
-
 
 .flex{
 	display: flex;
@@ -26,182 +26,62 @@
     font-size: 16px;
 }
 
-.mainButtonSalomie{
-	width: 160px;
-	height: 50px;
-	border-radius: 50px;
-	background-color: none;
-	border: 2px solid var(--salomie);
-}
-.mainBtnTextSilver{
-	font-size: 18px;
-	color: var(--salomie);
-}
-.mainBtnSilver{
-	width: 160px;
-	height: 50px;
-	border-radius: 50px;
-	background-color: none;
-	border: 2px solid var(--font-silber);
-}
-.mainBtnTextSilver{
-	font-size: 18px;
-	color: var(--font-silber);
-}
-
-/* 여기서부터 Sub */
-
-.subBtn{
-	width: 187px;
-	height: 45px;
-}
-.subBtnText{
-	font-size: 18px;
-	color: #FFF;
-}
-.subOneDepthBtn{
-	font-size: 24px;
-	font-weight: bold;
-}
-
-.subTop{
-	/* 이미지 사이즈가 가운데로 조여들게끔 만들게하기위해 max-width:none을 채택할지 고민해봐야함. */
-	/* max-width: none; */
-	width: 100%;
-	height: 400px;
-}
-.subPageTopText{
-	display: block;
-	text-align: center;
-	line-height: 400px;
-	color: #FFF;
-	font-size: 50px;
-	font-family: "Noto Serif KR", serif;
-	font-optical-sizing: auto;
-	font-style: normal;
-}
-
-/* 서브페이지 이미지를 개인 파트에 가져가 주세요. */
-.SubFesInfoImage{
-	background-image: url(./assets/SubFesInfoTop.png);
-	background-repeat: none;
-	background-position: center;
-}
-.SubNotiTop{
-	background-image: url(./assets/);
-	background-repeat: none;
-	background-position: center;
-}
-.SubGalleryTop{
-	background-image: url(./assets/);
-	background-repeat: none;
-	background-position: center;
-}
-.SubTourInfoTop{
-	background-image: url(./assets/);
-	background-repeat: none;
-	background-position: center;
-}
-.SubSupportTop{
-	background-image: url(./assets/);
-	background-repeat: none;
-	background-position: center;
-}
-/* 여기까지 이미지 */
-
-canvas{
-	width: 1920px;
-	height: 1020px;
-}
-
-
 /* main 반응형 */
 @media screen and (max-width : 1920px) {
-	.default_content {
-		margin: 110px 120px;
+	.defaultContent {
+		padding: 110px 120px;
 	}
 }
 @media screen and (max-width : 1280px) {
-	.default_content {
-		margin: 110px 80px;
+	.defaultContent {
+		padding: 110px 80px;
 	}
 }
 
 @media screen and (max-width : 1024px) {
-	.default_content {
-		margin: 65px 80px;
+	.defaultContent {
+		padding: 65px 80px;
 	}
 }
 
 @media screen and (max-width : 768px) {
 	.default_content {
-		margin: 65px 20px;
-	}
-	.mainButtonSalomie{
-		width: 120px;
-		height: 36px;
-		border-radius: 50px;
-		background-color: none;
-		border: 1px solid var(--salomie);
-	}
-	.mainButtonSilver{
-		width: 120px;
-		height: 36px;
-		border-radius: 50px;
-		background-color: none;
-		border: 1px solid var(--font-silber);
-	}
-	.mainButtonTextSilver{
-		font-size: 16px;
-		color: var(--salomie);
-	}
-	.mainButtonTextSilver{
-		font-size: 16px;
-		color: var(--font-silber);
+		margin: 65px px;
 	}
 }
 
 @media screen and (max-width : 500px) {}
 
-
-
-
-
 /* Sub Page 반응형*/
+@media screen and (max-width : 1920px) {
+	.subDefaultContent {
+		padding: 65px 0;
+		width: 1440px;
+		margin: 0 auto;
+	}
+}
 @media screen and (max-width : 1440px) {
-	.default_content {
-		margin: 65px 0;
+	.subDefaultContent {
+		width: 0;
 	}
 	.calcWidth {
 		width: calc(100% - 30px);
 	}
-	.subTop{
-		height: 300px;
-	}
-	.subPageTopText{
-		font-size: 45px;
-		line-height: 300px;
-	}
-
 }
 
 @media screen and (max-width : 1024px) {
-	.default_content {
-		margin: 65px 0;
-	}
 	.subTop{
 		height: 210px;
 	}
-	.subPageTopText{
+	.subTopText{
 		font-size: 38px;
 		line-height: 210px;
 	}
-
 }
 
 @media screen and (max-width : 768px) {
-	.default_content {
-		margin: 28px 0;
+	.subDefaultContent {
+		padding: 28px 0;
 	}
     .mFont{
         font-size: 18px;
@@ -212,20 +92,6 @@ canvas{
     .cFont{
         font-size: 14px;
     }
-	.subButton{
-		width: 150px;
-		height: 40px;
-	}
-	.subButtonText{
-		font-size: 14px;
-		font-weight: bold;
-	}
-	.subTop{
-		height: 210px;
-	}
-	.subPageTopText{
-		font-size: 30px;
-	}
 }
 
 @media screen and (max-width : 500px) {
