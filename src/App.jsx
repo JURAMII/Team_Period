@@ -13,7 +13,10 @@ function App() {
   return (
     <>
     <Header />
-    <Way />
+
+
+
+
     <Footer />
     </>
   )
