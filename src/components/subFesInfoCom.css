@@ -132,8 +132,6 @@
 }
 
 /* 반응형*/
-@media screen and (max-width : 1920px) {
-}
 @media screen and (max-width : 1280px) {
     .ticketWrap{
         justify-content: space-between;
@@ -164,7 +162,6 @@
         padding-bottom: 15px;
     }
     .infoRain{
-        justify-content: center;
         gap: 20px;
     }
     .progRote div{
@@ -234,5 +231,13 @@
 @media screen and (max-width : 500px) {
     .progRote div{
         width: 100%;
+    }
+}
+@media screen and (max-width : 360px) {
+    .infoRain{
+        gap: 10px;
+    }
+    .infoRain img{
+        width: 50%;
     }
 }

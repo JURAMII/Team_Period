@@ -6,12 +6,12 @@ const SubFesInfo = () =>{
         <div className="subTop subFesInfoImage">
           <p className="subTopText">축제소개</p>
         </div>
-        {/* <SubFesInfoK/>
-        <SubFesInfoC/> */}
+        <SubFesInfoK/>
+        <SubFesInfoC/>
         <ProgramK/>
         <ProgramC/>
-        {/* <TicketK/>
-        <TicketC/> */}
+        <TicketK/>
+        <TicketC/>
         </>
     )
 }
