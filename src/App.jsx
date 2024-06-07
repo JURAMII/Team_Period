@@ -9,13 +9,13 @@ function App() {
   return (
     <>
       <Header />
-      <MainGallery />
-      <Footer />
+      {/* <MainGallery /> */}
       {/* <FesInfoStart/> */}
       {/* <FesInfo/> */}
       {/* <SubFesInfo/> */}
       <Faq/>
-  </>
+      <Footer />
+    </>
   )
 }
 
