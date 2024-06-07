@@ -1,20 +1,22 @@
-import Header from './components/common/header/header'
-import FesInfoStart from './pages/main/sec3-5_fesInfo/fesInfoStart'
-import FesInfo from './pages/main/sec3-5_fesInfo/fesInfo'
-import SubFesInfo from './pages/subpages/subFesInfo'
-import Faq from './pages/subPages/faq'
+import {Route, Routes, Link} from 'react-router-dom';
 
+import Header from './components/common/header/header';
+import Footer from './components/common/footer/footer';
+import MainGallery from './pages/main/Sec7_Gallery/mainGallery';
 
 function App() {
 
   return (
     <>
-  {/* <FesInfoStart/> */}
-  {/* <FesInfo/> */}
-  {/* <SubFesInfo/> */}
-  <Faq/>
+      <Header />
+      <MainGallery />
+      <Footer />
+      {/* <FesInfoStart/> */}
+      {/* <FesInfo/> */}
+      {/* <SubFesInfo/> */}
+      <Faq/>
   </>
   )
 }
 
-export default App
+export default App;
