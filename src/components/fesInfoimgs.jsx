@@ -11,6 +11,8 @@ import Cmusic1 from '../assets/fesinfo_images/창덕궁공연.jpg'
 import Cmusic2 from '../assets/fesinfo_images/창덕궁공연2.jpg'
 import Ctalk1 from '../assets/fesinfo_images/창덕궁관람1.jpg'
 import Ctalk2 from '../assets/fesinfo_images/창덕궁관람2.jpg'
+import Rain from '../assets/fesinfo_images/rain.png'
+import HRain from '../assets/fesinfo_images/haveyRainIcon.png'
 
 export{
     Kposter,
@@ -26,4 +28,6 @@ export{
     Cmusic2,
     Ctalk1,
     Ctalk2,
+    Rain,
+    HRain,
 }

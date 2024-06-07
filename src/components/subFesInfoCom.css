@@ -29,6 +29,13 @@
     padding-top: 5px;
     font-size: 14px;
 }
+.infoRain{
+    gap: 30px;
+}
+.infoRain img{
+    width: 250px;
+    height: 250px;
+}
 
 /* 프로그램 */
 .pTit{
@@ -144,6 +151,10 @@
     .ticBtnWrap{
         padding-top: 65px;
     }
+    .infoRain img{
+        width: 150px;
+        height: 150px;
+    }
 }
 @media screen and (max-width : 768px) {
     .subInfoWrap{
@@ -158,6 +169,10 @@
     .subInfoWrap li:not(.subInfoTit){
         font-size: 14px;
         padding-bottom: 15px;
+    }
+    .infoRain{
+        justify-content: center;
+        gap: 20px;
     }
     .progRote div{
         width: 80%;

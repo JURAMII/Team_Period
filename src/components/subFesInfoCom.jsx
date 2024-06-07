@@ -2,19 +2,7 @@ import './subFesInfoCom.css'
 import LineTit from './lineTit'
 // 이미지
 import 
-{Kposter, 
-Cposter, 
-Kmap,
-Kmusic,
-Kfood,
-Ktalk1,
-Ktalk2,
-Ktalk3,
-Cmap,
-Cmusic1,
-Cmusic2,
-Ctalk1,
-Ctalk2,
+{Kposter, Cposter, Kmap,Kmusic,Kfood,Ktalk1,Ktalk2,Ktalk3,Cmap,Cmusic1,Cmusic2,Ctalk1,Ctalk2,Rain,HRain,
 } from './fesInfoimgs'
 
 // 서브 축제정보 페이지
@@ -35,7 +23,10 @@ const SubFesInfoK = () =>{
                     *입장시간이 경과되면 입장에 제한이 있을 수 있으니, 시간 준수 부탁드립니다</div></li>
                     <li><span>관람안내</span>음식 체험 및 야간 해설 탐방이 110분에 걸쳐 진행되며 내부관람도 포함되어 있으니 편한 신발과 겉옷을 준비해 주시기 바랍니다.</li>
                     <li><span>우천시안내</span><div>*행사 당일 오전 11시 기상청 예보 기준으로</div></li>
-                    <li>이미지</li>
+                    <li><div className='flex infoRain'>
+                        <img src={Rain} alt="우천시" />
+                        <img src={HRain} alt="우천시" />
+                        </div></li>
                     <li><span>전화문의</span>궁능 프로그램 콜센터 1522 - 2295</li>
                 </ul>
             </div>
@@ -62,7 +53,10 @@ const SubFesInfoC = () =>{
                     *입장시간이 경과되면 입장에 제한이 있을 수 있으니, 시간 준수 부탁드립니다</div></li>
                     <li><span>관람안내</span>음식 체험 및 야간 해설 탐방이 100분에 걸쳐 진행되며 내부관람도 포함되어 있으니 편한 신발과 겉옷을 준비해 주시기 바랍니다.</li>
                     <li><span>우천시안내</span><div>*행사 당일 오전 11시 기상청 예보 기준으로</div></li>
-                    <li>이미지</li>
+                    <li><div className='flex infoRain'>
+                        <img src={Rain} alt="우천시" />
+                        <img src={HRain} alt="우천시" />
+                        </div></li>
                     <li><span>전화문의</span>궁능 프로그램 콜센터 1522 - 2295</li>
                 </ul>
             </div>
