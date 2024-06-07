@@ -11,6 +11,12 @@ function App() {
       <Header />
       <MainGallery />
       <Footer />
+    <Header />
+
+
+
+
+    <Footer />
     </>
   )
 }
