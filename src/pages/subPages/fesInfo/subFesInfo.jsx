@@ -1,4 +1,4 @@
-import {SubFesInfoK, SubFesInfoC, ProgramK, ProgramC, TicketK, TicketC} from "../../components/subFesInfoCom"
+import {SubFesInfoK, SubFesInfoC, ProgramK, ProgramC, TicketK, TicketC} from "../../../components/subFesInfoCom"
 
 const SubFesInfo = () =>{
     return(
