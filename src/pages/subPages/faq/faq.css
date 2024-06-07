@@ -1,0 +1,27 @@
+.faqTopLine{
+    display: block;
+    border: 2px solid var(--font-black);
+}
+.faqWrap p{
+    white-space: pre-wrap;
+}
+.fqes{
+    border-bottom: 1px solid var(--line-silver);
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    cursor: pointer;
+}
+.fqes p{
+    line-height: 70px;
+}
+.fans{
+    background-color: var(--back-silver);
+    justify-content: space-between;
+    align-items: center;
+}
+.fans p{
+    padding: 20px;
+    min-height: 85px;
+}
