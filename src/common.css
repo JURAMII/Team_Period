@@ -109,6 +109,11 @@
 }
 /* 여기까지 이미지 */
 
+canvas{
+	width: 1920px;
+	height: 1020px;
+}
+
 
 /* main 반응형 */
 @media screen and (max-width : 1920px) {

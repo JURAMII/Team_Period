@@ -3,6 +3,7 @@ import '../src/common.css'
 import Header from './components/common/header/header';
 import Footer from './components/common/footer/footer';
 import Sec3D from './pages/main/Sec3D';
+import {Canvas} from '@react-three/fiber';
 
 function App() {
 
@@ -10,7 +11,8 @@ function App() {
     <>
     <Header />
     <main>
-      <Sec3D />
+      <Canvas><Sec3D /></Canvas>
+      
     </main>
     <Footer />
 
