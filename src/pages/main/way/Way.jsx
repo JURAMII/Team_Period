@@ -1,7 +1,12 @@
+import LineTit from '../../../components/lineTit';
+import OneDep from '../../../components/onedep';
+import './Way.css'
+
 const Way = ()=>{
     return(
-        <section>
-            <div>오시는길</div>
+        <section className='subDefaultContent'>
+            <OneDep subtit1={'오시는길'} subtit2={'주변안내'}/>
+            <LineTit subtit={'오시는길'}/>   
             <div>
                 <img src=""alt=""></img>
                 <ul>
@@ -24,7 +29,6 @@ const Way = ()=>{
             
             
         </section>
-
     )
 
 }
