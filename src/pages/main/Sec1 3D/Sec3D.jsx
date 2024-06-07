@@ -13,10 +13,6 @@ const Sec3D =()=>{
         <>
 		<ambientLight intensity={1}/>
         <primitive object={gltf.scene}></primitive>
-		<Environment 
-        files={'./golden_bay_4k.exr'} 
-        background
-        blur={0.05}/>
 		<OrbitControls />
         </>
     )
