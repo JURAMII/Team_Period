@@ -9,7 +9,7 @@ import
 const SubFesInfoK = () =>{
 
     return(
-        <section className="subDefaultContent calcWidth">
+        <section className="subDefaultContent">
         <LineTit subtit={'축제정보'}/>
         <div className='subInfoWrap flex'>
             <div><img src={Kposter} alt="경복궁 별빛야행" /></div>
@@ -39,7 +39,7 @@ const SubFesInfoK = () =>{
 const SubFesInfoC = () =>{
 
     return(
-        <section className="subDefaultContent calcWidth">
+        <section className="subDefaultContent">
         <LineTit subtit={'축제정보'}/>
         <div className='subInfoWrap flex'>
             <div><img src={Cposter} alt=" 별빛야행" /></div>
@@ -70,7 +70,7 @@ const SubFesInfoC = () =>{
 const ProgramK = () =>{
 
     return(
-        <section className="subDefaultContent calcWidth">
+        <section className="subDefaultContent">
         <LineTit subtit={'프로그램'}/>
         <div className='programWrap'>
             <div className='progRote'>
@@ -111,7 +111,7 @@ const ProgramK = () =>{
 const ProgramC = () =>{
 
     return(
-        <section className="subDefaultContent calcWidth">
+        <section className="subDefaultContent">
         <LineTit subtit={'프로그램'}/>
         <div className='programWrap'>
             <div className='progRote'>
@@ -153,7 +153,7 @@ const ProgramC = () =>{
 
 const TicketK = () =>{
     return(
-        <section className="subDefaultContent calcWidth">
+        <section className="subDefaultContent">
         <LineTit subtit={'예매 안내'}/>
         <div className='ticketWrap flex'>
         <div>
@@ -209,7 +209,7 @@ const TicketK = () =>{
 }
 const TicketC = () =>{
     return(
-        <section className="subDefaultContent calcWidth">
+        <section className="subDefaultContent">
         <LineTit subtit={'예매 안내'}/>
         <div className='ticketWrap flex'>
         <div>
