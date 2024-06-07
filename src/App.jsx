@@ -1,14 +1,18 @@
-import Header from './components/common/header/header'
-// import MainNoti from './pages/main/Sec6 NotiList/mainNoti'
+import {Route, Routes, Link} from 'react-router-dom';
+
+import Header from './components/common/header/header';
+import Footer from './components/common/footer/footer';
+import MainGallery from './pages/main/Sec7_Gallery/mainGallery';
 
 function App() {
 
   return (
     <>
-    <Header />
-	{/* <MainNoti /> */}
+      <Header />
+      <MainGallery />
+      <Footer />
     </>
   )
 }
 
-export default App
+export default App;
