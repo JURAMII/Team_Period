@@ -5,6 +5,7 @@ import Footer from './components/common/footer/footer';
 import MainGallery from './pages/main/Sec7_Gallery/mainGallery';
 import SubFesInfo from './pages/subPages/fesInfo/subFesInfo';
 import Faq from './pages/subPages/faq/faq';
+import FesInfo from './pages/main/sec3-5_fesInfo/fesInfo'
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
       {/* <Header /> */}
       {/* <MainGallery /> */}
       {/* <FesInfoStart/> */}
-      {/* <FesInfo/> */}
+      <FesInfo/>
       {/* <SubFesInfo/> */}
       <Faq/>
       {/* <Footer /> */}
