@@ -2,7 +2,7 @@ import './onedep.css'
 import { useState } from 'react';
 
 const OneDep = (props) => {
-    const [oneDep, setOneDep] = useState(null);
+    const [oneDep, setOneDep] = useState(1);
 
     const clickOne= (index) => {
         setOneDep(index);
