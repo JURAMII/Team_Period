@@ -10,10 +10,10 @@ const Way = ()=>{
             <div>
                 <img src=""alt=""></img>
                 <ul>
-                    <li><img src="" alt="" />주소
+                    <li><img src="./icons8-location-96.png" alt="location icon" />주소
                     <p>(03045) 서울 종로구 사직로 161</p>
                     </li>
-                    <li><img src="" alt="" />연락처
+                    <li><img src="./icons8-call-100.png" alt="phone icon" />연락처
                     <p>대표전화 02-3700-3900 </p>
                     <p>팩스 02-3700-3909</p>
                     </li>
