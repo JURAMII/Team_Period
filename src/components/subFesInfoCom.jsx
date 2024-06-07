@@ -88,7 +88,7 @@ const ProgramK = () =>{
                 <p className='sFont pTit2'>궁중음식 체험 및 국악공연 관람</p>
                 <p className='cFont subPTit'>궁궐의 부엌인 ‘소주방’에 들러 조선의 왕이 먹던 일상식인 12첩 반상을 현대적으로 재해석한 ‘도슭수라상’을 맛보게 됩니다.</p>
                 <p className='cFont subPTit subPTit2'>맛있는 수라상을 먹는 동안 국악공연이 함께 펼쳐져 맛과 멋의 풍류로 가득한 밤이 될 것입니다.</p>
-                <div className='flex KtourWrap'>
+                <div className='flex tourWrap'>
                     <img src={Kmusic} alt="경복궁 국악공연" />
                     <img src={Kfood} alt="도슾수라상" />
                 </div>
@@ -96,9 +96,9 @@ const ProgramK = () =>{
             <div>
             <p className='sFont pTit2'>야간해설탐방<br /><span className='subPTit'>(소요시간 : 약110분)</span></p>
             <p className='cFont subPTit'>경복궁 별빛야행은 야간 특별관람 때에 공개되지 않았던 경복궁 북측 권역을 탐방하며, 복원을 완료한 향원정을 고즈넉한 분위기에서 감상하실 수 있습니다.</p>
-            <div className='KtalkWrap'>
+            <div className='Ktalk'>
                 <img src={Ktalk1} alt="경복궁야간해설" />
-                <div className='flex Ktalk'>
+                <div className='flex tourWrap'>
                 <img src={Ktalk2} alt="경복궁야간해설" />
                 <img src={Ktalk3} alt="경복궁야간해설" />
                 </div>
@@ -133,7 +133,7 @@ const ProgramC = () =>{
             <div>
                 <p className='sFont pTit2'>전통예술공연 관람</p>
                 <p className='cFont subPTit'>은은한 달빛아래 녹음이 어우러진 창덕궁에서 전통 춤과 국악공연이 함께 어우러져 궁궐 곳곳의 정취를 느끼는 밤이 될 것입니다.</p>
-                <div className='flex CtourWrap'>
+                <div className='flex tourWrap'>
                     <img src={Cmusic1} alt="창덕궁 공연1" />
                     <img src={Cmusic2} alt="창덕궁 공연2" />
                 </div>
@@ -141,7 +141,7 @@ const ProgramC = () =>{
             <div>
             <p className='sFont pTit2'>야간해설탐방<br /><span className='subPTit'>(소요시간 : 약100분)</span></p>
             <p className='cFont subPTit'>전문해설사와 함께 궁궐의 곳곳을 관람하며, 각 전각에 대한 해설을 들을 수 있습니다.</p>
-            <div className='CtalkWrap flex'>
+            <div className='flex tourWrap'>
                 <img src={Ctalk1} alt="창덕궁 야간해설" />
                 <img src={Ctalk2} alt="창덕궁 야간해설" />
             </div>
