@@ -1,8 +1,13 @@
-import {Route, Routes, Link} from 'react-router-dom';
-
+import './reset.css'
+import '../src/common.css'
+import './App.css'
 import Header from './components/common/header/header';
 import Footer from './components/common/footer/footer';
+import Sec3D from './pages/main/Sec1 3D/Sec3D';
+import {Canvas} from '@react-three/fiber';
 import MainGallery from './pages/main/Sec7_Gallery/mainGallery';
+import Way from './pages/main/way/Way'
+
 
 function App() {
 
@@ -10,6 +15,7 @@ function App() {
     <>
       <Header />
       <MainGallery />
+      <Way />
       <Footer />
     </>
   )
