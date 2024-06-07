@@ -64,7 +64,7 @@
     width: 100%;
 }
 .progRote ul{
-    width: 750px;
+    width: 730px;
     margin: 0 auto;
     justify-content: center;
     flex-wrap: wrap;
@@ -84,21 +84,25 @@
     justify-content: center;
     gap: 30px;
 }
-.KtourWrap img{
-    width: 100%;
-}
 .KtalkWrap{
     padding-top: 30px;
 }
 .KtalkWrap img{
     width: 100%;
 }
-.KtalkWrap>div{
+.Ktalk{
     padding-top: 30px;
+    justify-content: space-between;
     gap: 30px;
 }
+/* .Ktalk img{
+    width: 100%;
+} */
 .CtalkWrap{
     gap: 30px;
+}
+.CtalkWrap img{
+    width: 90%;
 }
 
 /* 예매안내 */
@@ -142,6 +146,12 @@
 
 }
 @media screen and (max-width : 1280px) {
+    .KtourWrap img{
+        width: 45%;
+    }
+    .Ktalk img{
+        width: 48%;
+    }
     .ticketWrap{
         justify-content: space-between;
     }
@@ -157,6 +167,12 @@
     }
 }
 @media screen and (max-width : 768px) {
+    .KtourWrap img{
+        width: 100%;
+    }
+    .Ktalk img{
+        width: 100%;
+    }
     .subInfoWrap{
         flex-direction: column;
         gap: 28px;
@@ -206,7 +222,7 @@
     .KtalkWrap{
         padding-top: 20px;
     }
-    .KtalkWrap>div{
+    .Ktalk{
         flex-direction: column;
         gap: 20px;
     }
