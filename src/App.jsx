@@ -12,9 +12,9 @@ function App() {
 
   return (
     <>
-    <Header />
+    {/* <Header /> */}
 
-
+<Way />
 
     <Footer />
     </>
