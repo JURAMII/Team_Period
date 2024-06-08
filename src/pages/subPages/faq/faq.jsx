@@ -1,9 +1,12 @@
 import './faq.css'
-import { Fadd, Fminus } from "../../../components/fesInfoimgs"
+import { Fadd, Fminus } from "../fesInfo/fesInfoimgs"
 import { Fcontents, fReducer } from "./faqData"
 import { useReducer, useState } from "react"
+import SupTop from '../../../components/common/supTop'
+import OneDep from '../../../components/onedep'
+import FaqSearch from './faqSearch'
 
-const FaqList = ({fcont, Fsearch}) => {
+const FaqList = ({fcont}) => {
 
     const [isAct, setIsAct] = useState(false)
 
@@ -31,7 +34,7 @@ const FaqList = ({fcont, Fsearch}) => {
 
 const Faq = () => {
     const [state, dispatch] = useReducer(fReducer, Fcontents)
-    const {fconts} = state;
+    const {fconts, fsearch} = state;
 
     const Fsearch = (text) =>{
         dispatch({
@@ -41,11 +44,15 @@ const Faq = () => {
     }
 
     return(
-        <section className="subDefaultContent">
+      <>
+        <OneDep subtit1={'자주하는 질문'} subtit2={'묻고 답하기'} links1={'/Kinfo'} links2={'/Cinfo'}/>
+        <section className="faqSec">
         <span className='faqTopLine'></span>
-        {fconts.map((fcont)=><FaqList key={fcont.id} fcont={fcont} Fsearch={Fsearch}/>)}
-        <input type="text" />
+        {fconts.map((fcont)=><FaqList key={fcont.id} fcont={fcont}/>)}
+        <div className='faqPage'>1</div>
+        <FaqSearch/>
         </section>
+      </>
     )
 }
 

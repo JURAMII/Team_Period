@@ -2,6 +2,7 @@ import {Route, Routes, Link} from 'react-router-dom';
 import Header from './components/common/header/header'
 import Main from './pages/main/main';
 import { Kinfo, Cinfo, Kpro, Cpro, Kticket, Cticket } from './pages/subPages/fesInfo/subFesInfoPages';
+import Faq from './pages/subPages/faq/faq';
 import Footer from './components/common/footer/footer';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Route path='/Cprogram' element={<Cpro/>}/>
       <Route path='/Kticket' element={<Kticket/>}/>
       <Route path='/Cticket' element={<Cticket/>}/>
+      <Route path='/Faq' element = {<Faq/>}/>
     </Routes>
     </main>
     <Footer/>
