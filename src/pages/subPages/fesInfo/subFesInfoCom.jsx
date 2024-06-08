@@ -10,7 +10,6 @@ const SubFesInfoK = () =>{
 
     return(
         <section className="subDefaultContent">
-        <LineTit subtit={'축제정보'}/>
         <div className='subInfoWrap flex'>
             <div><img src={Kposter} alt="경복궁 별빛야행" /></div>
             <div>
@@ -40,7 +39,6 @@ const SubFesInfoC = () =>{
 
     return(
         <section className="subDefaultContent">
-        <LineTit subtit={'축제정보'}/>
         <div className='subInfoWrap flex'>
             <div><img src={Cposter} alt=" 별빛야행" /></div>
             <div>
@@ -71,7 +69,6 @@ const ProgramK = () =>{
 
     return(
         <section className="subDefaultContent">
-        <LineTit subtit={'프로그램'}/>
         <div className='programWrap'>
             <div className='progRote'>
                 <p className='sFont pTit'>관람 동선 안내</p>
@@ -112,7 +109,6 @@ const ProgramC = () =>{
 
     return(
         <section className="subDefaultContent">
-        <LineTit subtit={'프로그램'}/>
         <div className='programWrap'>
             <div className='progRote'>
                 <p className='sFont pTit'>관람 동선 안내</p>
@@ -156,7 +152,6 @@ const ProgramC = () =>{
 const TicketK = () =>{
     return(
         <section className="subDefaultContent">
-        <LineTit subtit={'예매 안내'}/>
         <div className='ticketWrap flex'>
         <div>
             <h3 className='sFont pTit'>온라인 예매</h3>
@@ -212,7 +207,6 @@ const TicketK = () =>{
 const TicketC = () =>{
     return(
         <section className="subDefaultContent">
-        <LineTit subtit={'예매 안내'}/>
         <div className='ticketWrap flex'>
         <div>
             <h3 className='sFont pTit'>온라인 예매</h3>
