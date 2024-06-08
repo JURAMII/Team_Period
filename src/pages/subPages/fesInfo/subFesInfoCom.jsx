@@ -1,11 +1,11 @@
 import './subFesInfoCom.css'
-import LineTit from './lineTit'
+import LineTit from '../../../components/lineTit'
 // 이미지
 import 
 {Kposter, Cposter, Kmap,Kmusic,Kfood,Ktalk1,Ktalk2,Ktalk3,Cmap,Cmusic1,Cmusic2,Ctalk1,Ctalk2,Rain,HRain,
 } from './fesInfoimgs'
 
-// 서브 축제정보 페이지
+// 서브페이지 축제정보
 const SubFesInfoK = () =>{
 
     return(
@@ -65,7 +65,7 @@ const SubFesInfoC = () =>{
     )
 }
 
-// 서브 프로그램 페이지
+// 서브페이지 프로그램
 
 const ProgramK = () =>{
 
@@ -150,6 +150,8 @@ const ProgramC = () =>{
         </section>
     )
 }
+
+// 서브페이지 예매안내
 
 const TicketK = () =>{
     return(
