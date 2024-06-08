@@ -61,7 +61,7 @@ article{
     display: inline-block;
 }
 .parkingWrap img{
-display: block;
-text-align: center;
+    display: block;
+    align-items: center;
+
 }
-/* 이미지 가운데 오는거 작업중...지금 안맞음 지대짱남 */
