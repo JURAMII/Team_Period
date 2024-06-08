@@ -44,6 +44,7 @@ const Faq = () => {
         <section className="subDefaultContent">
         <span className='faqTopLine'></span>
         {fconts.map((fcont)=><FaqList key={fcont.id} fcont={fcont} Fsearch={Fsearch}/>)}
+        <input type="text" />
         </section>
     )
 }
