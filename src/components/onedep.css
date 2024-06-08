@@ -1,8 +1,6 @@
 .oneDep{
-    margin: 0 auto;
     justify-content: center;
     gap: 65px;
-    padding: 65px 0;
 }
 .oneDep li{
     color: var(--font-black);
@@ -24,9 +22,6 @@
 }
 @media screen and (max-width : 768px) {
     .oneDep{
-        margin: 0 auto;
-        justify-content: center;
-        padding: 28px 0;
         gap: 28px;
     }
     .oneDeptit{
