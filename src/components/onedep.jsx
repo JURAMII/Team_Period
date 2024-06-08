@@ -10,10 +10,10 @@ const OneDep = (props) => {
     }
 
     return(
-        <ul className='oneDep flex'>
-            <li className={oneDep === 1 ? "mFont check" : "mFont"} onClick={() => clickOne(1)}><Link to = {props.links1}>{props.subtit1}</Link></li>
-            <li className={oneDep === 2 ? "mFont check" : "mFont"} onClick={() => clickOne(2)}><Link to = {props.links2}>{props.subtit2}</Link></li>
-            <li className={oneDep === 3 ? "mFont check" : "mFont"} onClick={() => clickOne(3)}><Link to = {props.links3}>{props.subtit3}</Link></li>
+        <ul className='oneDep flex subDefaultContent'>
+            <li className={oneDep === 1 ? "oneDeptit check" : "oneDeptit"} onClick={() => clickOne(1)}><Link to = {props.links1}>{props.subtit1}</Link></li>
+            <li className={oneDep === 2 ? "oneDeptit check" : "oneDeptit"} onClick={() => clickOne(2)}><Link to = {props.links2}>{props.subtit2}</Link></li>
+            <li className={oneDep === 3 ? "oneDeptit check" : "oneDeptit"} onClick={() => clickOne(3)}><Link to = {props.links3}>{props.subtit3}</Link></li>
         </ul>
     )
 }
