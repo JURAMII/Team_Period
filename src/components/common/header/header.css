@@ -3,16 +3,20 @@ a{
 }
 
 header{
-    width: 100%;
+    display: block;
 }
 
 .test1{
+    width: 100%; height: 80px;
+    position: relative;
+    left: 0; top: 0;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
     padding: 0 40px;
-    border-bottom: 1px solid #bcbcbc;
+    border-bottom: 1px solid var(--line-silver);
+    z-index: 10000;
 }
 
 .test1>.test2>.test2-1{
@@ -24,13 +28,95 @@ header{
     font-size: 18px;
 }
 
-.test1>.test3>.test3-1{
+.test1>.test3{
+    position: relative;
     display: flex;
-    gap: 28px;
+    align-items: center;
+
 }
 
-.test1>.test3>.test3-1 img{
+.test1>.test3>.test31{
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-right: 60px;
+}
+
+.test1>.test3>.test31 img{
     cursor: pointer;
     width: 30px; height: 30px;
 }
 
+/* menu */
+
+.test1>.test3>.test31>.menu{
+    width: 26px; height: 26px;
+    position: fixed;
+    right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--font-black);
+    border-radius: 50%;
+}
+
+.test1>.test3>.test31>.menu>.dotWrap{
+    cursor: pointer;
+    width: 10px; height: 10px;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%) scale(0) rotate(-360deg);
+    animation: rollingIn .6s .6s ease-out forwards;
+}
+
+.test1>.test3>.test31>.menu>.dotWrap:hover{
+    animation: rollingOut .6s ease-out forwards;
+}
+
+.test1>.test3>.test31>.menu>.dotWrap>.dot{
+    width: 3px; height: 3px;
+    background: var(--font-black);
+    position: absolute;
+}
+
+.test1>.test3>.test31>.menu>.dotWrap>.dot:nth-child(1){
+    left: 0; top: 0;
+}
+
+.test1>.test3>.test31>.menu>.dotWrap>.dot:nth-child(2){
+    right: 0; top: 0;
+}
+
+.test1>.test3>.test31>.menu>.dotWrap>.dot:nth-child(3){
+    left: 0; bottom: 0;
+}
+
+.test1>.test3>.test31>.menu>.dotWrap>.dot:nth-child(4){
+    right: 0; bottom: 0;
+}
+
+@keyframes rollingOut {
+    0% {transform: translate(-50%, -50%) scale(1) rotate(0deg);}
+    100% {transform: translate(-50%, -50%) scale(0) rotate(-360deg);}
+}
+@keyframes rollingIn {
+    0% {transform: translate(-50%, -50%) scale(0) rotate(-360deg);}
+    80% {transform: translate(-50%, -50%) scale(1.1) rotate(40deg);}
+    100% {transform: translate(-50%, -50%) scale(1) rotate(0deg);}
+}
+
+select {
+    width: 30px; height: 30px;
+    -webkit-appearance: none;
+    -moz-appearance:none;
+    appearance:none;
+    text-indent: 100%;
+    outline: none;
+    border: none;
+    background: url(../../../assets/icons8-earth-50.png) no-repeat top center;
+    background-size: 100%;
+    }
+
+select>option{
+    margin-top: 30px;
+}
