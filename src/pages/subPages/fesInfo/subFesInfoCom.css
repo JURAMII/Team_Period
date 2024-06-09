@@ -122,13 +122,14 @@
     background-color: var(--mirage);
     outline: none;
     border: none;
-    width: 160px;
-    line-height: 50px;
     border-radius: 50px;
 }
 .ticBtn a{
+    display: inline-block;
     color: white;
     font-size: 18px;
+    width: 160px;
+    line-height: 50px;
 }
 
 /* 반응형*/
