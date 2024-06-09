@@ -3,6 +3,9 @@
     margin: 0 auto;
     padding-bottom: 65px;
 }
+.faqSec h6{
+    padding: 5px 20px;
+}
 .faqTopLine{
     display: block;
     border: 2px solid var(--font-black);
@@ -23,12 +26,28 @@
 }
 .fans{
     background-color: var(--back-silver);
-    justify-content: space-between;
-    align-items: center;
 }
 .fans p{
     padding: 20px;
     min-height: 85px;
+}
+.faqUpWrap{
+    justify-content: center;
+    padding-bottom: 10px;
+}
+.faqUp{
+    width: 50px;
+    height: 50px;
+    background-color: var(--mirage);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.faqUp li{
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+    padding: 4px;
 }
 .faqPage{
     padding-top: 28px;
@@ -38,9 +57,19 @@
     align-items: center;
     padding-top: 28px;
 }
+
 @media screen and (max-width : 1440px) {
     .faqSec{
         width: calc(100% - 30px);
         padding-bottom: 28px;
+    }
+}
+@media screen and (max-width : 768px) {
+    .fqes{
+        padding: 0 5px;
+    }
+    .faqSec h6{
+       font-size: 12px;
+       padding-left: 5px;
     }
 }
