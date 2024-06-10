@@ -26,8 +26,9 @@
 	width: 50%;	
 }
 .mainNotiName{
-	margin: 0 0 15px 20px;
+	padding: 0 0 15px 20px;
 	align-items: center;
+	border-bottom: 2px solid var(--font-black);
 }
 
 .mainNotiName>li{
@@ -44,8 +45,7 @@
 }
 
 .notiList{
-	border-top: 2px solid black;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid var(--font-black);
 	height: 126px;
 }
 .notiSide{

@@ -1,0 +1,59 @@
+.greenWrap{
+    width: 1440px;
+    margin: 0 auto;
+}
+.greenLine{
+    border-top: 2px solid var(--mirage);
+    border-bottom: 2px solid var(--mirage);
+    position: relative;
+}
+.greenLine::before{
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: var(--mirage);
+    transform: rotate(45deg);
+    position: absolute;
+    top: -8px; left: 0;
+}
+.greenLine::after{
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: var(--mirage);
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: -8px; right: 0;
+}
+.greenTit{
+    line-height: 110px;
+    color: var(--mirage);
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 반응형 */
+@media screen and (max-width : 1440px) {
+    .greenWrap{
+        width: calc(100% - 30px);
+    }
+}
+@media screen and (max-width : 768px) {
+    .greenLine::before{
+        width: 10px;
+        height: 10px;
+        top: -6px; left: 0;
+    }
+    .greenLine::after{
+        width: 10px;
+        height: 10px;
+        bottom: -6px; right: 0;
+    }
+    .greenTit{
+        line-height: 65px;
+        font-size: 18px;
+    }
+}

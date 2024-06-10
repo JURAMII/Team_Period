@@ -214,14 +214,13 @@
 /* Sub Page 반응형*/
 @media screen and (max-width : 1920px) {
 	.subDefaultContent {
-		padding: 110px 120px;
+		padding: 65px 0;
+		width: 1440px;
+		margin: 0 auto;
 	}
 }
 @media screen and (max-width : 1440px) {
 	.subDefaultContent {
-		padding: 65px 0;
-	}
-	.calcWidth {
 		width: calc(100% - 30px);
 	}
 	.subTop{
@@ -235,9 +234,6 @@
 }
 
 @media screen and (max-width : 1024px) {
-	.subDefaultContent {
-		padding: 65px 0;
-	}
 	.subTop{
 		height: 210px;
 	}
@@ -250,7 +246,7 @@
 
 @media screen and (max-width : 768px) {
 	.subDefaultContent {
-		padding: 65px 20px;
+		padding: 28px 0;
 	}
     .mFont{
         font-size: 18px;
