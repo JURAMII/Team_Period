@@ -8,21 +8,21 @@ import Faq from './pages/subPages/faq/faq';
 import Footer from './components/common/footer/footer';
 import Three from './pages/main/Sec1 3D/Three'
 import MainNoti from './pages/main/Sec6NotiList/mainNoti';
-import NotiCategoryPosts from './pages/subPages/NotiSub/NotiCategoryPosts';
+import NotiList from './pages/subPages/NotiSub/notiList';
 import PostDetail from './pages/subPages/NotiSub/PostDetail';
 import CreatePost from './pages/subPages/NotiSub/CreatePost';
 
 
 function App() {
-  
- return (
+
+    return (
         <>
             <Header />
             <Three />
             <Routes>
                 <Route path='/' element={<Main/>}/>
                 <Route path="/mainNoti" element={<MainNoti/>} />
-                <Route path="/notiList/category/:key" element={<NotiCategoryPosts/>} />
+                <Route path="/notiList/category/:key" element={<NotiList/>} />
                 <Route path="/notiList/post/:id" element={<PostDetail/>} />
                 <Route path="/NotiList/create" element={<CreatePost/>} />
                 {/* <Route path="*" element={<Navigate to="/" />} /> */}
@@ -34,8 +34,6 @@ function App() {
                <Route path='/Cticket' element={<Cticket/>}/>
                <Route path='/Faq' element = {<Faq/>}/> 
             </Routes>
-             {/* <MainGallery /> */}
-             {/* <Way /> */}
             <Footer/>
         </>
     );
@@ -43,3 +41,4 @@ function App() {
 }
 
 export default App;
+

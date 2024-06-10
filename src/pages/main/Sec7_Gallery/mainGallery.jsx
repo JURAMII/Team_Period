@@ -1,5 +1,9 @@
 // import "./mainGallery.css";
+// import "./mainGallery.css";
 
+// // Import Swiper React components
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import {Autoplay} from "swiper/modules";
 // // Import Swiper React components
 // import { Swiper, SwiperSlide } from "swiper/react";
 // import {Autoplay} from "swiper/modules";
@@ -38,8 +42,9 @@
 
 // // 차후 이미지 폴더를 따로 만들 예정
 
-// Import Swiper styles
-import "swiper/css";
+
+// // Import Swiper styles
+// import "swiper/css";
 
 // const MainGallery = () => {
 //   return (

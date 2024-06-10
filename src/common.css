@@ -78,10 +78,22 @@
 
 /* 여기서부터 Sub */
 
+.oneDepthBtnWrap{
+	display: flex;
+	gap: 65px;
+	padding: 55px 0;
+	justify-content: center;
+	margin: 0 auto;
+}
 .oneDepthBtn{
 	cursor: pointer;
 	font-size: 24px;
 	font-weight: bold;
+	display: block;
+	padding: 5px 0;
+}
+.oneDepthBtnActive{
+	border-bottom: 2px solid var(--font-black);
 }
 .twoDepthBtn{
 	width: 187px;
