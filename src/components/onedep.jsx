@@ -1,13 +1,13 @@
 import './onedep.css'
 import { useState } from 'react';
-import {Link} from 'react-router-dom';
 
 const OneDep = ({OsubTits, Olinks}) => {
 
-    const [oneDep, setOneDep] = useState(1);
+    const [oneDep, setOneDep] = useState(0);
 
-    const clickOne= (index) => {
+    function clickOne(index){
         setOneDep(index);
+        
     }
 
     return(
