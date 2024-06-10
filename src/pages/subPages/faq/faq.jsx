@@ -8,14 +8,14 @@ import OneDep from '../../../components/onedep'
 import FaqSearch from './faqSearch'
 
 
-const FaqList = ({fans,fqes,findex, FsetIndex}) => {
+const FaqList = ({fans,fqes,id, findex, FsetIndex}) => {
 
     const [toggle, setToggle] = useState(false)
 
     const faqClick=(id)=>{
         setToggle(!toggle)
         FsetIndex(id)
-        console.log(id)
+        // console.log(FsetIndex(id))
     }
 
     const [calc,setcalc] = useState(5);
@@ -98,7 +98,7 @@ const Faq = () => {
         <section className="faqSec">
         <h6>total <span>{count}</span></h6>
         <span className='faqTopLine'></span>
-        {fconts.map((fcont)=><FaqList key={fcont.id} {...fcont} findex={findex} FsetIndex={FsetIndex}/>)}
+        {fconts.map((fcont)=><FaqList key={fcont.id} {...fcont} findex={findex} FsetIndex={FsetIndex} id={fcont.id}/>)}
         <div className='faqPage'>1</div>
         <FaqSearch/>
         </section>
