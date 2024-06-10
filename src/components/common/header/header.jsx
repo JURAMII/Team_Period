@@ -1,10 +1,6 @@
 import "./header.css";
 import icon1 from "../../../assets/로고 최종.png";
 import icon2 from "../../../assets/icons8-account-72.png";
-import icon3 from "../../../assets/icons8-earth-50.png";
-import { Routes, Route } from 'react-router-dom'; 
-import { Menu } from "./Menu/Menu";
-import { Lang } from "./Lang/Lang";
 
 const Header = () => {
   return (
@@ -37,8 +33,22 @@ const Header = () => {
             <li>
               <img src={icon2} alt="" />
             </li>
-            <Lang/>
-            <Menu/>
+            <li>
+              <div className="lang_change">
+                <select>
+                  <option>KOR</option>
+                  <option>ENG</option>
+                </select>
+              </div>
+            </li>
+            <li className="headMenuBtn">
+              <div className="dotWrap">
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <div className="dot"></div>
+              </div>
+            </li>
           </ul>
         </div>
       </div>

@@ -38,7 +38,6 @@ import moonLightTour15 from '../../../assets/moonlight/moonLightTour (15).jpg';
 
 // 차후 이미지 폴더를 따로 만들 예정
 
-
 // Import Swiper styles
 import "swiper/css";
 
