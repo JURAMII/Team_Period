@@ -175,6 +175,12 @@ select>option{
     }
 }
 
-@media screen and (max-width : 500px) {
-    
+@media screen and (max-width : 300px) {
+    .headNavi>.test3>.test31{
+        gap: 10px;
+        margin-right: 30px;
+    }
+    .headNavi>.test3>.test31>.headMenuBtn{
+        right: 10px;
+    }
 }

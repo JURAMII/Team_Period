@@ -20,8 +20,10 @@
 .oneDeptit{
     font-size: 24px;
 }
+
 @media screen and (max-width : 768px) {
     .oneDep{
+        padding: 28px 0;
         gap: 28px;
     }
     .oneDeptit{
