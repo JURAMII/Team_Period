@@ -6,7 +6,7 @@ import "./reset.css";
 import "./common.css";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <BrowserRouter basename={'/Team_Period'}>
-        <App />
-    </BrowserRouter>
-);
+  <BrowserRouter basename={'/Team_Period'}>
+   <App />
+ </BrowserRouter>
+)
