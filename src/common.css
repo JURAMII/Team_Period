@@ -110,26 +110,31 @@
 	background-image: url(./assets/SubFesInfoTop.png);
 	background-repeat: no-repeat;
 	background-position: center;
+	background-size: cover;
 }
 .subNotiTop{
 	background-image: url(./assets/);
 	background-repeat: no-repeat;
 	background-position: center;
+	background-size: cover;
 }
 .subGalleryTop{
-	background-image: url(./assets/);
+	background-image: url(./assets/subGalleryTop.png);
 	background-repeat: no-repeat;
 	background-position: center;
+	background-size: cover;
 }
 .subTourInfoTop{
 	background-image: url(./assets/);
 	background-repeat: no-repeat;
 	background-position: center;
+	background-size: cover;
 }
 .subSupportTop{
-	background-image: url(./assets/);
+	background-image: url(./assets/subGalleryTop.png);
 	background-repeat: no-repeat;
 	background-position: center;
+	background-size: cover;
 }
 /* 여기까지 이미지 */
 

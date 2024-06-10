@@ -1,0 +1,89 @@
+.headWrap{
+    background-color: #1E2F35;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    padding: 110px 120px;
+    display: flex;
+    z-index: 10000;
+  }
+  
+  .headWrap>.headImg{
+    width: 504px; height: 100%;
+    background-image: url(../../../assets/starnight.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+  }
+  
+  .headWrap>.headMenu{
+    width: calc(100% - 504px); height: 100%;
+  }
+  
+  .headWrap>.headMenu>.headInner{
+    width: 100%; height: 100%;
+  }
+  
+  .headWrap>.headMenu>.headInner>.boxWrap{
+    width: 100%; height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "g1 g2 g3"
+    "g4 g5 g6"
+    ;
+  }
+  
+  .headWrap>.headMenu>.headInner> .boxWrap>li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color:#fff;
+  }
+  
+  .menuBox{
+    border: 1px solid #fff;
+  }
+  
+  .headWrap>.headMenu>.headInner> .boxWrap>.lastBox{
+    text-align: end;
+    font-size: 8%;
+    font-weight: 400;
+    justify-content: flex-end;
+  }
+  
+  .headWrap>.headMenu>.headInner> .boxWrap>.lastBox img{
+    width: 175px; height: 175px;
+    background-image: url(../../../assets/로고\ 최종푸터.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+  }
+  
+  .grid1{
+  
+    grid-area: g1;
+  }
+  
+  .grid2{
+    grid-area: g2;
+  }
+  
+  .grid3{
+    grid-area: g3;
+  }
+  
+  .grid4{
+    grid-area: g4;
+  }
+  
+  .grid5{
+    grid-area: g5;
+  }
+  
+  .grid6{
+    grid-area: g6;
+  }
+  

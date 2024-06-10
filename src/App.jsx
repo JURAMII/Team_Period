@@ -1,24 +1,22 @@
-import './reset.css'
-import '../src/common.css'
-import './App.css'
-import Header from './components/common/header/header';
-import Footer from './components/common/footer/footer';
-import Sec3D from './pages/main/Sec1 3D/Sec3D';
-import {Canvas} from '@react-three/fiber';
-import MainGallery from './pages/main/Sec7_Gallery/mainGallery';
-import Way from './pages/main/way/Way'
-
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/common/header/header";
+import Footer from "./components/common/footer/footer";
+import MainGallery from "./pages/main/Sec7_Gallery/mainGallery";
+import Way from "./pages/main/way/Way";
+import AllMenuPage from "./components/common/allMenuPage/allMenu";
+import Gallery from "./pages/subPages/gallery/gallery";
 
 function App() {
-
   return (
     <>
+      {/* <AllMenuPage /> */}
       <Header />
       <MainGallery />
       <Way />
-      <Footer />
+      {/* <Gallery/> */}
     </>
-  )
+  );
 }
 
 export default App;

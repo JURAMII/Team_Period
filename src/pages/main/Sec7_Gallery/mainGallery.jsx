@@ -65,10 +65,10 @@ const MainGallery = () => {
               slidesPerView: 2,
             },
             1280: {
-              slidesPerView: 3,
+              slidesPerView: 4,
             },
             1920: {
-              slidesPerView: 4, // 한번에 보여줄 갯수
+              slidesPerView: 5, // 한번에 보여줄 갯수
             },
           }} // breakpoints 반응형 설정
           speed={6000} // 이미지 슬라이드 속도
@@ -131,10 +131,10 @@ const MainGallery = () => {
               slidesPerView: 2,
             },
             1280: {
-              slidesPerView: 3,
+              slidesPerView: 4,
             },
             1920: {
-              slidesPerView: 4, // 한번에 보여줄 갯수
+              slidesPerView: 5, // 한번에 보여줄 갯수
             },
           }}
           speed={6000}
