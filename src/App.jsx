@@ -16,12 +16,12 @@ function App() {
         <>
             <Header />
             <Three />
+			<MainNoti/>
             <Routes>
                 <Route path="/" element={<MainNoti/>} />
                 <Route path="/notiList/category/:key" element={<NotiList/>} />
                 <Route path="/notiList/post/:id" element={<PostDetail/>} />
                 <Route path="/NotiList/create" element={<CreatePost/>} />
-                {/* <Route path="*" element={<Navigate to="/" />} /> */}
             </Routes>
             <Footer/>
         </>
