@@ -19,7 +19,7 @@ const PostList = () => {
     }, [key]);
 
     // 필터링된 게시물
-    const filteredPosts = posts.filter(post => post.key === key);
+    const filteredPosts = posts.filter(post => post.category === category);
 
     // 페이지네이션 계산
     const [currentPage, setCurrentPage] = useState(1);
@@ -65,7 +65,7 @@ const PostList = () => {
                     <button onClick={() => setCategory('별빛야행')} style={{ padding: '10px', backgroundColor: category === '별빛야행' ? '#007bff' : '#ccc', color: '#fff', borderRadius: '5px', margin: '0 5px' }}>별빛야행</button>
                     <button onClick={() => setCategory('달빛기행')} style={{ padding: '10px', backgroundColor: category === '달빛기행' ? '#007bff' : '#ccc', color: '#fff', borderRadius: '5px', margin: '0 5px' }}>달빛기행</button>
                 </div>
-                <Link to="/Team_Period/create" style={{ textDecoration: 'none', padding: '10px', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px' }}>글쓰기</Link>
+                <Link to="/create" style={{ textDecoration: 'none', padding: '10px', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px' }}>글쓰기</Link>
             </div>
             <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                 <thead>
@@ -81,7 +81,7 @@ const PostList = () => {
                         currentPosts.map((post) => (
                             <tr key={post.id}>
                                 <td>{post.id}</td>
-                                <td><Link to={`/Team_Period/notiList/post/${post.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>{post.title}</Link></td>
+                                <td><Link to={`/notiList/post/${post.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>{post.title}</Link></td>
                                 <td>{post.author}</td>
                                 <td>{post.time}</td>
                             </tr>

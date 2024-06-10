@@ -12,20 +12,22 @@ const NotiCategoryPosts = () => {
         return (
             <div style={{ textAlign: 'center', padding: '50px' }}>
                 <h1>카테고리에 해당하는 게시글이 없습니다.</h1>
-                <Link to="/Team_Period/">메인 페이지로 이동</Link>
+                <Link to="/">메인 페이지로 이동</Link>
             </div>
         );
     }
+	// 카테고리 글이 전부없을경우 렌더링 되는 페이지 임시설정
 
     return (
+		
         <div style={{ width: '100%', maxWidth: '1440px', margin: '0 auto' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', padding: '10px 0' }}>
                 <div>
-                    <Link to="/Team_Period/notiList/category/noti" style={{ textDecoration: 'none', padding: '10px', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', margin: '0 5px' }}>공지사항</Link>
-                    <Link to="/Team_Period/notiList/category/star" style={{ textDecoration: 'none', padding: '10px', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', margin: '0 5px' }}>별빛야행</Link>
-                    <Link to="/Team_Period/notiList/category/moon" style={{ textDecoration: 'none', padding: '10px', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', margin: '0 5px' }}>달빛기행</Link>
+                    <Link to="/notiList/category/noti" style={{ textDecoration: 'none', padding: '10px', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', margin: '0 5px' }}>공지사항</Link>
+                    <Link to="/notiList/category/star" style={{ textDecoration: 'none', padding: '10px', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', margin: '0 5px' }}>별빛야행</Link>
+                    <Link to="/notiList/category/moon" style={{ textDecoration: 'none', padding: '10px', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', margin: '0 5px' }}>달빛기행</Link>
                 </div>
-                <Link to="/Team_Period/NotiList/create" style={{ textDecoration: 'none', padding: '10px', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px' }}>글쓰기</Link>
+                <Link to="/NotiList/create" style={{ textDecoration: 'none', padding: '10px', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px' }}>글쓰기</Link>
             </div>
             <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                 <thead>
@@ -40,7 +42,7 @@ const NotiCategoryPosts = () => {
                     {filteredPosts.map((post) => (
                         <tr key={post.id}>
                             <td>{post.id}</td>
-                            <td><Link to={`/Team_Period/notiList/post/${post.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>{post.title}</Link></td>
+                            <td><Link to={`/notiList/post/${post.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>{post.title}</Link></td>
                             <td>{post.author}</td>
                             <td>{post.time}</td>
                         </tr>

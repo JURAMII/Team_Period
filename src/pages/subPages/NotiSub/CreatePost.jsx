@@ -45,11 +45,11 @@ const CreatePost = () => {
             key: categoryKeyMap[category]  // key 값을 category에 따라 설정
         };
         posts.unshift(newPost); // 새로운 게시글을 맨 앞에 추가
-        navigate(`/Team_Period/notiList/category/${newPost.key}`);
+        navigate(`/notiList/category/${newPost.key}`);
     };
 
     const handleCancel = () => {
-        navigate('/Team_Period/notiList/category/noti');
+        navigate('/notiList/category/noti');
     };
 
     return (

@@ -116,22 +116,22 @@
 	background-position: center;
 }
 .subNotiTop{
-	background-image: url(./assets/);
+	background-image: url(./assets/subNotiTop.png);
 	background-repeat: no-repeat;
 	background-position: center;
 }
 .subGalleryTop{
-	background-image: url(./assets/);
+	background-image: url(./assets/subGalleryTop.png);
 	background-repeat: no-repeat;
 	background-position: center;
 }
 .subTourInfoTop{
-	background-image: url(./assets/);
+	background-image: url(./assets/subTourInfoTop.png);
 	background-repeat: no-repeat;
 	background-position: center;
 }
 .subSupportTop{
-	background-image: url(./assets/);
+	background-image: url(./assets/subSupportTop.png);
 	background-repeat: no-repeat;
 	background-position: center;
 }
