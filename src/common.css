@@ -113,25 +113,25 @@
 	background-size: cover;
 }
 .subNotiTop{
-	background-image: url(./assets/);
+	background-image: url(./assets/subNotiTop.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
 .subGalleryTop{
-	background-image: url(./assets/);
+	background-image: url(./assets/subGalleryTop.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
 .subTourInfoTop{
-	background-image: url(./assets/);
+	background-image: url(./assets/subTourInfoTop.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
 .subSupportTop{
-	background-image: url(./assets/);
+	background-image: url(./assets/subSupportTop.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
