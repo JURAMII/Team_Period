@@ -9,7 +9,7 @@ const FaqPagination = () =>{
     const [page, setPage] = useState(1);
 
     
-    const handlePageChange = (page) => { setPage(page);};
+    const handlePageChange = (page) => { setPage(page)};
 
 
     return(

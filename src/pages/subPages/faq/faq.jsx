@@ -16,7 +16,6 @@ const FaqList = ({fans,fqes,id, findex, FsetIndex}) => {
     const faqClick=(id)=>{
         setToggle(!toggle)
         FsetIndex(id)
-        // console.log(FsetIndex(id))
     }
 
     const [calc,setcalc] = useState(5);
