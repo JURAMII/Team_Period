@@ -7,11 +7,10 @@ import { BrowserRouter } from 'react-router-dom';
 import "./reset.css"
 import "./common.css"
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  // <>
-  //   <App />
-  // </>
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-);
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+
+  <BrowserRouter basename={'/Team_Period'}>
+   <App />
+ </BrowserRouter>
+)
