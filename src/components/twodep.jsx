@@ -11,9 +11,9 @@ const TwoDep = (props) => {
 
     return(
        <ul className='twoDep flex'>
-       <li className={twoDep === 1 ? "twoDeptit tcheck" : "twoDeptit"} onClick={()=>clickTwo(1)}>{props.Tsubtit1}</li>
-       <li className={twoDep === 2 ? "twoDeptit tcheck" : "twoDeptit"} onClick={()=>clickTwo(2)}>{props.Tsubtit2}</li>
-       <li className={twoDep === 3 ? "twoDeptit tcheck" : "twoDeptit"} onClick={()=>clickTwo(3)}>{props.Tsubtit3}</li>
+       <li><Link to ={props.Tlinks1} onClick={()=>clickTwo(1)} className={twoDep === 1 ? "twoDeptit tcheck" : "twoDeptit"}>{props.Tsubtit1}</Link></li>
+       <li><Link to ={props.Tlinks2} onClick={()=>clickTwo(2)} className={twoDep === 2 ? "twoDeptit tcheck" : "twoDeptit"} >{props.Tsubtit1}</Link></li>
+       <li><Link to ={props.Tlinks3} onClick={()=>clickTwo(3)} >{props.Tsubtit1}</Link></li>
    </ul>
     )
 }
