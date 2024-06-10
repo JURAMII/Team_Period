@@ -15,43 +15,17 @@ const Gallery = () => {
             <div className="galImgSec1_inner">
                 <div className="mainImgWrap">
                     <div className="mainImgSlide">
-                        <Swiper
-                            modules={[Autoplay]}
-                            spaceBetween={15}
-                            autoplay={{
-                                delay:0,
-                                disableOnInteraction: false,
-                            }}
-                            speed={8000}
-                            loop={true}
-                            breakpoints={{
-                                1920: {
-                                    slidesPerView: 5
-                                },
-                                1024: {
-                                    slidesPerView: 3
-                                },
-                                768: {
-                                    slidesPerView: 1
-                                }
-                            }}
-                        >
-                            <SwiperSlide>
-                                <div><img src="" alt="" /></div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div><img src="" alt="" /></div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div><img src="" alt="" /></div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div><img src="" alt="" /></div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div><img src="" alt="" /></div>
-                            </SwiperSlide>
-                        </Swiper>
+                        <div className='prev'>
+                            <span></span>
+                        </div>
+                        <div className='next'>
+                            <span></span>
+                        </div>
+                        <div className='slide1'></div>
+                        <div className='slide2'></div>
+                        <div className='slide3'></div>
+                        <div className='slide4'></div>
+                        <div className='slide5'></div>
                     </div>
                 </div>
             </div>

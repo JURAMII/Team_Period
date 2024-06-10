@@ -1,4 +1,5 @@
 export const Menu = ()=>{
+    
     return(
         <li className="headMenuBtn">
               <div className="dotWrap">
@@ -8,6 +9,6 @@ export const Menu = ()=>{
                 <div className="dot"></div>
               </div>
         </li>
-        /* onscroll 이벤트를 넣어서 스크롤시 색상이 바뀌게 하자 */
+        /* 언어선택 메뉴는 차후 div 박스로 구현 예정 select 안 쓸거임 */
     )
 }

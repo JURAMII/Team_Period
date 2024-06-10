@@ -4,6 +4,7 @@ import icon2 from "../../../assets/icons8-account-72.png";
 import icon3 from "../../../assets/icons8-earth-50.png";
 import { Routes, Route } from 'react-router-dom'; 
 import { Menu } from "./Menu/Menu";
+import { Lang } from "./Lang/Lang";
 
 const Header = () => {
   return (
@@ -36,15 +37,7 @@ const Header = () => {
             <li>
               <img src={icon2} alt="" />
             </li>
-            <li>
-              <div className="lang_change">
-                <select>
-                  <option>KOR</option>
-                  <option>ENG</option>
-                </select>
-              </div>
-            </li>
-            {/* 언어선택 메뉴는 차후 div 박스로 구현 예정 select 안 쓸거임 */}
+            <Lang/>
             <Menu/>
           </ul>
         </div>

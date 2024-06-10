@@ -10,7 +10,7 @@ import Gallery from "./pages/subPages/gallery/gallery";
 function App() {
   return (
     <>
-      {/* <AllMenuPage /> */}
+      <AllMenuPage />
       <Header />
       <MainGallery />
       <Way />
