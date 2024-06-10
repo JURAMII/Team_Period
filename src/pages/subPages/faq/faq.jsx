@@ -6,6 +6,7 @@ import { useMemo, useReducer, useState } from "react"
 import SupTop from '../../../components/common/supTop'
 import OneDep from '../../../components/onedep'
 import FaqSearch from './faqSearch'
+import FaqPagination from './faqPagination'
 
 
 const FaqList = ({fans,fqes,id, findex, FsetIndex}) => {
@@ -48,36 +49,13 @@ const FaqList = ({fans,fqes,id, findex, FsetIndex}) => {
     )
 }
 
-//   const FaqList = ({fans,fqes}) => {
-
-//     const [isAct, setIsAct] = useState(false)
-
-//     function faqClick(){
-//         setIsAct(!isAct)
-//     }
-
-//     return(
-//         <div className='faqWrap'>
-//             <div className='fqes flex' onClick={faqClick}>
-//                 <p className='cFont'>{fqes}</p>
-//                 <span>
-//                     {isAct? <img src={Fminus} alt="닫기" />:
-//                      <img src={Fadd} alt="열기" />
-//                     }
-//                 </span>
-//             </div>
-//             <div className='fans flex'>
-//                 {isAct && <p className='cFont'>{fans}</p>}
-//             </div>
-//         </div>
-//     )
-// }
 
 const Faq = () => {
     const [state, dispatch] = useReducer(fReducer, Fcontents)
     const {fconts, fsearch} = state;
-
     const [findex, FsetIndex] = useState(0)
+    const OsubTitsF = ['자주하는 질문','묻고 답하기']
+    const TlinksF = ['/Faq']
 
     const Fsearch = (text) =>{
         dispatch({
@@ -86,21 +64,23 @@ const Faq = () => {
         })
     }
 
-    function counts (fconts){
+    function allCounts (fconts){
         return fconts.length
       }
     
-    const count = useMemo(()=>counts(fconts),[fconts])
+    const allCount = useMemo(()=>allCounts(fconts),[fconts])
+
+
 
     return(
       <>
-        <OneDep subtit1={'자주하는 질문'} subtit2={'묻고 답하기'} links1={'/Kinfo'} links2={'/Cinfo'}/>
+        <OneDep OsubTits={OsubTitsF} Olinks={TlinksF}/>
         <section className="faqSec">
-        <h6>total <span>{count}</span></h6>
+        <h6>total <span>{allCount}</span></h6>
         <span className='faqTopLine'></span>
         {fconts.map((fcont)=><FaqList key={fcont.id} {...fcont} findex={findex} FsetIndex={FsetIndex} id={fcont.id}/>)}
-        <div className='faqPage'>1</div>
-        <FaqSearch Fsearch={Fsearch}/>
+        <FaqPagination {...fconts}/>
+        <FaqSearch Fsearch={Fsearch} />
         </section>
       </>
     )
