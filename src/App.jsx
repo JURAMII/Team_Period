@@ -34,6 +34,7 @@ function App() {
                <Route path='/Cticket' element={<Cticket/>}/>
                <Route path='/Faq' element = {<Faq/>}/> 
             </Routes>
+             <MainGallery />
             <Footer/>
         </>
     );
