@@ -23,7 +23,7 @@ const FaqList = ({fans,fqes,id, findex, FsetIndex}) => {
     const plusCalc = () =>{
       setcalc(calc + 1)
     }
-
+    
     return(
         <div className='faqWrap'>
             <div className='fqes flex' onClick={()=>faqClick(id)}>
@@ -100,7 +100,7 @@ const Faq = () => {
         <span className='faqTopLine'></span>
         {fconts.map((fcont)=><FaqList key={fcont.id} {...fcont} findex={findex} FsetIndex={FsetIndex} id={fcont.id}/>)}
         <div className='faqPage'>1</div>
-        <FaqSearch/>
+        <FaqSearch Fsearch={Fsearch}/>
         </section>
       </>
     )
