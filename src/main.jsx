@@ -10,7 +10,8 @@ import ScrollToTop from './scroll.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter basename={'/Team_Period'}>
-    <ScrollToTop/>
-   <App />
- </BrowserRouter>
+  <ScrollToTop>
+  <App />
+  </ScrollToTop>
+  </BrowserRouter>
 )
