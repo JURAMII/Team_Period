@@ -1,7 +1,7 @@
 .greenWrap{
-    padding-bottom: 65px;
+    width: 1440px;
+    margin: 0 auto;
 }
-
 .greenLine{
     border-top: 2px solid var(--mirage);
     border-bottom: 2px solid var(--mirage);
@@ -36,10 +36,12 @@
 }
 
 /* 반응형 */
-@media screen and (max-width : 768px) {
+@media screen and (max-width : 1440px) {
     .greenWrap{
-        padding-bottom: 28px;
+        width: calc(100% - 30px);
     }
+}
+@media screen and (max-width : 768px) {
     .greenLine::before{
         width: 10px;
         height: 10px;
