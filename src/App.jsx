@@ -19,6 +19,7 @@ function App() {
           <Sec3D />
     </Canvas>
 
+
     <Footer />
     </>
   )

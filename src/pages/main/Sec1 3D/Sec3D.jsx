@@ -8,7 +8,7 @@ import * as dat from 'dat.gui';
 
 const Sec3D =()=>{
     //씬
-    let camera, scene, renderer;
+    let scene, renderer;
     
     scene = new THREE.Scene();
     scene.background = new THREE.Color( 0x000000 );
