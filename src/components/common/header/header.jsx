@@ -1,7 +1,6 @@
 import "./header.css";
 import icon1 from "../../../assets/로고 최종.png";
 import icon2 from "../../../assets/icons8-account-72.png";
-import icon3 from "../../../assets/icons8-earth-50.png";
 
 const Header = () => {
   return (
@@ -42,7 +41,6 @@ const Header = () => {
                 </select>
               </div>
             </li>
-            {/* 언어선택 메뉴는 차후 div 박스로 구현 예정 select 안 쓸거임 */}
             <li className="headMenuBtn">
               <div className="dotWrap">
                 <div className="dot"></div>
@@ -51,7 +49,6 @@ const Header = () => {
                 <div className="dot"></div>
               </div>
             </li>
-            {/* onscroll 이벤트를 넣어서 스크롤시 색상이 바뀌게 하자 */}
           </ul>
         </div>
       </div>
