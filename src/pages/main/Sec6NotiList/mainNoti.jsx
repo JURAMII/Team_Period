@@ -23,7 +23,7 @@ const MainNoti = () => {
                 </div>
                 <div className="notiOverText">
                     <p>별빛야행과 달빛기행</p>
-                    <b>축제의 특별한 소식을</b>
+                    <p>축제의 특별한 소식<span>을</span></p>
                     <p>확인하세요.</p>
                 </div>
             </article>
@@ -41,7 +41,7 @@ const MainNoti = () => {
                                 <li className="notiDate">{post.time}</li>
                             </ul>
                             <span className="NotiTitle textEllipsis">
-                                <Link to={`/Team_Period/notiList/post/${post.id}`}>
+                                <Link to={`/notiList/post/${post.id}`}>
                                     [{post.category}] {post.title}
                                 </Link>
                             </span>
@@ -49,7 +49,7 @@ const MainNoti = () => {
                     ))}
                 </ul>
                 <div className="moveSubNotiWrap flex">
-                    <Link to={`/Team_Period/notiList/category/${categoryKey}`}>
+                    <Link to={`/notiList/category/${categoryKey}`}>
                         <input className="moveSubNoti mainBtnSilver" type="button" value="전체보기" />
                     </Link>
                 </div>
