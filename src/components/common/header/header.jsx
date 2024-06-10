@@ -2,17 +2,16 @@ import "./header.css";
 import icon1 from "../../../assets/로고 최종.png";
 import icon2 from "../../../assets/icons8-account-72.png";
 import icon3 from "../../../assets/icons8-earth-50.png";
-// import GoogleLoginButton from "../Login/googleLogin";
 
 const Header = () => {
   return (
     <header>
-      <div className="test1">
-        <a>
+      <div className="headNavi">
+        <a className="logo">
           <img src={icon1} alt="" />
         </a>
-        <div className="test2">
-          <ul className="test2-1">
+        <div className="headMenuWrap">
+          <ul className="headMenu">
             <li>
               <a href="/">축제소개</a>
             </li>
@@ -35,7 +34,6 @@ const Header = () => {
             <li>
               <img src={icon2} alt="" />
             </li>
-            {/* <li><GoogleLoginButton></GoogleLoginButton></li> */}
             <li>
               <div className="lang_change">
                 <select>
@@ -45,7 +43,7 @@ const Header = () => {
               </div>
             </li>
             {/* 언어선택 메뉴는 차후 div 박스로 구현 예정 select 안 쓸거임 */}
-            <li className="menu">
+            <li className="headMenuBtn">
               <div className="dotWrap">
                 <div className="dot"></div>
                 <div className="dot"></div>

@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 a{
     text-decoration: none;
 }
@@ -6,11 +10,10 @@ header{
     display: block;
 }
 
-.test1{
+.headNavi{
     width: 100%; height: 80px;
     position: relative;
     left: 0; top: 0;
-    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -19,40 +22,43 @@ header{
     z-index: 10000;
 }
 
-.test1>.test2>.test2-1{
+.headNavi>.logo>img{
+    width: 60px;
+}
+
+.headNavi>.headMenuWrap>.headMenu{
     display: flex;
     gap: 84px;
 }
 
-.test1>.test2>.test2-1 a{
+.headNavi>.headMenuWrap>.headMenu a{
     font-size: 18px;
 }
 
-.test1>.test3{
+.headNavi>.test3{
     position: relative;
     display: flex;
     align-items: center;
-
 }
 
-.test1>.test3>.test31{
+.headNavi>.test3>.test31{
     display: flex;
     align-items: center;
     gap: 28px;
     margin-right: 60px;
 }
 
-.test1>.test3>.test31 img{
+.headNavi>.test3>.test31 img{
     cursor: pointer;
     width: 30px; height: 30px;
 }
 
 /* menu */
 
-.test1>.test3>.test31>.menu{
-    width: 26px; height: 26px;
+.headNavi>.test3>.test31>.headMenuBtn{
     position: fixed;
     right: 40px;
+    width: 30px; height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,7 +66,7 @@ header{
     border-radius: 50%;
 }
 
-.test1>.test3>.test31>.menu>.dotWrap{
+.headNavi>.test3>.test31>.headMenuBtn>.dotWrap{
     cursor: pointer;
     width: 10px; height: 10px;
     position: absolute;
@@ -69,29 +75,29 @@ header{
     animation: rollingIn .6s .6s ease-out forwards;
 }
 
-.test1>.test3>.test31>.menu>.dotWrap:hover{
+.headNavi>.test3>.test31>.headMenuBtn>.dotWrap:hover{
     animation: rollingOut .6s ease-out forwards;
 }
 
-.test1>.test3>.test31>.menu>.dotWrap>.dot{
+.headNavi>.test3>.test31>.headMenuBtn>.dotWrap>.dot{
     width: 3px; height: 3px;
     background: var(--font-black);
     position: absolute;
 }
 
-.test1>.test3>.test31>.menu>.dotWrap>.dot:nth-child(1){
+.headNavi>.test3>.test31>.headMenuBtn>.dotWrap>.dot:nth-child(1){
     left: 0; top: 0;
 }
 
-.test1>.test3>.test31>.menu>.dotWrap>.dot:nth-child(2){
+.headNavi>.test3>.test31>.headMenuBtn>.dotWrap>.dot:nth-child(2){
     right: 0; top: 0;
 }
 
-.test1>.test3>.test31>.menu>.dotWrap>.dot:nth-child(3){
+.headNavi>.test3>.test31>.headMenuBtn>.dotWrap>.dot:nth-child(3){
     left: 0; bottom: 0;
 }
 
-.test1>.test3>.test31>.menu>.dotWrap>.dot:nth-child(4){
+.headNavi>.test3>.test31>.headMenuBtn>.dotWrap>.dot:nth-child(4){
     right: 0; bottom: 0;
 }
 
@@ -119,4 +125,56 @@ select {
 
 select>option{
     margin-top: 30px;
+}
+
+@media screen and (max-width : 1440px) {
+    .headNavi>.headMenuWrap>.headMenu{
+        gap: 56px;
+    }
+}
+
+@media screen and (max-width : 1280px) {
+    .headNavi>.logo>img{
+        width: 50px;
+    }
+    .headNavi>.headMenuWrap>.headMenu a{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width : 1024px) {
+    .headNavi{
+        padding: 0 30px;
+    }
+    .headNavi>.headMenuWrap>.headMenu{
+        gap: 28px;
+    }
+    .headNavi>.test3>.test31>.headMenuBtn{
+        width: 25px; height: 25px;
+    }
+    .headNavi>.test3>.test31 img{
+        width: 25px; height: 25px;
+    }
+    select{
+        width: 25px; height: 25px;
+    }
+    .headNavi>.test3>.test31>.headMenuBtn{
+        right: 35px;
+    }
+}
+
+@media screen and (max-width : 768px) {
+    .headNavi{
+        padding: 0 20px;
+    }
+    .headNavi>.headMenuWrap{
+        display: none;
+    }
+    .headNavi>.test3>.test31>.headMenuBtn{
+        right: 28px;
+    }
+}
+
+@media screen and (max-width : 500px) {
+    
 }
