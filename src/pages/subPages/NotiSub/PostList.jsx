@@ -54,7 +54,7 @@ const PostList = () => {
     const endPage = Math.min(startPage + pageGroupSize - 1, totalPageCount);
     const pageNumbers = [];
     for (let i = startPage; i <= endPage; i++) {
-        pageNumbers.push(i);
+        pageNumbers.push(i); 
     }
 
     return (
