@@ -1,4 +1,5 @@
 import "./header.css";
+import {Link} from 'react-router-dom';
 import icon1 from "../../../assets/로고 최종.png";
 import icon2 from "../../../assets/icons8-account-72.png";
 
@@ -11,7 +12,7 @@ const Header = () => {
         </a>
         <div className="headMenuWrap">
           <ul className="headMenu">
-            <li>
+            {/* <li>
               <a href="/">축제소개</a>
             </li>
             <li>
@@ -25,6 +26,21 @@ const Header = () => {
             </li>
             <li>
               <a href="/">관광안내</a>
+            </li> */}
+            <li>
+              <Link to="">축제소개</Link>
+            </li>
+            <li>
+              <Link to="">공지사항</Link>
+            </li>
+            <li>
+              <Link to="">갤러리</Link>
+            </li>
+            <li>
+              <Link to="">고객지원</Link>
+            </li>
+            <li>
+              <Link to="">관광안내</Link>
             </li>
           </ul>
         </div>
