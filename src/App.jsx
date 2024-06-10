@@ -1,6 +1,8 @@
 import React from 'react'
+import {Canvas} from '@react-three/fiber';
 import {Route, Routes, Link} from 'react-router-dom';
 import Header from './components/common/header/header'
+import Sec3D from './pages/main/Sec1 3D/Sec3D'
 import Main from './pages/main/main';
 import { Kinfo, Cinfo, Kpro, Cpro, Kticket, Cticket } from './pages/subPages/fesInfo/subFesInfoPages';
 import Faq from './pages/subPages/faq/faq';
@@ -16,9 +18,9 @@ function App() {
     return (
         <>
             <Header />
-            <Canvas>
+            {/* <Canvas>
             <Sec3D />
-           </Canvas>
+           </Canvas> */}
             <Routes>
                 <Route path="/" element={<MainNoti/>} />
                 <Route path="/notiList/category/:key" element={<NotiCategoryPosts/>} />

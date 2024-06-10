@@ -1,20 +1,25 @@
+import './twodep.css'
+import { useState} from 'react';
+import {Link, useNavigate} from 'react-router-dom';
 
-import { useState } from 'react';
-import {Link} from 'react-router-dom';
-
-const TwoDep = (props) => {
+const TwoDep = ({TsubTits, Tlinks}) => {
     const [twoDep, setTwoDep] = useState(1);
+
+    const navigate=useNavigate()
+
 
     function clickTwo(index){
         setTwoDep(index);
     }
 
+    function twoDepPage(Tlinks){
+        navigate(Tlinks)
+    } 
+
     return(
        <ul className='twoDep flex'>
-       <li><Link to ={props.Tlinks1} onClick={()=>clickTwo(1)} className={twoDep === 1 ? "twoDeptit tcheck" : "twoDeptit"}>{props.Tsubtit1}</Link></li>
-       <li><Link to ={props.Tlinks2} onClick={()=>clickTwo(2)} className={twoDep === 2 ? "twoDeptit tcheck" : "twoDeptit"} >{props.Tsubtit2}</Link></li>
-       <li><Link to ={props.Tlinks3} onClick={()=>clickTwo(3)} className={twoDep === 3 ? "twoDeptit tcheck" : "twoDeptit"} >{props.Tsubtit3}</Link></li>
-   </ul>
+        {TsubTits.map((TsubTit,index)=><li key={index} className={twoDep === index ? "twoDeptit tcheck" : "twoDeptit"} onClick={()=>{clickTwo(index); twoDepPage(Tlinks)}}>{TsubTit}</li>)}
+      </ul>
     )
 }
 

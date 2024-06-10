@@ -2,7 +2,7 @@ import './onedep.css'
 import { useState } from 'react';
 import {Link} from 'react-router-dom';
 
-const OneDep = (props) => {
+const OneDep = ({OsubTits, Olinks}) => {
 
     const [oneDep, setOneDep] = useState(1);
 
@@ -12,9 +12,7 @@ const OneDep = (props) => {
 
     return(
         <ul className='oneDep flex subDefaultContent'>
-        <li className={oneDep === 1 ? "oneDeptit check" : "oneDeptit"} onClick={() => clickOne(1)}>{props.subtit1}</li>
-        <li className={oneDep === 2 ? "oneDeptit check" : "oneDeptit"} onClick={() => clickOne(2)}>{props.subtit2}</li>
-        <li className={oneDep === 3 ? "oneDeptit check" : "oneDeptit"} onClick={() => clickOne(3)}>{props.subtit3}</li>
+          {OsubTits.map((OsubTit,index)=><li key={index} className={oneDep === index ? "oneDeptit check" : "oneDeptit"} onClick={()=>clickOne(index)}>{OsubTit}</li>)}
     </ul>
     )
 
