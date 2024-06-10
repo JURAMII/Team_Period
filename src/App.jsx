@@ -7,7 +7,6 @@ import { Kinfo, Cinfo, Kpro, Cpro, Kticket, Cticket } from './pages/subPages/fes
 import Faq from './pages/subPages/faq/faq';
 import Footer from './components/common/footer/footer';
 import Three from './pages/main/Sec1 3D/Three'
-import MainGallery from './pages/main/Sec7_Gallery/mainGallery';
 import MainNoti from './pages/main/Sec6NotiList/mainNoti';
 import NotiCategoryPosts from './pages/subPages/NotiSub/NotiCategoryPosts';
 import PostDetail from './pages/subPages/NotiSub/PostDetail';
