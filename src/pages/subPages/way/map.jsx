@@ -23,11 +23,11 @@ var marker = new kakao.maps.Marker({
 
   return (
     <div
-      id="map"
-      style={{
-        width: "1071px",
-        height: "445px",
-      }}
+      id="map" className="map"
+      // style={{
+      //   width: "1071px",
+      //   height: "445px",
+      // }}
     ></div>
   );
 }
