@@ -1,0 +1,36 @@
+.twoDep{
+    width: 1440px;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 28px;
+    padding-bottom: 65px;
+}
+.twoDeptit{
+    display: inline-block;
+    background-color: var(--mirage);
+    width: 187px; line-height: 45px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+.tcheck{
+    background-color: var(--font-silber);
+}
+
+@media screen and (max-width : 1440px) {
+    .twoDep{
+        width: calc(100% - 30px);
+    }
+}
+
+@media screen and (max-width : 768px) {
+    .twoDep{
+        padding-bottom: 28px;
+    }
+    .twoDeptit{
+        width: 150px; line-height: 40px;
+        font-size: 14px;
+    }
+} 
