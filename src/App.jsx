@@ -10,9 +10,13 @@ import CreatePost from './pages/subPages/NotiSub/CreatePost';
 import MainGallery from './pages/main/Sec7_Gallery/mainGallery';
 
 function App() {
+
     return (
         <>
             <Header />
+            <Canvas>
+          <Sec3D />
+           </Canvas>
             <Routes>
                 <Route path="/" element={<MainNoti/>} />
                 <Route path="/notiList/category/:key" element={<NotiCategoryPosts/>} />
