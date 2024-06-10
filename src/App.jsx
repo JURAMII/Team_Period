@@ -15,7 +15,11 @@ function App() {
   return (
     <>
     <Header />
-	{/* <MainNoti /> */}
+    <Canvas>
+          <Sec3D />
+    </Canvas>
+
+    <Footer />
     </>
   )
 }
