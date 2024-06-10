@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { posts } from '../../main/Sec6NotiList/data';
 import "./notiList.css";
+
 const NotiList = () => {
     const { key } = useParams(); // URL에서 key 파라미터를 가져옴
     const [category, setCategory] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
     const [currentGroup, setCurrentGroup] = useState(1);
-	const location = useLocation();
-	const isActive = location.pathname === '/notiList/category/noti';
-	const isActive2 = location.pathname === '/notiList/category/star';
 
     useEffect(() => {
         // URL 파라미터에 따라 카테고리를 설정
@@ -71,9 +69,8 @@ const NotiList = () => {
         <div className="inner">
             <div className="flex" style={{ justifyContent: 'space-between', padding: '10px 0' }}>
                 <div className='oneDepthBtnWrap'>
-                    {/* <Link to="/notiList/category/noti" className={`oneDepthBtn ${category === '공지사항' ? 'oneDepthBtnActive' : ''}`}>공지사항</Link> */}
-					<Link to="/notiList/category/noti" className={`oneDepthBtn ${isActive ? 'oneDepthBtnActive' : ''}`}    >공지사항</Link>
-                    <Link to="/notiList/category/star" className={`oneDepthBtn ${isActive2 ? 'oneDepthBtnActive' : ''}`}>별빛야행</Link>
+                    <Link to="/notiList/category/noti" className={`oneDepthBtn ${category === '공지사항' ? 'oneDepthBtnActive' : ''}`}>공지사항</Link>
+                    <Link to="/notiList/category/star" className={`oneDepthBtn ${category === '별빛야행' ? 'oneDepthBtnActive' : ''}`}>별빛야행</Link>
                     <Link to="/notiList/category/moon" className={`oneDepthBtn ${category === '달빛기행' ? 'oneDepthBtnActive' : ''}`}>달빛기행</Link>
                 </div>
             </div>

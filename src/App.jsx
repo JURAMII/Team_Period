@@ -7,7 +7,7 @@ import MainNoti from './pages/main/Sec6NotiList/mainNoti';
 import NotiList from './pages/subPages/NotiSub/notiList';
 import PostDetail from './pages/subPages/NotiSub/PostDetail';
 import CreatePost from './pages/subPages/NotiSub/CreatePost';
-import MainGallery from './pages/main/Sec7_Gallery/mainGallery';
+// import MainGallery from './pages/main/Sec7_Gallery/mainGallery';
 
 function App() {
 
