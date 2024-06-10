@@ -1,8 +1,6 @@
 .oneDep{
-    margin: 0 auto;
     justify-content: center;
     gap: 65px;
-    padding: 65px 0;
 }
 .oneDep li{
     color: var(--font-black);

@@ -1,9 +1,9 @@
 import './twodep.css'
-import { useState } from 'react';
-import {Link} from 'react-router-dom';
+import { useState} from 'react';
 
-const TwoDep = (props) => {
-    const [twoDep, setTwoDep] = useState(1);
+const TwoDep = ({TsubTits, Tlinks}) => {
+    const [twoDep, setTwoDep] = useState(0);
+
 
     function clickTwo(index){
         setTwoDep(index);
@@ -11,12 +11,9 @@ const TwoDep = (props) => {
 
     return(
        <ul className='twoDep flex'>
-       <li><Link to ={props.Tlinks1} onClick={()=>clickTwo(1)} className={twoDep === 1 ? "twoDeptit tcheck" : "twoDeptit"}>{props.Tsubtit1}</Link></li>
-       <li><Link to ={props.Tlinks2} onClick={()=>clickTwo(2)} className={twoDep === 2 ? "twoDeptit tcheck" : "twoDeptit"} >{props.Tsubtit1}</Link></li>
-       <li><Link to ={props.Tlinks3} onClick={()=>clickTwo(3)} >{props.Tsubtit1}</Link></li>
-   </ul>
+        {TsubTits.map((TsubTit,index)=><li key={index} className={twoDep === index ? "twoDeptit tcheck" : "twoDeptit"} onClick={()=>{clickTwo(index)}}>{TsubTit}</li>)}
+      </ul>
     )
 }
-
 
 export default TwoDep;
