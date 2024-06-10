@@ -3,7 +3,6 @@ import { useLoader} from '@react-three/fiber';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { useRef,useEffect } from 'react';
 import {OrbitControls} from '@react-three/drei'
-import * as dat from 'dat.gui';
 
 
 const Sec3D =()=>{

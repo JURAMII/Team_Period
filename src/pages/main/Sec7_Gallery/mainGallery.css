@@ -1,6 +1,6 @@
 .mainGallery{
-    width: 100%; height: 100vh;
-    background-color: var(--line-silver);
+    width: 100%;
+    background-color: var(--mirage);
     padding: 110px 0;
     text-align: center;
 }
@@ -74,7 +74,14 @@
 
 .mainGallery>.galleryslide>.swiper>.swiper-wrapper>.swiper-slide>a{
     width: 100%; height: 100%;
-    background-color: var(--mirage);
-    border-radius: 10px;
 }
+
+.mainGallery>.galleryslide>.swiper>.swiper-wrapper>.swiper-slide>a>img{
+    cursor: pointer;
+    width: 100%; height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
 
