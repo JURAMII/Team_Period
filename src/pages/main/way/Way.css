@@ -1,0 +1,14 @@
+.kakao ul{
+    margin: 100px 30px;
+}
+.kakao li{
+    align-items: center;
+    font-size: 18px;
+}
+.kakao li p{
+    font-size: 16px;
+}
+.kakao li img{
+    width: 25px;
+    margin: 10px 10px 0px 10px;
+}
