@@ -4,6 +4,11 @@ import Header from './components/common/header/header';
 import Footer from './components/common/footer/footer';
 import Main from './pages/main/main';
 import AllMenuPage from './components/common/allMenuPage/allMenu';
+import { Kinfo, Cinfo, Kpro, Cpro, Kticket, Cticket } from './pages/subPages/fesInfo/subFesInfoPages';
+import Faq from './pages/subPages/faq/faq'
+import NotiList from './pages/subPages/NotiSub/notiList';
+import PostDetail from './pages/subPages/NotiSub/PostDetail';
+import CreatePost from './pages/subPages/NotiSub/CreatePost';
 
 function App() {
   const [isMenuVisible, setIsMenuVisible] = useState(false); // 메뉴 가시성을 관리하는 상태
