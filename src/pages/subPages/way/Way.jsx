@@ -72,7 +72,6 @@ const Way = ()=>{
                         </ul>
                     </div>
                     <div>
-                    {/* <LineTit subtit={'주차요금'}/> */}
                     <h3>주차요금</h3>
                     <table>
                         <tr>
