@@ -36,7 +36,7 @@
 }
 /* 메인 버튼 살로미색상 */
 .mainBtnSalomie{
-	font-size:18px;
+	font-size: 18px;
 	width: 160px;
 	height: 50px;
 	border-radius: 50px;
@@ -70,10 +70,12 @@
 	border: none;
 }
 
-.textEllipsis{
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+/* 제목이 줄어들었을 때 ...으로 표시되도록 하는 CSS */
+.textEllipsis {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 /* 여기서부터 Sub */
@@ -92,6 +94,9 @@
 	display: block;
 	padding: 5px 0;
 }
+
+
+
 .oneDepthBtnActive{
 	border-bottom: 2px solid var(--font-black);
 }
@@ -124,12 +129,6 @@
 /* 서브페이지 이미지를 개인 파트에 가져가 주세요. */
 .subFesInfoImage{
 	background-image: url(./assets/SubFesInfoTop.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-}
-.subNotiTop{
-	background-image: url(./assets/subNotiTop.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -179,6 +178,8 @@
 	background-color: var(--mirage);
 	border: none;
 	cursor: pointer;
+	text-align: center;
+	line-height: 39px;
 }
 
 
@@ -197,6 +198,13 @@
 @media screen and (max-width : 1024px) {
 	.defaultContent {
 		padding: 65px 80px;
+	}
+	.oneDepthBtnWrap{
+		padding: 23px 0;
+		gap: 28px;
+	}
+	.oneDepthBtn{
+		font-size: 16px;
 	}
 }
 
@@ -283,7 +291,7 @@
 		font-size: 30px;
 	}
 	.oneDepthBtn{
-		font-size: 18px;
+		font-size: 16px;
 	}
 	.twoDepthBtn{
 		width: 150px;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { posts } from '../../main/Sec6NotiList/data';
+import { posts } from '../../pages/main/Sec6NotiList/data';
 
 const PostDetail = () => {
     const { id } = useParams();

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { posts } from '../../main/Sec6NotiList/data';
+import { posts } from '../../pages/main/Sec6NotiList/data';
 
 const formatDate = (date) => {
     const year = date.getFullYear();
