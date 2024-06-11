@@ -34,7 +34,7 @@ const Header = () => {
               <Link to="">공지사항</Link>
             </li>
             <li>
-              <Link to="">갤러리</Link>
+              <Link to="/Gallery/">갤러리</Link>
             </li>
             <li>
               <Link to="">고객지원</Link>
@@ -51,7 +51,7 @@ const Header = () => {
             </li>
             <li>
               <div className="lang_change">
-                <select>
+                <select className="lang">
                   <option>KOR</option>
                   <option>ENG</option>
                 </select>

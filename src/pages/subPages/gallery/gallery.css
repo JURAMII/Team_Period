@@ -1,42 +1,129 @@
-.galImgSec1 {
-    width: 100%; min-height: 100%;
+.subTop{
+    margin-bottom: 65px;
 }
 
-.galImgSec1>.galImgSec1_inner {
+.subGal {
+    width: 100%;
     max-width: 1440px;
     margin: 0 auto;
 }
 
-.galImgSec1>.galImgSec1_inner>.mainImgWrap {
+.subGal>.ImgSwap{
+    text-align: end;
+}
+
+.subGal>.ImgSwap>.cate{
+    width: 150px; height: 44px;
+    border: 1px solid var(--line-silver);
+}
+
+.subGal>.galImgSec1 {
+    width: 100%;
+    padding: 30px 0;
+    overflow: hidden;
+}
+
+.subGal>.galImgSec1>.galImgSec1_inner>.mainImgWrap {
     position: relative;
 }
 
-.galImgSec1>.galImgSec1_inner>.mainImgWrap>.mainImgSlide {
-    overflow: visible;
-}
-
-.galImgSec1>.galImgSec1_inner>.mainImgWrap>.mainImgSlide>.swiper-wrapper {
+.subGal>.galImgSec1>.galImgSec1_inner>.mainImgWrap>.mainImgSlide {
     width: 100%;
     height: 100%;
-    z-index: 1;
+    overflow: visible;
     display: flex;
     position: relative;
+    z-index: 1;
     transform: translateZ(0);
 }
 
-.galImgSec1>.galImgSec1_inner>.mainImgWrap>.mainImgSlide>.swiper-wrapper>.swiper-slide {
+.subGal>.galImgSec1>.galImgSec1_inner>.mainImgWrap>.mainImgSlide>.slide {
+    width: 20%;
+    height: 570px;
     transition: width 0.6s cubic-bezier(0.6, 0, 0.4, 1);
-    height: 768px;
+    border: 1px solid var(--font-black);
 }
 
-.galImgSec1>.galImgSec1_inner>.mainImgWrap>.mainImgSlide>.swiper-wrapper>.swiper-slide>div {
-    width: 1344px;
+.subGal>.galImgSec1>.galImgSec1_inner>.mainImgWrap>.mainImgSlide>.slide>div {
+    width: 100%;
 }
 
-.galImgSec1>.galImgSec1_inner>.mainImgWrap>.mainImgSlide>.swiper-wrapper>.swiper-slide>div>img {
+.subGal>.galImgSec1>.galImgSec1_inner>.mainImgWrap>.mainImgSlide>.slide>div>img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: aqua;
+    z-index: 1;
+}
+
+.gridBox {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(4, 337px);
+    grid-template-rows: repeat(3, 294px);
+    grid-template-areas:
+    "g1 g2 g3 g4"
+    "g5 g6 g7 g8"
+    "g9 g10 g11 g12"
+    ;
+    margin-bottom: 130px;
+}
+
+.gridBox>.gImgCard{
+    width: 100%; height: 100%;
+    border: 1px solid #000;
+}
+
+.gridBox>.gImgCard>a>img{
+    width: 337px; height: 294px;
+}
+
+.gridCard1{
+    grid-area: g1;
+}
+
+.gridCard2{
+    grid-area: g2;
+}
+
+.gridCard3{
+    grid-area: g3;
+}
+
+.gridCard4{
+    grid-area: g4;
+}
+
+.gridCard5{
+    grid-area: g5;
+}
+
+.gridCard6{
+    grid-area: g6;
+}
+
+.gridCard7{
+    grid-area: g7;
+}
+
+.gridCard8{
+    grid-area: g8;
+}
+
+.gridCard9{
+    grid-area: g9;
+}
+
+.gridCard10{
+    grid-area: g10;
+}
+
+.gridCard11{
+    grid-area: g11;
+}
+
+.gridCard12{
+    grid-area: g12;
 }

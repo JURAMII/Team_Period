@@ -111,7 +111,7 @@ header{
     100% {transform: translate(-50%, -50%) scale(1) rotate(0deg);}
 }
 
-select {
+.lang {
     width: 30px; height: 30px;
     -webkit-appearance: none;
     -moz-appearance:none;
@@ -175,7 +175,7 @@ select>option{
     }
 }
 
-@media screen and (max-width : 300px) {
+@media screen and (max-width : 360px) {
     .headNavi>.test3>.test31{
         gap: 10px;
         margin-right: 30px;

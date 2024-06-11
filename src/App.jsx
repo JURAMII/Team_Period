@@ -10,7 +10,8 @@ import PostDetail from "./pages/subPages/NotiSub/PostDetail";
 import CreatePost from "./pages/subPages/NotiSub/CreatePost";
 import MainGallery from "./pages/main/Sec7_Gallery/mainGallery";
 import AllMenuPage from "./components/common/allMenuPage/allMenu";
-import DetailPage from "./pages/main/Sec7_Gallery/subGalleryDetaill";
+import DetailPage from "./pages/subPages/gallery/subGalleryDetaill";
+import Gallery from "./pages/subPages/gallery/gallery";
 
 function App() {
   return (
@@ -19,12 +20,9 @@ function App() {
       <Header />
       {/* <Three /> */}
       <Routes>
-        {/* <Route path="/" element={<MainNoti />} />
-        <Route path="/notiList/category/:key" element={<NotiCategoryPosts />} />
-        <Route path="/notiList/post/:id" element={<PostDetail />} />
-        <Route path="/NotiList/create" element={<CreatePost />} /> */}
         <Route path="/" element={<MainGallery />} />
-        <Route path="//Gallery/detail/:id" element={<DetailPage />} />
+        <Route path="/Gallery/" element={<Gallery />} />
+        <Route path="/Gallery/detail/:id" element={<DetailPage />} />
       </Routes>
       <Footer />
     </>
