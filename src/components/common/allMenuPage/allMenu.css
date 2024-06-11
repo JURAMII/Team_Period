@@ -1,7 +1,7 @@
+
 .headWrap {
   background-color: #1E2F35;
   position: fixed;
-  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -18,12 +18,16 @@
 }
 
 .headWrap>.headImg {
-  width: 504px;
+  width: calc(100% - 1000px);
   height: 100%;
-  background-image: url(../../../assets/starnight.png);
+  background-image: url(../../../assets/starnight.webp);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+}
+
+.headWrap>.headImg p{
+  color: #fff;
 }
 
 .headWrap>.headImg>div{
@@ -35,7 +39,7 @@
 }
 
 .headWrap>.headMenu {
-  width: calc(100% - 504px);
+  width: 1000px;
   height: 100%;
 }
 
@@ -48,7 +52,7 @@
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-template-areas:
     "g1 g2 g3"
@@ -65,7 +69,19 @@
 }
 
 .menuBox {
+  min-width: 250px;
   border: 1px solid #fff;
+}
+
+.headWrap>.headMenu>.headInner>.boxWrap>.menuBox ul{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.headWrap>.headMenu>.headInner>.boxWrap>.menuBox li{
+  font-size: 18px;
+  color: #fff;
 }
 
 .headWrap>.headMenu>.headInner>.boxWrap>.lastBox {
@@ -75,13 +91,13 @@
   justify-content: flex-end;
 }
 
-.headWrap>.headMenu>.headInner>.boxWrap>.lastBox img {
+.headWrap>.headMenu>.headInner>.boxWrap>.lastBox img{
   width: 175px;
   height: 175px;
-  background-image: url(../../../assets/로고\ 최종푸터.png);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
+}
+
+.headWrap>.headMenu>.headInner>.boxWrap>.lastBox p{
+  color: #fff;
 }
 
 .grid1 {
@@ -115,4 +131,50 @@
   font-weight: bold;
   color: #fff;
   margin-bottom: 25px;
+}
+
+@media screen and (max-width : 1280px) {
+  .headWrap>.headImg{
+    display: none;
+  }
+}
+
+@media screen and (max-width : 768px) {
+  .headWrap {
+    padding: 0;
+  }
+  .headWrap>.headMenu {
+    width: 100%;
+  }
+  .headWrap>.headMenu>.headInner>.boxWrap {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "g1 g2"
+      "g3 g4"
+      "g5 g6"
+    ;}
+}
+
+@media screen and (max-width : 360px) {
+  .headWrap {
+    padding: 0;
+  }
+  .headWrap>.headMenu {
+    width: 100%;
+  }
+  .headWrap>.headMenu>.headInner>.boxWrap {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+      "g1"
+      "g2"
+      "g3"
+      "g4"
+      "g5"
+      "g6"
+    ;}
+    .headWrap>.headMenu>.headInner>.boxWrap>.menuBox{
+      padding: 28px 0;
+    }
 }

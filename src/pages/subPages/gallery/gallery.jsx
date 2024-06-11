@@ -131,7 +131,7 @@ import Header from "../../../components/common/header/header";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import SupTop from "../../../components/common/supTop";
-import Twodep from "../../../components/twodep";
+import Twodep from "../../../components/twodep"
 
 const Gallery = () => {
   // 선택된 카테고리를 저장하는 state를 만듭니다.
@@ -153,7 +153,6 @@ const Gallery = () => {
       <div className="subTop subGalleryTop">
         <p className="subTopText">갤러리</p>
       </div>
-      <Twodep />
       <section className="subGal">
         <div className="ImgSwap">
           <select

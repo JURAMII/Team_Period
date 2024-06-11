@@ -21,6 +21,11 @@
 .threeDWrap{
     position: relative;
 }
+canvas{
+    width: 100%;
+    height: 100vh;
+}
+
 
 @keyframes scroll {
     0% {

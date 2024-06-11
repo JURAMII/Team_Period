@@ -57,6 +57,7 @@ header{
 
 .headNavi>.test3>.test31>.headMenuBtn{
     position: fixed;
+    z-index: 10002;
     right: 40px;
     width: 30px; height: 30px;
     display: flex;
@@ -155,7 +156,7 @@ select>option{
     .headNavi>.test3>.test31 img{
         width: 25px; height: 25px;
     }
-    select{
+    .lang{
         width: 25px; height: 25px;
     }
     .headNavi>.test3>.test31>.headMenuBtn{
