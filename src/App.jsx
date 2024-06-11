@@ -15,7 +15,18 @@ function App() {
         <AllMenuPage setIsMenuVisible={setIsMenuVisible} /> // 전체 메뉴가 보이는 상태일 때 AllMenuPage를 렌더링
       ) : (
         <Routes>
-          <Route path="/" element={<Main />} />
+               <Route path="/" element={<Main />} />
+               <Route path="/notiList/category/:key" element={<NotiList/>} />
+               <Route path="/notiList/post/:id" element={<PostDetail/>} />
+               <Route path="/NotiList/create" element={<CreatePost/>} />
+               <Route path='/Kinfo' element={<Kinfo/>}/>
+               <Route path='/Cinfo' element={<Cinfo/>}/>
+               <Route path='/Kprogram' element={<Kpro/>}/>
+               <Route path='/Cprogram' element={<Cpro/>}/>
+               <Route path='/Kticket' element={<Kticket/>}/>
+               <Route path='/Cticket' element={<Cticket/>}/>
+               <Route path='/Faq' element = {<Faq/>}/>
+          
         </Routes>
       )}
       <Footer />
