@@ -17,12 +17,12 @@ function App() {
         <>
             <Header />
             <Routes>
-                <Route path='/' element={<Main/>}/>
-                <Route path="/mainNoti" element={<MainNoti/>} />
-                <Route path="/notiList/category/:key" element={<NotiList/>} />
-                <Route path="/notiList/post/:id" element={<PostDetail/>} />
-                <Route path="/NotiList/create" element={<CreatePost/>} />
-                <Route path='/Kinfo' element={<Kinfo/>}/>
+               <Route path='/' element={<Main/>}/>
+               <Route path="/mainNoti" element={<MainNoti/>} />
+               <Route path="/notiList/category/:key" element={<NotiList/>} />
+               <Route path="/notiList/post/:id" element={<PostDetail/>} />
+               <Route path="/NotiList/create" element={<CreatePost/>} />
+               <Route path='/Kinfo' element={<Kinfo/>}/>
                <Route path='/Cinfo' element={<Cinfo/>}/>
                <Route path='/Kprogram' element={<Kpro/>}/>
                <Route path='/Cprogram' element={<Cpro/>}/>
