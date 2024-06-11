@@ -5,8 +5,6 @@
 .oneDep li{
     color: var(--font-black);
     cursor: pointer;
-}
-.check{
     font-weight: bold;
 }
 .check::after{
