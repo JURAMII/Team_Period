@@ -1,7 +1,6 @@
 import './faq.css'
-import { Fadd, Fminus } from "../fesInfo/fesInfoimgs"
 import { Fcontents, fReducer } from "./faqData"
-import { useMemo, useReducer, useState } from "react"
+import { useMemo, useReducer } from "react"
 
 import SupTop from '../../../components/common/supTop'
 import OneDep from '../../../components/onedep'

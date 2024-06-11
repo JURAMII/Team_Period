@@ -1,5 +1,5 @@
 import './subFesInfoCom.css'
-import LineTit from '../../../components/lineTit'
+
 // 이미지
 import 
 {Kposter, Cposter, Kmap,Kmusic,Kfood,Ktalk1,Ktalk2,Ktalk3,Cmap,Cmusic1,Cmusic2,Ctalk1,Ctalk2,Rain,HRain,
