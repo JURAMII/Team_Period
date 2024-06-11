@@ -1,8 +1,9 @@
 import Three from '../main/Sec1 3D/Three'
+import AllMenuPage from "../../components/common/allMenuPage/allMenu"
 import FesInfoStart from "./sec3-5_fesInfo/fesInfoStart"
 import FesInfo from "./sec3-5_fesInfo/fesInfo"
 import MainNoti from "./Sec6NotiList/mainNoti"
-// import MainGallery from './Sec7_Gallery/mainGallery'
+import MainGallery from "./Sec7_Gallery/mainGallery"
 
 
 const Main = () =>{
@@ -12,9 +13,9 @@ const Main = () =>{
          <FesInfoStart/>
          <FesInfo/>
          <MainNoti/>
-         {/* <MainGallery/> */}
+         <MainGallery/>
         </>
     )
 }
 
-export default Main
+export default Main;
