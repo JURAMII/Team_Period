@@ -35,7 +35,7 @@ const Header = () => {
             </li>
             <li>
               <div className="lang_change">
-                <select>
+                <select className="lang">
                   <option>KOR</option>
                   <option>ENG</option>
                 </select>

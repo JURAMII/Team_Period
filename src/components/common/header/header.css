@@ -111,7 +111,7 @@ header{
     100% {transform: translate(-50%, -50%) scale(1) rotate(0deg);}
 }
 
-select {
+.lang {
     width: 30px; height: 30px;
     -webkit-appearance: none;
     -moz-appearance:none;
@@ -123,7 +123,7 @@ select {
     background-size: 100%;
     }
 
-select>option{
+.lang>option{
     margin-top: 30px;
 }
 
@@ -155,7 +155,7 @@ select>option{
     .headNavi>.test3>.test31 img{
         width: 25px; height: 25px;
     }
-    select{
+    .lang{
         width: 25px; height: 25px;
     }
     .headNavi>.test3>.test31>.headMenuBtn{

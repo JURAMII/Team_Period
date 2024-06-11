@@ -16,6 +16,9 @@
 .notiTable {
     border-top: 1px solid var(--line-silver);
 }
+.notiTable:last-child{
+	border-bottom: 1px solid var(--line-silver);
+}
 
 .notiTable>td {
     padding: 18px 0;
@@ -27,6 +30,8 @@
     max-width: 100px;
 	/* textEllipsis가 적용받게 하기 위해서 max-width를 주었음. */
 }
+
+
 
 
 @media screen and (max-width: 768px) {

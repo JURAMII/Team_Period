@@ -1,33 +1,63 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { posts } from '../../pages/main/Sec6NotiList/data';
+import CategoryTabs from './CategoryTabs'; //1뎁스 스위치 컴퍼넌트
+import Pagination from './Pagination'; // 페이지넌트 컴퍼넌트
 import "./notiList.css";
+import SearchBar from './SearchBar'; //서치바 컴퍼넌트
 
 const NotiList = () => {
     const { key } = useParams(); // URL에서 key 파라미터를 가져옴
-    const [category, setCategory] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
     const [currentGroup, setCurrentGroup] = useState(1);
+    const [pageGroupSize, setPageGroupSize] = useState(5);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [searchField, setSearchField] = useState('title');
+    const [filteredPosts, setFilteredPosts] = useState(posts);
 
     useEffect(() => {
         // URL 파라미터에 따라 카테고리를 설정
-        const categoryMap = {
-            noti: '공지사항',
-            star: '별빛야행',
-            moon: '달빛기행'
-        };
-        const newCategory = categoryMap[key] || '공지사항';
-        setCategory(newCategory); // key에 해당하는 카테고리를 설정
         setCurrentPage(1);  // 카테고리가 변경되면 페이지를 초기화
         setCurrentGroup(1); // 카테고리가 변경되면 그룹을 초기화
+        setFilteredPosts(posts.filter(post => post.key === key)); // key에 해당하는 게시물을 필터링
     }, [key]);
 
-    // posts 배열을 카테고리에 따라 필터링
-    const filteredPosts = posts.filter(post => post.category === category); // category 필터링 조건 확인
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 768) {
+                setPageGroupSize(4);
+            } else {
+                setPageGroupSize(5);
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        // 초기 화면 크기에 따른 설정. 작은화면에서 켜졌을 시 바로 4개부터 시작
+        handleResize();
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    const handleSearch = () => {
+        const searchFilteredPosts = posts.filter(post => post.key === key).filter(post => {
+            if (searchField === 'title') {
+                return post.title.toLowerCase().includes(searchTerm.toLowerCase());
+            } else if (searchField === 'content') {
+                return post.content.toLowerCase().includes(searchTerm.toLowerCase());
+            } else if (searchField === 'author') {
+                return post.author.toLowerCase().includes(searchTerm.toLowerCase());
+            }
+            return true;
+        });
+        setFilteredPosts(searchFilteredPosts);
+        setCurrentPage(1); // 검색 후 페이지를 첫 페이지로 설정
+        setCurrentGroup(1); // 검색 후 그룹을 첫 그룹으로 설정
+    };
 
     // 페이지네이션을 위한 상태를 정의
     const postsPerPage = 10; // 한 페이지에 노출될 게시물 수
-    const pageGroupSize = 5; // 한 그룹에 표시될 페이지 수
 
     // 현재 페이지에 해당하는 게시물의 인덱스를 계산
     const indexOfLastPost = currentPage * postsPerPage;
@@ -35,8 +65,8 @@ const NotiList = () => {
     const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
 
     // 페이지 번호를 클릭했을 때 실행되는 핸들러
-    const handleClick = (event) => {
-        setCurrentPage(Number(event.target.id));
+    const handleClick = (pageNumber) => {
+        setCurrentPage(pageNumber);
     };
 
     // 이전 페이지 그룹으로 이동하는 핸들러
@@ -57,26 +87,13 @@ const NotiList = () => {
 
     // 총 페이지 수를 계산
     const totalPageCount = Math.ceil(filteredPosts.length / postsPerPage);
-    // 현재 그룹의 첫 번째 페이지와 마지막 페이지를 계산
-    const startPage = (currentGroup - 1) * pageGroupSize + 1;
-    const endPage = Math.min(startPage + pageGroupSize - 1, totalPageCount);
-    const pageNumbers = [];
-    for (let i = startPage; i <= endPage; i++) {
-        pageNumbers.push(i); 
-    }
 
     return (
         <div className="inner">
-			<div className='subTop subNotiTop'>
-				<p className='subTopText'>공지사항</p>
-			</div>
-            <div className="flex">
-                <div className='oneDepthBtnWrap'>
-                    <Link to="/notiList/category/noti" className={`oneDepthBtn ${category === '공지사항' ? 'oneDepthBtnActive' : ''}`}>공지사항</Link>
-                    <Link to="/notiList/category/star" className={`oneDepthBtn ${category === '별빛야행' ? 'oneDepthBtnActive' : ''}`}>별빛야행</Link>
-                    <Link to="/notiList/category/moon" className={`oneDepthBtn ${category === '달빛기행' ? 'oneDepthBtnActive' : ''}`}>달빛기행</Link>
-                </div>
+            <div className='subTop subNotiTop'>
+                <p className='subTopText'>공지사항</p>
             </div>
+            <CategoryTabs /> {/* CategoryTabs 컴포넌트를 사용 */}
             {/* 게시물 리스트 */}
             <table className='subDefaultContent'>
                 <thead>
@@ -105,21 +122,26 @@ const NotiList = () => {
                 </tbody>
             </table>
             {/* 페이지네이션 */}
-            <div className="flex subDefaultContent" style={{ justifyContent: 'center', padding: '20px 0' }}>
-                <button onClick={handlePreviousGroup} disabled={currentGroup === 1}>
-                    &lt;
-                </button>
-                {pageNumbers.map(number => (
-                    <button key={number} id={number} onClick={handleClick} className={`mainBtnSilver ${number === currentPage ? 'active' : ''}`}>
-                        {number}
-                    </button>
-                ))}
-                <button onClick={handleNextGroup} disabled={endPage === totalPageCount} className="mainBtnSilver">
-                    &gt;
-                </button>
-				<Link to="/NotiList/create" className="subBtn notiWrite">글쓰기</Link>
+            <Pagination 
+                currentPage={currentPage}
+                totalPageCount={totalPageCount}
+                currentGroup={currentGroup}
+                pageGroupSize={pageGroupSize}
+                onPageChange={handleClick}
+                onPreviousGroup={handlePreviousGroup}
+                onNextGroup={handleNextGroup}
+            />
+			<div className='pageBtnWrap writeBtn'>
+                <Link to="/NotiList/create" className="subBtn notiWrite">글쓰기</Link>
             </div>
-        </div>
+            <SearchBar 
+                searchField={searchField}
+                setSearchField={setSearchField}
+                searchTerm={searchTerm}
+                setSearchTerm={setSearchTerm}
+                onSearch={handleSearch}
+            />
+		</div>
     );
 };
 

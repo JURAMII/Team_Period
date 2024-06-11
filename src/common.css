@@ -153,7 +153,16 @@
 }
 /* 여기까지 이미지 */
 
-.subSearch{
+/* 여기서부터 search,작성버튼 포지션 */
+.searchWrap{
+	justify-content: center;
+	margin-bottom: 28px;
+}
+.subSearchName{
+	width: 80px;
+	height: 40px;
+}
+.subSearch{	
 	width: 350px;
 	height: 40px;
 	padding: 0 10px;
@@ -182,6 +191,41 @@
 	line-height: 39px;
 }
 
+
+.pageBtnWrap {
+    width: 1440px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+	padding: 28px 0;	
+}
+.buttonDown{
+    display: block;
+    height: 50px;
+	line-height: 60px;
+}
+.buttonDown>button{
+	border: 0;
+	background-color: transparent;
+	cursor: pointer;
+	font-size: 18px;
+	margin: 0 14px;
+}
+.buttonDown>button:disabled {
+    cursor: not-allowed;
+}
+.buttonDown>button.active {
+    font-weight: bold;
+}
+
+.pageBtnWrap .subBtn {
+    position: absolute;
+    right: 0;
+	bottom: 93px;
+}
+.writeBtn{
+	position: relative;
+}
 
 /* main 반응형 */
 @media screen and (max-width : 1920px) {
@@ -247,7 +291,7 @@
 	}
 }
 @media screen and (max-width : 1440px) {
-	.subDefaultContent {
+	.subDefaultContent,.pageBtnWrap {
 		width: calc(100% - 30px);
 	}
 	.subTop{
@@ -303,11 +347,27 @@
 		width: 100px;
 		height: 32px;
 		font-size: 14px;
+		line-height: 32px;
+	}
+	.pageBtnWrap .subBtn {
+		right: 0;
+		bottom: 101px;
+	}
+	.buttonDown{
+		line-height: 45px;
+	}
+	.buttonDown>button{
+		font-size: 16px;
 	}
 }
 
 @media screen and (max-width : 500px) {
 	.subTop{
 		height: 210px;
+	}
+	.pageBtnWrap .subBtn {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 36px;
 	}
 }
