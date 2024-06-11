@@ -58,7 +58,19 @@
     gap: 28px;
     padding-top: 28px;
     font-size: 18px;
-  }
+}
+.pagination li:first-child{
+    display: none;
+}
+.pagination li:last-child{
+    display: none;
+}
+.active{
+    font-weight: bold;
+}
+.disabled{
+    font-weight: normal;
+}
 
 /* 검색창 */
 .faqSearch{

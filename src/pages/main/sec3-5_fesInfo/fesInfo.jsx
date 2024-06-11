@@ -71,13 +71,7 @@ const FesInfo = () => {
     ]
     return(
         <>
-        {fesInfoConts.map((fesInfoCont)=><FesInfoComponent key={fesInfoCont.id} fTitle1={fesInfoCont.fTitle1} 
-        fTitle2={fesInfoCont.fTitle2} 
-        fText1={fesInfoCont.fText1} 
-        fText2={fesInfoCont.fText2} 
-        fImg={fesInfoCont.fImg}
-        fCla={fesInfoCont.fCla}
-        fLink={fesInfoCont.fLink}/>)}
+        {fesInfoConts.map((fesInfoCont)=><FesInfoComponent key={fesInfoCont.id} {...fesInfoCont}/>)}
         </>
     )
 }
