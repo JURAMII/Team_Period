@@ -15,7 +15,7 @@ const FaqSearch = ({Fsearch}) =>{
     
     return(
         <div className='faqSearch flex'>
-        <input type="text" className='subSearch' placeholder='search' value={searchFaq} onChange={searchChange}/>
+        <input type="text" className='subSearch' placeholder='search' value={searchFaq} onChange={searchChange} onKeyPress={searchFaqBtn}/>
         <input type="button" className='subSearchBtn' onClick={searchFaqBtn}/>
         </div>
     )
