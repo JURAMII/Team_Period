@@ -7,7 +7,6 @@
 
 .notiTableTop {
     border-top: 2px solid var(--font-black);
-    border-bottom: 2px solid var(--font-black);
 }
 
 .notiTableTop>th {
