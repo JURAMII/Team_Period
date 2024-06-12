@@ -376,4 +376,7 @@
         transform: translateX(50%);
         bottom: 36px;
 	}
+	.subBtnWrap {
+		gap: 5px;
+	}
 }

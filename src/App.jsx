@@ -5,8 +5,6 @@ import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Header from './components/common/header/header';
 import Footer from './components/common/footer/footer';
-import Main from './pages/main/main';
-
 import PostDetail from './components/SubNoti/PostDetail';
 import CreatePost from './components/SubNoti/CreatePost';
 import EditPost from './components/SubNoti/EditPost';
@@ -14,14 +12,8 @@ import AllMenuPage from './components/common/allMenuPage/allMenu';
 import NotiList from './components/SubNoti/notiList';
 import { posts as initialPosts } from './pages/main/Sec6NotiList/data';
 // section6/subNoti에서 사용할 데이터 파일 initialPosts는 포스트의 초기상태 설정을 위해 useState에서 설정
-
-import { Kinfo, Cinfo, Kpro, Cpro, Kticket, Cticket } from './pages/subPages/fesInfo/subFesInfoPages';
-import Faq from './pages/subPages/faq/faq';
-
-import AllMenuPage from './components/common/allMenuPage/allMenu';
 import Gallery from './pages/subPages/gallery/gallery';
 import DetailPage from './pages/main/Sec7_Gallery/subGalleryDetaill';
-
 
 function App() {
     const [isMenuVisible, setIsMenuVisible] = useState(false); // 메뉴 가시성을 관리하는 상태

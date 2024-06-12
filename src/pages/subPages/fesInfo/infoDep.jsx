@@ -65,8 +65,8 @@ const FaqDep = ({one}) =>{
 
     return(
         <ul className="oneDep flex subDefaultContent">
-        <li className={oneDep === 1 ? "oneDeptit check" : "oneDeptit"} onClick={() => clickOne(1)}> <Link to='/Faq'>자주하는 질문</Link></li>
-        <li className={oneDep === 2 ? "oneDeptit check" : "oneDeptit"} onClick={() => clickOne(2)}><Link to=''>묻고 답하기</Link></li>
+        	<li className={oneDep === 1 ? "oneDeptit check" : "oneDeptit"} onClick={() => clickOne(1)}> <Link to='/Faq'>자주하는 질문</Link></li>
+        	<li className={oneDep === 2 ? "oneDeptit check" : "oneDeptit"} onClick={() => clickOne(2)}><Link to='/Qna'>묻고 답하기</Link></li>
        </ul>
     )
 }
