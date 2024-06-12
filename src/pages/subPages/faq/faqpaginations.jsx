@@ -1,12 +1,9 @@
 import Pagination from 'react-js-pagination'
 import './faq.css'
 
-import { useReducer } from "react"
-import { Fcontents, fReducer } from "./faqData"
 
-const FaqPagination = ({page, setPage, postPerPage}) =>{
-    const [state, dispatch] = useReducer(fReducer, Fcontents)
-    const {fconts} = state;
+const FaqPagination = ({page, setPage, postPerPage, allCount}) =>{
+    
     const handlePageChange = (page) => { setPage(page); };
    
     return(
@@ -14,7 +11,7 @@ const FaqPagination = ({page, setPage, postPerPage}) =>{
           <Pagination
             activePage={page}
             itemsCountPerPage={postPerPage}
-            totalItemsCount={fconts.length}
+            totalItemsCount={allCount}
             pageRangeDisplayed={5}
             prevPageText={'<'}
             nextPageText={'>'}

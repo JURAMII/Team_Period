@@ -2,9 +2,6 @@
 *{
     box-sizing: border-box;
 }
-.fesInfoSec{
-    height: 100vh;
-}
 .infoStart h3{
     font-weight: 300;
     font-size: 110px;

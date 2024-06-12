@@ -45,7 +45,7 @@ const Faq = () => {
         <h6>total <span>{allCount}</span></h6>
         <span className='faqTopLine'></span>
         {currentPost.map((fcont)=><FaqList key={fcont.id} {...fcont} findex={findex} FsetIndex={FsetIndex} id={fcont.id}/>)}
-        <FaqPagination page={page} setPage={setPage} postPerPage={postPerPage}/>
+        <FaqPagination page={page} setPage={setPage} postPerPage={postPerPage} allCount={allCount}/>
         <FaqSearch Fsearch={Fsearch} />
         </section>
         </ScrollToTop>
