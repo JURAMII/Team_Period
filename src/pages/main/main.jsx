@@ -9,6 +9,7 @@ import MainVideo from './mainVideo'
 const Main = () =>{
     return(
         <>
+         <Three/>
          <FesInfoStart/>
          <FesInfo/>
          <MainVideo/>

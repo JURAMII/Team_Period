@@ -9,7 +9,6 @@ const ResDetail = ({datas})=>{
         <pre>{data.gallTxT}</pre>
         </div>
         )}
-        
 </>
 
     )
