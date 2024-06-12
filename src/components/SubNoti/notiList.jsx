@@ -91,7 +91,7 @@ const NotiList = ({ posts, setPosts }) => {
 
     return (
         <div className="inner">
-            <div className='subTop subNotiTop'>
+            <div className='subNotiTop'>
                 <p className='subTopText'>공지사항</p>
             </div>
             <CategoryTabs /> {/* CategoryTabs 컴포넌트를 사용 */}
