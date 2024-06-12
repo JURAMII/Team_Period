@@ -1,26 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { posts } from '../../pages/main/Sec6NotiList/data';
 import CategoryTabs from './CategoryTabs'; //1뎁스 스위치 컴퍼넌트
 import Pagination from './Pagination'; // 페이지넌트 컴퍼넌트
 import "./notiList.css";
 import SearchBar from './SearchBar'; //서치바 컴퍼넌트
 
-const NotiList = () => {
+const NotiList = ({ posts, setPosts }) => {
     const { key } = useParams(); // URL에서 key 파라미터를 가져옴
     const [currentPage, setCurrentPage] = useState(1);
     const [currentGroup, setCurrentGroup] = useState(1);
     const [pageGroupSize, setPageGroupSize] = useState(5);
     const [searchTerm, setSearchTerm] = useState('');
     const [searchField, setSearchField] = useState('title');
-    const [filteredPosts, setFilteredPosts] = useState(posts);
+    const [filteredPosts, setFilteredPosts] = useState([]);
 
     useEffect(() => {
-        // URL 파라미터에 따라 카테고리를 설정
-        setCurrentPage(1);  // 카테고리가 변경되면 페이지를 초기화
-        setCurrentGroup(1); // 카테고리가 변경되면 그룹을 초기화
-        setFilteredPosts(posts.filter(post => post.key === key)); // key에 해당하는 게시물을 필터링
-    }, [key]);
+        setFilteredPosts(posts.filter(post => post.key === key));
+    }, [key, posts]);
 
     useEffect(() => {
         const handleResize = () => {
@@ -32,7 +28,6 @@ const NotiList = () => {
         };
 
         window.addEventListener('resize', handleResize);
-        // 초기 화면 크기에 따른 설정. 작은화면에서 켜졌을 시 바로 4개부터 시작
         handleResize();
 
         return () => {
@@ -54,6 +49,12 @@ const NotiList = () => {
         setFilteredPosts(searchFilteredPosts);
         setCurrentPage(1); // 검색 후 페이지를 첫 페이지로 설정
         setCurrentGroup(1); // 검색 후 그룹을 첫 그룹으로 설정
+    };
+
+    const handleDeletePost = (postId) => {
+        const updatedPosts = posts.filter(post => post.id !== postId);
+        setPosts(updatedPosts);
+        setFilteredPosts(updatedPosts.filter(post => post.key === key));
     };
 
     // 페이지네이션을 위한 상태를 정의
@@ -131,7 +132,7 @@ const NotiList = () => {
                 onPreviousGroup={handlePreviousGroup}
                 onNextGroup={handleNextGroup}
             />
-			<div className='pageBtnWrap writeBtn'>
+            <div className='pageBtnWrap writeBtn'>
                 <Link to="/NotiList/create" className="subBtn notiWrite">글쓰기</Link>
             </div>
             <SearchBar 
@@ -141,7 +142,7 @@ const NotiList = () => {
                 setSearchTerm={setSearchTerm}
                 onSearch={handleSearch}
             />
-		</div>
+        </div>
     );
 };
 
