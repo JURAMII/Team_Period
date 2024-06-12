@@ -6,6 +6,7 @@ import SupTop from '../../../components/common/supTop'
 import { FaqDep } from '../fesInfo/infoDep'
 import FaqPagination from './faqpaginations'
 import FaqSearch from './faqSearch'
+import ScrollToTop from '../../../scroll'
 
 
 const Faq = () => {
@@ -29,6 +30,7 @@ const Faq = () => {
 
     return(
       <>
+        <ScrollToTop>
         <SupTop supTopImg={'subSupportTop'} supTopTit={'고객지원'}/>
         <FaqDep one={one}/>
         <section className="faqSec">
@@ -37,6 +39,7 @@ const Faq = () => {
         <FaqPagination {...fconts}/>
         <FaqSearch Fsearch={Fsearch} />
         </section>
+        </ScrollToTop>
       </>
     )
 }
