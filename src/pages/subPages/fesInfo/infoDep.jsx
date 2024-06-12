@@ -33,7 +33,7 @@ const InfoDep2 = ({one}) =>{
         <ul className="twoDep flex">
         <li className={twoDep === 1 ? "twoDeptit tcheck" : "twoDeptit"} onClick={()=>clickTwo(1)}><Link to='/Kinfo'>축제정보</Link></li>
         <li className={twoDep === 2 ? "twoDeptit tcheck" : "twoDeptit"} onClick={()=>clickTwo(2)}><Link to='/Kprogram'>프로그램</Link></li>
-        <li className={twoDep === 3 ? "twoDeptit tcheck" : "twoDeptit"} onClick={()=>clickTwo(3)}><Link to='/Kticket'>예매정보</Link></li>
+        <li className={twoDep === 3 ? "twoDeptit tcheck" : "twoDeptit"} onClick={()=>clickTwo(3)}><Link to='/Kticket'>예매안내</Link></li>
         </ul>
     )
 }

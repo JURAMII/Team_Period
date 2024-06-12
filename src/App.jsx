@@ -10,6 +10,9 @@ import CreatePost from './components/SubNoti/CreatePost';
 import PostDetail from './components/SubNoti/PostDetail';
 import { Kinfo, Cinfo, Kpro, Cpro, Kticket, Cticket } from './pages/subPages/fesInfo/subFesInfoPages';
 import Faq from './pages/subPages/faq/faq';
+import Way from './pages/subPages/way/Way';
+import Way2 from './pages/subPages/way/Way2';
+import AllMenuPage from './components/common/allMenuPage/allMenu';
 
 function App() {
   const [isMenuVisible, setIsMenuVisible] = useState(false); // 메뉴 가시성을 관리하는 상태
@@ -31,7 +34,9 @@ function App() {
                <Route path='/Cprogram' element={<Cpro/>}/>
                <Route path='/Kticket' element={<Kticket/>}/>
                <Route path='/Cticket' element={<Cticket/>}/>
-               <Route path='/Faq' element = {<Faq/>}/>      
+               <Route path='/Faq' element = {<Faq/>}/>
+               <Route path='/Way' element = {<Way/>}/>    
+               <Route path='/Way2' element = {<Way2/>}/>    
         </Routes>
       )}
       <Footer />

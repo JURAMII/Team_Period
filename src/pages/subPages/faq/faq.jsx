@@ -1,17 +1,25 @@
 import './faq.css'
 import { Fcontents, fReducer } from "./faqData"
-import { useMemo, useReducer } from "react"
+import { useMemo, useReducer, useState } from "react"
 
 import SupTop from '../../../components/common/supTop'
 import { FaqDep } from '../fesInfo/infoDep'
 import FaqPagination from './faqpaginations'
 import FaqSearch from './faqSearch'
 import ScrollToTop from '../../../scroll'
+import FaqList from './faqList'
 
 
 const Faq = () => {
     const [state, dispatch] = useReducer(fReducer, Fcontents)
     const {fconts, fsearch} = state;
+    const [findex, FsetIndex] = useState(0)
+    const [page, setPage] = useState(1);
+    const postPerPage = 10
+    const indexOfLastPost = page * postPerPage
+    const indexOfFirstPost = indexOfLastPost - postPerPage
+    const currentPost = fconts.slice(indexOfFirstPost, indexOfLastPost)
+  
 
     const Fsearch = (text) =>{
         dispatch({
@@ -36,7 +44,8 @@ const Faq = () => {
         <section className="faqSec">
         <h6>total <span>{allCount}</span></h6>
         <span className='faqTopLine'></span>
-        <FaqPagination {...fconts}/>
+        {currentPost.map((fcont)=><FaqList key={fcont.id} {...fcont} findex={findex} FsetIndex={FsetIndex} id={fcont.id}/>)}
+        <FaqPagination page={page} setPage={setPage} postPerPage={postPerPage}/>
         <FaqSearch Fsearch={Fsearch} />
         </section>
         </ScrollToTop>
