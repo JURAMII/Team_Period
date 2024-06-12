@@ -57,6 +57,7 @@ header{
 
 .headNavi>.test3>.test31>.headMenuBtn{
     position: fixed;
+    z-index: 10002;
     right: 40px;
     width: 30px; height: 30px;
     display: flex;
@@ -101,6 +102,12 @@ header{
     right: 0; bottom: 0;
 }
 
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 @keyframes rollingOut {
     0% {transform: translate(-50%, -50%) scale(1) rotate(0deg);}
     100% {transform: translate(-50%, -50%) scale(0) rotate(-360deg);}
@@ -111,7 +118,7 @@ header{
     100% {transform: translate(-50%, -50%) scale(1) rotate(0deg);}
 }
 
-select {
+.lang {
     width: 30px; height: 30px;
     -webkit-appearance: none;
     -moz-appearance:none;
@@ -123,7 +130,7 @@ select {
     background-size: 100%;
     }
 
-select>option{
+.lang>option{
     margin-top: 30px;
 }
 
@@ -155,7 +162,7 @@ select>option{
     .headNavi>.test3>.test31 img{
         width: 25px; height: 25px;
     }
-    select{
+    .lang{
         width: 25px; height: 25px;
     }
     .headNavi>.test3>.test31>.headMenuBtn{
@@ -175,7 +182,7 @@ select>option{
     }
 }
 
-@media screen and (max-width : 300px) {
+@media screen and (max-width : 360px) {
     .headNavi>.test3>.test31{
         gap: 10px;
         margin-right: 30px;

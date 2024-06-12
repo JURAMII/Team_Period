@@ -1,7 +1,6 @@
 .notiWrap {
 	margin: 0 auto;
 	max-width: 1920px;
-	height: 100vh;
 }
 
 /* Left article css */
@@ -95,7 +94,9 @@ p>span {
 	margin: 60px 0 0 0;
 	justify-content: end;
 }
-
+.selected {
+    font-weight: bold;
+}
 
 /* 반응형 */
 @media screen and (max-width : 1280px) {

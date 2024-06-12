@@ -1,60 +1,25 @@
 import './faq.css'
-import { Fadd, Fminus } from "../fesInfo/fesInfoimgs"
 import { Fcontents, fReducer } from "./faqData"
 import { useMemo, useReducer, useState } from "react"
 
 import SupTop from '../../../components/common/supTop'
-import OneDep from '../../../components/onedep'
+import FaqDep from './faqDep'
+import FaqPagination from './faqpaginations'
 import FaqSearch from './faqSearch'
-import FaqPagination from './faqPagination'
-
-
-const FaqList = ({fans,fqes,id, findex, FsetIndex}) => {
-
-    const [toggle, setToggle] = useState(false)
-
-    const faqClick=(id)=>{
-        setToggle(!toggle)
-        FsetIndex(id)
-    }
-
-    const [calc,setcalc] = useState(5);
-
-    const plusCalc = () =>{
-      setcalc(calc + 1)
-    }
-    
-    return(
-        <div className='faqWrap'>
-            <div className='fqes flex' onClick={()=>faqClick(id)}>
-                <p className='cFont'>{fqes}</p>
-                <span>
-                    {!!toggle&&id===findex? <img src={Fminus} alt="닫기" />:
-                     <img src={Fadd} alt="열기" />
-                    }
-                </span>
-            </div>
-            <div className='fans'>
-                {!!toggle && id===findex && <><p className='cFont'>{fans}</p>
-                <div className='faqUpWrap flex'>
-                <ul className='faqUp' onClick={plusCalc}>
-                    <li>👍</li>
-                    <li>{calc}</li>
-                </ul>
-                </div>
-                </>}
-            </div>
-        </div>
-    )
-}
+import ScrollToTop from '../../../scroll'
+import FaqList from './faqList'
 
 
 const Faq = () => {
     const [state, dispatch] = useReducer(fReducer, Fcontents)
     const {fconts, fsearch} = state;
     const [findex, FsetIndex] = useState(0)
-    const OsubTitsF = ['자주하는 질문','묻고 답하기']
-    const TlinksF = ['/Faq']
+    const [page, setPage] = useState(1);
+    const postPerPage = 10
+    const indexOfLastPost = page * postPerPage
+    const indexOfFirstPost = indexOfLastPost - postPerPage
+    const currentPost = fconts.slice(indexOfFirstPost, indexOfLastPost)
+  
 
     const Fsearch = (text) =>{
         dispatch({
@@ -69,18 +34,21 @@ const Faq = () => {
     
     const allCount = useMemo(()=>allCounts(fconts),[fconts])
 
-
+    const one = 1;
 
     return(
       <>
-        <OneDep OsubTits={OsubTitsF} Olinks={TlinksF}/>
+        <ScrollToTop>
+        <SupTop supTopImg={'subSupportTop'} supTopTit={'고객지원'}/>
+        <FaqDep one={one}/>
         <section className="faqSec">
         <h6>total <span>{allCount}</span></h6>
         <span className='faqTopLine'></span>
-        {fconts.map((fcont)=><FaqList key={fcont.id} {...fcont} findex={findex} FsetIndex={FsetIndex} id={fcont.id}/>)}
-        <FaqPagination {...fconts}/>
+        {currentPost.map((fcont)=><FaqList key={fcont.id} {...fcont} findex={findex} FsetIndex={FsetIndex} id={fcont.id}/>)}
+        <FaqPagination page={page} setPage={setPage} postPerPage={postPerPage} allCount={allCount}/>
         <FaqSearch Fsearch={Fsearch} />
         </section>
+        </ScrollToTop>
       </>
     )
 }

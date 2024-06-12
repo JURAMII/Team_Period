@@ -1,21 +1,27 @@
 import './faq.css'
-import { useState } from 'react'
+import { useState } from 'react';
 
 const FaqSearch = ({Fsearch}) =>{
-   
-    const [searchFaq, setSearchFaq] = useState('')
+
+    const [inputText, setInputText] = useState("");
 
     function searchChange(e){
-        setSearchFaq(e.target.value)
+        setInputText(e.target.value)
     }
 
     function searchFaqBtn(){
-        Fsearch(searchFaq)
+        Fsearch(inputText)
     }
     
+    const activeEnter = (e) => {
+        if(e.key === "Enter") {
+        searchFaqBtn();
+        }
+      }
+   
     return(
         <div className='faqSearch flex'>
-        <input type="text" className='subSearch' placeholder='search' value={searchFaq} onChange={searchChange}/>
+        <input type="text" className='subSearch' placeholder='search' value={inputText} onChange={searchChange} onKeyDown={activeEnter}/>
         <input type="button" className='subSearchBtn' onClick={searchFaqBtn}/>
         </div>
     )

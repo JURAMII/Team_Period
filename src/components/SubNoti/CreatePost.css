@@ -1,0 +1,59 @@
+.createCategory {
+	border-top: 2px solid var(--font-black);
+	border-bottom: 1px solid var(--line-silver);
+}
+
+.createPadding {
+	padding: 20px 10px 20px 10px;
+	background-color: #F2F2F2;
+	display: inline-block;
+	width: 160px;
+}
+
+.createLine {
+	border-bottom: 1px solid var(--line-silver);
+}
+
+.categorySelectNoMedia{
+	padding: 8px 40px 8px 8px;
+	margin-left: 10px;
+	border: 1px solid var(--line-silver);
+	border-radius: 2px;
+	outline: none;
+}
+.categorySelect {
+	padding: 8px 40px 8px 8px;
+	margin-left: 10px;
+	border: 1px solid var(--line-silver);
+	border-radius: 2px;
+	outline: none;
+}
+
+.textBox {
+	margin: 10px 0 28px 0;
+	width: 100%;
+	height: 430px;
+	border: 1px solid var(--line-silver);
+	outline: none;
+	resize: none;
+}
+.subBtnWrap{
+	justify-content: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+	.createPadding {
+		width: 85px;
+		font-size: 14px;
+	}
+
+	.categorySelect {
+		width: calc(85% - 30px);
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.categorySelect {
+		width: calc(75% - 30px);
+	}
+}

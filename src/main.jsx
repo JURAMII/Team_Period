@@ -4,12 +4,10 @@ import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom';
 
 import "./common.css"
-import ScrollToTop from './scroll.jsx';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter basename={'/Team_Period'}>
-    <ScrollToTop/>
-   <App />
- </BrowserRouter>
+  <BrowserRouter basename={'/Team_Period/'}>
+  <App />
+  </BrowserRouter>
 )
