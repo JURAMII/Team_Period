@@ -6,9 +6,9 @@ import { posts } from './data';
 const MainNoti = () => {
     const [selectedCategory, setSelectedCategory] = useState('공지사항');
     const [categoryKey, setCategoryKey] = useState('noti');
-    
-    const filteredPosts = useMemo(() => 
-        posts.filter(post => post.category === selectedCategory).slice(0, 5), 
+
+    const filteredPosts = useMemo(() =>
+        posts.filter(post => post.category === selectedCategory).slice(0, 5),
         [selectedCategory]
     );
 
@@ -32,9 +32,24 @@ const MainNoti = () => {
             </article>
             <aside className="notiRight">
                 <ul className="flex mainNotiName">
-                    <li onClick={() => handleCategoryClick('공지사항', 'noti')}>공지사항</li>
-                    <li onClick={() => handleCategoryClick('별빛야행', 'star')}>별빛야행</li>
-                    <li onClick={() => handleCategoryClick('달빛기행', 'moon')}>달빛기행</li>
+                    <li 
+                        onClick={() => handleCategoryClick('공지사항', 'noti')} 
+                        className={selectedCategory === '공지사항' ? 'selected' : ''}
+                    >
+                        공지사항
+                    </li>
+                    <li 
+                        onClick={() => handleCategoryClick('별빛야행', 'star')} 
+                        className={selectedCategory === '별빛야행' ? 'selected' : ''}
+                    >
+                        별빛야행
+                    </li>
+                    <li 
+                        onClick={() => handleCategoryClick('달빛기행', 'moon')} 
+                        className={selectedCategory === '달빛기행' ? 'selected' : ''}
+                    >
+                        달빛기행
+                    </li>
                 </ul>
                 <ul className="mainNotiList">
                     {filteredPosts.map((post) => (
