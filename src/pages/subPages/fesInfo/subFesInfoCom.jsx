@@ -2,7 +2,7 @@ import './subFesInfoCom.css'
 
 // 이미지
 import 
-{Kposter, Cposter, Kmap,Kmusic,Kfood,Ktalk1,Ktalk2,Ktalk3,Cmap,Cmusic1,Cmusic2,Ctalk1,Ctalk2,Rain,HRain,
+{Kposter, Cposter, Kmap,Kmusic,Kfood,Ktalk1,Ktalk2,Ktalk3,Cmap,Cmusic1,Cmusic2,Ctalk1,Ctalk2,Ctalk3,Rain,HRain,
 } from './fesInfoimgs'
 
 // 서브페이지 축제정보
@@ -140,6 +140,9 @@ const ProgramC = () =>{
             <div className='flex tourWrap'>
                 <img src={Ctalk1} alt="창덕궁 야간해설" />
                 <img src={Ctalk2} alt="창덕궁 야간해설" />
+            </div>
+            <div className='Ktalk'>
+                <img src={Ctalk3} alt="창덕궁 야간해설" />
             </div>
             </div>
         </div>
