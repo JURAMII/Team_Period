@@ -102,6 +102,12 @@ header{
     right: 0; bottom: 0;
 }
 
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 @keyframes rollingOut {
     0% {transform: translate(-50%, -50%) scale(1) rotate(0deg);}
     100% {transform: translate(-50%, -50%) scale(0) rotate(-360deg);}
