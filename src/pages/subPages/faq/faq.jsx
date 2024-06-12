@@ -3,7 +3,7 @@ import { Fcontents, fReducer } from "./faqData"
 import { useMemo, useReducer, useState } from "react"
 
 import SupTop from '../../../components/common/supTop'
-import { FaqDep } from '../fesInfo/infoDep'
+import FaqDep from './faqDep'
 import FaqPagination from './faqpaginations'
 import FaqSearch from './faqSearch'
 import ScrollToTop from '../../../scroll'
