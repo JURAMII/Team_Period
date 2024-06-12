@@ -1,5 +1,5 @@
 import LineTit from '../../../components/lineTit';
-import OneDep from '../../../components/onedep';
+// import OneDep from '../../../components/onedep';
 import KakaoMap from './map2';
 import './Way.css'
 
@@ -8,7 +8,7 @@ const Way2 = ()=>{
     return(
         <section className='subDefaultContent'>
             <article>
-            <OneDep subtit1={'오시는길'} subtit2={'주변안내'}/>
+            {/* <OneDep subtit1={'오시는길'} subtit2={'주변안내'}/> */}
             <LineTit subtit={'오시는길'}/>   
             <div className='kakao flex'>     
                 <KakaoMap />     
