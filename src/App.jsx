@@ -15,6 +15,7 @@ import { posts as initialPosts } from './pages/main/Sec6NotiList/data';
 
 import { Kinfo, Cinfo, Kpro, Cpro, Kticket, Cticket } from './pages/subPages/fesInfo/subFesInfoPages';
 import Faq from './pages/subPages/faq/faq';
+
 import Gallery from './pages/subPages/gallery/gallery';
 import DetailPage from './pages/main/Sec7_Gallery/subGalleryDetaill';
 
@@ -51,7 +52,7 @@ function App() {
                     <Route path="/" element={<Main />} />
                     <Route path="/notiList/category/:key" element={<NotiList posts={posts} setPosts={setPosts} />} />
                     <Route path="/notiList/post/:id" element={<PostDetail posts={posts} onDelete={handleDeletePost} />} />
-                    <Route path="/NotiList/create" element={<CreatePost />} />
+                    <Route path="/notiList/create" element={<CreatePost />} />
                     <Route path="/notiList/edit/:id" element={<EditPost posts={posts} setPosts={setPosts} />} />
                     <Route path='/Kinfo' element={<Kinfo />} />
                     <Route path='/Cinfo' element={<Cinfo />} />
@@ -64,7 +65,7 @@ function App() {
                     <Route path="/QnaList/post/:id" element={<QnaDetail posts={posts1} onDelete={handleDeletePost1} />} />
                     <Route path="/QnaList/create" element={<QnaCreatePost />} />
                     <Route path="/QnaList/edit/:id" element={<QnaEditPost posts={posts1} setPosts={setPosts1} />} />
-                    <Route path='/Gallery' element = {<Gallery/>}/>
+                    <Route path='/Gallery/category/:key' element = {<Gallery/>}/>
                     <Route path='/Gallery/Detail/:id' element = {<DetailPage/>}/>
                 </Routes>
             )}
