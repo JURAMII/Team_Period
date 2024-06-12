@@ -3,8 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 
 import Header from './components/common/header/header';
 import Footer from './components/common/footer/footer';
-import Main from './pages/main/main';
-
 import PostDetail from './components/SubNoti/PostDetail';
 import CreatePost from './components/SubNoti/CreatePost';
 import EditPost from './components/SubNoti/EditPost';

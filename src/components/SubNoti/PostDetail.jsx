@@ -27,7 +27,7 @@ const PostDetail = ({ posts, onDelete }) => {
 
     return (
         <div className='inner'>
-            <div className='subTop subNotiTop'>
+            <div className='subNotiTop'>
                 <p className='subTopText'>공지사항</p>
             </div>
             <CategoryTabs />
