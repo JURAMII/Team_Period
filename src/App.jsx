@@ -1,8 +1,13 @@
+import Main from './pages/main/main';
+import { Kinfo, Cinfo, Kpro, Cpro, Kticket, Cticket } from './pages/subPages/fesInfo/subFesInfoPages';
+import Faq from './pages/subPages/faq/faq';
 import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Header from './components/common/header/header';
 import Footer from './components/common/footer/footer';
-import Main from './pages/main/main';
+import NotiList from './components/SubNoti/notiList';
+import PostDetail from './components/SubNoti/PostDetail';
+import CreatePost from './components/SubNoti/CreatePost';
 import AllMenuPage from './components/common/allMenuPage/allMenu';
 import { Kinfo, Cinfo, Kpro, Cpro, Kticket, Cticket } from './pages/subPages/fesInfo/subFesInfoPages';
 import Faq from './pages/subPages/faq/faq'
