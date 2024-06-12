@@ -24,7 +24,9 @@
     text-overflow: ellipsis;
     padding-top: 10px;
 }
-
+.galTop{
+	margin: 0 auto;
+}
 
 @media screen and (max-width : 1920px) {
 	.subDefaultContent {

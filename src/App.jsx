@@ -20,12 +20,13 @@ function App() {
     return (
         <>
             <Header />
-            <Routes>
+            {/* <Routes>
                 <Route path='/' element={<Main />} />
                 <Route path='/Way' element={<Way />} />
                 <Route path='/Way2' element={<Way2 />} />
                 <Route path='/ResPage' element={<ResPage />} />
-            </Routes>
+            </Routes> */}
+            <ResPage />
             <Footer/>
         </>
     );

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import List from './ResLi';
 import News from './ResNew';
+import ResDetail from './ResDetail';
 
 
 function ResPage() {
@@ -53,6 +54,7 @@ function ResPage() {
       <section>
         <News createEvent={createEvent}/>
         <List datas={datas}/>
+        <ResDetail datas={datas} />
       </section>
       </>
     );
