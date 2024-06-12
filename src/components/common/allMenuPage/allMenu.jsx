@@ -1,6 +1,9 @@
 import { Menu } from "../header/Menu/Menu";
 import "../allMenuPage/allMenu.css";
 
+import LazyImage from "../../../LazyImg";
+import { AllMenu } from "../../../image";
+
 const AllMenuPage = ({ setIsMenuVisible }) => {
   const toggleMenu = () => {
     setIsMenuVisible(false); // 전체 메뉴를 닫습니다
@@ -14,6 +17,7 @@ const AllMenuPage = ({ setIsMenuVisible }) => {
           <h2 className="titText">별빛야행</h2>
           <p>경복궁의 가장 깊은 곳, 북측 권역의 문이 열립니다.</p>
         </div>
+        {/* <LazyImage src={AllMenu[1]} alt={"/"}></LazyImage> */}
       </div>
       <div className="headMenu">
         <div className="headInner">

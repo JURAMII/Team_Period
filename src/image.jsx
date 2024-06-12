@@ -30,6 +30,9 @@ import moonLightTour13 from './assets/moonlightTour/moonLightTour (13).webp';
 import moonLightTour14 from './assets/moonlightTour/moonLightTour (14).webp';
 import moonLightTour15 from './assets/moonlightTour/moonLightTour (15).webp';
 
+import AllMenuStar from './assets/starnight.webp';
+import AllMenuMoon from './assets/moonlight.webp';
+
 
 const starLightImages = [
   { src: starLightTour1, key : 'starLight' },
@@ -67,4 +70,9 @@ const moonLightImages = [
   { src : moonLightTour15, key : 'moonLight' }
 ];
 
-export { starLightImages, moonLightImages };
+const AllMenu = [
+  { src : AllMenuStar, key : 'starLight'},
+  { src : AllMenuMoon, key : 'moonLight'}
+]
+
+export { starLightImages, moonLightImages, AllMenu };
