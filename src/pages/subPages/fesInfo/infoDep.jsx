@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import '../../../components/onedep.css'
 import '../../../components/twodep.css'
 
@@ -9,6 +9,7 @@ const InfoDep = ({one}) =>{
 
     function clickOne(index){
         setOneDep(index);
+        document.querySelector('.oneDep').scrollTop
     }
 
     return(
@@ -32,7 +33,7 @@ const InfoDep2 = ({one}) =>{
         <ul className="twoDep flex">
         <li className={twoDep === 1 ? "twoDeptit tcheck" : "twoDeptit"} onClick={()=>clickTwo(1)}><Link to='/Kinfo'>축제정보</Link></li>
         <li className={twoDep === 2 ? "twoDeptit tcheck" : "twoDeptit"} onClick={()=>clickTwo(2)}><Link to='/Kprogram'>프로그램</Link></li>
-        <li className={twoDep === 3 ? "twoDeptit tcheck" : "twoDeptit"} onClick={()=>clickTwo(3)}><Link to='/Kticket'>예매정보</Link></li>
+        <li className={twoDep === 3 ? "twoDeptit tcheck" : "twoDeptit"} onClick={()=>clickTwo(3)}><Link to='/Kticket'>예매안내</Link></li>
         </ul>
     )
 }
@@ -49,26 +50,10 @@ const InfoDep3 = ({one}) =>{
         <ul className="twoDep flex">
         <li className={twoDep === 1 ? "twoDeptit tcheck" : "twoDeptit"} onClick={()=>clickTwo(1)}><Link to='/Cinfo'>축제정보</Link></li>
         <li className={twoDep === 2 ? "twoDeptit tcheck" : "twoDeptit"} onClick={()=>clickTwo(2)}><Link to='/Cprogram'>프로그램</Link></li>
-        <li className={twoDep === 3 ? "twoDeptit tcheck" : "twoDeptit"} onClick={()=>clickTwo(3)}><Link to='/Cticket'>예매정보</Link></li>
+        <li className={twoDep === 3 ? "twoDeptit tcheck" : "twoDeptit"} onClick={()=>clickTwo(3)}><Link to='/Cticket'>예매안내</Link></li>
         </ul>
     )
 }
 
 
-const FaqDep = ({one}) =>{
-
-    const [oneDep, setOneDep] = useState(one);
-
-    function clickOne(index){
-        setOneDep(index);
-    }
-
-    return(
-        <ul className="oneDep flex subDefaultContent">
-        <li className={oneDep === 1 ? "oneDeptit check" : "oneDeptit"} onClick={() => clickOne(1)}> <Link to='/Faq'>자주하는 질문</Link></li>
-        <li className={oneDep === 2 ? "oneDeptit check" : "oneDeptit"} onClick={() => clickOne(2)}><Link to=''>묻고 답하기</Link></li>
-       </ul>
-    )
-}
-
-export {InfoDep, InfoDep2, InfoDep3, FaqDep}
+export {InfoDep, InfoDep2, InfoDep3}
