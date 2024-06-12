@@ -9,6 +9,7 @@ const InfoDep = ({one}) =>{
 
     function clickOne(index){
         setOneDep(index);
+        document.querySelector('.oneDep').scrollTop
     }
 
     return(
