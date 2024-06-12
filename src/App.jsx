@@ -64,6 +64,13 @@ function App() {
                     <Route path="/QnaList/post/:id" element={<QnaDetail posts={posts1} onDelete={handleDeletePost1} />} />
                     <Route path="/QnaList/create" element={<QnaCreatePost />} />
                     <Route path="/QnaList/edit/:id" element={<QnaEditPost posts={posts1} setPosts={setPosts1} />} />
+                    
+                    <Route path='/Faq' element={<Faq />} />
+                    <Route path="/QnaList/category/:key" element={<QnaList posts={posts1} setPosts={setPosts1} />} />
+                    <Route path="/QnaList/post/:id" element={<QnaDetail posts={posts1} onDelete={handleDeletePost1} />} />
+                    <Route path="/QnaList/create" element={<QnaCreatePost />} />
+                    <Route path="/QnaList/edit/:id" element={<QnaEditPost posts={posts1} setPosts={setPosts1} />} />
+
                     <Route path='/Gallery' element = {<Gallery/>}/>
                     <Route path='/Gallery/Detail/:id' element = {<DetailPage/>}/>
                 </Routes>
