@@ -107,8 +107,10 @@ const CreatePost = () => {
                         maxLength={1500}
                     />
                 </div>
-                <button type="button" onClick={handleCancel}>취소</button>
-                <button type="submit">저장</button>
+				<div className='flex subBtnWrap'>
+                	<button className='subBtn' type="button" onClick={handleCancel}>취소</button>
+                	<button className='subBtn' type="submit">저장</button>
+				</div>
             </form>
         </div>
 		</div>

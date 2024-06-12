@@ -179,6 +179,9 @@
 	border: 0;
 	cursor: pointer;
 }
+.subBtnWrap{
+	gap: 28px;
+}
 
 .subBtn{
 	width: 124px;
@@ -190,6 +193,7 @@
 	cursor: pointer;
 	text-align: center;
 	line-height: 39px;
+	display: block;
 }
 
 
@@ -227,6 +231,7 @@
 .writeBtn{
 	position: relative;
 }
+
 
 /* main 반응형 */
 @media screen and (max-width : 1920px) {
