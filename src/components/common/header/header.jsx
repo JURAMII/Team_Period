@@ -1,8 +1,8 @@
 import "./header.css";
 import { Link } from 'react-router-dom';
 import icon1 from "../../../assets/로고 최종.png";
-import icon2 from "../../../assets/icons8-account-72.png";
 import { Menu } from "./Menu/Menu";
+import KakaoLogin from "../Login/KakaoLogin";
 
 const Header = ({ setIsMenuVisible }) => {
   const toggleMenu = () => {
@@ -18,13 +18,13 @@ const Header = ({ setIsMenuVisible }) => {
         <div className="headMenuWrap">
           <ul className="headMenu">
             <li>
-              <Link to="/">축제소개</Link>
+              <Link to="/Kinfo">축제소개</Link>
             </li>
             <li>
               <Link to="/">공지사항</Link>
             </li>
             <li>
-              <Link to="/Gallery/">갤러리</Link>
+              <Link to="/Gallery">갤러리</Link>
             </li>
             <li>
               <Link to="/">고객지원</Link>
@@ -37,7 +37,7 @@ const Header = ({ setIsMenuVisible }) => {
         <div className="test3">
           <ul className="test31">
             <li>
-              <img src={icon2} alt="계정 아이콘" />
+              <KakaoLogin />
             </li>
             <li>
               <div className="lang_change">

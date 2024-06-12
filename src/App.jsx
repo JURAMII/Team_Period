@@ -9,6 +9,8 @@ import Faq from './pages/subPages/faq/faq'
 import NotiList from './components/SubNoti/notiList'
 import PostDetail from './components/SubNoti/PostDetail';
 import CreatePost from './components/SubNoti/CreatePost';
+import Gallery from './pages/subPages/gallery/gallery';
+import DetailPage from './pages/main/Sec7_Gallery/subGalleryDetaill';
 
 function App() {
   const [isMenuVisible, setIsMenuVisible] = useState(false); // 메뉴 가시성을 관리하는 상태
@@ -31,7 +33,9 @@ function App() {
                <Route path='/Kticket' element={<Kticket/>}/>
                <Route path='/Cticket' element={<Cticket/>}/>
                <Route path='/Faq' element = {<Faq/>}/>
-          
+               <Route path='/Gallery' element = {<Gallery/>}></Route>
+               <Route path='/Gallery/Detail/:id' element = {<DetailPage/>}></Route>
+
         </Routes>
       )}
       <Footer />
