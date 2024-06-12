@@ -54,7 +54,6 @@ function ResPage() {
       <section>
         <News createEvent={createEvent}/>
         <List datas={datas}/>
-        <ResDetail datas={datas} />
       </section>
       </>
     );

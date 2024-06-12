@@ -2,7 +2,6 @@
 const ResDetail = ({datas})=>{
     return(
 <>
-    
         {datas.map((data)=>
         <div key={data.id} className="galTop">
         <h2>{data.gallTit}</h2>

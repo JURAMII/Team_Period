@@ -14,7 +14,6 @@ import ResPage from './pages/subPages/nearInfo/ResPage';
 import {Way,Way2} from './pages/subPages/way/Way';
 
 
-
 function App() {
 
     return (
@@ -28,6 +27,7 @@ function App() {
             </Routes> */}
             <ResPage />
             <Footer/>
+
         </>
     );
 
