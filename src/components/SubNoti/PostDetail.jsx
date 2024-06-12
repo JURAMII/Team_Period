@@ -12,18 +12,19 @@ const PostDetail = () => {
     return (
 		<div className='inner'>
 			<div className='subTop subNotiTop'>
-                <p className='subTopText'>공지사항</p>
-            </div>
+               	<p className='subTopText'>공지사항</p>
+           	</div>
 			<CategoryTabs />
-	        <div className='subDefaultContent'>
+        	<div className='subDefaultContent'>
     	        <h2>{post.category}</h2>
 				<h2>{post.title}</h2>
-            	<p style={{ color: 'gray' }}>{post.author} - {post.time}</p>
-        	</div>
+           		<p style={{ color: 'gray' }}>{post.author} - {post.time}</p>
+       		</div>
 			<div>
 				<p>{post.content}</p>
 			</div>
 		</div>
+
     );
 };
 
