@@ -73,9 +73,9 @@ const KakaoLogin = ({ setUserInfo, onLogout }) => {
                 </div>
             ) : (
                 // 로그아웃 상태일 때는 로그인 버튼을 보여줌
-                <button onClick={handleLogin}>
+                <div onClick={handleLogin} className='loginWrap'>
                     <img src={icon2} alt="로그인 이미지" />
-                </button>
+                </div>
             )}
         </>
     );
