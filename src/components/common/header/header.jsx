@@ -118,10 +118,10 @@ const Header = ({ setIsMenuVisible }) => {
               <Link to="/Kinfo">축제소개</Link>
             </li>
             <li>
-              <Link to="/notiList/category/:key">공지사항</Link>
+              <Link to="/notiList/category/noti">공지사항</Link>
             </li>
             <li>
-              <Link to="/Gallery">갤러리</Link>
+              <Link to="Gallery/category/starLigth">갤러리</Link>
             </li>
             <li>
               <Link to="/">고객지원</Link>
