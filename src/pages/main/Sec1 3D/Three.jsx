@@ -1,10 +1,6 @@
 import {Canvas} from '@react-three/fiber';
 import Sec3D from './Sec3D';
-import { useState } from "react";
-
 import "./three.css";
-import Background from 'three/examples/jsm/renderers/common/Background.js';
-
 
 const Three = ()=>{
     
