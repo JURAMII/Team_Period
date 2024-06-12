@@ -63,10 +63,10 @@ const Header = ({ setIsMenuVisible }) => {
               <Link to="Gallery/category/starLigth">갤러리</Link>
             </li>
             <li>
-              <Link to="/">고객지원</Link>
+              <Link to="/Faq">고객지원</Link>
             </li>
             <li>
-              <Link to="/">관광안내</Link>
+              <Link to="">관광안내</Link>
             </li>
           </ul>
         </div>
