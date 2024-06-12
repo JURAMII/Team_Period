@@ -5,7 +5,7 @@ export default function InfoScroll(props) {
     const { pathname } = useLocation();
 
     useEffect(() => {
-        window.scrollTo({top:500, left:0, behavior:'smooth'});
+        window.scrollTo({top:500, left:0});
     }, [pathname]);
 
     return <>{props.children}</>;

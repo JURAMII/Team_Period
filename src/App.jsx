@@ -15,8 +15,6 @@ import { posts as initialPosts } from './pages/main/Sec6NotiList/data';
 
 import { Kinfo, Cinfo, Kpro, Cpro, Kticket, Cticket } from './pages/subPages/fesInfo/subFesInfoPages';
 import Faq from './pages/subPages/faq/faq';
-
-import AllMenuPage from './components/common/allMenuPage/allMenu';
 import Gallery from './pages/subPages/gallery/gallery';
 import DetailPage from './pages/main/Sec7_Gallery/subGalleryDetaill';
 
