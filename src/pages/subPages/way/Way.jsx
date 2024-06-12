@@ -1,15 +1,40 @@
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import LineTit from '../../../components/lineTit';
-// import OneDep from '../../../components/onedep';
 import KakaoMap from './map';
+import '../../../components/onedep'
+import '../../../components/twodep'
 import './Way.css'
 
-const Way = ()=>{
 
+const Way = ()=>{
+    const [oneDep, setOneDep] = useState(1);
+    
+    function clickOne(index){
+        setOneDep(index);
+    }  
+
+    const [twoDep, setTwoDep] = useState(1);
+    
+    function clickOne(index){
+        setTwoDep(index);
+    }  
     return(
+        <>
+        {/* 원뎁스 */}
+        <ul className="oneDep flex subDefaultContent">
+         <li className={oneDep === 1 ? "oneDeptit check" : "oneDeptit"} onClick={() => clickOne(1)}> <Link to='/Way'>오시는길</Link></li>
+         <li className={oneDep === 2 ? "oneDeptit check" : "oneDeptit"} onClick={() => clickOne(2)}><Link to='/ResPage'>주변안내</Link></li>
+        </ul>
+        {/* 투뎁스 */}
+        <ul className="twoDep flex">
+        <li className={twoDep === 1 ? "twoDeptit tcheck" : "twoDeptit"} onClick={()=>clickTwo(1)}><Link to='/Way'>경복궁 별빛야행</Link></li>
+        <li className={twoDep === 2 ? "twoDeptit tcheck" : "twoDeptit"} onClick={()=>clickTwo(2)}><Link to='/Way2'>창덕궁 달빛기행</Link></li>
+        </ul>
+
         <section className='subDefaultContent'>
             <article>
-            {/* <OneDep subtit1={'오시는길'} subtit2={'주변안내'}/> */}
-            <LineTit subtit={'오시는길'}/>   
+            <LineTit subtit={'오시는길'}/>
             <div className='kakao flex'>     
                 <KakaoMap />     
                 <ul>
@@ -72,7 +97,6 @@ const Way = ()=>{
                         </ul>
                     </div>
                     <div>
-                    {/* <LineTit subtit={'주차요금'}/> */}
                     <h3>주차요금</h3>
                     <table>
                         <tr>
@@ -100,11 +124,14 @@ const Way = ()=>{
                     <p className='red'>※ 단, 소형차량이 지상주차장 이용 시 중/대형차 요금이 적용됩니다.</p>
                     <h3>요금 할인</h3>
                     <table>
+                        <thead>
                         <tr>
                             <td className='silver'>구 분</td>
                             <td className='silver'>내 용</td>
                             <td className='silver'>비 고</td>
                         </tr>
+                        </thead>
+                        <tbody>
                         <tr>
                             <td className='silver'>감면 (80%)</td>
                             <td><ul>
@@ -125,6 +152,7 @@ const Way = ()=>{
                             </td>
                             <td>다자녀가족임을 증명할 수 있는 서류(다자녀카드, 가족관계등록부,건강보험증 등)를 지참하고 신분증과 함께 제시하는 경우 </td>
                         </tr>
+                        </tbody>
                     </table>
                     <p className='red'>※ 경차는 배기량이 1000cc미만으로써 길이 3.6미터,너비1.6미터,높이 2.0미터 이하인 차</p>
                     <p className='red'>※ 저공해 자동차는 차량출고시 저공해자동차로 등록되며, 증명서 및 발급번호를 받은 차량, 일반차량등의 LPG차량 변경등은 해당되지 않음</p>
@@ -133,8 +161,84 @@ const Way = ()=>{
                 
             </article>
         </section>
+        </>
     )
 
 }
 
-export default Way;
+const Way2 = ()=>{
+    const [oneDep, setOneDep] = useState(1);
+    
+    function clickOne(index){
+        setOneDep(index);
+    }  
+
+    const [twoDep, setTwoDep] = useState(2);
+    
+    function clickTwo(index){
+        setTwoDep(index);
+    }  
+
+    return(
+        <>
+        {/* 원뎁스 */}
+        <ul className="oneDep flex subDefaultContent">
+         <li className={oneDep === 1 ? "oneDeptit check" : "oneDeptit"} onClick={() => clickOne(1)}> <Link to='/Way'>오시는길</Link></li>
+         <li className={oneDep === 2 ? "oneDeptit check" : "oneDeptit"} onClick={() => clickOne(2)}><Link to='/ResPage'>주변안내</Link></li>
+        </ul>
+        {/* 투뎁스 */}
+        <ul className="twoDep flex">
+        <li className={twoDep === 1 ? "twoDeptit tcheck" : "twoDeptit"} onClick={()=>clickTwo(1)}><Link to='/Way'>경복궁 별빛야행</Link></li>
+        <li className={twoDep === 2 ? "twoDeptit tcheck" : "twoDeptit"} onClick={()=>clickTwo(2)}><Link to='/Way2'>창덕궁 달빛기행</Link></li>
+        </ul>
+        <section className='subDefaultContent'>
+            <article>
+                
+            <LineTit subtit={'오시는길'}/>   
+            <div className='kakao flex'>     
+                <KakaoMap />     
+                <ul>
+                    <li><img src="./icons8-location-96.png" alt="location icon" /><b>주소</b>
+                    <p>(03072) 서울 종로구 율곡로 99</p>
+                    </li>
+                    <li><img src="./icons8-call-100.png" alt="phone icon" /><b>연락처</b>
+                    <p>대표전화 02-3668-2300 </p>
+                    <p>팩스 02-762-2070</p>
+                    </li>
+                </ul>
+            </div>
+            <ul className='transport flex'>
+                    <li>
+                        <img src="icons8-subway-100.png" alt="subway icon" />
+                        <ul className='tr_txt'>
+                            <li><b>지하철 이용시</b></li>
+                            <li>3호선 안국역 3번 출구 도보 5분</li>
+                            <li>1·3·5호선 종로3가역 7번 출구 도보 10분</li>
+                        </ul>
+                    </li>
+                    <li className='leftLine'>
+                        <img src="icons8-bus-100.png" alt="bus icon" />
+                        <ul className='tr_txt'>
+                            <li><b>버스 이용시</b></li>
+                            <li>서울돈화문국악당 하차<br />
+                            간선 109, 151, 162, 171, 172, 272, 710<br />
+                            지선 7025</li>
+                        </ul>
+                    </li>
+                    <li className='leftLine'><img src="icons8-car-96.png" alt="car icon" />
+                    <ul className='tr_txt'>
+                            <li><b>자가용 이용시</b></li>
+                            <li>창덕궁
+                                <p className='red'>*주차시설이 없으니 대중교통을 이용하시기 바랍니다.</p>
+                            </li>
+                        </ul>
+                        </li>
+            </ul>
+            </article>
+        </section>
+        </>
+    )
+
+}
+
+export {Way,Way2};

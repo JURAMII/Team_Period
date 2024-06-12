@@ -31,9 +31,10 @@ article{
     height: 400px;
     justify-content: center;
     margin: 0 auto;
-    padding: 65px 0;
+    /* padding: 65px 0; */
 }
-.transport li{
+.transport>li{
+    width: auto;
     text-align: center;
     padding: 10px;
 }
@@ -66,7 +67,7 @@ article{
     content: '';
     display: block;
     width: 1px;
-    height: 430px;
+    height: 330px;
     background-color: #bcbcbc;
     position: absolute;
     top: 0;
@@ -200,6 +201,12 @@ p.red{
     }
     .subDefaultContent{
         font-size: 13px;
+    }
+    .kakao li{
+        font-size: 16px;
+    }
+    .kakao li p{
+        font-size: 14px;
     }
 }
 
