@@ -98,6 +98,9 @@
 }
 
 @media screen and (max-width : 1024px) {
+    .mainGallery{
+        padding: 65px 0;
+    }
     .mainGallery>h1{
         font-size: 32px;
     }

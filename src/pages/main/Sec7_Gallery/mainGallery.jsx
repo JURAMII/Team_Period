@@ -38,7 +38,7 @@ const MainGallery = () => {
           className="mySwiper">
           {starLightImages.map((image, index) => (
             <SwiperSlide key={`${image.key}-${index}`}>
-              <Link to={`/Gallery/detail/${index}`}>
+              <Link to={`/Gallery/Detail/${index}`}>
                 <LazyImage
                   src={image.src}
                   alt={`StarLightTour ${index + 1}`}
@@ -63,7 +63,7 @@ const MainGallery = () => {
           className="mySwiper">
           {moonLightImages.map((image, index) => (
             <SwiperSlide key={`${image.key}-${index}`}>
-              <Link to={`/Gallery/detail/${index + starLightImages.length}`}>
+              <Link to={`/Gallery/Detail/${index + starLightImages.length}`}>
                 <LazyImage
                   src={image.src}
                   alt={`MoonLightTour ${index + 1}`}
