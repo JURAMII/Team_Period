@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import './mainNoti.css';
 import { posts } from './data';
@@ -7,12 +7,15 @@ const MainNoti = () => {
     const [selectedCategory, setSelectedCategory] = useState('공지사항');
     const [categoryKey, setCategoryKey] = useState('noti');
     
-    const filteredPosts = posts.filter(post => post.category === selectedCategory).slice(0, 5);
+    const filteredPosts = useMemo(() => 
+        posts.filter(post => post.category === selectedCategory).slice(0, 5), 
+        [selectedCategory]
+    );
 
-    const handleCategoryClick = (category, key) => {
+    const handleCategoryClick = useCallback((category, key) => {
         setSelectedCategory(category);
         setCategoryKey(key);
-    };
+    }, []);
 
     return (
         <section className="defaultContent flex notiWrap inner">

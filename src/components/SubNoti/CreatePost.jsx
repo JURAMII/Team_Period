@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { posts } from '../../main/Sec6NotiList/data';
+import { posts } from '../../pages/main/Sec6NotiList/data';
+import "./CreatePost.css"
 
 const formatDate = (date) => {
     const year = date.getFullYear();
@@ -53,12 +54,43 @@ const CreatePost = () => {
     };
 
     return (
-        <div style={{ width: '100%', maxWidth: '1440px', margin: '0 auto', padding: '20px' }}>
-            <h2>글쓰기</h2>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label>제목</label>
+		<div className="inner">
+		<div className='subTop subNotiTop'>
+			<p className='subTopText'>공지사항</p>
+		</div>
+        <div className='subDefaultContent'>
+			    <div className='createCategory'>
+                    <div className='createPadding'>
+						<label>축제선택</label>
+					</div>
+                    <select className='categorySelectNoMedia' value={category} onChange={(e) => setCategory(e.target.value)} required>
+                        <option value="공지사항">공지사항</option>
+                        <option value="별빛야행">별빛야행</option>
+                        <option value="달빛기행">달빛기행</option>
+                    </select>
+                </div>
+				<form onSubmit={handleSubmit}>
+				<div className='createLine'>
+					<div className='createPadding'>
+                    	<label>이름</label>
+					</div>
                     <input
+						className='categorySelect'
+                        type="text"
+                        value={author}
+                        onChange={(e) => setAuthor(e.target.value)}
+                        required
+						// 반드시 들어가야 다음으로 진행
+                        maxLength={5}
+						// 글자수제한
+                    />
+                </div>
+                <div className='createLine'>
+					<div className='createPadding'>
+                    	<label>제목</label>
+					</div>
+                    <input
+						className='categorySelect'
                         type="text"
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
@@ -67,36 +99,19 @@ const CreatePost = () => {
                     />
                 </div>
                 <div>
-                    <label>내용</label>
                     <textarea
+						className='textBox'
                         value={content}
                         onChange={(e) => setContent(e.target.value)}
                         required
                         maxLength={1500}
                     />
                 </div>
-                <div>
-                    <label>글쓴이</label>
-                    <input
-                        type="text"
-                        value={author}
-                        onChange={(e) => setAuthor(e.target.value)}
-                        required
-                        maxLength={5}
-                    />
-                </div>
-                <div>
-                    <label>카테고리</label>
-                    <select value={category} onChange={(e) => setCategory(e.target.value)} required>
-                        <option value="공지사항">공지사항</option>
-                        <option value="별빛야행">별빛야행</option>
-                        <option value="달빛기행">달빛기행</option>
-                    </select>
-                </div>
                 <button type="button" onClick={handleCancel}>취소</button>
                 <button type="submit">저장</button>
             </form>
         </div>
+		</div>
     );
 };
 
