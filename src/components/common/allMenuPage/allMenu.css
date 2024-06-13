@@ -82,7 +82,7 @@
   gap: 12px;
 }
 
-.headWrap>.headMenu>.headInner>.boxWrap>.menuBox li{
+.headWrap>.headMenu>.headInner>.boxWrap>.menuBox li>a{
   font-size: 18px;
   color: #fff;
 }

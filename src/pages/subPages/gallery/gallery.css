@@ -1,125 +1,199 @@
+.subTop {
+  margin-bottom: 65px;
+}
+
 .subGal {
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
-.subGal>.ImgSwap{
-    text-align: end;
+.subGal > .ImgSwap {
+  text-align: end;
+  margin-bottom: 20px;
 }
 
-.subGal>.ImgSwap>.cate{
-    width: 150px; height: 44px;
-    border: 1px solid var(--line-silver);
+.subGal > .ImgSwap > .cate {
+  width: 150px;
+  height: 44px;
+  border: 1px solid var(--line-silver);
 }
 
-.subGal>.galImgSec1 {
-    width: 100%;
-    padding: 30px 0;
-    overflow: hidden;
+.subGal > .galImgSec1 {
+  width: 100%;
+  padding: 30px 0;
+  overflow: hidden;
 }
 
-.subGal>.galImgSec1>.galImgSec1_inner>.mainImgWrap {
-    position: relative;
+.subGal > .galImgSec1 > .galImgSec1_inner > .mainImgWrap {
+  position: relative;
 }
 
-.subGal>.galImgSec1>.galImgSec1_inner>.mainImgWrap>.mainImgSlide {
-    width: 100%;
-    height: 100%;
-    overflow: visible;
-    display: flex;
-    position: relative;
-    z-index: 1;
-    transform: translateZ(0);
+.mainSwiper {
+  width: 100%;
+  height: 100%;
 }
 
-.subGal>.galImgSec1>.galImgSec1_inner>.mainImgWrap>.mainImgSlide>.slide {
-    width: 20%;
-    height: 570px;
-    transition: width 0.6s cubic-bezier(0.6, 0, 0.4, 1);
-    border: 1px solid var(--font-black);
+.mainSlide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 570px;
+  transition: width 0.6s cubic-bezier(0.6, 0, 0.4, 1);
 }
 
-.subGal>.galImgSec1>.galImgSec1_inner>.mainImgWrap>.mainImgSlide>.slide>div {
-    width: 100%;
+.mainSlide-active {
+  width: 1000px;
 }
 
-.subGal>.galImgSec1>.galImgSec1_inner>.mainImgWrap>.mainImgSlide>.slide>div>img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;
+.mainSlide-inactive {
+  width: 66px;
+}
+
+.mainSlide > div {
+  width: 100%;
+  height: 100%;
+}
+
+.mainSlide > div > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 .gridBox {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    gap: 30px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas:
-    "g1 g2 g3 g4"
-    "g5 g6 g7 g8"
-    "g9 g10 g11 g12"
-    ;
-    margin-bottom: 130px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+  "g1 g2 g3 g4"
+  "g5 g6 g7 g8"
+  "g9 g10 g11 g12"
+  "g13 g14 g15 g16"
+  ;
+  margin-bottom: 130px;
 }
 
-.gridBox>.gImgCard{
-    width: 100%; height: 100%;
-    border: 1px solid #000;
+.gridBox > .gImgCard {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000;
 }
 
-.gridBox>.gImgCard>a>img{
-    width: 337px; height: 294px;
+.gridBox > .gImgCard > a{
+  display: inline-block;
+  width: 100%; height: 100%;
 }
 
-.gridCard1{
-    grid-area: g1;
+.gridBox > .gImgCard > a > img {
+  width: 337px;
+  height: 294px;
 }
 
-.gridCard2{
-    grid-area: g2;
+.gridCard1 {
+  grid-area: g1;
 }
 
-.gridCard3{
-    grid-area: g3;
+.gridCard2 {
+  grid-area: g2;
 }
 
-.gridCard4{
-    grid-area: g4;
+.gridCard3 {
+  grid-area: g3;
 }
 
-.gridCard5{
-    grid-area: g5;
+.gridCard4 {
+  grid-area: g4;
 }
 
-.gridCard6{
-    grid-area: g6;
+.gridCard5 {
+  grid-area: g5;
 }
 
-.gridCard7{
-    grid-area: g7;
+.gridCard6 {
+  grid-area: g6;
 }
 
-.gridCard8{
-    grid-area: g8;
+.gridCard7 {
+  grid-area: g7;
 }
 
-.gridCard9{
-    grid-area: g9;
+.gridCard8 {
+  grid-area: g8;
 }
 
-.gridCard10{
-    grid-area: g10;
+.gridCard9 {
+  grid-area: g9;
 }
 
-.gridCard11{
-    grid-area: g11;
+.gridCard10 {
+  grid-area: g10;
 }
 
-.gridCard12{
-    grid-area: g12;
+.gridCard11 {
+  grid-area: g11;
 }
+
+.gridCard12 {
+  grid-area: g12;
+}
+
+.gridCard13 {
+  grid-area: g13;
+}
+
+.gridCard14 {
+  grid-area: g14;
+}
+
+.gridCard15 {
+  grid-area: g15;
+}
+
+.gridCard16 {
+  grid-area: g16;
+}
+
+.titText {
+  display: inline-block;
+  font-size: 38px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+@media screen and (max-width: 1280px) {
+  .subGal > h1 {
+      font-size: 48px;
+  }
+
+  .subGal > p {
+      font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .subGal > h1 {
+      font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .subGal > p {
+      font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .subGal > .galleryBtn {
+      gap: 15px;
+  }
+}
+
+  

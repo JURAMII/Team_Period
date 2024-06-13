@@ -30,49 +30,50 @@ import moonLightTour13 from './assets/moonlightTour/moonLightTour (13).webp';
 import moonLightTour14 from './assets/moonlightTour/moonLightTour (14).webp';
 import moonLightTour15 from './assets/moonlightTour/moonLightTour (15).webp';
 
-import AllMenuStar from './assets/starnight.webp';
-import AllMenuMoon from './assets/moonlight.webp';
+import starLightTour16 from './assets/starnight.webp';
+import moonLightTour16 from './assets/moonlight.webp';
+
+const formatDate = (date) => {
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+  return `${year}.${month}.${day}`;
+};
 
 
-const starLightImages = [
-  { src: starLightTour1, key : 'starLight' },
-  { src: starLightTour2, key : 'starLight' },
-  { src: starLightTour3, key : 'starLight' },
-  { src: starLightTour4, key : 'starLight' },
-  { src: starLightTour5, key : 'starLight' },
-  { src: starLightTour6, key : 'starLight' },
-  { src: starLightTour7, key : 'starLight' },
-  { src: starLightTour8, key : 'starLight' },
-  { src: starLightTour9, key : 'starLight' },
-  { src: starLightTour10, key : 'starLight' },
-  { src: starLightTour11, key : 'starLight' },
-  { src: starLightTour12, key : 'starLight' },
-  { src: starLightTour13, key : 'starLight' },
-  { src: starLightTour14, key : 'starLight' },
-  { src: starLightTour15, key : 'starLight' }
+let galleryImages = [
+  { src: starLightTour1, id: 1, title: '별빛야행 - 갤러리 게시글 1', content: '별빛야행 - 갤러리 게시글 1 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'starLigth' },
+  { src: starLightTour2, id: 2, title: '별빛야행 - 갤러리 게시글 2', content: '별빛야행 - 갤러리 게시글 2 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'starLigth' },
+  { src: starLightTour3, id: 3, title: '별빛야행 - 갤러리 게시글 3', content: '별빛야행 - 갤러리 게시글 3 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'starLigth' },
+  { src: starLightTour4, id: 4, title: '별빛야행 - 갤러리 게시글 4', content: '별빛야행 - 갤러리 게시글 4 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'starLigth' },
+  { src: starLightTour5, id: 5, title: '별빛야행 - 갤러리 게시글 5', content: '별빛야행 - 갤러리 게시글 5 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'starLigth' },
+  { src: starLightTour6, id: 6, title: '별빛야행 - 갤러리 게시글 6', content: '별빛야행 - 갤러리 게시글 6 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'starLigth' },
+  { src: starLightTour7, id: 7, title: '별빛야행 - 갤러리 게시글 7', content: '별빛야행 - 갤러리 게시글 7 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'starLigth' },
+  { src: starLightTour8, id: 8, title: '별빛야행 - 갤러리 게시글 8', content: '별빛야행 - 갤러리 게시글 8 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'starLigth' },
+  { src: starLightTour9, id: 9, title: '별빛야행 - 갤러리 게시글 9', content: '별빛야행 - 갤러리 게시글 9 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'starLigth' },
+  { src: starLightTour10, id: 10, title: '별빛야행 - 갤러리 게시글 10', content: '별빛야행 - 갤러리 게시글 10 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'starLigth' },
+  { src: starLightTour11, id: 11, title: '별빛야행 - 갤러리 게시글 11', content: '별빛야행 - 갤러리 게시글 11 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'starLigth' },
+  { src: starLightTour12, id: 12, title: '별빛야행 - 갤러리 게시글 12', content: '별빛야행 - 갤러리 게시글 12 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'starLigth' },
+  { src: starLightTour13, id: 13, title: '별빛야행 - 갤러리 게시글 13', content: '별빛야행 - 갤러리 게시글 13 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'starLigth' },
+  { src: starLightTour14, id: 14, title: '별빛야행 - 갤러리 게시글 14', content: '별빛야행 - 갤러리 게시글 14 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'starLigth' },
+  { src: starLightTour15, id: 15, title: '별빛야행 - 갤러리 게시글 15', content: '별빛야행 - 갤러리 게시글 15 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'starLigth' },
+  { src: starLightTour16, id: 16, title: '별빛야행 - 갤러리 게시글 16', content: '별빛야행 - 갤러리 게시글 16 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'starLigth' },
+  { src: moonLightTour1, id: 17, title: '달빛기행 - 갤러리 게시글 1', content: '달빛기행 - 갤러리 게시글 1 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'moonLight' },
+  { src: moonLightTour2, id: 18, title: '달빛기행 - 갤러리 게시글 2', content: '달빛기행 - 갤러리 게시글 2 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'moonLight' },
+  { src: moonLightTour3, id: 19, title: '달빛기행 - 갤러리 게시글 3', content: '달빛기행 - 갤러리 게시글 3 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'moonLight' },
+  { src: moonLightTour4, id: 20, title: '달빛기행 - 갤러리 게시글 4', content: '달빛기행 - 갤러리 게시글 4 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'moonLight' },
+  { src: moonLightTour5, id: 21, title: '달빛기행 - 갤러리 게시글 5', content: '달빛기행 - 갤러리 게시글 5 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'moonLight' },
+  { src: moonLightTour6, id: 22, title: '달빛기행 - 갤러리 게시글 6', content: '달빛기행 - 갤러리 게시글 6 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'moonLight' },
+  { src: moonLightTour7, id: 23, title: '달빛기행 - 갤러리 게시글 7', content: '달빛기행 - 갤러리 게시글 7 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'moonLight' },
+  { src: moonLightTour8, id: 24, title: '달빛기행 - 갤러리 게시글 8', content: '달빛기행 - 갤러리 게시글 8 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'moonLight' },
+  { src: moonLightTour9, id: 25, title: '달빛기행 - 갤러리 게시글 9', content: '달빛기행 - 갤러리 게시글 9 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'moonLight' },
+  { src: moonLightTour10, id: 26, title: '달빛기행 - 갤러리 게시글 10', content: '달빛기행 - 갤러리 게시글 10 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'moonLight' },
+  { src: moonLightTour11, id: 27, title: '달빛기행 - 갤러리 게시글 11', content: '달빛기행 - 갤러리 게시글 11 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'moonLight' },
+  { src: moonLightTour12, id: 28, title: '달빛기행 - 갤러리 게시글 12', content: '달빛기행 - 갤러리 게시글 12 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'moonLight' },
+  { src: moonLightTour13, id: 29, title: '달빛기행 - 갤러리 게시글 13', content: '달빛기행 - 갤러리 게시글 13 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'moonLight' },
+  { src: moonLightTour14, id: 30, title: '달빛기행 - 갤러리 게시글 14', content: '달빛기행 - 갤러리 게시글 14 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'moonLight' },
+  { src: moonLightTour15, id: 31, title: '달빛기행 - 갤러리 게시글 15', content: '달빛기행 - 갤러리 게시글 15 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'moonLight' },
+  { src: moonLightTour16, id: 32, title: '달빛기행 - 갤러리 게시글 16', content: '달빛기행 - 갤러리 게시글 16 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'moonLight' }
 ];
 
-const moonLightImages = [
-  { src : moonLightTour1, key : 'moonLight' },
-  { src : moonLightTour2, key : 'moonLight' },
-  { src : moonLightTour3, key : 'moonLight' },
-  { src : moonLightTour4, key : 'moonLight' },
-  { src : moonLightTour5, key : 'moonLight' },
-  { src : moonLightTour6, key : 'moonLight' },
-  { src : moonLightTour7, key : 'moonLight' },
-  { src : moonLightTour8, key : 'moonLight' },
-  { src : moonLightTour9, key : 'moonLight' },
-  { src : moonLightTour10, key : 'moonLight' },
-  { src : moonLightTour11, key : 'moonLight' },
-  { src : moonLightTour12, key : 'moonLight' },
-  { src : moonLightTour13, key : 'moonLight' },
-  { src : moonLightTour14, key : 'moonLight' },
-  { src : moonLightTour15, key : 'moonLight' }
-];
-
-const AllMenu = [
-  { src : AllMenuStar, key : 'starLight'},
-  { src : AllMenuMoon, key : 'moonLight'}
-]
-
-export { starLightImages, moonLightImages, AllMenu };
+export { galleryImages };
