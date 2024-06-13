@@ -109,13 +109,39 @@ const MainGallery = () => {
       <div className="galleryslide">
         <Swiper
           modules={[Autoplay]}
-          spaceBetween={20}
           centeredSlides={true}
           autoplay={{
             delay: 0,
             disableOnInteraction: false,
           }}
-          slidesPerView={"auto"}
+          breakpoints= {
+            {
+              1920: {
+                slidesPerView: 5,
+                spaceBetween: 0
+              },
+              1440: {
+                slidesPerView: 'auto',
+                spaceBetween: 20
+              },
+              1280: {
+                slidesPerView: 'auto',
+                spaceBetween: 20
+              },
+              1024: {
+                slidesPerView: 'auto',
+                spaceBetween: 20
+              },
+              768: {
+                slidesPerView: 'auto',
+                spaceBetween: 20
+              },
+              500: {
+                slidesPerView: 'auto',
+                spaceBetween: 20
+              }
+            }
+          }
           speed={6000}
           loop={true}
           loopedslides={1}
@@ -135,13 +161,39 @@ const MainGallery = () => {
         </Swiper>
         <Swiper
           modules={[Autoplay]}
-          spaceBetween={20}
           autoplay={{
             delay: 0,
             disableOnInteraction: false,
             reverseDirection: true,
           }}
-          slidesPerView={"auto"}
+          breakpoints= {
+            {
+              1920: {
+                slidesPerView: 5,
+                spaceBetween: 0,
+              },
+              1440: {
+                slidesPerView: 'auto',
+                spaceBetween: 20
+              },
+              1280: {
+                slidesPerView: 'auto',
+                spaceBetween: 20
+              },
+              1024: {
+                slidesPerView: 'auto',
+                spaceBetween: 20
+              },
+              768: {
+                slidesPerView: 'auto',
+                spaceBetween: 20
+              },
+              500: {
+                slidesPerView: 'auto',
+                spaceBetween: 20
+              }
+            }
+          }
           speed={6000}
           loop={true}
           loopedslides={1}
