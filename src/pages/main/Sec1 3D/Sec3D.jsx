@@ -18,7 +18,7 @@ const Sec3D = () => {
       <ambientLight intensity={50} />
       <directionalLight color="white" intensity={10} />
       <spotLight position={[0, 5, 10]} angle={0.3} penumbra={1} />
-      <primitive ref={modelRef} object={gltf.scene} scale={10} />
+      <primitive ref={modelRef} object={gltf.scene} scale={11} position={[0,-0.2,0]}/>
     </>
   );
 };
