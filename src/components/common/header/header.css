@@ -140,6 +140,10 @@ header{
     margin-top: 30px;
 }
 
+.profile> img{
+    border-radius: 50%;
+}
+
 @media screen and (max-width : 1440px) {
     .headNavi>.headMenuWrap>.headMenu{
         gap: 56px;
