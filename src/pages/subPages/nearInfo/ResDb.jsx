@@ -1,3 +1,5 @@
+import starLightTour1 from '../../../assets/맛집/0111113619490-4344d6513be34eeeae6d8e78829159b4.webp';
+
 const formatDate = (date) => {
     const year = date.getFullYear();
     const month = date.getMonth() + 1;
@@ -5,15 +7,15 @@ const formatDate = (date) => {
     return `${year}.${month}.${day}`;
 };
 
-export const posts = [
+export const resposts = [
     {id: 1,
-     img : "./restauant/0111113619490-4344d6513be34eeeae6d8e78829159b4.jpg",
+     img : starLightTour1,
      title : "목포 자매집",
      content : "해남 출신의 네 자매가 운영하는 남도 음식 전문점. 해남에서 올라오는 자연산 재료를 사용한 남도식 반찬이 맛있다. 점심때는 짱뚱어탕이 유명하다.",
      author: "관리자",
      category: "res",
      time: formatDate(new Date()),
-     key: 'restaurant'
+     key: 'res'
     },
     {id : 2,
     img : "./restauant/0111120942226-9d7db25abc064036b11631022c7310f4.jpg",
@@ -22,7 +24,7 @@ export const posts = [
     author: "관리자",
     category: "res",
     time: formatDate(new Date()),
-    key: 'restaurant'
+    key: 'res'
    },
   {id : 3,
 img : "./restauant/0112093030902-ab05e438bddc48a3bb9e9a97466e03c6.jpg",
@@ -31,7 +33,7 @@ img : "./restauant/0112093030902-ab05e438bddc48a3bb9e9a97466e03c6.jpg",
   author: "관리자",
   category: "res",
   time: formatDate(new Date()),
-  key: 'restaurant'
+  key: 'res'
  },
  {id : 4,
 img : "./restauant/0112132533927-0ba3b683be534464b11b1a108c40f238.jpg",
@@ -40,7 +42,7 @@ img : "./restauant/0112132533927-0ba3b683be534464b11b1a108c40f238.jpg",
  author: "관리자",
  category: "res",
  time: formatDate(new Date()),
- key: 'restaurant'
+ key: 'res'
 },
 {id : 5,
 img : "./restauant/0113104704297-734b67afa0664b569b00d6420ab5e64e.jpg",
@@ -49,7 +51,7 @@ gallTxT : "한우 생불고기와 곰국수(사골 국물 칼국수)를 맛볼 �
 author: "관리자",
 category: "res",
 time: formatDate(new Date()),
-key: 'restaurant'
+key: 'res'
 },
 {id : 6,
 img : "./restauant/0113105006484-46fa1c0ad4524ce0809bdb2075a2bde5.jpg",
@@ -58,7 +60,7 @@ gallTxT : "서래마을에서 프렌치 퓨전으로 이름을 알린 키친 플
 author: "관리자",
 category: "res",
 time: formatDate(new Date()),
-key: 'restaurant'
+key: 'res'
 },
 {id : 7,
 img : "./restauant/0113105557828-6e668b33fb2540d489cee732efeececa.jpg",
@@ -67,7 +69,7 @@ gallTxT : "비교적 저렴하게 곱창을 즐길 수 있다. 숯불구이라�
 author: "관리자",
 category: "res",
 time: formatDate(new Date()),
-key: 'restaurant'
+key: 'res'
 },
 {id : 8,
 img : "./restauant/0113152911045-15cbf700be604d96b8b64a05d5e0f6fa.jpg",
@@ -76,7 +78,7 @@ gallTxT : "세계 최고의 맛 아시안 월스트리트 저널 신문에서 �
 author: "관리자",
 category: "res",
 time: formatDate(new Date()),
-key: 'restaurant'
+key: 'res'
 },
 {id : 9,
 img : "./restauant/0114133200968-cbf9842ff6c94df8984e8d170126a805.jpg",
@@ -85,7 +87,7 @@ gallTxT : "태국의 수키와 일본의 샤부샤부를 혼합한 음식점이�
 author: "관리자",
 category: "res",
 time: formatDate(new Date()),
-key: 'restaurant'
+key: 'res'
 },
 {id : 10,
 img : "./restauant/0118152354350-eb73238dbc494ce393679124cb495f2b.jpg",
@@ -94,7 +96,7 @@ gallTxT : "빨간 떡볶이의 원조 '신당동 떡볶이'를 만든 마복림 
 author: "관리자",
 category: "res",
 time: formatDate(new Date()),
-key: 'restaurant'
+key: 'res'
 },
 {id : 11,
 img : "./restauant/0120092716310-001a1527e8df4339ac49c79107ac8334.jpg",
@@ -103,7 +105,7 @@ gallTxT : "핸드 드립 커피전문점이다. 한쪽 벽면 가득한 국내�
 author: "관리자",
 category: "res",
 time: formatDate(new Date()),
-key: 'restaurant'
+key: 'res'
 },
 {id : 12,
 img : "./restauant/0120135426780-d27a23fa32de4084b772d3fc4e6fdd51.jpg",
@@ -112,7 +114,7 @@ gallTxT : "63빌딩 식당가를 레노베이션하면서 새로 오픈한 곳�
 author: "관리자",
 category: "res",
 time: formatDate(new Date()),
-key: 'restaurant'
+key: 'res'
 },
 {id : 13,
 img : "./restauant/0118152354350-eb73238dbc494ce393679124cb495f2b.jpg",
@@ -121,7 +123,7 @@ gallTxT : "빨간 떡볶이의 원조 '신당동 떡볶이'를 만든 마복림 
 author: "관리자",
 category: "res",
 time: formatDate(new Date()),
-key: 'restaurant'
+key: 'res'
 },
 {id : 14,
 img : "./restauant/0121120725648-a9c46645f2464d3d8d3cc74eddd344c6.jpg",
@@ -130,7 +132,7 @@ gallTxT : "자그마한 집이지만 짬뽕, 짜장면, 탕수육 등이 맛있�
 author: "관리자",
 category: "res",
 time: formatDate(new Date()),
-key: 'restaurant'
+key: 'res'
 },
 {id : 15,
 img : "./restauant/0121142143985-34280ad2f64945e0aa43e48fafd03c25.jpg",
@@ -139,7 +141,7 @@ gallTxT : "그안의 셰프가 독립한 곳. 파스타 맛이 좋으며, 다양
 author: "관리자",
 category: "res",
 time: formatDate(new Date()),
-key: 'restaurant'
+key: 'res'
 },
 {id : 16,
 img : "./restauant/201806071035509891.jpg",
@@ -148,5 +150,5 @@ gallTxT : "일본 긴자에서 접할 수 있는 작고 아담한 스타일의 �
 author: "관리자",
 category: "res",
 time: formatDate(new Date()),
-key: 'restaurant'
+key: 'res'
 }]

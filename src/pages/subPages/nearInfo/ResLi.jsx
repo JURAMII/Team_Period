@@ -5,7 +5,6 @@ import Pagination from '../../../components/SubNoti/Pagination'; // 페이지넌
 import "../../../components/SubNoti/notiList.css"
 import SearchBar from '../../../components/SubNoti/SearchBar'; //서치바 컴퍼넌트
 import SupTop from '../../../components/common/supTop';
-import FaqDep from './faqDep';
 import ScrollToTop from '../../../scroll';
 
 const ResList = ({ posts, setPosts }) => {
@@ -95,26 +94,14 @@ const ResList = ({ posts, setPosts }) => {
     return (
         <ScrollToTop>
                <div className="inner">
-            <SupTop supTopImg={'subSupportTop'} supTopTit={'고객지원'}/>
-            <FaqDep one={2}/>
-            {/* 게시물 리스트 */}
-            <table className='subDefaultContent'>
-                <thead>
-                    <tr className='notiTableTop'>
-                        <th className='tableNumber' style={{ width: '10%' }}>번호</th>
-                        <th>제목</th>
-                        <th className='tableAuthor' style={{ minWidth: '10%' }}>글쓴이</th>
-                        <th style={{ width: '10%' }}>작성시간</th>
-                    </tr>
-                </thead>
-                {/* 이부분 어떻게?? */}
-                <tbody>
+            <SupTop supTopImg={'subTourInfoTop'} supTopTit={'관광안내'}/>
+
                     {/* 필터링된 게시물을 현재 페이지에 맞게 출력 */}
                     {currentPosts.map((post)=><figure key={post.id}>
-                <img src={post.img} alt={post.title} />
+                <img src={img} alt={post.gallTit} />
                 <figcaption className='gall_txt'>
-                <b>{post.title}</b>
-                <p>{post.content}</p>                    
+                <b>{post.gallTit}</b>
+                <p>{post.gallTxT}</p>                    
                 </figcaption>
             </figure>)}
                     {currentPosts.length === 0 && (
@@ -122,8 +109,7 @@ const ResList = ({ posts, setPosts }) => {
                             <td colSpan="4">게시물이 없습니다.</td>
                         </tr>
                     )}
-                </tbody>
-            </table>
+
             {/* 페이지네이션 */}
             <Pagination 
                 currentPage={currentPage}
@@ -135,7 +121,7 @@ const ResList = ({ posts, setPosts }) => {
                 onNextGroup={handleNextGroup}
             />
             <div className='pageBtnWrap writeBtn'>
-                <Link to="/ResNew/create" className="subBtn notiWrite">글쓰기</Link>
+                <Link to="/ResLi/create" className="subBtn notiWrite">글쓰기</Link>
             </div>
             <SearchBar 
                 searchField={searchField}

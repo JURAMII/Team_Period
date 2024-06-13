@@ -2,7 +2,6 @@ import React from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import '../../../components/SubNoti/PostDetail.css';
 import SupTop from '../../../components/common/supTop';
-import FaqDep from './faqDep';
 
 const ResDetail = ({ posts, onDelete }) => {
     const { id } = useParams();
@@ -28,8 +27,7 @@ const ResDetail = ({ posts, onDelete }) => {
 
     return (
         <div className='inner'>
-             <SupTop supTopImg={'subSupportTop'} supTopTit={'고객지원'}/>
-             <FaqDep one={2}/>
+             <SupTop supTopImg={'subTourInfoTop'} supTopTit={'관광안내'}/>
             <div className='postDetailWrap'>
                 <div className='postWrap flex'>
                     <p className='postCategory'>{post.category}</p>

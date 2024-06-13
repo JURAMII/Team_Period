@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { posts1 } from './qnaData';
+import { resposts } from './ResDb';
 import "../../../components/SubNoti/CreatePost.css"
 import SupTop from '../../../components/common/supTop';
-import FaqDep from './faqDep';
 
 const formatDate = (date) => {
     const year = date.getFullYear();
@@ -37,7 +36,7 @@ const ResPost = () => {
             '맛집안내': 'res',
         };
         const newPost = {
-            id: posts1.length + 1,
+            id: resposts.length + 1,
             title,
             content,
             author,
@@ -45,18 +44,17 @@ const ResPost = () => {
             time: formatDate(new Date()),
             key: categoryKeyMap[category]  // key 값을 category에 따라 설정
         };
-        posts1.unshift(newPost); // 새로운 게시글을 맨 앞에 추가
-        navigate(`/ResInfo/category/${newPost.key}`);
+        resposts.unshift(newPost); // 새로운 게시글을 맨 앞에 추가
+        navigate(`/ResLi/category/${newPost.key}`);
     };
 
     const handleCancel = () => {
-        navigate('/ResInfo/category/res');
+        navigate('/ResLi/category/res');
     };
 
     return (
 		<div className="inner">
-		 <SupTop supTopImg={'subSupportTop'} supTopTit={'맛집안내'}/>
-         <FaqDep one={2}/>
+		 <SupTop supTopImg={'subTourInfoTop'} supTopTit={'맛집안내'}/>
         <div className='subDefaultContent'>
 			    <div className='createCategory'>
                     <div className='createPadding'>
