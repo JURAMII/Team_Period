@@ -223,10 +223,11 @@
     }
     .ticBtn{
         width: 120px;
-        line-height: 36px;
     }
     .ticBtn a{
         font-size: 16px;
+        width: 100%;
+        line-height: 36px;
     }
 }
 @media screen and (max-width : 500px) {
