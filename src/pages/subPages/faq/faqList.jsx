@@ -1,44 +1,54 @@
 import './faq.css'
 import { Fadd, Fminus } from "../fesInfo/fesInfoimgs"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const FaqList = ({fans, fqes, id, findex, FsetIndex}) => {
-
     const [toggle, setToggle] = useState(false)
-  
-    const faqClick=(id)=>{
-        setToggle(!toggle)
-        FsetIndex(id)
+    const [calc, setCalc] = useState(5)
+
+    useEffect(() => {
+        if (id === findex) {
+            setToggle(true)
+        } else {
+            setToggle(false)
+        }
+    }, [findex, id])
+
+    const faqClick = () => {
+        if (id === findex) {
+            FsetIndex(null) // Close if clicked again
+        } else {
+            FsetIndex(id)
+        }
     }
   
-    const [calc,setcalc] = useState(5);
-  
-    const plusCalc = () =>{
-      setcalc(calc + 1)
+    const plusCalc = () => {
+        setCalc(calc + 1)
     }
     
-    return(
+    return (
         <div className='faqWrap'>
-            <div className='fqes flex' onClick={()=>faqClick(id)}>
-                <p className='cFont'>{fqes}</p>
+            <div className='fqes flex' onClick={faqClick}>
+                <p className='cFont textEllipsis'>{fqes}</p>
                 <span>
-                    {!!toggle&&id===findex? <img src={Fminus} alt="닫기" />:
-                     <img src={Fadd} alt="열기" />
-                    }
+                    {toggle ? <img src={Fminus} alt="닫기" /> : <img src={Fadd} alt="열기" />}
                 </span>
             </div>
             <div className='fans'>
-                {!!toggle && id===findex && <><p className='cFont'>{fans}</p>
-                <div className='faqUpWrap flex'>
-                <ul className='faqUp' onClick={plusCalc}>
-                    <li>👍</li>
-                    <li>{calc}</li>
-                </ul>
-                </div>
-                </>}
+                {toggle && (
+                    <>
+                        <p className='cFont'>{fans}</p>
+                        <div className='faqUpWrap flex'>
+                            <ul className='faqUp' onClick={plusCalc}>
+                                <li>👍</li>
+                                <li>{calc}</li>
+                            </ul>
+                        </div>
+                    </>
+                )}
             </div>
         </div>
     )
-  }
+}
 
-  export default FaqList
+export default FaqList

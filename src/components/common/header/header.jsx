@@ -80,7 +80,6 @@ const Header = ({ setIsMenuVisible }) => {
                     alt="프로필 이미지"
                     onClick={handleLogout} // 클릭 시 로그아웃 및 인가 코드 제거
                   />
-                  <span>{userInfo.nickname}</span>
                 </div>
               ) : (
                 <KakaoLogin setUserInfo={setUserInfo} onLogout={handleLogout} /> // 로그인 시 setUserInfo로 사용자 정보 저장, 로그아웃 함수 전달

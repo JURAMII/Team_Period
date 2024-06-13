@@ -1,7 +1,10 @@
-import React, { useState, useMemo, useCallback } from 'react';
+import React, { useState, useMemo, useCallback, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './mainNoti.css';
 import { posts } from './data';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const MainNoti = () => {
     const [selectedCategory, setSelectedCategory] = useState('공지사항');
@@ -16,9 +19,20 @@ const MainNoti = () => {
         setSelectedCategory(category);
         setCategoryKey(key);
     }, []);
+    useEffect(() => {
+        AOS.init(
+            { duration: 1200,
+              once: false,
+              mirror: true,
+              disable: window.innerWidth < 768,
+            }
+        );
+        AOS.refresh();
+      }, [])
+
 
     return (
-        <section className="defaultContent flex notiWrap inner">
+        <section className="defaultContent flex notiWrap inner" data-aos="fade-up" ata-aos-anchor-placement="top-center">
             <article className="notiLeft">
                 <div className="tagWrap">
                     <span className="tagFont">#별빛야행</span>

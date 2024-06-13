@@ -11,7 +11,7 @@ const Three = ()=>{
    </div>
    <div className='threeDWrap'>
    <Canvas 
-   style={{ background: "black" }}
+   style={{ background: "black"}}
    camera={{ fov: 50, position: [1, 1, 2] }}>
         <Sec3D />
         </Canvas>
