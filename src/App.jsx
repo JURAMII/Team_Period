@@ -25,11 +25,11 @@ import QnaCreatePost from './pages/subPages/faq/qnaCreate';
 import QnaDetail from './pages/subPages/faq/qnaDetail';
 import { posts1 as initialPosts1 } from './pages/subPages/faq/qnaData';
 
-import { resposts as ResInitialPosts } from './pages/subPages/nearInfo/ResDb';
-import ResList from './pages/subPages/nearInfo/ResLi';
-import ResDetail from './pages/subPages/nearInfo/ResDetail';
-import ResPost from './pages/subPages/nearInfo/ResNew';
-import ResEditPost from './pages/subPages/nearInfo/ResEdit';
+// import { resposts as ResInitialPosts } from './pages/subPages/nearInfo/ResDb';
+// import ResList from './pages/subPages/nearInfo/ResLi';
+// import ResDetail from './pages/subPages/nearInfo/ResDetail';
+// import ResPost from './pages/subPages/nearInfo/ResNew';
+// import ResEditPost from './pages/subPages/nearInfo/ResEdit';
 
 
 function App() {
@@ -47,12 +47,13 @@ function App() {
         const updatedPosts = posts1.filter(post => post.id !== postId);
         setPosts1(updatedPosts);
     };
-    const [resposts, setResPosts] = useState(ResInitialPosts); // 초기 상태 설정 / onDelete 삭제함수 호출 후 초기상태설정하는데 사용
+    // const [resposts, setResPosts] = useState(ResInitialPosts); // 초기 상태 설정 / onDelete 삭제함수 호출 후 초기상태설정하는데 사용
 
-    const ReshandleDeletePost = (postId) => {
-        const updatedPosts = posts1.filter(post => post.id !== postId);
-        setPosts1(updatedPosts);
-    };
+    // const ReshandleDeletePost = (postId) => {
+    //     const updatedPosts = posts1.filter(post => post.id !== postId);
+    //     setPosts1(updatedPosts);
+    // };
+  
   
     return (
         <>
@@ -79,10 +80,10 @@ function App() {
                     <Route path="/QnaList/edit/:id" element={<QnaEditPost posts={posts1} setPosts={setPosts1} />} />
                     <Route path='/Gallery' element = {<Gallery/>}/>
                     <Route path='/Gallery/Detail/:id' element = {<DetailPage/>}/>
-                    <Route path="/ResLi/category/:key" element={<ResList posts={resposts} setPosts={setResPosts} />} />
+                    {/* <Route path="/ResLi/category/:key" element={<ResList posts={resposts} setPosts={setResPosts} />} />
                     <Route path="/ResLi/post/:id" element={<ResDetail posts={resposts} onDelete={ReshandleDeletePost} />} />
                     <Route path="/ResLi/create" element={<ResPost />} />
-                    <Route path="/ResLi/edit/:id" element={<ResEditPost posts={resposts} setPosts={setResPosts} />} />
+                    <Route path="/ResLi/edit/:id" element={<ResEditPost posts={resposts} setPosts={setResPosts} />} /> */}
                 </Routes>
             )}
             <Footer />
