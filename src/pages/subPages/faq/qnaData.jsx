@@ -18,5 +18,4 @@ export const posts1 = [
     { id: 9, title: '묻고 답하기 - 게시글 3', content: '묻고 답하기 - 게시글 3 내용', author: '회원', category: '묻고 답하기', time: formatDate(new Date()), key: 'qna' },
     { id: 10, title: '묻고 답하기 - 게시글 2', content: '묻고 답하기 - 게시글 2 내용', author: '회원', category: '묻고 답하기', time: formatDate(new Date()), key: 'qna' },
     { id: 11, title: '묻고 답하기 - 게시글 1', content: '묻고 답하기 - 게시글 1 내용', author: '회원', category: '묻고 답하기', time: formatDate(new Date()), key: 'qna' },
-  
 ];

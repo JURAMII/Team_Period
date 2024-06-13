@@ -20,7 +20,7 @@ const FaqList = ({fans, fqes, id, findex, FsetIndex}) => {
     return(
         <div className='faqWrap'>
             <div className='fqes flex' onClick={()=>faqClick(id)}>
-                <p className='cFont'>{fqes}</p>
+                <p className='cFont textEllipsis'>{fqes}</p>
                 <span>
                     {!!toggle&&id===findex? <img src={Fminus} alt="닫기" />:
                      <img src={Fadd} alt="열기" />

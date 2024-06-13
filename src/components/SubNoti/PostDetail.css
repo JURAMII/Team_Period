@@ -54,15 +54,10 @@
 	justify-content: space-between;
 }
 
-
 @media screen and (max-width : 1440px) {
 	.postDetailWrap{
 		width: calc( 100% - 30px );
 	}
-}
-
-@media screen and (max-width : 1024px) {
-	
 }
 
 @media screen and (max-width : 768px) {
@@ -82,8 +77,4 @@
 	.postWrap{
 		padding-left: 10px;
 	}
-}
-
-@media screen and (max-width : 500px) {
-	
 }

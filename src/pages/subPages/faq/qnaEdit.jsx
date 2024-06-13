@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import "../../../components/SubNoti/CreatePost.css";
 import SupTop from '../../../components/common/supTop';
 import FaqDep from './faqDep';
+import './qnaCreate.css'
 
 const formatDate = (date) => {
     const year = date.getFullYear();
@@ -71,8 +72,8 @@ const QnaEditPost = ({ posts, setPosts }) => {
         <div className="inner">
            <SupTop supTopImg={'subSupportTop'} supTopTit={'고객지원'}/>
            <FaqDep one={2}/>
-            <div className='subDefaultContent'>
-                <div className='createCategory'>
+            <div className='qnaCreateWrap'>
+                <div className='createCategory none'>
                     <div className='createPadding'>
                         <label>축제선택</label>
                     </div>
@@ -80,7 +81,7 @@ const QnaEditPost = ({ posts, setPosts }) => {
                         <option value="묻고 답하기">묻고 답하기</option>
                     </select>
                 </div>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className='borderTop2'>
                     <div className='createLine'>
                         <div className='createPadding'>
                             <label>이름</label>

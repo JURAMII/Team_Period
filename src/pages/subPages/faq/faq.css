@@ -10,7 +10,7 @@
     display: block;
     border: 1px solid var(--font-black);
 }
-.faqWrap p{
+.faqWrap>.fans p{
     white-space: pre-wrap;
 }
 .fqes{

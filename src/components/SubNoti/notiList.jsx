@@ -101,7 +101,7 @@ const NotiList = ({ posts, setPosts }) => {
                     <tr className='notiTableTop'>
                         <th className='tableNumber' style={{ width: '10%' }}>번호</th>
                         <th>제목</th>
-                        <th className='tableAuthor' style={{ minWidth: '10%' }}>글쓴이</th>
+                        <th className='tableAuthor' style={{ width: '11%' }}>글쓴이</th>
                         <th style={{ width: '10%' }}>작성시간</th>
                     </tr>
                 </thead>
@@ -111,13 +111,13 @@ const NotiList = ({ posts, setPosts }) => {
                         <tr className='notiTable' key={post.id}>
                             <td className='tableNumberPost' style={{ width: '10%' }}>{post.id}</td>
                             <td><Link to={`/notiList/post/${post.id}`} className="textEllipsis">{post.title}</Link></td>
-                            <td className='tableAuthorPost' style={{ minWidth: '10%' }}>{post.author}</td>
+                            <td className='tableAuthorPost' style={{ width: '11%' }}>{post.author}</td>
                             <td style={{ width: '10%' }}>{post.time}</td>
                         </tr>
                     ))}
                     {currentPosts.length === 0 && (
                         <tr>
-                            <td colSpan="4">게시물이 없습니다.</td>
+                            <td colSpan="4">검색 결과가 없습니다.</td>
                         </tr>
                     )}
                 </tbody>
