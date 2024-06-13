@@ -1,60 +1,3 @@
-// import { useEffect, useState } from 'react';
-// import icon2 from "../../../assets/icons8-account-72.png";
-
-// const KakaoLogin = () => {
-//     const Rest_api_key = '7fa0610f6442011e7212da9227bd4c8e'; // REST API KEY
-//     const redirect_uri = 'http://localhost:5173/Team_Period/'; // Redirect URI
-
-//     // 상태를 관리하기 위한 useState 훅
-//     const [isLoggedIn, setIsLoggedIn] = useState(false); // 로그인 상태를 저장하는 변수
-
-//     // 컴포넌트가 처음 렌더링될 때 실행되는 useEffect 훅
-//     useEffect(() => {
-//         // URL에서 인가 코드(code)를 가져오기 위한 함수
-//         const code = new URL(window.location.href).searchParams.get("code");
-
-//         if (code) {
-//             // 인가 코드가 있는 경우, 서버에 토큰 요청 (여기서는 간단히 로그인 상태로 설정)
-//             // 실제로는 서버에 요청해서 토큰을 받아와야 함
-//             setIsLoggedIn(true);
-//         }
-//     }, []);
-
-//     // 카카오 로그인 요청 URL
-//     const kakaoURL = `https://kauth.kakao.com/oauth/authorize?client_id=${Rest_api_key}&redirect_uri=${redirect_uri}&response_type=code`;
-
-//     // 로그인 버튼 클릭 시 호출되는 함수
-//     const handleLogin = () => {
-//         window.location.href = kakaoURL; // 카카오 로그인 페이지로 이동
-//     };
-
-//     // 로그아웃 함수
-//     const handleLogout = () => {
-//         // 실제 로그아웃 요청 (여기서는 간단히 로그아웃 상태로 설정)
-//         // 실제로는 서버에 요청해서 로그아웃 처리해야 함
-//         setIsLoggedIn(false);
-//         window.location.href = redirect_uri; // 로그아웃 후 리다이렉트
-//     };
-
-//     return (
-//         <>
-//             {isLoggedIn ? (
-//                 // 로그인이 되어 있는 경우 로그아웃 버튼을 보여줌
-//                 <button onClick={handleLogout}>
-//                     로그아웃
-//                 </button>
-//             ) : (
-//                 // 로그인이 되어 있지 않은 경우 로그인 버튼을 보여줌
-//                 <button onClick={handleLogin}>
-//                     <img src={icon2} alt="로그인 이미지" />
-//                 </button>
-//             )}
-//         </>
-//     );
-// };
-
-// export default KakaoLogin;
-
 import { useEffect, useState } from 'react';
 import icon2 from "../../../assets/icons8-account-72.png";
 
@@ -130,9 +73,9 @@ const KakaoLogin = ({ setUserInfo, onLogout }) => {
                 </div>
             ) : (
                 // 로그아웃 상태일 때는 로그인 버튼을 보여줌
-                <button onClick={handleLogin}>
+                <div onClick={handleLogin} className='loginWrap'>
                     <img src={icon2} alt="로그인 이미지" />
-                </button>
+                </div>
             )}
         </>
     );
