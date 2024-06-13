@@ -17,7 +17,10 @@ const QnaList = ({ posts, setPosts }) => {
     const [filteredPosts, setFilteredPosts] = useState([]);
 
     useEffect(() => {
-        setFilteredPosts(posts.filter(post => post.key === key));
+        const filtered = posts.filter(post => post.key === key);
+        // 게시물을 ID 기준으로 역순 정렬
+        const sortedFiltered = filtered.sort((a, b) => b.id - a.id);
+        setFilteredPosts(sortedFiltered);
     }, [key, posts]);
 
     useEffect(() => {
@@ -47,7 +50,7 @@ const QnaList = ({ posts, setPosts }) => {
                 return post.author.toLowerCase().includes(searchTerm.toLowerCase());
             }
             return true;
-        });
+        }).sort((a, b) => b.id - a.id); // 검색 후에도 역순 정렬 유지
         setFilteredPosts(searchFilteredPosts);
         setCurrentPage(1); // 검색 후 페이지를 첫 페이지로 설정
         setCurrentGroup(1); // 검색 후 그룹을 첫 그룹으로 설정
@@ -56,7 +59,7 @@ const QnaList = ({ posts, setPosts }) => {
     const handleDeletePost = (postId) => {
         const updatedPosts = posts.filter(post => post.id !== postId);
         setPosts(updatedPosts);
-        setFilteredPosts(updatedPosts.filter(post => post.key === key));
+        setFilteredPosts(updatedPosts.filter(post => post.key === key).sort((a, b) => b.id - a.id)); // 삭제 후에도 역순 정렬 유지
     };
 
     // 페이지네이션을 위한 상태를 정의
@@ -93,59 +96,58 @@ const QnaList = ({ posts, setPosts }) => {
 
     return (
         <ScrollToTop>
-               <div className="inner">
-            <SupTop supTopImg={'subSupportTop'} supTopTit={'고객지원'}/>
-            <FaqDep one={2}/>
-            {/* 게시물 리스트 */}
-            <table className='subDefaultContent'>
-                <thead>
-                    <tr className='notiTableTop'>
-                        <th className='tableNumber' style={{ width: '10%' }}>번호</th>
-                        <th>제목</th>
-                        <th className='tableAuthor' style={{ minWidth: '10%' }}>글쓴이</th>
-                        <th style={{ width: '10%' }}>작성시간</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {/* 필터링된 게시물을 현재 페이지에 맞게 출력 */}
-                    {currentPosts.map((post) => (
-                        <tr className='notiTable' key={post.id}>
-                            <td className='tableNumberPost' style={{ width: '10%' }}>{post.id}</td>
-                            <td><Link to={`/QnaList/post/${post.id}`} className="textEllipsis">{post.title}</Link></td>
-                            <td className='tableAuthorPost' style={{ minWidth: '10%' }}>{post.author}</td>
-                            <td style={{ width: '10%' }}>{post.time}</td>
+            <div className="inner">
+                <SupTop supTopImg={'subSupportTop'} supTopTit={'고객지원'}/>
+                <FaqDep one={2}/>
+                {/* 게시물 리스트 */}
+                <table className='subDefaultContent'>
+                    <thead>
+                        <tr className='notiTableTop'>
+                            <th className='tableNumber' style={{ width: '10%' }}>번호</th>
+                            <th>제목</th>
+                            <th className='tableAuthor' style={{ width: '11%' }}>글쓴이</th>
+                            <th style={{ width: '10%' }}>작성시간</th>
                         </tr>
-                    ))}
-                    {currentPosts.length === 0 && (
-                        <tr>
-                            <td colSpan="4">게시물이 없습니다.</td>
-                        </tr>
-                    )}
-                </tbody>
-            </table>
-            {/* 페이지네이션 */}
-            <Pagination 
-                currentPage={currentPage}
-                totalPageCount={totalPageCount}
-                currentGroup={currentGroup}
-                pageGroupSize={pageGroupSize}
-                onPageChange={handleClick}
-                onPreviousGroup={handlePreviousGroup}
-                onNextGroup={handleNextGroup}
-            />
-            <div className='pageBtnWrap writeBtn'>
-                <Link to="/QnaList/create" className="subBtn notiWrite">글쓰기</Link>
+                    </thead>
+                    <tbody>
+                        {/* 필터링된 게시물을 현재 페이지에 맞게 출력 */}
+                        {currentPosts.map((post) => (
+                            <tr className='notiTable' key={post.id}>
+                                <td className='tableNumberPost' style={{ width: '10%' }}>{post.id}</td>
+                                <td><Link to={`/QnaList/post/${post.id}`} className="textEllipsis">{post.title}</Link></td>
+                                <td className='tableAuthorPost' style={{ width: '11%' }}>{post.author}</td>
+                                <td style={{ width: '10%' }}>{post.time}</td>
+                            </tr>
+                        ))}
+                        {currentPosts.length === 0 && (
+                            <tr>
+                                <td colSpan="4">게시물이 없습니다.</td>
+                            </tr>
+                        )}
+                    </tbody>
+                </table>
+                {/* 페이지네이션 */}
+                <Pagination 
+                    currentPage={currentPage}
+                    totalPageCount={totalPageCount}
+                    currentGroup={currentGroup}
+                    pageGroupSize={pageGroupSize}
+                    onPageChange={handleClick}
+                    onPreviousGroup={handlePreviousGroup}
+                    onNextGroup={handleNextGroup}
+                />
+                <div className='pageBtnWrap writeBtn'>
+                    <Link to="/QnaList/create" className="subBtn notiWrite">글쓰기</Link>
+                </div>
+                <SearchBar 
+                    searchField={searchField}
+                    setSearchField={setSearchField}
+                    searchTerm={searchTerm}
+                    setSearchTerm={setSearchTerm}
+                    onSearch={handleSearch}
+                />
             </div>
-            <SearchBar 
-                searchField={searchField}
-                setSearchField={setSearchField}
-                searchTerm={searchTerm}
-                setSearchTerm={setSearchTerm}
-                onSearch={handleSearch}
-            />
-        </div>
         </ScrollToTop>
-     
     );
 };
 
