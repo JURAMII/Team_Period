@@ -6,7 +6,7 @@ const formatDate = (date) => {
 };
 
 export const posts1 = [
-    // 공지사항 카테고리
+    
     { id: 11, title: '묻고 답하기 - 게시글 11', content: '묻고 답하기 - 게시글 11 내용', author: '회원', category: '묻고 답하기', time: formatDate(new Date()), key: 'qna' },
     { id: 10, title: '묻고 답하기 - 게시글 10', content: '묻고 답하기 - 게시글 10 내용', author: '회원', category: '묻고 답하기', time: formatDate(new Date()), key: 'qna' },
     { id: 9, title: '묻고 답하기 - 게시글 9', content: '묻고 답하기 - 게시글 9 내용', author: '회원', category: '묻고 답하기', time: formatDate(new Date()), key: 'qna' },
@@ -18,5 +18,4 @@ export const posts1 = [
     { id: 3, title: '묻고 답하기 - 게시글 3', content: '묻고 답하기 - 게시글 3 내용', author: '회원', category: '묻고 답하기', time: formatDate(new Date()), key: 'qna' },
     { id: 2, title: '묻고 답하기 - 게시글 2', content: '묻고 답하기 - 게시글 2 내용', author: '회원', category: '묻고 답하기', time: formatDate(new Date()), key: 'qna' },
     { id: 1, title: '묻고 답하기 - 게시글 1', content: '묻고 답하기 - 게시글 1 내용', author: '회원', category: '묻고 답하기', time: formatDate(new Date()), key: 'qna' },
-  
 ];

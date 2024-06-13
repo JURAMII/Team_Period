@@ -1,4 +1,4 @@
-import Video1 from '/videos/mainVideo.mp4'
+import Video1 from '/videos/mainVideo.mp4';
 
 const MainVideo = () =>{
     return(
@@ -10,4 +10,4 @@ const MainVideo = () =>{
     )
 }
 
-export default MainVideo
+export default MainVideo;
