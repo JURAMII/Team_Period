@@ -24,6 +24,13 @@ import QnaCreatePost from './pages/subPages/faq/qnaCreate';
 import QnaDetail from './pages/subPages/faq/qnaDetail';
 import { posts1 as initialPosts1 } from './pages/subPages/faq/qnaData';
 
+// import { resposts as ResInitialPosts } from './pages/subPages/nearInfo/ResDb';
+// import ResList from './pages/subPages/nearInfo/ResLi';
+// import ResDetail from './pages/subPages/nearInfo/ResDetail';
+// import ResPost from './pages/subPages/nearInfo/ResNew';
+// import ResEditPost from './pages/subPages/nearInfo/ResEdit';
+
+
 function App() {
     const [isMenuVisible, setIsMenuVisible] = useState(false); // 메뉴 가시성을 관리하는 상태
     const [posts, setPosts] = useState(initialPosts); // 초기 상태 설정 / onDelete 삭제함수 호출 후 초기상태설정하는데 사용
@@ -39,7 +46,14 @@ function App() {
         const updatedPosts = posts1.filter(post => post.id !== postId);
         setPosts1(updatedPosts);
     };
+    // const [resposts, setResPosts] = useState(ResInitialPosts); // 초기 상태 설정 / onDelete 삭제함수 호출 후 초기상태설정하는데 사용
 
+    // const ReshandleDeletePost = (postId) => {
+    //     const updatedPosts = posts1.filter(post => post.id !== postId);
+    //     setPosts1(updatedPosts);
+    // };
+  
+  
     return (
         <>
             <Header setIsMenuVisible={setIsMenuVisible} /> {/* Header에 상태 설정 함수를 전달 */}
@@ -63,9 +77,12 @@ function App() {
                     <Route path="/QnaList/post/:id" element={<QnaDetail posts={posts1} onDelete={handleDeletePost1} />} />
                     <Route path="/QnaList/create" element={<QnaCreatePost />} />
                     <Route path="/QnaList/edit/:id" element={<QnaEditPost posts={posts1} setPosts={setPosts1} />} />
-                    <Route path='/Gallery/category/:key' element={<Gallery />} />
-                    <Route path='/Gallery/category2/:key' element={<GalleryReview />} /> {/* GalleryReview 라우팅 추가 */}
-                    <Route path='/Gallery/Detail/:id' element={<DetailPage />} />
+                    <Route path='/Gallery' element = {<Gallery/>}/>
+                    <Route path='/Gallery/Detail/:id' element = {<DetailPage/>}/>
+                    {/* <Route path="/ResLi/category/:key" element={<ResList posts={resposts} setPosts={setResPosts} />} />
+                    <Route path="/ResLi/post/:id" element={<ResDetail posts={resposts} onDelete={ReshandleDeletePost} />} />
+                    <Route path="/ResLi/create" element={<ResPost />} />
+                    <Route path="/ResLi/edit/:id" element={<ResEditPost posts={resposts} setPosts={setResPosts} />} /> */}
                 </Routes>
             )}
             <Footer />
@@ -74,4 +91,3 @@ function App() {
 }
 
 export default App;
-
