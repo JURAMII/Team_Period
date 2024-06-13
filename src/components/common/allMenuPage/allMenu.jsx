@@ -1,8 +1,6 @@
 import { Menu } from "../header/Menu/Menu";
 import "../allMenuPage/allMenu.css";
-
-import LazyImage from "../../../LazyImg";
-import { AllMenu } from "../../../image";
+import { Link } from 'react-router-dom';
 
 const AllMenuPage = ({ setIsMenuVisible }) => {
   const toggleMenu = () => {
@@ -26,9 +24,9 @@ const AllMenuPage = ({ setIsMenuVisible }) => {
               <div>
                 <h2 className="titText">축제소개</h2>
                 <ul>
-                  <li>축제정보</li>
-                  <li>프로그램</li>
-                  <li>예매안내</li>
+                  <li><Link to="/Kinfo" onClick={toggleMenu}>축제정보</Link></li>
+                  <li><Link to="/Kprogram" onClick={toggleMenu}>프로그램</Link></li>
+                  <li><Link to="/Kticket" onClick={toggleMenu}>예매안내</Link></li>
                 </ul>
               </div>
             </li>
@@ -36,9 +34,9 @@ const AllMenuPage = ({ setIsMenuVisible }) => {
               <div>
                 <h2 className="titText">공지사항</h2>
                 <ul>
-                  <li>메인 공지</li>
-                  <li>경복궁 공지</li>
-                  <li>창덕궁 공지</li>
+                  <li><Link to="/notiList/category/noti" onClick={toggleMenu}>메인 공지</Link></li>
+                  <li><Link to="/notiList/category/star" onClick={toggleMenu}>경복궁 공지</Link></li>
+                  <li><Link to="/notiList/category/moon" onClick={toggleMenu}>창덕궁 공지</Link></li>
                 </ul>
               </div>
             </li>
@@ -46,8 +44,8 @@ const AllMenuPage = ({ setIsMenuVisible }) => {
               <div>
                 <h2 className="titText">갤러리</h2>
                 <ul>
-                  <li>축제 사진</li>
-                  <li>축제 후기</li>
+                  <li><Link to="/Gallery/category/starLigth" onClick={toggleMenu}>축제 사진</Link></li>
+                  <li><Link to="/Gallery/category2/starLigth" onClick={toggleMenu}>축제 후기</Link></li>
                 </ul>
               </div>
             </li>
@@ -55,8 +53,8 @@ const AllMenuPage = ({ setIsMenuVisible }) => {
               <div>
                 <h2 className="titText">커뮤니티</h2>
                 <ul>
-                  <li>자주하는 질문</li>
-                  <li>묻고 답하기</li>
+                  <li><Link to="/Faq" onClick={toggleMenu}>자주하는 질문</Link></li>
+                  <li><Link to="/QnaList/category/qna" onClick={toggleMenu}>묻고 답하기</Link></li>
                 </ul>
               </div>
             </li>
@@ -64,15 +62,15 @@ const AllMenuPage = ({ setIsMenuVisible }) => {
               <div>
                 <h2 className="titText">관광안내</h2>
                 <ul>
-                  <li>오시는 길</li>
-                  <li>주변 즐길거리</li>
+                  <li><Link to="/Location" onClick={toggleMenu}>오시는 길</Link></li>
+                  <li><Link to="/Attractions" onClick={toggleMenu}>주변 즐길거리</Link></li>
                 </ul>
               </div>
             </li>
             <li className="lastBox grid6">
               <div>
                 <div>
-                  <img />
+                  <img src="/" alt="서울특별시 강남구 봉은사로 406(삼성동 112-2)" />
                 </div>
                 <p>서울특별시 강남구 봉은사로 406(삼성동 112-2)</p>
                 <p>Copyright(C) Korea Heritage Agency All Rights Reserved.</p>
@@ -86,3 +84,4 @@ const AllMenuPage = ({ setIsMenuVisible }) => {
 };
 
 export default AllMenuPage;
+
