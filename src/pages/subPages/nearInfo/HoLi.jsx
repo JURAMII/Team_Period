@@ -8,13 +8,13 @@ import Neardep from './neardep';
 import '../../../components/onedep.css'
 import '../../../components/twodep.css'
 import './GallList.css'
-const ResList = ({ posts, setPosts }) => {
+const HoList = ({ posts, setPosts }) => {
     const { key } = useParams(); // URL에서 key 파라미터를 가져옴
     const [currentPage, setCurrentPage] = useState(1);
     const [currentGroup, setCurrentGroup] = useState(1);
     const [pageGroupSize, setPageGroupSize] = useState(5);
     const [searchTerm, setSearchTerm] = useState('');
-    const [searchField, setSearchField] = useState('gallTit');
+    const [searchField, setSearchField] = useState('title');
     const [filteredPosts, setFilteredPosts] = useState([]);
 
     useEffect(() => {
@@ -90,7 +90,7 @@ const ResList = ({ posts, setPosts }) => {
     // 총 페이지 수를 계산
     const totalPageCount = Math.ceil(filteredPosts.length / postsPerPage);
 
-    const [twoDep, setTwoDep] = useState(1);
+    const [twoDep, setTwoDep] = useState(2);
 
 function clickTwo(index){
     setTwoDep(index);
@@ -108,9 +108,9 @@ const one = 2;
         </ul>
         <section className='subDefaultContent'>
         <ScrollToTop>
-                <div className='gall'>
+        <div className='gall'>
                     {currentPosts.map((post)=><figure key={post.id}>
-                        <Link to={`/ResLi/Detail/${post.id}`}>
+                        <Link to={`/HoLi/Detail/${post.id}`}>
                 <img src={post.img} alt={post.gallTit} />
                 <figcaption className='gall_txt'>
                 <b>{post.gallTit}</b>
@@ -123,7 +123,6 @@ const one = 2;
                             <td colSpan="4">게시물이 없습니다.</td>
                         </tr>
                     )}
-
             {/* 페이지네이션 */}
             <Pagination 
                 currentPage={currentPage}
@@ -135,7 +134,7 @@ const one = 2;
                 onNextGroup={handleNextGroup}
             />
             <div className='pageBtnWrap writeBtn'>
-                <Link to="/ResLi/create" className="subBtn notiWrite">글쓰기</Link>
+                <Link to="/HoLi/create" className="subBtn notiWrite">글쓰기</Link>
             </div>
             
 
@@ -153,4 +152,4 @@ const one = 2;
     );
 };
 
-export default ResList;
+export default HoList;

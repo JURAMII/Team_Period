@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom'; // useNavigate 추가
 import SupTop from '../../../components/common/supTop';
 
-const ResDetail = ({posts ,onDelete}) => {
+const HoDetail = ({posts ,onDelete}) => {
   // URL에서 id 파라미터를 가져옵니다
   const { id } = useParams();
   const navigate = useNavigate(); // 페이지 이동을 위한 navigate 함수
@@ -18,7 +18,7 @@ const ResDetail = ({posts ,onDelete}) => {
 
   // 수정 버튼 클릭 시 실행되는 함수
   const handleEdit = () => {
-    navigate(`/ResLi/edit/${post.id}`);
+    navigate(`/HoLi/edit/${post.id}`);
   };
 
   // 삭제 버튼 클릭 시 실행되는 함수
@@ -26,7 +26,7 @@ const ResDetail = ({posts ,onDelete}) => {
     if (window.confirm("정말로 이 게시물을 삭제하시겠습니까?")) {
       onDelete(post.id);
       alert("게시물이 삭제되었습니다.");
-      navigate(`/ResLi/category/res`);
+      navigate(`/HoLi/category/hotel`);
     }
   };
 
@@ -45,18 +45,18 @@ const ResDetail = ({posts ,onDelete}) => {
         </div>
         <div className='postNavigation'>
           {previousPost && (
-            <Link to={`/ResLi/detail/${previousPost.id}`} className="">
+            <Link to={`/HoLi/detail/${previousPost.id}`} className="">
               <div>이전글: &#91;{previousPost.category}&#93; {previousPost.gallTit}</div>
             </Link>
           )}
           {nextPost && (
-            <Link to={`/ResLi/detail/${nextPost.id}`} className="">
+            <Link to={`/HoLi/detail/${nextPost.id}`} className="">
               <div>다음글: &#91;{nextPost.category}&#93; {nextPost.gallTit}</div>
             </Link>
           )}
         </div>
         <div className='postActions flex'>
-          <Link to={`/ResLi/category/${post.key}`} className='subBtn'>목록보기</Link>
+          <Link to={`/HoLi/category/${post.key}`} className='subBtn'>목록보기</Link>
           <div className='flex subBtnWrap'>
             <button className='subBtn' onClick={handleEdit}>수정하기</button>
             <button className='subBtn' onClick={handleDelete}>삭제하기</button>
@@ -67,4 +67,4 @@ const ResDetail = ({posts ,onDelete}) => {
   );
 };
 
-export default ResDetail;
+export default HoDetail;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { resposts } from './ResDb';
+import { hoposts } from './HoDb';
 import "../../../components/SubNoti/CreatePost.css"
 import SupTop from '../../../components/common/supTop';
 
@@ -11,11 +11,11 @@ const formatDate = (date) => {
     return `${year}.${month}.${day}`;
 };
 
-const ResPost = () => {
+const HoPost = () => {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
     const [author, setAuthor] = useState('');
-    const [category, setCategory] = useState('맛집소개');
+    const [category, setCategory] = useState('숙박소개');
     const navigate = useNavigate();
 
     const handleSubmit = (event) => {
@@ -33,10 +33,10 @@ const ResPost = () => {
             return;
         }
         const categoryKeyMap = {
-            '맛집소개': 'res',
+            '숙박소개': 'hotel',
         };
         const newPost = {
-            id: resposts.length + 1,
+            id: hoposts.length + 1,
             title,
             content,
             author,
@@ -44,24 +44,24 @@ const ResPost = () => {
             time: formatDate(new Date()),
             key: categoryKeyMap[category]  // key 값을 category에 따라 설정
         };
-        resposts.unshift(newPost); // 새로운 게시글을 맨 앞에 추가
-        navigate(`/ResLi/category/${newPost.key}`);
+        hoposts.unshift(newPost); // 새로운 게시글을 맨 앞에 추가
+        navigate(`/HoLi/category/${newPost.key}`);
     };
 
     const handleCancel = () => {
-        navigate('/ResLi/category/res');
+        navigate('/HoLi/category/hotel');
     };
 
     return (
 		<div className="inner">
-		 <SupTop supTopImg={'subTourInfoTop'} supTopTit={'맛집소개'}/>
+		 <SupTop supTopImg={'subTourInfoTop'} supTopTit={'숙박소개'}/>
         <div className='subDefaultContent'>
 			    <div className='createCategory'>
                     <div className='createPadding'>
 						<label>항목선택</label>
 					</div>
                     <select className='categorySelectNoMedia' value={category} onChange={(e) => setCategory(e.target.value)} required>
-                        <option value="맛집소개">맛집소개</option>
+                        <option value="숙박소개">숙박소개</option>
                     </select>
                 </div>
 				<form onSubmit={handleSubmit}>
@@ -112,4 +112,4 @@ const ResPost = () => {
     );
 };
 
-export default ResPost;
+export default HoPost;

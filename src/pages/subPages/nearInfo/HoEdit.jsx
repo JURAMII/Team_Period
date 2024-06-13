@@ -10,7 +10,7 @@ const formatDate = (date) => {
     return `${year}.${month}.${day}`;
 };
 
-const ResEditPost = ({ posts, setPosts }) => {
+const HoEditPost = ({ posts, setPosts }) => {
     const { id } = useParams();
     const navigate = useNavigate();
     const post = posts.find(post => post.id === Number(id));
@@ -18,7 +18,7 @@ const ResEditPost = ({ posts, setPosts }) => {
     const [gallTit, setGallTit] = useState('');
     const [gallTxT, setGallTxT] = useState('');
     const [author, setAuthor] = useState('');
-    const [category, setCategory] = useState('맛집소개');
+    const [category, setCategory] = useState('숙박소개');
 
     useEffect(() => {
         if (post) {
@@ -27,7 +27,7 @@ const ResEditPost = ({ posts, setPosts }) => {
             setAuthor(post.author);
             setCategory(post.category);
         } else {
-            navigate('/ResLi/category/res');
+            navigate('/HoLi/category/hotel');
         }
     }, [post, navigate]);
 
@@ -46,7 +46,7 @@ const ResEditPost = ({ posts, setPosts }) => {
             return;
         }
         const categoryKeyMap = {
-            '맛집안내': 'res',
+            '숙박소개': 'hotel',
         };
         const updatedPost = {
             ...post,
@@ -59,11 +59,11 @@ const ResEditPost = ({ posts, setPosts }) => {
         };
         const updatedPosts = posts.map(p => p.id === Number(id) ? updatedPost : p);
         setPosts(updatedPosts);
-        navigate(`/ResLi/Detail/${post.id}`);
+        navigate(`/HoLi/Detail/${post.id}`);
     };
 
     const handleCancel = () => {
-        navigate(`ResLi/Detail/${post.id}`);
+        navigate(`HoLi/Detail/${post.id}`);
     };
 
     return (
@@ -75,7 +75,7 @@ const ResEditPost = ({ posts, setPosts }) => {
                         <label>축제선택</label>
                     </div>
                     <select className='categorySelectNoMedia' value={category} onChange={(e) => setCategory(e.target.value)} required>
-                        <option value="맛집안내">맛집안내</option>
+                        <option value="숙박소개">숙박소개</option>
                     </select>
                 </div>
                 <form onSubmit={handleSubmit}>
@@ -124,4 +124,4 @@ const ResEditPost = ({ posts, setPosts }) => {
     );
 };
 
-export default ResEditPost;
+export default HoEditPost;

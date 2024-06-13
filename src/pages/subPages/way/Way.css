@@ -53,7 +53,7 @@ article{
 }
 .tr_txt li{
     text-align: left;
-    line-height: 25px;
+    line-height: 30px;
 }
 .tr_txt>li:not(:first-child)::before {
     content: '•';
@@ -101,23 +101,23 @@ article{
     display: inline-block;
     margin-right: 10px;
 }
-table{
+.pee{
     border-top: 2px solid var(--font-black);
     width: 100%;
     margin: 20px 0;
 }
-td{
+.pee td{
     padding: 20px;
     text-align: center;
     border-bottom: 1px solid var(--line-silver);
 }
-td:not(:first-child){
+.pee td:not(:first-child){
     border-left: 1px solid var(--line-silver);
 }
-td.silver{
+.pee td.silver{
     background-color: var(--back-silver);
 }
-h3{
+.peeTit{
     padding-top: 65px ;
     font-size: 20px;
 }
