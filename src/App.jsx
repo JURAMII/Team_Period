@@ -33,7 +33,6 @@ import { posts1 as initialPosts1 } from './pages/subPages/faq/qnaData';
 // import ResPost from './pages/subPages/nearInfo/ResNew';
 // import ResEditPost from './pages/subPages/nearInfo/ResEdit';
 
-
 function App() {
     const [images, setImages] = useState(galleryImages);
     const [isMenuVisible, setIsMenuVisible] = useState(false); // 메뉴 가시성을 관리하는 상태
