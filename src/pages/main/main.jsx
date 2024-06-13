@@ -6,7 +6,11 @@ import MainGallery from "./Sec7_Gallery/mainGallery"
 import MainVideo from './mainVideo'
 
 
+
+
 const Main = () =>{
+
+  
     return(
         <>
          <Three/>
@@ -15,7 +19,7 @@ const Main = () =>{
          <MainVideo/>
          <MainNoti/>
          <MainGallery/>
-        </>
+         </>
     )
 }
 
