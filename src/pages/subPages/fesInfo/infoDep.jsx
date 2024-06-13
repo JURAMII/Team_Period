@@ -57,3 +57,4 @@ const InfoDep3 = ({one}) =>{
 
 
 export {InfoDep, InfoDep2, InfoDep3}
+
