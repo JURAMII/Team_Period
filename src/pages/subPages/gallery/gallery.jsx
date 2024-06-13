@@ -127,11 +127,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { starLightImages, moonLightImages } from "../../../image"; // 이미지 파일 import
 import "./gallery.css";
-import Header from "../../../components/common/header/header";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import SupTop from "../../../components/common/supTop";
-import Twodep from "../../../components/twodep"
+// import Header from "../../../components/common/header/header";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Autoplay } from "swiper/modules";
+// import SupTop from "../../../components/common/supTop";
+// import Twodep from "../../../components/twodep"
 
 const Gallery = () => {
   // 선택된 카테고리를 저장하는 state를 만듭니다.

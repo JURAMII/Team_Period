@@ -8,7 +8,7 @@
 }
 .faqTopLine{
     display: block;
-    border: 2px solid var(--font-black);
+    border: 1px solid var(--font-black);
 }
 .faqWrap p{
     white-space: pre-wrap;
