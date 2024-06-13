@@ -24,9 +24,7 @@
     text-overflow: ellipsis;
     padding-top: 10px;
 }
-.galTop{
-	margin: 0 auto;
-}
+
 
 @media screen and (max-width : 1920px) {
 	.subDefaultContent {
@@ -46,6 +44,9 @@
 		font-size: 45px;
 		line-height: 300px;
 	}
+	.gall{
+		justify-content: center;
+	}
 
 }
 
@@ -57,7 +58,6 @@
 		font-size: 38px;
 		line-height: 210px;
 	}
-
 }
 
 @media screen and (max-width : 768px) {

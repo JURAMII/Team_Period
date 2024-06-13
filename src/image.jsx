@@ -30,6 +30,23 @@ import moonLightTour13 from './assets/moonlightTour/moonLightTour (13).webp';
 import moonLightTour14 from './assets/moonlightTour/moonLightTour (14).webp';
 import moonLightTour15 from './assets/moonlightTour/moonLightTour (15).webp';
 
+import resto1 from './assets/restaurant/resto (1).webp';
+import resto2 from './assets/restaurant/resto (2).webp';
+import resto3 from './assets/restaurant/resto (3).webp';
+import resto4 from './assets/restaurant/resto (4).webp';
+import resto5 from './assets/restaurant/resto (5).webp';
+import resto6 from './assets/restaurant/resto (6).webp';
+import resto7 from './assets/restaurant/resto (7).webp';
+import resto8 from './assets/restaurant/resto (8).webp';
+import resto9 from './assets/restaurant/resto (9).webp';
+import resto10 from './assets/restaurant/resto (10).webp';
+import resto11 from './assets/restaurant/resto (11).webp';
+import resto12 from './assets/restaurant/resto (12).webp';
+import resto13 from './assets/restaurant/resto (13).webp';
+import resto14 from './assets/restaurant/resto (14).webp';
+import resto15 from './assets/restaurant/resto (15).webp';
+import resto16 from './assets/restaurant/resto (16).webp';
+
 import starLightTour16 from './assets/starnight.webp';
 import moonLightTour16 from './assets/moonlight.webp';
 
@@ -76,4 +93,22 @@ let galleryImages = [
   { src: moonLightTour16, id: 32, title: '달빛기행 - 갤러리 게시글 16', content: '달빛기행 - 갤러리 게시글 16 내용', author: '관리자', user: '이용자', category: '축제사진', category2: '축제후기', time: formatDate(new Date()), key: 'moonLight' }
 ];
 
-export { galleryImages };
+let resImg = [
+  {src: resto1, id: 1},
+  {src: resto2, id: 2},
+  {src: resto3, id: 3},
+  {src: resto4, id: 4},
+  {src: resto5, id: 5},
+  {src: resto6, id: 6},
+  {src: resto7, id: 7},
+  {src: resto8, id: 8},
+  {src: resto9, id: 9},
+  {src: resto10, id: 10},
+  {src: resto11, id: 11},
+  {src: resto12, id: 12},
+  {src: resto13, id: 13},
+  {src: resto14, id: 14},
+  {src: resto15, id: 15},
+  {src: resto16, id: 16}
+]
+export { galleryImages,resImg };
