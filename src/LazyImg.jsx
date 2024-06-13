@@ -21,9 +21,9 @@ function LazyImage({ src, alt, className, width = "auto", height = "auto" }) {
   }, []);
 
   return (
-    <div className="w-full">
+    <>
       <img width={width} height={height} ref={imgRef} src={isLoading ? src : null} alt={alt} className={className} />
-    </div>
+    </>
   );
 }
 
