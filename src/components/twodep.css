@@ -28,9 +28,7 @@
 }
 
 @media screen and (max-width : 768px) {
-    .twoDep{
-        padding-bottom: 28px;
-    }
+    
     .twoDeptit{
         width: 150px; line-height: 40px;
     }
