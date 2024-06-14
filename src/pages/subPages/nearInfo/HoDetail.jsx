@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom'; // useNavigate 추가
 import SupTop from '../../../components/common/supTop';
+import Neardep from './neardep';
 
 const HoDetail = ({posts ,onDelete}) => {
   // URL에서 id 파라미터를 가져옵니다
@@ -30,9 +31,12 @@ const HoDetail = ({posts ,onDelete}) => {
     }
   };
 
+  const one = 2;
+
   return (
     <>
     <SupTop supTopImg={'subTourInfoTop'} supTopTit={'관광안내'}/>
+    <Neardep one={one}/>
       <div className='postDetailWrap'>
         <div className='postWrap flex'>
           <p className='postCategory'>{post.category}</p>
@@ -41,7 +45,7 @@ const HoDetail = ({posts ,onDelete}) => {
         </div>
         <div className='postContent'>
           <img src={post.img} alt={`Detail ${id}`} />
-          <p>{post.gallTxT}</p>
+          <p style={{ whiteSpace: 'pre-line' }}>{post.gallTxT}</p>
         </div>
         <div className='postNavigation'>
           {previousPost && (
