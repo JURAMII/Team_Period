@@ -12,7 +12,7 @@ const Loading = () => {
         mask.current.style.opacity = '0'; //서서히 사라지는 효과
         mask.current.style.display = 'none';
         html.style.overflow = 'auto'; //스크롤 방지 해제
-      }, 3000);
+      }, 2000);
 
 
     return(
