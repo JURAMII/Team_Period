@@ -33,6 +33,7 @@ header{
 
 .headNavi>.headMenuWrap>.headMenu a{
     font-size: 18px;
+	font-weight: bold
 }
 
 .headNavi>.test3{

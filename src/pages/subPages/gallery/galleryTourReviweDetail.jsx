@@ -39,7 +39,7 @@ const DetailPageReview = ({ images, onDelete }) => {
         <div className='postWrap flex'>
           <p className='postCategory'>{image.category2}</p>
           <p className='postTitle'>&#91;{image.category2}&#93; {image.title}</p>
-          <p className='postInfo'>작성자: {image.user} - 작성시간: {image.time}</p>
+          <p className='postInfo'>작성자: {image.user}  &nbsp;작성시간: {image.time}</p>
         </div>
         <div className='postContent'>
           <img src={image.src} alt={`Detail ${id}`} />

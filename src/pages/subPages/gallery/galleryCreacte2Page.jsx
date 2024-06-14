@@ -51,6 +51,11 @@ const Create2GalleryPost = ({ images, setImages }) => {
         };
         setImages([newPost, ...images]); // 새로운 게시글을 맨 앞에 추가
         navigate(`/gallery/category2/${newPost.key}`);
+
+        console.log(categoryKeyMap)
+        console.log(categoryKeyMap[category])
+        console.log(newPost)
+        console.log(newPost.key)
     };
 
     const handleCancel = () => {

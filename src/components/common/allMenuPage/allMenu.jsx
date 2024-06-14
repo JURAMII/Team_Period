@@ -1,3 +1,4 @@
+import React from 'react';
 import { Menu } from "../header/Menu/Menu";
 import "../allMenuPage/allMenu.css";
 import { Link } from 'react-router-dom';
@@ -11,13 +12,18 @@ const AllMenuPage = ({ setIsMenuVisible }) => {
     <div className="headWrap visi">
       <Menu toggleMenu={toggleMenu} /> {/* 닫기 기능을 추가한 Menu 컴포넌트 */}
       <div className="headImg">
-        <div>
-          <h2 className="titText">별빛야행</h2>
-          <p>경복궁의 가장 깊은 곳, 북측 권역의 문이 열립니다.</p>
+        <div className="slider">
+          <div className="slide">
+            <h2 className="titText">별빛야행</h2>
+            <p>경복궁의 가장 깊은 곳, 북측 권역의 문이 열립니다.</p>
+          </div>
+          <div className="slide">
+            <h2 className="titText">달빛기행</h2>
+            <p>창덕궁의 가장 깊은 곳, 북측 권역의 문이 열립니다.</p>
+          </div>
         </div>
-        {/* <LazyImage src={AllMenu[1]} alt={"/"}></LazyImage> */}
       </div>
-      <div className="headMenu">
+      <div className="headMenuNavPage">
         <div className="headInner">
           <ul className="boxWrap">
             <li className="menuBox grid1">
@@ -34,9 +40,9 @@ const AllMenuPage = ({ setIsMenuVisible }) => {
               <div>
                 <h2 className="titText">공지사항</h2>
                 <ul>
-                  <li><Link to="/notiList/category/noti" onClick={toggleMenu}>메인 공지</Link></li>
-                  <li><Link to="/notiList/category/star" onClick={toggleMenu}>경복궁 공지</Link></li>
-                  <li><Link to="/notiList/category/moon" onClick={toggleMenu}>창덕궁 공지</Link></li>
+                  <li><Link to="/notiList/category/noti" onClick={toggleMenu}>공지사항</Link></li>
+                  <li><Link to="/notiList/category/star" onClick={toggleMenu}>경복궁 별빛야행</Link></li>
+                  <li><Link to="/notiList/category/moon" onClick={toggleMenu}>창덕궁 달빛기행</Link></li>
                 </ul>
               </div>
             </li>
@@ -68,13 +74,16 @@ const AllMenuPage = ({ setIsMenuVisible }) => {
               </div>
             </li>
             <li className="lastBox grid6">
-              <div>
-                <div>
-                  <img src="/" alt="서울특별시 강남구 봉은사로 406(삼성동 112-2)" />
-                </div>
-                <p>서울특별시 강남구 봉은사로 406(삼성동 112-2)</p>
-                <p>Copyright(C) Korea Heritage Agency All Rights Reserved.</p>
-              </div>
+	        	<div className="slider hiddenContents">
+          			<div className="slide">
+            			<h2 className="titText">별빛야행</h2>
+            			<p>경복궁의 가장 깊은 곳, 북측 권역의 문이 열립니다.</p>
+          			</div>
+          			<div className="slide">
+	            		<h2 className="titText">달빛기행</h2>
+        	    		<p>창덕궁의 가장 깊은 곳, 북측 권역의 문이 열립니다.</p>
+    	      		</div>
+	        	</div>
             </li>
           </ul>
         </div>
@@ -84,4 +93,3 @@ const AllMenuPage = ({ setIsMenuVisible }) => {
 };
 
 export default AllMenuPage;
-

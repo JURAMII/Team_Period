@@ -35,10 +35,10 @@ const PostDetail = ({ posts, onDelete }) => {
                 <div className='postWrap flex'>
                     <p className='postCategory'>{post.category}</p>
                     <p className='postTitle'>&#91;{post.category}&#93; {post.title}</p>
-                    <p className='postInfo'>작성자 : {post.author} - 작성시간 : {post.time}</p>
+                    <p className='postInfo'>글쓴이 : {post.author} &nbsp; <span>작성날짜 : {post.time}</span></p>
                 </div>
                 <div className='postContent'>
-                    <p>{post.content}</p>
+					<p style={{ whiteSpace: 'pre-line' }}>{post.content}</p>
                 </div>
 				<div className='postNavigation'>
                 {previousPost && (

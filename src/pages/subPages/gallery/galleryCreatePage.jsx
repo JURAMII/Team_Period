@@ -39,8 +39,13 @@ const CreateGalleryPost = ({ images, setImages }) => {
             '별빛야행': 'starLigth',
             '달빛기행': 'moonLight'
         };
+        // const categoryMap = {
+        //     '축제사진': 'starLigth',
+        //     '달빛기행': 'moonLight'
+        // };
 
         const isReview = location.pathname.includes('category2');
+        
         const newPost = {
             id: images.length + 1,
             title,
@@ -59,6 +64,11 @@ const CreateGalleryPost = ({ images, setImages }) => {
         } else {
             navigate(`/Gallery/category/${newPost.key}`);
         }
+
+        console.log(categoryKeyMap)
+        console.log(categoryKeyMap[category])
+        console.log(newPost)
+        console.log(newPost.key)
     };
 
     const handleCancel = () => {

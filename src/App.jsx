@@ -179,7 +179,8 @@ import HoPost from './pages/subPages/nearInfo/HoNew';
 import HoDetail from './pages/subPages/nearInfo/HoDetail';
 import HoEditPost from './pages/subPages/nearInfo/HoEdit';
 
-import Loading from './pages/main/loading';
+import ScrollToTop from './components/common/ScrollToTop';
+
 
 function App() {
     const [images, setImages] = useState(galleryImages); // 갤러리 페이지에서 사용할 이미지 데이터 관리하는 상태
@@ -219,11 +220,12 @@ function App() {
 
     return (
         <>
-        <Loading></Loading>
             <Header setIsMenuVisible={setIsMenuVisible} /> {/* Header에 상태 설정 함수를 전달 */}
             {isMenuVisible ? (
                 <AllMenuPage setIsMenuVisible={setIsMenuVisible} /> // 전체 메뉴가 보이는 상태일 때 AllMenuPage를 렌더링
             ) : (
+				<>
+				<ScrollToTop/>
                 <Routes>
                     <Route path="/" element={<Main />} />
                     <Route path="/notiList/category/:key" element={<NotiList posts={posts} setPosts={setPosts} />} />
@@ -262,6 +264,7 @@ function App() {
                     <Route path='/Gallery/category/edit/:id' element={<GalleryEditPage images={images} setImages={setImages} />} />
                     <Route path='/Gallery/category2/edit/:id' element={<GalleryEdit2Page images={images} setImages={setImages} />} />
                 </Routes>
+				</>
             )}
             <Footer />
         </>
