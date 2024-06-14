@@ -71,7 +71,7 @@ const Header = ({ setIsMenuVisible }) => {
               <Link to="/Faq">고객지원</Link>
             </li>
             <li>
-              <Link to="Way">관광안내</Link>
+              <Link to="/Way">관광안내</Link>
             </li>
           </ul>
         </div>
