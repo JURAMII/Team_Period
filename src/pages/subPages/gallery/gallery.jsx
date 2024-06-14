@@ -128,7 +128,7 @@ const Gallery = ({ images }) => {
                 speed={6000}
                 className="mainSwiper"
               >
-                {filteredImages.slice(0, 5).map((image, index) => (
+                {filteredImages.slice(0, 8).map((image, index) => (
                   <SwiperSlide key={index} className="mainSlide">
                     <div>
                       <LazyImage
