@@ -1,0 +1,245 @@
+/* 서브 소개 페이지 */
+.subInfoWrap{
+    justify-content: space-between;
+    gap: 40px;
+}
+.subInfoWrap>div:first-child{
+    margin: 0 auto;
+}
+.subInfoWrap img{
+    width: 100%;
+}
+.subInfoTit{
+    font-size: 18px;
+    padding: 0 0 38px;
+    font-weight: bold;
+}
+.subInfoWrap li:not(.subInfoTit){
+    padding-bottom: 28px;
+}
+.subInfoWrap li>span{
+    font-weight: bold;
+    padding-right: 10px;
+}
+.middleSlash{
+    color: gray;
+    padding-left: 10px;
+}
+.subInfoWrap li>div{
+    padding-top: 5px;
+    font-size: 14px;
+}
+.infoRain{
+    gap: 30px;
+}
+.infoRain img{
+    width: 250px;
+    height: 250px;
+}
+
+/* 프로그램 */
+.pTit{
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 65px;
+}
+.pTit2{
+    font-weight: bold;
+    text-align: center;
+    padding-top: 65px;
+    padding-bottom: 15px;
+}
+.subPTit{
+    font-size: 16px;
+    text-align: center;
+}
+.subPTit2{
+    padding-top: 7px;
+}
+.progRote div{
+    width: 500px;
+    margin: 0 auto;
+}
+.progRote img{
+    width: 100%;
+}
+.progRote ul{
+    width: 730px;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 20px;
+
+}
+.progRote ul li{
+    padding-bottom: 10px;
+    padding-right: 20px;
+}
+.progRote ul li span{
+    font-weight: bold;
+    padding-right: 5px;
+}
+.tourWrap{
+    padding-top: 30px;
+    justify-content: center;
+    gap: 30px;
+    overflow: hidden;
+}
+.tourWrap img{
+    width: 50%;
+}
+.Ktalk{
+    padding-top: 30px;
+}
+.Ktalk img{
+    width: 100%;
+}
+
+/* 예매안내 */
+.ticketWrap{
+    justify-content: space-around;
+    gap: 15px;
+}
+.ticketWrap h4{
+    font-weight: bold;
+    padding-right: 10px;
+}
+.ticketWrap p{
+    padding-bottom: 10px;
+}
+.ticketWrap h6{
+    font-size: 14px;
+    font-weight: 400;
+}
+.ticCont{
+    padding-bottom: 28px;
+}
+.ticBtnWrap{
+    padding-top: 110px;
+    justify-content: center;
+}
+.ticBtn{
+    background-color: var(--mirage);
+    outline: none;
+    border: none;
+    border-radius: 50px;
+}
+.ticBtn a{
+    display: inline-block;
+    color: white;
+    font-size: 18px;
+    width: 160px;
+    line-height: 50px;
+}
+
+/* 반응형*/
+@media screen and (max-width : 1280px) {
+    .ticketWrap{
+        justify-content: space-between;
+    }
+    .ticTit{
+        width: 97px;
+    }
+    .ticBtnWrap{
+        padding-top: 65px;
+    }
+    .infoRain img{
+        width: 150px;
+        height: 150px;
+    }
+}
+@media screen and (max-width : 768px) {
+    .subInfoWrap{
+        flex-direction: column;
+        gap: 28px;
+    }
+    .subInfoTit{
+        font-size: 16px;
+        text-align: center;
+        padding-bottom: 28px;
+    }
+    .subInfoWrap li:not(.subInfoTit){
+        font-size: 14px;
+        padding-bottom: 15px;
+    }
+    .infoRain{
+        gap: 20px;
+    }
+    .progRote div{
+        width: 80%;
+    }
+    .pTit{
+        padding-bottom: 28px;
+    }
+    .pTit2{
+        padding-top: 28px;
+    }
+    .subPTit{
+        font-size: 14px;
+        text-align: start;
+    }
+    .subPTit2{
+        padding-top: 0px;
+    }
+    .progRote ul{
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .progRote ul li{
+        font-size: 14px;
+        padding-right: 15px;
+    }
+    .tourWrap{
+        flex-direction: column;
+        padding-top: 20px;
+        gap: 20px;
+    }
+    .tourWrap img{
+        width: 100%;
+    }
+    .Ktalk{
+        padding-top: 20px;
+    }
+    .CtourWrap{
+        flex-direction: column;
+        padding-top: 20px;
+        gap: 20px;
+    }
+    .ticketWrap{
+        flex-direction: column;
+    }
+    .ticketWrap h4{
+       font-size: 14px;
+    }
+    .ticketWrap p{
+        font-size: 14px;
+        padding: 0;
+    }
+    .ticCont{
+        padding-bottom: 15px;
+    }
+    .ticBtnWrap{
+        padding-top: 28px;
+    }
+    .ticBtn{
+        width: 120px;
+    }
+    .ticBtn a{
+        font-size: 16px;
+        width: 100%;
+        line-height: 36px;
+    }
+}
+@media screen and (max-width : 500px) {
+    .progRote div{
+        width: 100%;
+    }
+}
+@media screen and (max-width : 360px) {
+    .infoRain{
+        gap: 10px;
+    }
+    .infoRain img{
+        width: 50%;
+    }
+}

@@ -1,0 +1,90 @@
+.postDetailWrap{
+	width: 1440px;
+	margin: 0 auto;
+	padding: 0 0 65px 0;
+	
+}
+.postWrap{
+	padding-left: 15px;
+	height: 150px;
+	flex-direction: column;
+	justify-content: space-around;
+	border-top: 2px solid var(--font-black);
+    border-bottom: 1px solid var(--line-silver);
+}
+
+
+.postCategory{
+	font-size: 18px;
+	font-weight: bold;
+}
+.postTitle{
+	padding-left: 5px;
+	font-size: 24px;
+	color: var(--font-black);
+}
+.postInfo{
+	font-size: 16px;
+	color: var(--line-silver);
+}
+
+.postNavigation>a>div{
+	border-top: 1px solid var(--line-silver);
+	border-bottom: 1px solid var(--line-silver);
+	padding: 35px 0;
+}
+.postNavigation>a:nth-child(2)>div{
+	border-top: none;
+}
+
+.subTopText {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.postContent {
+    padding: 30px 15px 200px 15px;
+}
+.postContent img{
+	margin-bottom: 30px;
+}
+.postInfo {
+    color: gray;
+}
+
+.postActions{
+	margin-top: 28px;
+	justify-content: space-between;
+}
+
+@media screen and (max-width : 1440px) {
+	.postDetailWrap{
+		width: calc( 100% - 30px );
+	}
+}
+
+@media screen and (max-width : 1024px) {
+	.postContent img{
+		width: 100%;
+	}
+}
+
+
+@media screen and (max-width : 768px) {
+	.postCategory{
+		font-size: 16px;
+	}
+	.postTitle{
+		font-size: 16px;
+		font-weight: bold;
+	}
+	.postInfo{
+		font-size: 14px;
+	}
+	.postContent {
+		padding: 20px 10px 250px 10px;
+	}
+	.postWrap{
+		padding-left: 10px;
+	}
+}

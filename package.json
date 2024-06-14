@@ -9,14 +9,26 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@react-oauth/google": "^0.12.1",
+    "@react-three/drei": "^9.106.0",
+    "aos": "^2.3.4",
+    "axios": "^1.7.2",
+    "dat.gui": "^0.7.9",
+    "fiber": "^1.0.4",
+    "gapi-script": "^1.2.0",
     "gh-pages": "^6.1.1",
+    "jwt-decode": "^4.0.0",
+    "kakao-js-sdk": "^1.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-js-pagination": "^3.0.3",
     "react-router-dom": "^6.23.1",
+    "swiper": "^11.1.4",
+    "three": "^0.165.0",
     "vite-plugin-pwa": "^0.20.0"
   },
   "devDependencies": {

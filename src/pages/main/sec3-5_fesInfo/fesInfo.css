@@ -1,0 +1,273 @@
+/* sec3 */
+*{
+    box-sizing: border-box;
+}
+.infoStart h3{
+    font-weight: 300;
+    font-size: 110px;
+}
+.infoStart h4{
+    font-weight: bold;
+    padding-top: 30px;
+    font-size: 110px;
+}
+.startWrap{
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 200px;
+}
+.startWrap h5{
+    font-size: 133px;
+}
+.infoArraw{
+    width: 115px; height: 115px;
+    justify-content: flex-end;
+    position: relative;
+    padding-top: 80px;
+}
+.infoArraw div:first-child{
+    width: 95px;
+    height: 95px;
+    border-left: 5px solid var(--font-black);
+    border-bottom: 5px solid var(--font-black);
+}
+.infoArraw div:nth-child(2){
+    width: 150px;
+    height: 4px;
+    background: var(--font-black);
+    transform-origin: left center;
+    transform: translateY(50%) rotate(-45deg);
+    position: absolute;
+    left: 2px;
+    bottom: -57px;
+    z-index: 1;
+}
+
+/* sec4-5 */
+.fesInfoSec2{
+    background-color: var(--mirage);
+}
+.fesInfoWrap{
+    justify-content: space-between;
+}
+.fesInfoWrap img{
+    width: 648px;
+}
+.fesInfo1>div:first-child{
+    order: 2;
+}
+.fesInfo1 .fesInfoTxt p{
+    padding-left: 15px;
+}
+.fesInfo2 .fesInfoTxt h2:first-child{
+    text-align: right;
+}
+.fesInfo2 .fesInfoTxt p{
+    text-align: right;
+}
+.fesInfoTxt{
+    position: relative;
+}
+.fesInfoTxt h2{
+    color: var(--salomie);
+    font-size: 100px;
+    font-weight: 300;
+}
+.fesInfoTxt h2:first-child{
+    padding-bottom: 20px;
+}
+.fesInfoTxt p{
+    color: white;
+    font-size: 18px;
+}
+.fesInfoTxt p:first-child{
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+.fesInfoBtn{
+    margin-top: 80px;
+}
+.fesInfo1 .fesInfoBtn{
+   margin-left: 15px;
+}
+.fesInfo2 .fesInfoBtn{
+    position: absolute;
+    right: 0;
+}
+
+
+/* 반응형 */
+@media screen and (max-width : 1920px) {
+    .fesInfoSec{
+        height: 100%;
+    }
+}
+
+@media screen and (max-width : 1280px) {
+    .infoStart h3{
+        font-size: 85px;
+    }
+    .infoStart h4{
+        font-size: 85px;
+        padding-top: 15px;
+    }
+    .startWrap{
+        padding-top: 80px;
+    }
+    .startWrap h5{
+        font-size: 85px;
+    }
+    .infoArraw{
+        padding-top: 60px;
+    }
+    .infoArraw div:nth-child(2){
+        bottom: -38px;
+    }
+    .fesInfoWrap img{
+        width: 485px;
+        height: 629px;
+    }
+    .fesInfoTxt h2{
+        font-size: 70px;
+    }
+    .fesInfo2 .fesInfoTxt h2:last-child {
+        text-align: right;
+    }
+}
+
+@media screen and (max-width : 1024px) {
+    .infoArraw{
+        width: 105px; height: 105px;
+    }
+    .infoArraw div:first-child{
+        width: 85px;
+        height: 85px;
+    }
+    .infoArraw div:nth-child(2){
+        width: 130px;
+        bottom: -38px;
+    }
+    .fesInfoWrap img{
+        width: 350px;
+        height: 450px;
+    }
+    .fesInfoTxt h2{
+        font-size: 55px;
+    }
+    .fesInfoTxt h2:first-child{
+        padding-bottom: 7px;
+    }
+    .fesInfoTxt p{
+        font-size: 16px;
+    }
+    .fesInfoTxt p:first-child{
+        padding-top: 20px;
+        padding-bottom: 7px;
+    }
+}
+
+@media screen and (max-width : 768px) {
+    .infoStart h3{
+        font-size: 60px;
+    }
+    .infoStart h4{
+        font-size: 60px;
+    }
+    .startWrap{
+        padding-top: 50px;
+    }
+    .startWrap h5{
+        font-size: 60px;
+    }
+    .infoArraw{
+        width: 75px; height: 75px;
+        padding-top: 40px;
+    }
+    .infoArraw div:first-child{
+        width: 55px;
+        height: 55px;
+    }
+    .infoArraw div:nth-child(2){
+        width: 100px;
+        left: 2px;
+        bottom: -18px;
+    }
+    .fesInfoWrap{
+        flex-direction: column;
+    }
+    .fesInfo1>div:first-child{
+        order: 0;
+    }
+    .fesInfoWrap>div:first-child{
+        margin: 0 auto;
+    }
+    .fesInfoTxt h2{
+        font-size: 40px;
+        text-align: center;
+    }
+    .fesInfoTxt h2:first-child{
+        padding-top: 30px;
+    }
+    .fesInfoTxt p{
+        font-size: 14px;
+        text-align: center;
+    }
+    .fesInfo1 .fesInfoTxt p{
+        padding-left: 0;
+    }
+    .fesInfo2 .fesInfoTxt h2:first-child {
+        text-align: center;
+    }
+    .fesInfo2 .fesInfoTxt h2:last-child {
+        text-align: center;
+    }
+    .fesInfo2 .fesInfoTxt p {
+        text-align: center;
+    }
+    .fesInfoBtnWrap{
+        justify-content: center;
+    }
+    .fesInfoBtn{
+        margin-top: 50px;
+    }
+    .fesInfo1 .fesInfoBtn{
+       margin-left: 0;
+    }
+    .fesInfo2 .fesInfoBtn{
+        position: relative;
+    }
+    /* [data-aos] {
+        pointer-events: auto !important;
+        opacity: 1 !important;
+        transform: none !important;
+      } */
+}
+
+@media screen and (max-width : 500px) {
+    .infoStart h3{
+        font-size: 36px;
+    }
+    .infoStart h4{
+        font-size: 36px;
+        padding-top: 10px;
+    }
+    .startWrap h5{
+        font-size: 36px;
+    }
+    .infoArraw{
+        width: 55px; height: 55px;
+        padding-top: 20px;
+    }
+    .infoArraw div:first-child{
+        width: 35px;
+        height: 35px;
+    }
+    .infoArraw div:nth-child(2){
+        width: 60px;
+        bottom: 2px;
+    }
+    .fesInfoWrap img{
+        width: 100%;
+        height: auto;
+    }
+}

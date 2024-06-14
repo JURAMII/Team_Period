@@ -1,0 +1,21 @@
+.none{
+	display: none;
+	width: 0;
+	height: 0;
+}
+
+.borderTop2{
+	border-top: 2px solid var(--font-black);
+}
+
+.qnaCreateWrap{
+	width: 1440px;
+	margin: 0 auto;
+	padding: 0 0 65px 0;
+}
+
+@media screen and (max-width : 1440px) {
+	.qnaCreateWrap{
+		width: calc( 100% - 30px );
+	}
+}

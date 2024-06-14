@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap');
+
+footer{
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 65px 120px;
+}
+footer>h2{
+    width: 263px;
+    color: #fff;
+    font-size: 90px;
+    font-family: "Noto Serif KR", serif;
+    line-height: 130px;
+    font-weight: 300;
+}
+.footerWrap{
+    display: flex;
+    justify-content: flex-end;
+    vertical-align: bottom;
+}
+.footerBox p{
+    padding-top: 60px;
+    color: #bcbcbc;
+    font-size: 18px;
+}
+.footerBox span{
+    color: #bcbcbc;
+    font-size: 15px;
+    margin: 20px 0;
+}
+.footerBox ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 17px;
+}
+.footerBox img{
+    width: 100px;
+}
+h1 img{
+    width: 100px;
+    padding-top: 50px;
+    padding-left: 24px;
+}
+
+@media screen and (max-width: 1280px) {
+    footer>h2{
+        width: 173px;
+        font-size: 60px;
+        line-height: 100px;
+    }
+    .footerBox p{
+        padding-top: 60px;
+        font-size: 16px;
+    }
+    .footerBox span{
+        color: #bcbcbc;
+        font-size: 12px;
+        margin: 20px 0;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    footer{
+        padding: 60px 20px;
+    }
+    footer>h2{
+        font-size: 28px;
+        line-height: 28px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .footerWrap{
+        flex-direction: column;
+    }
+    .footerBox{
+        margin: 0 auto;
+        text-align: center;
+        order: 2;
+    }
+    .footerBox p{
+        padding-top: 0px;
+        font-size: 14px;
+    }
+    h1 img{
+        width: 70px;
+        order: 1;
+        padding: 30px 0;
+        margin: 0 auto;
+        display: block;
+    }
+    .footerBox ul{
+        gap: 10px;
+    }
+    
+  }

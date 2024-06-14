@@ -1,0 +1,53 @@
+.subNotiTop {
+    background-image: url(../../assets/subNotiTop.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.notiTableTop {
+    border-top: 2px solid var(--font-black);
+}
+
+.notiTableTop>th {
+    padding: 18px 0;
+}
+
+.notiTable {
+    border-top: 1px solid var(--line-silver);
+}
+.notiTable:last-child{
+	border-bottom: 1px solid var(--line-silver);
+}
+
+.notiTable>td {
+    padding: 18px 0;
+    text-align: center;
+}
+
+.notiTable>td:nth-child(2) {
+    text-align: start;
+    max-width: 100px;
+	/* textEllipsis가 적용받게 하기 위해서 max-width를 주었음. */
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .tableNumber {
+        display: none;
+    }
+    .tableNumberPost {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .tableAuthor {
+        display: none;
+    }
+    .tableAuthorPost {
+        display: none;
+    }
+}

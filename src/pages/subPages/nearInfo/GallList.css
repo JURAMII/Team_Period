@@ -1,0 +1,102 @@
+.gall{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.gall img{
+    width: 337px;
+    height: 280px;
+}
+.gall_txt{
+    width: 337px;
+    height: 100px;
+    background-color: var(--font-black);
+    padding: 15px;
+}
+.gall_txt b{
+    color: #fff;
+    font-size: 18px;
+}
+.gall_txt p{
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-top: 10px;
+}
+
+
+@media screen and (max-width : 1920px) {
+	.subDefaultContent {
+		padding: 65px 0;
+		width: 1440px;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width : 1440px) {
+	.subDefaultContent {
+		width: calc(100% - 30px);
+	}
+	.subTop{
+		height: 300px;
+	}
+	.subTopText{
+		font-size: 45px;
+		line-height: 300px;
+	}
+	.gall{
+		justify-content: center;
+	}
+
+}
+
+@media screen and (max-width : 1024px) {
+	.subTop{
+		height: 210px;
+	}
+	.subTopText{
+		font-size: 38px;
+		line-height: 210px;
+	}
+}
+
+@media screen and (max-width : 768px) {
+	.subDefaultContent {
+		padding: 28px 0;
+	}
+    .mFont{
+        font-size: 18px;
+    }
+    .sFont{
+        font-size: 16px;
+    }
+    .cFont{
+        font-size: 14px;
+    }
+	.subTop{
+		height: 210px;
+	}
+	.subTopText{
+		font-size: 30px;
+	}
+	.oneDepthBtn{
+		font-size: 18px;
+	}
+	.twoDepthBtn{
+		width: 150px;
+		height: 40px;
+		font-size: 14px;
+		line-height: 40px;
+	}
+	.subBtn{
+		width: 100px;
+		height: 32px;
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width : 500px) {
+	.subTop{
+		height: 210px;
+	}
+}

@@ -1,0 +1,237 @@
+.headWrap {
+	background-color: #1E2F35;
+	position: fixed;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 110px 120px;
+	z-index: 10000;
+  }
+  
+  .headWrap.visi {
+	display: flex;
+  }
+  
+  .headWrap.invi {
+	display: none;
+  }
+  
+  .headImg {
+	width: calc(100% - 1000px);
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+	overflow: hidden;
+	position: relative;
+  }
+  
+  .slider {
+	width: 100%;
+	height: 100%;
+	position: relative;
+  }
+  
+  .slide {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: opacity 2s ease-in-out;
+  }
+  
+  .slide:nth-child(1) {
+	background-image: url('../../../assets/starnight.webp');
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+  
+  .slide:nth-child(2) {
+	background-image: url('../../../assets/moonlight.webp');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+  }
+  
+  .slider .slide:nth-child(1) {
+	animation: fade 10s infinite;
+  }
+  
+  .slider .slide:nth-child(2) {
+	animation: fade 10s infinite 5s;
+  }
+  .hiddenContents{
+	display: none;
+  }
+
+  @keyframes fade {
+	0%, 10%, 90%, 100% {
+	  opacity: 0;
+	}
+	20%, 80% {
+	  opacity: 1;
+	}
+  }
+  
+  .headImg p {
+	color: #fff;
+  }
+  
+  .headImg > div {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	padding: 0 28px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .headMenuNavPage {
+	width: 1000px;
+	height: 100%;
+  }
+  
+  .headInner {
+	width: 100%;
+	height: 100%;
+  }
+  
+  .boxWrap {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 33%);
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-areas:
+	  "g1 g2 g3"
+	  "g4 g5 g6";
+  }
+  
+  .boxWrap > li {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	color: #fff;
+  }
+  
+  .menuBox {
+	width: 100%;
+	min-width: 250px;
+	max-width: 390px;
+	border: 1px solid #fff;
+  }
+  
+  .menuBox ul {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+  }
+  
+  .menuBox li > a {
+	font-size: 18px;
+	color: #fff;
+  }
+  
+  .lastBox {
+	text-align: end;
+	font-size: 8%;
+	font-weight: 400;
+	justify-content: flex-end;
+  }
+  
+  .lastBox img {
+	width: 175px;
+	height: 175px;
+  }
+  
+  .lastBox p {
+	color: #fff;
+  }
+  
+  .grid1 {
+	grid-area: g1;
+  }
+  
+  .grid2 {
+	grid-area: g2;
+  }
+  
+  .grid3 {
+	grid-area: g3;
+  }
+  
+  .grid4 {
+	grid-area: g4;
+  }
+  
+  .grid5 {
+	grid-area: g5;
+  }
+  
+  .grid6 {
+	grid-area: g6;
+  }
+  
+  .titText {
+	display: inline-block;
+	font-size: 38px;
+	font-weight: bold;
+	color: #fff;
+	margin-bottom: 25px;
+  }
+  
+  @media screen and (max-width : 1280px) {
+	.headImg {
+	  display: none;
+	}
+	.hiddenContents{
+		display: block;
+	  }
+  }
+  
+  @media screen and (max-width : 768px) {
+	.headWrap {
+	  padding: 0;
+	}
+	.headMenuNavPage {
+	  width: 100%;
+	}
+	.boxWrap {
+	  grid-template-columns: repeat(2, 1fr);
+	  grid-template-rows: repeat(3, 1fr);
+	  grid-template-areas:
+		"g1 g2"
+		"g3 g4"
+		"g5 g6";
+	}
+  }
+  
+  @media screen and (max-width : 500px) {
+	.headWrap {
+	  padding: 0;
+	}
+	.headMenuNavPage {
+	  width: 100%;
+	}
+	.boxWrap {
+	  grid-template-columns: repeat(1, 1fr);
+	  grid-template-rows: repeat(6, 1fr);
+	  grid-template-areas:
+		"g1"
+		"g2"
+		"g3"
+		"g4"
+		"g5"
+		"g6";
+	}
+	.menuBox {
+	  padding: 28px 0;
+	}
+  }
+  

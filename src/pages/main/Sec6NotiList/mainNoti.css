@@ -1,0 +1,188 @@
+.notiWrap {
+	margin: 0 auto;
+	max-width: 1920px;
+}
+
+/* Left article css */
+
+.notiLeft {
+	width: 50%;
+}
+
+.tagWrap {
+	margin-bottom: 15px;
+}
+
+.tagFont {
+	font-size: 26px;
+	font-weight: bold;
+}
+
+.notiOverText>p {
+	margin: 15px 0;
+	font-size: 55px;
+}
+
+.notiOverText>p:nth-child(2) {
+	font-weight: bold;
+}
+
+p>span {
+	font-weight: 400;
+}
+
+/* Right aside css */
+.notiRight {
+	width: 50%;
+}
+
+.mainNotiName {
+	padding: 0 0 15px 20px;
+	align-items: center;
+	border-bottom: 2px solid var(--font-black);
+}
+
+.mainNotiName>li {
+	margin-right: 20px;
+	padding-right: 20px;
+	border-right: 1px solid var(--line-silver);
+	line-height: 1;
+	cursor: pointer;
+}
+
+.mainNotiName>li:last-child {
+	margin-right: 0;
+	padding-right: 0;
+	border-right: none;
+}
+
+.notiList {
+	border-bottom: 1px solid var(--font-black);
+	height: 126px;
+}
+
+.notiSide {
+	flex-direction: column;
+	justify-content: center;
+	padding: 0;
+	margin: 0 20px;
+}
+
+.notiSide>li {
+	width: 70px;
+	text-align: center;
+}
+
+.notiNumber {
+	font-size: 38px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.notiDate {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.NotiTitle {
+	line-height: 126px;
+	margin: 0 20px;
+	font-size: 18px;
+}
+
+.moveSubNotiWrap {
+	margin: 60px 0 0 0;
+	justify-content: end;
+}
+.selected {
+    font-weight: bold;
+}
+
+/* 반응형 */
+@media screen and (max-width : 1280px) {
+
+	.notiOverText>p {
+		font-size: 45px;
+	}
+
+	.NotiTitle {
+		line-height: 100px;
+		font-size: 16px;
+	}
+
+	.notiList {
+		height: 100px;
+	}
+
+	.notiNumber {
+		font-size: 36px;
+		margin-bottom: 5px;
+	}
+
+}
+
+@media screen and (max-width : 1024px) {
+	.notiWrap {
+		flex-direction: column;
+	}
+
+	.notiLeft {
+		width: 100%;
+	}
+
+	.notiRight {
+		width: 100%;
+	}
+
+	.moveSubNotiWrap {
+		justify-content: center;
+	}
+
+	.mainNotiName {
+		margin-top: 50px;
+	}
+
+	.notiDate {
+		font-size: 14px;
+		font-weight: 400;
+	}
+
+	.notiOverText>p{
+		font-size: 33px;
+	}
+}
+
+
+@media screen and (max-width : 768px) {
+	.NotiTitle {
+		margin: 0 15px;
+	}
+}
+
+@media screen and (max-width : 500px) {
+    .NotiTitle {
+        line-height: 40px;
+    }
+    .notiOverText>p {
+        font-size: 30px;
+    }
+	.notiList {
+		height: 66px;
+	}
+	.notiNumber {
+		display: none;
+	}
+	.mainNotiList>.flex{
+		display: block;
+	}
+	.notiList>.flex{
+		display: block;
+	}
+	.notiSide{
+			margin: 15px 0 0 10px;	
+	}
+	.mainNotiName>li {
+		margin-right: 14px;
+		padding-right: 14px;
+	}
+}

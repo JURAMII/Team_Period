@@ -1,11 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap');
+
 :root {
     --mirage: #1E2F35;
     --salomie: #FFDB88;
+	--font-silber: #9E9E9E;
     --silver: #BDBDBD;
     --line-silver: #BCBCBC;
     --btn-silver: #999;
     --back-silver: #F2F2F2;
     --font-black: #1E1E23;
+}
+
+*{
+	font-family: "Noto Sans", sans-serif;
+}
+
+.inner{
+	max-width: 1920px;
+	margin: 0 auto;
 }
 
 .flex{
@@ -21,53 +34,296 @@
 .cFont{
     font-size: 16px;
 }
+/* 메인 버튼 살로미색상 */
+.mainBtnSalomie{
+	font-size: 18px;
+	width: 160px;
+	height: 50px;
+	border-radius: 50px;
+	color: var(--salomie);
+	background-color: var(--mirage);
+	border: 2px solid var(--salomie);
+	cursor: pointer;
+}
+.mainBtnSalomie:hover{
+	background-color: var(--salomie);
+	color: var(--mirage);
+	font-weight: bold;
+	border:none
+}
+
+/* 메인버튼 실버색상 */
+.mainBtnSilver{
+	font-size: 18px;
+	width: 160px;
+	height: 50px;
+	border-radius: 50px;
+	color: var(--font-silber);
+	background-color: #fff;
+	border: 2px solid var(--font-silber);
+	cursor: pointer;
+}
+.mainBtnSilver:hover{
+	background-color: var(--font-silber);
+	color: #fff;
+	font-weight: bold;
+	border: none;
+}
+
+/* 제목이 줄어들었을 때 ...으로 표시되도록 하는 CSS */
+.textEllipsis {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 여기서부터 Sub */
+
+.oneDepthBtnWrap{
+	display: flex;
+	gap: 65px;
+	padding: 55px 0;
+	justify-content: center;
+	margin: 0 auto;
+}
+.oneDepthBtn{
+	cursor: pointer;
+	font-size: 24px;
+	font-weight: bold;
+	display: block;
+	padding: 5px 0;
+}
+
+
+
+.oneDepthBtnActive{
+	border-bottom: 2px solid var(--font-black);
+}
+.twoDepthBtn{
+	width: 187px;
+	height: 45px;
+	font-size: 18px;
+	color: #FFF;
+	line-height: 45px;
+	text-align: center;
+}
+
+.subTop{
+	/* 이미지 사이즈가 가운데로 조여들게끔 만들게하기위해 max-width:none을 채택할지 고민해봐야함. */
+	/* max-width: none; */
+	width: 100%;
+	height: 400px;
+}
+.subTopText{
+	display: block;
+	text-align: center;
+	line-height: 400px;
+	color: #FFF;
+	font-size: 50px;
+	font-family: "Noto Serif KR", serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+}
+
+/* 서브페이지 이미지를 개인 파트에 가져가 주세요. */
+.subFesInfoImage{
+	background-image: url(./assets/SubFesInfoTop.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.subGalleryTop{
+	background-image: url(./assets/subGalleryTop.png);
+	background-image: url(./assets/subGalleryTop.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.subTourInfoTop{
+	background-image: url(./assets/subTourInfoTop.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.subSupportTop{
+	background-image: url(./assets/subSupportTop.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+/* 여기까지 이미지 */
+
+/* 여기서부터 search,작성버튼 포지션 */
+.searchWrap{
+	justify-content: center;
+	margin-bottom: 28px;
+}
+.subSearchName{
+	width: 80px;
+	height: 40px;
+}
+.subSearch{	
+	width: 350px;
+	height: 40px;
+	padding: 0 10px;
+}
+.subSearchBtn{
+	width: 40px;
+	height: 40px;
+	background-color: var(--mirage);
+	background-image: url(./assets/searchWhite.svg);
+	background-repeat: no-repeat;
+	background-size: 24px;
+	background-position: center;
+	border: 0;
+	cursor: pointer;
+}
+.subBtnWrap{
+	gap: 28px;
+}
+
+.subBtn{
+	width: 124px;
+	height: 39px;
+	font-size: 17px;
+	color: #fff;
+	background-color: var(--mirage);
+	border: none;
+	cursor: pointer;
+	text-align: center;
+	line-height: 39px;
+	display: block;
+}
+
+
+.pageBtnWrap {
+    width: 1440px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+	padding: 28px 0;	
+}
+.buttonDown{
+    display: block;
+    height: 50px;
+	line-height: 60px;
+}
+.buttonDown>button{
+	border: 0;
+	background-color: transparent;
+	cursor: pointer;
+	font-size: 18px;
+	margin: 0 14px;
+}
+.buttonDown>button:disabled {
+    cursor: not-allowed;
+}
+.buttonDown>button.active {
+    font-weight: bold;
+}
+
+.pageBtnWrap .subBtn {
+    position: absolute;
+    right: 0;
+	bottom: 93px;
+}
+.writeBtn{
+	position: relative;
+}
+
 
 /* main 반응형 */
 @media screen and (max-width : 1920px) {
-	.default_content {
-		margin: 110px 120px;
+	.defaultContent {
+		padding: 110px 120px;
 	}
 }
 @media screen and (max-width : 1280px) {
-	.default_content {
-		margin: 110px 80px;
+	.defaultContent {
+		padding: 110px 80px;
 	}
 }
 
 @media screen and (max-width : 1024px) {
-	.default_content {
-		margin: 65px 80px;
+	.defaultContent {
+		padding: 65px 80px;
+	}
+	.oneDepthBtnWrap{
+		padding: 23px 0;
+		gap: 28px;
+	}
+	.oneDepthBtn{
+		font-size: 16px;
 	}
 }
 
 @media screen and (max-width : 768px) {
-	.default_content {
-		margin: 65px px;
+	.defaultContent {
+		padding: 65px 20px;
+	}
+	.mainBtnSalomie{
+		width: 120px;
+		height: 36px;
+		border-radius: 50px;
+		background-color: none;
+		border: 1px solid var(--salomie);
+		font-size: 16px;
+		color: var(--salomie);
+	}
+	.mainButtonSilver{
+		width: 120px;
+		height: 36px;
+		border-radius: 50px;
+		background-color: none;
+		border: 1px solid var(--font-silber);
+		font-size: 16px;
+		color: var(--font-silber);
 	}
 }
 
-@media screen and (max-width : 500px) {}
+/* @media screen and (max-width : 500px) {} */
+
+
+
+
 
 /* Sub Page 반응형*/
-@media screen and (max-width : 1440px) {
-	.default_content {
-		margin: 65px 0;
+@media screen and (max-width : 1920px) {
+	.subDefaultContent {
+		padding: 65px 0;
+		width: 1440px;
+		margin: 0 auto;
 	}
-
-	.calcWidth {
+}
+@media screen and (max-width : 1440px) {
+	.subDefaultContent,.pageBtnWrap {
 		width: calc(100% - 30px);
 	}
+	.subTop{
+		height: 300px;
+	}
+	.subTopText{
+		font-size: 45px;
+		line-height: 300px;
+	}
+
 }
 
 @media screen and (max-width : 1024px) {
-	.default_content {
-		margin: 65px 0;
+	.subTop{
+		height: 210px;
 	}
+	.subTopText{
+		font-size: 38px;
+		line-height: 210px;
+	}
+
 }
 
 @media screen and (max-width : 768px) {
-	.default_content {
-		margin: 28px 0;
+	.subDefaultContent {
+		padding: 28px 0;
 	}
     .mFont{
         font-size: 18px;
@@ -78,6 +334,49 @@
     .cFont{
         font-size: 14px;
     }
+	.subTop{
+		height: 210px;
+	}
+	.subTopText{
+		font-size: 30px;
+	}
+	.oneDepthBtn{
+		font-size: 16px;
+	}
+	.twoDepthBtn{
+		width: 150px;
+		height: 40px;
+		font-size: 14px;
+		line-height: 40px;
+	}
+	.subBtn{
+		width: 100px;
+		height: 32px;
+		font-size: 14px;
+		line-height: 32px;
+	}
+	.pageBtnWrap .subBtn {
+		right: 0;
+		bottom: 101px;
+	}
+	.buttonDown{
+		line-height: 45px;
+	}
+	.buttonDown>button{
+		font-size: 16px;
+	}
 }
 
-@media screen and (max-width : 500px) {}
+@media screen and (max-width : 500px) {
+	.subTop{
+		height: 210px;
+	}
+	.pageBtnWrap .subBtn {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 36px;
+	}
+	.subBtnWrap {
+		gap: 5px;
+	}
+}
