@@ -27,12 +27,7 @@ import QnaCreatePost from './pages/subPages/faq/qnaCreate';
 import QnaDetail from './pages/subPages/faq/qnaDetail';
 import { posts1 as initialPosts1 } from './pages/subPages/faq/qnaData';
 
-// import { resposts as ResInitialPosts } from './pages/subPages/nearInfo/ResDb';
-// import ResList from './pages/subPages/nearInfo/ResLi';
-// import ResDetail from './pages/subPages/nearInfo/ResDetail';
-// import ResPost from './pages/subPages/nearInfo/ResNew';
-// import ResEditPost from './pages/subPages/nearInfo/ResEdit';
-
+import ScrollToTop from './components/common/ScrollToTop';
 
 function App() {
     const [images, setImages] = useState(galleryImages);
@@ -55,13 +50,6 @@ function App() {
         const updatedPosts = posts1.filter(post => post.id !== postId);
         setPosts1(updatedPosts);
     };
-    // const [resposts, setResPosts] = useState(ResInitialPosts); // 초기 상태 설정 / onDelete 삭제함수 호출 후 초기상태설정하는데 사용
-
-    // const ReshandleDeletePost = (postId) => {
-    //     const updatedPosts = posts1.filter(post => post.id !== postId);
-    //     setPosts1(updatedPosts);
-    // };
-  
   
     return (
         <>
@@ -69,34 +57,37 @@ function App() {
             {isMenuVisible ? (
                 <AllMenuPage setIsMenuVisible={setIsMenuVisible} /> // 전체 메뉴가 보이는 상태일 때 AllMenuPage를 렌더링
             ) : (
-                <Routes>
-                    <Route path="/" element={<Main />} />
-                    <Route path="/notiList/category/:key" element={<NotiList posts={posts} setPosts={setPosts} />} />
-                    <Route path="/notiList/post/:id" element={<PostDetail posts={posts} onDelete={handleDeletePost} />} />
-                    <Route path="/notiList/create" element={<CreatePost />} />
-                    <Route path="/notiList/edit/:id" element={<EditPost posts={posts} setPosts={setPosts} />} />
-                    <Route path='/Kinfo' element={<Kinfo />} />
-                    <Route path='/Cinfo' element={<Cinfo />} />
-                    <Route path='/Kprogram' element={<Kpro />} />
-                    <Route path='/Cprogram' element={<Cpro />} />
-                    <Route path='/Kticket' element={<Kticket />} />
-                    <Route path='/Cticket' element={<Cticket />} />
-                    <Route path='/Faq' element={<Faq />} />
-                    <Route path="/QnaList/category/:key" element={<QnaList posts={posts1} setPosts={setPosts1} />} />
-                    <Route path="/QnaList/post/:id" element={<QnaDetail posts={posts1} onDelete={handleDeletePost1} />} />
-                    <Route path="/QnaList/create" element={<QnaCreatePost />} />
-                    <Route path="/QnaList/edit/:id" element={<QnaEditPost posts={posts1} setPosts={setPosts1} />} />
-                    <Route path='/Gallery' element = {<Gallery/>}/>
-                    <Route path='/Gallery/Detail/:id' element = {<DetailPage/>}/>
-                    {/* <Route path="/ResLi/category/:key" element={<ResList posts={resposts} setPosts={setResPosts} />} />
-                    <Route path="/ResLi/post/:id" element={<ResDetail posts={resposts} onDelete={ReshandleDeletePost} />} />
-                    <Route path="/ResLi/create" element={<ResPost />} />
-                    <Route path="/ResLi/edit/:id" element={<ResEditPost posts={resposts} setPosts={setResPosts} />} /> */}
-                     <Route path="/Gallery/category/:key"element={<Gallery images={images} onDelete={handleDelete} />}/>
-                     <Route path="/Gallery/category2/:key"element={<GalleryReview images={images} onDelete={handleDelete} />}/>
-                     <Route path="/Gallery/Detail/:id" element={<DetailPage onDelete={handleDelete} />}/>
-                     <Route path="/Gallery/Detail2/:id" element={<DetailPageReview onDelete={handleDelete} />}/>
-                </Routes>
+                <>
+                    <ScrollToTop /> 
+                    <Routes>
+                        <Route path="/" element={<Main />} />
+                        <Route path="/notiList/category/:key" element={<NotiList posts={posts} setPosts={setPosts} />} />
+                        <Route path="/notiList/post/:id" element={<PostDetail posts={posts} onDelete={handleDeletePost} />} />
+                        <Route path="/notiList/create" element={<CreatePost />} />
+                        <Route path="/notiList/edit/:id" element={<EditPost posts={posts} setPosts={setPosts} />} />
+                        <Route path='/Kinfo' element={<Kinfo />} />
+                        <Route path='/Cinfo' element={<Cinfo />} />
+                        <Route path='/Kprogram' element={<Kpro />} />
+                        <Route path='/Cprogram' element={<Cpro />} />
+                        <Route path='/Kticket' element={<Kticket />} />
+                        <Route path='/Cticket' element={<Cticket />} />
+                        <Route path='/Faq' element={<Faq />} />
+                        <Route path="/QnaList/category/:key" element={<QnaList posts={posts1} setPosts={setPosts1} />} />
+                        <Route path="/QnaList/post/:id" element={<QnaDetail posts={posts1} onDelete={handleDeletePost1} />} />
+                        <Route path="/QnaList/create" element={<QnaCreatePost />} />
+                        <Route path="/QnaList/edit/:id" element={<QnaEditPost posts={posts1} setPosts={setPosts1} />} />
+                        <Route path='/Gallery' element = {<Gallery/>}/>
+                        <Route path='/Gallery/Detail/:id' element = {<DetailPage/>}/>
+                        {/* <Route path="/ResLi/category/:key" element={<ResList posts={resposts} setPosts={setResPosts} />} />
+                        <Route path="/ResLi/post/:id" element={<ResDetail posts={resposts} onDelete={ReshandleDeletePost} />} />
+                        <Route path="/ResLi/create" element={<ResPost />} />
+                        <Route path="/ResLi/edit/:id" element={<ResEditPost posts={resposts} setPosts={setResPosts} />} /> */}
+                        <Route path="/Gallery/category/:key"element={<Gallery images={images} onDelete={handleDelete} />}/>
+                        <Route path="/Gallery/category2/:key"element={<GalleryReview images={images} onDelete={handleDelete} />}/>
+                        <Route path="/Gallery/Detail/:id" element={<DetailPage onDelete={handleDelete} />}/>
+                        <Route path="/Gallery/Detail2/:id" element={<DetailPageReview onDelete={handleDelete} />}/>
+                    </Routes>
+                </>
             )}
             <Footer />
         </>
