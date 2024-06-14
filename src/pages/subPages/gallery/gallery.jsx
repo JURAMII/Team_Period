@@ -7,7 +7,6 @@ import GalleryCategoryTabs from "./galleryCategoryTabs";
 import LazyImage from "../../../LazyImg";
 import Pagination from '../../../components/SubNoti/Pagination'; // 페이지네이션 컴포넌트 import
 import GallerySearchBar from './gallerySearchBar'; // 갤러리용 서치바 컴퍼넌트 import
-import ScrollToTop from "../../../scroll";
 import "swiper/css";
 import "swiper/css/autoplay";
 
@@ -174,7 +173,6 @@ const Gallery = ({ images }) => {
         <div className='pageBtnWrap writeBtn'>
             <Link to="/Gallery/category/create" className="subBtn notiWrite">글쓰기</Link>
         </div>
-        <ScrollToTop />
         <GallerySearchBar
           searchField={searchField}
           setSearchField={setSearchField}

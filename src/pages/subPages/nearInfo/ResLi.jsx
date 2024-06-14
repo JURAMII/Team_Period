@@ -3,7 +3,6 @@ import { Link, useParams } from 'react-router-dom';
 import Pagination from '../../../components/SubNoti/Pagination'; // 페이지넌트 컴퍼넌트
 import SearchBar from './SearchBar'; //서치바 컴퍼넌트
 import SupTop from '../../../components/common/supTop';
-import ScrollToTop from '../../../scroll';
 import Neardep from './neardep';
 import '../../../components/onedep.css'
 import '../../../components/twodep.css'
@@ -107,7 +106,6 @@ const one = 2;
         <li className={twoDep === 2 ? "twoDeptit tcheck" : "twoDeptit"} onClick={()=>clickTwo(2)}><Link to='/HoLi/category/hotel'>호텔소개</Link></li>
         </ul>
         <section className='subDefaultContent'>
-        <ScrollToTop>
                 <div className='gall'>
                     {currentPosts.map((post)=><figure key={post.id}>
                         <Link to={`/ResLi/Detail/${post.id}`}>
@@ -140,7 +138,6 @@ const one = 2;
             
 
         </div>
-        </ScrollToTop>
         <SearchBar 
                 searchField={searchField}
                 setSearchField={setSearchField}
