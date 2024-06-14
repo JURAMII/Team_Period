@@ -3,6 +3,7 @@ import { useLoader, useFrame } from '@react-three/fiber';
 import { useRef } from 'react';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
+
 const Sec3D = () => {
   const gltf = useLoader(GLTFLoader, 'gungbockgung.glb');
   const modelRef = useRef();

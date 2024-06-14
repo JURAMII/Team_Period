@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { resposts } from './ResDb';
-import "../../../components/SubNoti/CreatePost.css"
 import SupTop from '../../../components/common/supTop';
+import "../../../components/SubNoti/CreatePost.css"
 
 const formatDate = (date) => {
     const year = date.getFullYear();
@@ -12,19 +12,20 @@ const formatDate = (date) => {
 };
 
 const ResPost = () => {
-    const [title, setTitle] = useState('');
-    const [content, setContent] = useState('');
+    const [gallTit, setGallTit] = useState('');
+    const [gallTxT, setGallTxT] = useState('');
     const [author, setAuthor] = useState('');
     const [category, setCategory] = useState('맛집소개');
+    const [selectedImage, setSelectedImage] = useState(null);
     const navigate = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (title.length > 25) {
+        if (gallTit.length > 25) {
             alert('제목의 최대 글자수는 25자입니다.');
             return;
         }
-        if (content.length > 1500) {
+        if (gallTxT.length > 1500) {
             alert('내용의 최대 글자수는 1500자입니다.');
             return;
         }
@@ -32,24 +33,36 @@ const ResPost = () => {
             alert('글쓴이의 최대 글자수는 5자입니다.');
             return;
         }
+        if (!selectedImage) {
+            alert('이미지를 선택해주세요.');
+            return;
+        }
         const categoryKeyMap = {
             '맛집소개': 'res',
         };
         const newPost = {
             id: resposts.length + 1,
-            title,
-            content,
+            gallTit,
+            gallTxT,
             author,
             category,
+            img: URL.createObjectURL(selectedImage),
             time: formatDate(new Date()),
             key: categoryKeyMap[category]  // key 값을 category에 따라 설정
         };
+
         resposts.unshift(newPost); // 새로운 게시글을 맨 앞에 추가
         navigate(`/ResLi/category/${newPost.key}`);
     };
 
     const handleCancel = () => {
         navigate('/ResLi/category/res');
+    };
+
+    const handleImageChange = (e) => {
+        if (e.target.files && e.target.files[0]) {
+            setSelectedImage(e.target.files[0]);
+        }
     };
 
     return (
@@ -87,17 +100,29 @@ const ResPost = () => {
                     <input
 						className='categorySelect'
                         type="text"
-                        value={title}
-                        onChange={(e) => setTitle(e.target.value)}
+                        value={gallTit}
+                        onChange={(e) => setGallTit(e.target.value)}
                         required
                         maxLength={25}
                     />
                 </div>
+                <div className='createLine'>
+                        <div className='createPadding'>
+                            <label>이미지</label>
+                        </div>
+                        <input
+                            className='categorySelect'
+                            type="file"
+                            accept="image/*"
+                            onChange={handleImageChange}
+                            required
+                        />
+                    </div>
                 <div>
                     <textarea
 						className='textBox'
-                        value={content}
-                        onChange={(e) => setContent(e.target.value)}
+                        value={gallTxT}
+                        onChange={(e) => setGallTxT(e.target.value)}
                         required
                         maxLength={1500}
                     />
