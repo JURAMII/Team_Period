@@ -41,7 +41,6 @@ import HoDetail from './pages/subPages/nearInfo/HoDetail';
 import HoEditPost from './pages/subPages/nearInfo/HoEdit';
 
 import Loading from './pages/main/loading';
-import ScrollToTop from './components/common/ScrollToTop';
 
 function App() {
     const [images, setImages] = useState(galleryImages);
@@ -64,12 +63,20 @@ function App() {
         const updatedPosts = posts1.filter(post => post.id !== postId);
         setPosts1(updatedPosts);
     };
-    // const [resposts, setResPosts] = useState(ResInitialPosts); // 초기 상태 설정 / onDelete 삭제함수 호출 후 초기상태설정하는데 사용
+    const [resposts, setResPosts] = useState(ResInitialPosts); // 초기 상태 설정 / onDelete 삭제함수 호출 후 초기상태설정하는데 사용
 
-    // const ReshandleDeletePost = (postId) => {
-    //     const updatedPosts = posts1.filter(post => post.id !== postId);
-    //     setPosts1(updatedPosts);
-    // };
+    const ReshandleDeletePost2 = (postId) => {
+        const updatedPosts = resposts.filter(post => post.id !== postId);
+        setResPosts(updatedPosts);
+    };
+  
+    const [hoposts, setHoPosts] = useState(HoInitialPosts); // 초기 상태 설정 / onDelete 삭제함수 호출 후 초기상태설정하는데 사용
+
+    const ReshandleDeletePost3 = (postId) => {
+        const updatedPosts = hoposts.filter(post => post.id !== postId);
+        setHoPosts(updatedPosts);
+    };
+ 
   
   
     return (
@@ -98,10 +105,16 @@ function App() {
                     <Route path="/QnaList/edit/:id" element={<QnaEditPost posts={posts1} setPosts={setPosts1} />} />
                     <Route path='/Gallery' element = {<Gallery/>}/>
                     <Route path='/Gallery/Detail/:id' element = {<DetailPage/>}/>
-                    {/* <Route path="/ResLi/category/:key" element={<ResList posts={resposts} setPosts={setResPosts} />} />
-                    <Route path="/ResLi/post/:id" element={<ResDetail posts={resposts} onDelete={ReshandleDeletePost} />} />
+                    <Route path='/Way' element={<Way />} />
+                    <Route path='/Way2' element={<Way2 />} />
+                    <Route path="/ResLi/category/:key" element={<ResList posts={resposts} setPosts={setResPosts} />} />
                     <Route path="/ResLi/create" element={<ResPost />} />
-                    <Route path="/ResLi/edit/:id" element={<ResEditPost posts={resposts} setPosts={setResPosts} />} /> */}
+                    <Route path="/ResLi/edit/:id" element={<ResEditPost posts={resposts} setPosts={setResPosts} />} />
+                    <Route path='/ResLi/Detail/:id' element = {<ResDetail posts={resposts} onDelete={ReshandleDeletePost2} />}/>
+                    <Route path="/HoLi/category/:key" element={<HoList posts={hoposts} setPosts={setHoPosts} />} />
+                    <Route path="/HoLi/create" element={<HoPost />} />
+                    <Route path="/HoLi/edit/:id" element={<HoEditPost posts={hoposts} setPosts={setHoPosts} />} />
+                    <Route path='/HoLi/Detail/:id' element = {<HoDetail posts={hoposts} onDelete={ReshandleDeletePost3} />}/>
                      <Route path="/Gallery/category/:key"element={<Gallery images={images} onDelete={handleDelete} />}/>
                      <Route path="/Gallery/category2/:key"element={<GalleryReview images={images} onDelete={handleDelete} />}/>
                      <Route path="/Gallery/Detail/:id" element={<DetailPage onDelete={handleDelete} />}/>
