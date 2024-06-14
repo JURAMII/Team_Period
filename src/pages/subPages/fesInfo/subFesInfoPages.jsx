@@ -2,7 +2,6 @@ import { SubFesInfoK, SubFesInfoC, ProgramK, ProgramC, TicketK, TicketC } from "
 import SupTop from "../../../components/common/supTop"
 import LineTit from "../../../components/lineTit"
 import {InfoDep, InfoDep2, InfoDep3}  from "./infoDep";
-import ScrollToTop from "../../../scroll";
 
 function Kinfo(){
 

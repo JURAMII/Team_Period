@@ -6,7 +6,6 @@ import SupTop from '../../../components/common/supTop'
 import FaqDep from './faqDep'
 import FaqPagination from './faqpaginations'
 import FaqSearch from './faqSearch'
-import ScrollToTop from '../../../scroll'
 import FaqList from './faqList'
 
 
