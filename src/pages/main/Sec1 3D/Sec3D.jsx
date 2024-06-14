@@ -1,8 +1,8 @@
 import * as THREE from 'three';
 import { useLoader, useFrame } from '@react-three/fiber';
+import { SpotLight } from '@react-three/drei'
 import { useRef } from 'react';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-
 
 const Sec3D = () => {
   const gltf = useLoader(GLTFLoader, 'gungbockgung.glb');
@@ -17,8 +17,7 @@ const Sec3D = () => {
   return (
     <>
       <ambientLight intensity={50} />
-      <directionalLight color="white" intensity={10} />
-      <spotLight position={[0, 5, 10]} angle={0.3} penumbra={1} />
+      <directionalLight color="white" intensity={1} />
       <primitive ref={modelRef} object={gltf.scene} scale={11} position={[0,-0.2,0]}/>
     </>
   );
