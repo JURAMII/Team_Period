@@ -6,11 +6,16 @@ import { Menu } from "./Menu/Menu";
 import KakaoLogin from "../Login/KakaoLogin";
 
 const Header = ({ setIsMenuVisible }) => {
+
   const [userInfo, setUserInfo] = useState(null); // 사용자 정보를 저장하는 상태
 
   const toggleMenu = () => {
     setIsMenuVisible(prev => !prev); // 메뉴의 가시성을 토글합니다
   };
+
+  const cancelMenu = () => {
+    
+  }
 
   const handleLogout = () => {
     const token = localStorage.getItem('kakao_token'); // localStorage에서 토큰 가져오기
@@ -66,7 +71,7 @@ const Header = ({ setIsMenuVisible }) => {
               <Link to="/Faq">고객지원</Link>
             </li>
             <li>
-              <Link to="">관광안내</Link>
+              <Link to="Way">관광안내</Link>
             </li>
           </ul>
         </div>

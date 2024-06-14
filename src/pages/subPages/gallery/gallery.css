@@ -55,15 +55,15 @@
   height: 100%;
 }
 
-.swiper-slide.mainSlide.swiper-slide-active{
+.swiper-slide.mainSlide.swiper-slide-active {
   width: 80% !important;
 }
 
-.swiper-slide.mainSlide.swiper-slide-prev{
+.swiper-slide.mainSlide.swiper-slide-prev {
   width: 10% !important;
 }
 
-.swiper-slide.mainSlide.swiper-slide-next{
+.swiper-slide.mainSlide.swiper-slide-next {
   width: 10% !important;
 }
 
@@ -83,133 +83,127 @@
 
 .subGal > .galImgSec2 > .gridBox {
   width: 100%;
-  height: 100%;
   display: grid;
   gap: 30px;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-areas:
-  "g1 g2 g3 g4"
-  "g5 g6 g7 g8"
-  "g9 g10 g11 g12"
-  "g13 g14 g15 g16"
-  ;
-  margin-bottom: 130px;
+  margin-bottom: 30px;
 }
 
 .subGal > .galImgSec2 > .gridBox > .gImgCard {
   width: 100%;
   height: 100%;
-  border: 1px solid #000;
 }
 
-.subGal > .galImgSec2 > .gridBox > .gImgCard > a{
+.subGal > .galImgSec2 > .gridBox > .gImgCard > a {
   display: inline-block;
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .subGal > .galImgSec2 > .gridBox > .gImgCard > a > img {
-  width: 337px;
+  width: 100%;
   height: 294px;
 }
 
-.gridCard1 {
-  grid-area: g1;
+.imageDetails {
+  padding: 10px;
+  background-color: var(--font-black);
 }
 
-.gridCard2 {
-  grid-area: g2;
-}
-
-.gridCard3 {
-  grid-area: g3;
-}
-
-.gridCard4 {
-  grid-area: g4;
-}
-
-.gridCard5 {
-  grid-area: g5;
-}
-
-.gridCard6 {
-  grid-area: g6;
-}
-
-.gridCard7 {
-  grid-area: g7;
-}
-
-.gridCard8 {
-  grid-area: g8;
-}
-
-.gridCard9 {
-  grid-area: g9;
-}
-
-.gridCard10 {
-  grid-area: g10;
-}
-
-.gridCard11 {
-  grid-area: g11;
-}
-
-.gridCard12 {
-  grid-area: g12;
-}
-
-.gridCard13 {
-  grid-area: g13;
-}
-
-.gridCard14 {
-  grid-area: g14;
-}
-
-.gridCard15 {
-  grid-area: g15;
-}
-
-.gridCard16 {
-  grid-area: g16;
-}
-
-.titText {
-  display: inline-block;
-  font-size: 38px;
-  font-weight: bold;
+.imageDetails h3 {
+  font-size: 18px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: #fff;
-  margin-bottom: 25px;
+}
+
+.imageDetails p {
+  margin: 5px 0;
+  color: #fff;
+}
+
+.imageDetails .content {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pageBtnWrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.buttonDown {
+  display: flex;
+  gap: 5px;
+}
+
+.subSearchName {
+  width: 150px;
+  height: 44px;
+  border: 1px solid var(--line-silver);
+  margin-right: 10px;
+}
+
+.subSearch {
+  width: 300px;
+  height: 44px;
+  border: 1px solid var(--line-silver);
+  padding-left: 10px;
+  margin-right: 10px;
+}
+
+.subSearchBtn {
+  width: 44px;
+  height: 44px;
+  background: url('/path/to/search-icon.png') no-repeat center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1280px) {
   .subGal > h1 {
-      font-size: 48px;
+    font-size: 48px;
   }
 
   .subGal > p {
-      font-size: 16px;
+    font-size: 16px;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .subGal > h1 {
-      font-size: 32px;
+    font-size: 32px;
+  }
+
+  .subGal > .galImgSec2 > .gridBox {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (max-width: 768px) {
   .subGal > p {
-      font-size: 14px;
+    font-size: 14px;
+  }
+
+  .subGal > .galImgSec2 > .gridBox {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .subGal > .galImgSec2 > .gridBox {
+    grid-template-columns: 1fr;
   }
 }
 
 @media screen and (max-width: 300px) {
   .subGal > .galleryBtn {
-      gap: 15px;
+    gap: 15px;
   }
 }
 
