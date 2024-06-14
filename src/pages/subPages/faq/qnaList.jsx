@@ -5,7 +5,6 @@ import "../../../components/SubNoti/notiList.css"
 import SearchBar from '../../../components/SubNoti/SearchBar'; //서치바 컴퍼넌트
 import SupTop from '../../../components/common/supTop';
 import FaqDep from './faqDep';
-import ScrollToTop from '../../../scroll';
 
 const QnaList = ({ posts, setPosts }) => {
     const { key } = useParams(); // URL에서 key 파라미터를 가져옴
@@ -95,7 +94,6 @@ const QnaList = ({ posts, setPosts }) => {
     const totalPageCount = Math.ceil(filteredPosts.length / postsPerPage);
 
     return (
-        <ScrollToTop>
             <div className="inner">
                 <SupTop supTopImg={'subSupportTop'} supTopTit={'고객지원'}/>
                 <FaqDep one={2}/>
@@ -147,7 +145,6 @@ const QnaList = ({ posts, setPosts }) => {
                     onSearch={handleSearch}
                 />
             </div>
-        </ScrollToTop>
     );
 };
 

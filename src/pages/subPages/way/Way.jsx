@@ -2,8 +2,9 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import LineTit from '../../../components/lineTit';
 import KakaoMap from './map';
-import '../../../components/onedep'
-import '../../../components/twodep'
+import SupTop from '../../../components/common/supTop';
+import '../../../components/onedep.css'
+import '../../../components/twodep.css'
 import './Way.css'
 
 
@@ -21,10 +22,11 @@ const Way = ()=>{
     }  
     return(
         <>
+        <SupTop supTopImg={'subTourInfoTop'} supTopTit={'관광안내'}/>
         {/* 원뎁스 */}
         <ul className="oneDep flex subDefaultContent">
          <li className={oneDep === 1 ? "oneDeptit check" : "oneDeptit"} onClick={() => clickOne(1)}> <Link to='/Way'>오시는길</Link></li>
-         <li className={oneDep === 2 ? "oneDeptit check" : "oneDeptit"} onClick={() => clickOne(2)}><Link to='/ResPage'>주변안내</Link></li>
+         <li className={oneDep === 2 ? "oneDeptit check" : "oneDeptit"} onClick={() => clickOne(2)}><Link to='/ResLi/category/res'>주변안내</Link></li>
         </ul>
         {/* 투뎁스 */}
         <ul className="twoDep flex">
@@ -97,8 +99,8 @@ const Way = ()=>{
                         </ul>
                     </div>
                     <div>
-                    <h3>주차요금</h3>
-                    <table>
+                    <h3 className='peeTit'>주차요금</h3>
+                    <table className='pee'>
                         <tr>
                             <td className='silver'>구 분</td>
                             <td className='silver'>기본 1시간</td>
@@ -122,8 +124,8 @@ const Way = ()=>{
                         </tr>
                     </table>
                     <p className='red'>※ 단, 소형차량이 지상주차장 이용 시 중/대형차 요금이 적용됩니다.</p>
-                    <h3>요금 할인</h3>
-                    <table>
+                    <h3 className='peeTit'>요금 할인</h3>
+                    <table className='pee'>
                         <thead>
                         <tr>
                             <td className='silver'>구 분</td>
@@ -181,10 +183,11 @@ const Way2 = ()=>{
 
     return(
         <>
+        <SupTop supTopImg={'subTourInfoTop'} supTopTit={'관광안내'}/>
         {/* 원뎁스 */}
         <ul className="oneDep flex subDefaultContent">
          <li className={oneDep === 1 ? "oneDeptit check" : "oneDeptit"} onClick={() => clickOne(1)}> <Link to='/Way'>오시는길</Link></li>
-         <li className={oneDep === 2 ? "oneDeptit check" : "oneDeptit"} onClick={() => clickOne(2)}><Link to='/ResPage'>주변안내</Link></li>
+         <li className={oneDep === 2 ? "oneDeptit check" : "oneDeptit"} onClick={() => clickOne(2)}><Link to='/ResLi/category/res'>주변안내</Link></li>
         </ul>
         {/* 투뎁스 */}
         <ul className="twoDep flex">
