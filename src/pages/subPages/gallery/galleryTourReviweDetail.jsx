@@ -1,25 +1,23 @@
 import React from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { galleryImages } from '../../../image';
 import GalleryCategoryTabs from '../../subPages/gallery/galleryCategoryTabs'; // 카테고리 탭 컴포넌트 import
 
-const DetailPageReview = ({ onDelete }) => {
-  // URL에서 id 파라미터를 가져옵니다
+const DetailPageReview = ({ images, onDelete }) => {
   const { id } = useParams();
   const navigate = useNavigate(); // 페이지 이동을 위한 navigate 함수
 
   // id를 사용하여 해당 이미지 데이터를 가져옵니다
-  const image = galleryImages.find(image => image.id === parseInt(id, 10));
-  const currentIndex = galleryImages.findIndex(image => image.id === parseInt(id, 10));
-  const previousImage = currentIndex > 0 ? galleryImages[currentIndex - 1] : null;
-  const nextImage = currentIndex < galleryImages.length - 1 ? galleryImages[currentIndex + 1] : null;
+  const image = images.find(image => image.id === parseInt(id, 10));
+  const currentIndex = images.findIndex(image => image.id === parseInt(id, 10));
+  const previousImage = currentIndex > 0 ? images[currentIndex - 1] : null;
+  const nextImage = currentIndex < images.length - 1 ? images[currentIndex + 1] : null;
 
   // 이미지가 존재하지 않을 경우 메시지를 표시합니다
   if (!image) return <div>이미지를 찾을 수 없습니다.</div>;
 
   // 수정 버튼 클릭 시 실행되는 함수
   const handleEdit = () => {
-    navigate(`/gallery/edit2/${image.id}`);
+    navigate(`/gallery/category2/edit/${image.id}`);
   };
 
   // 삭제 버튼 클릭 시 실행되는 함수
@@ -36,7 +34,7 @@ const DetailPageReview = ({ onDelete }) => {
       <div className='subGalleryTop'>
         <p className='subTopText'>갤러리</p>
       </div>
-      <GalleryCategoryTabs /> {/* CategoryTabs 컴포넌트를 사용 */}
+      <GalleryCategoryTabs /> {/* 카테고리 탭 컴포넌트를 사용 */}
       <div className='postDetailWrap'>
         <div className='postWrap flex'>
           <p className='postCategory'>{image.category2}</p>
@@ -72,3 +70,4 @@ const DetailPageReview = ({ onDelete }) => {
 };
 
 export default DetailPageReview;
+

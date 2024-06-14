@@ -1,21 +1,35 @@
-import React, { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import "../../../components/SubNoti/CreatePost.css";
 
-const formatDate = (image) => {
-    const year = image.getFullYear();
-    const month = image.getMonth() + 1;
-    const day = image.getDate();
+const formatDate = (date) => {
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
     return `${year}.${month}.${day}`;
 };
 
-const CreateGalleryPost = ({ images, setImages }) => {
+const galleryEdit2Page = ({ images, setImages }) => {
+    const { id } = useParams();
+    const navigate = useNavigate();
+    const image = images.find(image => image.id === Number(id));
+
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
-    const [author, setAuthor] = useState('');
+    const [user, setUser] = useState('');
+    const [category, setCategory] = useState('별빛야행');
     const [selectedImage, setSelectedImage] = useState(null);
-    const navigate = useNavigate();
-    const location = useLocation();
+
+    useEffect(() => {
+        if (image) {
+            setTitle(image.title);
+            setContent(image.content);
+            setUser(image.user);
+            setCategory(image.category === 'starLigth' ? '별빛야행' : '달빛기행');
+        } else {
+            navigate('/Gallery');
+        }
+    }, [image, navigate]);
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -27,11 +41,11 @@ const CreateGalleryPost = ({ images, setImages }) => {
             alert('내용의 최대 글자수는 1500자입니다.');
             return;
         }
-        if (author.length > 5) {
+        if (user.length > 5) {
             alert('글쓴이의 최대 글자수는 5자입니다.');
             return;
         }
-        if (!selectedImage) {
+        if (!selectedImage && !image.src) {
             alert('이미지를 선택해주세요.');
             return;
         }
@@ -39,30 +53,23 @@ const CreateGalleryPost = ({ images, setImages }) => {
             '별빛야행': 'starLigth',
             '달빛기행': 'moonLight'
         };
-
-        const isReview = location.pathname.includes('category2');
-        const newPost = {
-            id: images.length + 1,
+        const updatedImage = {
+            ...image,
             title,
             content,
-            author,
-            category: isReview ? '축제후기' : '축제사진',
-            src: URL.createObjectURL(selectedImage),
+            user,
+            category: '축제후기',
+            src: selectedImage ? URL.createObjectURL(selectedImage) : image.src,
             time: formatDate(new Date()),
             key: categoryKeyMap[category]
         };
-
-        setImages([newPost, ...images]);
-
-        if (isReview) {
-            navigate(`/Gallery/category2/${newPost.key}`);
-        } else {
-            navigate(`/Gallery/category/${newPost.key}`);
-        }
+        const updatedImages = images.map(img => img.id === Number(id) ? updatedImage : img);
+        setImages(updatedImages);
+        navigate(`/gallery/detail2/${updatedImage.id}`);
     };
 
     const handleCancel = () => {
-        navigate(-1);
+        navigate(`/gallery/detail2/${image.id}`);
     };
 
     const handleImageChange = (e) => {
@@ -70,8 +77,6 @@ const CreateGalleryPost = ({ images, setImages }) => {
             setSelectedImage(e.target.files[0]);
         }
     };
-
-    const [category, setCategory] = useState('별빛야행');
 
     return (
         <div className="inner">
@@ -96,8 +101,8 @@ const CreateGalleryPost = ({ images, setImages }) => {
                         <input
                             className='categorySelect'
                             type="text"
-                            value={author}
-                            onChange={(e) => setAuthor(e.target.value)}
+                            value={user}
+                            onChange={(e) => setUser(e.target.value)}
                             required
                             maxLength={5}
                         />
@@ -124,7 +129,6 @@ const CreateGalleryPost = ({ images, setImages }) => {
                             type="file"
                             accept="image/*"
                             onChange={handleImageChange}
-                            required
                         />
                     </div>
                     <div>
@@ -146,8 +150,4 @@ const CreateGalleryPost = ({ images, setImages }) => {
     );
 };
 
-export default CreateGalleryPost;
-
-
-
-
+export default galleryEdit2Page;

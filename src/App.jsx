@@ -20,6 +20,8 @@ import GalleryReview from "./pages/subPages/gallery/galleryTourReviwe";
 import DetailPageReview from "./pages/subPages/gallery/galleryTourReviweDetail"
 import CreateGalleryPost from "./pages/subPages/gallery/galleryCreatePage";
 import Create2GalleryPost from "./pages/subPages/gallery/galleryCreacte2Page";
+import GalleryEditPage from './pages/subPages/gallery/galleryEditPage';
+import GalleryEdit2Page from './pages/subPages/gallery/galleryEdit2Page';
 import { galleryImages } from "./image";
 
 import Faq from './pages/subPages/faq/faq';
@@ -119,6 +121,8 @@ function App() {
                     <Route path="/Gallery/Detail2/:id" element={<DetailPageReview images={images} onDelete={handleDelete} />} />
                     <Route path="/Gallery/category/create" element={<CreateGalleryPost images={images} setImages={setImages} />} />
                     <Route path="/Gallery/category2/create" element={<Create2GalleryPost images={images} setImages={setImages} />} />
+                    <Route path='/Gallery/category/edit/:id' element={<GalleryEditPage images={images} setImages={setImages} />} />
+                    <Route path='/Gallery/category2/edit/:id' element={<GalleryEdit2Page images={images} setImages={setImages} />} />
                 </Routes>
             )}
             <Footer />

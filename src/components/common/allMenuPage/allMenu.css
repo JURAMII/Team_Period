@@ -142,6 +142,12 @@
   }
 }
 
+@media screen and (max-width : 1024px) {
+  .headWrap>.headMenu>.headInner>.boxWrap>.lastBox {
+    display: none;
+  }
+}
+
 @media screen and (max-width : 768px) {
   .headWrap {
     padding: 0;

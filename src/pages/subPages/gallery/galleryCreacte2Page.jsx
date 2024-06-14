@@ -12,7 +12,7 @@ const formatDate = (image) => {
 const Create2GalleryPost = ({ images, setImages }) => {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
-    const [user, setAuthor] = useState('');
+    const [user, setUser] = useState('');
     const [category, setCategory] = useState('별빛야행');
     const [selectedImage, setSelectedImage] = useState(null);
     const navigate = useNavigate();
@@ -87,7 +87,7 @@ const Create2GalleryPost = ({ images, setImages }) => {
                             className='categorySelect'
                             type="text"
                             value={user}
-                            onChange={(e) => setAuthor(e.target.value)}
+                            onChange={(e) => setUser(e.target.value)}
                             required
                             maxLength={5}
                         />

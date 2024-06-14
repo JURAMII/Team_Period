@@ -134,7 +134,7 @@ const Gallery = ({ images }) => {
                     <div>
                       <LazyImage
                         src={image.src}
-                        alt={`${index + 1}`}
+                        alt={` ${index + 1}`}
                       />
                     </div>
                   </SwiperSlide>

@@ -14,7 +14,7 @@ const Header = ({ setIsMenuVisible }) => {
   };
 
   const cancelMenu = () => {
-    
+
   }
 
   const handleLogout = () => {
