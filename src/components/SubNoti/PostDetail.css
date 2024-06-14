@@ -45,9 +45,11 @@
 .postContent {
     padding: 30px 15px 200px 15px;
 }
-
-.postInfo,.postInfo>span {
-    color: var(--font-silber);
+.postContent img{
+	margin-bottom: 30px;
+}
+.postInfo {
+    color: gray;
 }
 
 .postActions{
@@ -60,6 +62,13 @@
 		width: calc( 100% - 30px );
 	}
 }
+
+@media screen and (max-width : 1024px) {
+	.postContent img{
+		width: 100%;
+	}
+}
+
 
 @media screen and (max-width : 768px) {
 	.postCategory{
