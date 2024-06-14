@@ -1,0 +1,36 @@
+/* PostDetail.css */
+
+.commentsSection {
+    margin-top: 20px;
+}
+
+.commentsList {
+    margin-bottom: 10px;
+}
+
+.comment {
+    background-color: var(--back-silver);
+    padding: 30px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.addComment {
+    display: flex;
+    flex-direction: column;
+	margin-bottom: 28px;
+}
+
+.commentBox {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+	border: 1px solid var(--line-silver);
+	outline: none;
+	resize: none;
+}
+
+.addComment button {
+    align-self: flex-end;
+}
+

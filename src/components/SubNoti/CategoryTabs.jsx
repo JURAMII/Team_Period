@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
-// import "./CategoryTabs.css"; // 스타일을 위한 CSS 파일
+// import './CategoryTabs.css'; // 스타일을 위한 CSS 파일
 
 const CategoryTabs = () => {
     const { key } = useParams();
@@ -9,7 +9,7 @@ const CategoryTabs = () => {
         star: '별빛야행',
         moon: '달빛기행'
     };
-    const category = categoryMap[key] || '공지사항';
+    const category = categoryMap[key] || '';
 
     return (
         <div className="flex">

@@ -40,6 +40,9 @@ import HoPost from './pages/subPages/nearInfo/HoNew';
 import HoDetail from './pages/subPages/nearInfo/HoDetail';
 import HoEditPost from './pages/subPages/nearInfo/HoEdit';
 
+import ScrollToTop from './components/common/ScrollToTop';
+
+
 function App() {
     const [images, setImages] = useState(galleryImages);
     const [isMenuVisible, setIsMenuVisible] = useState(false); // 메뉴 가시성을 관리하는 상태
@@ -83,6 +86,8 @@ function App() {
             {isMenuVisible ? (
                 <AllMenuPage setIsMenuVisible={setIsMenuVisible} /> // 전체 메뉴가 보이는 상태일 때 AllMenuPage를 렌더링
             ) : (
+				<>
+				<ScrollToTop/>
                 <Routes>
                     <Route path="/" element={<Main />} />
                     <Route path="/notiList/category/:key" element={<NotiList posts={posts} setPosts={setPosts} />} />
@@ -117,6 +122,7 @@ function App() {
                      <Route path="/Gallery/Detail/:id" element={<DetailPage onDelete={handleDelete} />}/>
                      <Route path="/Gallery/Detail2/:id" element={<DetailPageReview onDelete={handleDelete} />}/>
                 </Routes>
+				</>
             )}
             <Footer />
         </>

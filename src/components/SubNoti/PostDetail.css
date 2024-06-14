@@ -16,6 +16,7 @@
 
 .postCategory{
 	font-size: 18px;
+	font-weight: bold;
 }
 .postTitle{
 	padding-left: 5px;
@@ -45,8 +46,8 @@
     padding: 30px 15px 200px 15px;
 }
 
-.postInfo {
-    color: gray;
+.postInfo,.postInfo>span {
+    color: var(--font-silber);
 }
 
 .postActions{
@@ -72,7 +73,7 @@
 		font-size: 14px;
 	}
 	.postContent {
-		padding: 20px 10px 430px 10px;
+		padding: 20px 10px 250px 10px;
 	}
 	.postWrap{
 		padding-left: 10px;
