@@ -38,7 +38,6 @@ const Faq = () => {
 
     return(
       <>
-        <ScrollToTop>
         <SupTop supTopImg={'subSupportTop'} supTopTit={'고객지원'}/>
         <FaqDep one={one}/>
         <section className="faqSec">
@@ -48,7 +47,6 @@ const Faq = () => {
         <FaqPagination page={page} setPage={setPage} postPerPage={postPerPage} allCount={allCount}/>
         <FaqSearch Fsearch={Fsearch} />
         </section>
-        </ScrollToTop>
       </>
     )
 }

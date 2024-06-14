@@ -95,7 +95,6 @@ const QnaList = ({ posts, setPosts }) => {
     const totalPageCount = Math.ceil(filteredPosts.length / postsPerPage);
 
     return (
-        <ScrollToTop>
             <div className="inner">
                 <SupTop supTopImg={'subSupportTop'} supTopTit={'고객지원'}/>
                 <FaqDep one={2}/>
@@ -147,7 +146,6 @@ const QnaList = ({ posts, setPosts }) => {
                     onSearch={handleSearch}
                 />
             </div>
-        </ScrollToTop>
     );
 };
 
