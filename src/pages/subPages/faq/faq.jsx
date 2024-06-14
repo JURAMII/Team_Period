@@ -6,7 +6,6 @@ import SupTop from '../../../components/common/supTop'
 import FaqDep from './faqDep'
 import FaqPagination from './faqpaginations'
 import FaqSearch from './faqSearch'
-import ScrollToTop from '../../../scroll'
 import FaqList from './faqList'
 
 
@@ -38,7 +37,6 @@ const Faq = () => {
 
     return(
       <>
-        <ScrollToTop>
         <SupTop supTopImg={'subSupportTop'} supTopTit={'고객지원'}/>
         <FaqDep one={one}/>
         <section className="faqSec">
@@ -48,7 +46,6 @@ const Faq = () => {
         <FaqPagination page={page} setPage={setPage} postPerPage={postPerPage} allCount={allCount}/>
         <FaqSearch Fsearch={Fsearch} />
         </section>
-        </ScrollToTop>
       </>
     )
 }
