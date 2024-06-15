@@ -9,8 +9,9 @@ const AllMenuPage = ({ setIsMenuVisible }) => {
   };
 
   return (
+    <>
+    <Menu toggleMenu={toggleMenu} /> {/* 닫기 기능을 추가한 Menu 컴포넌트 */}
     <div className="headWrap visi">
-      <Menu toggleMenu={toggleMenu} /> {/* 닫기 기능을 추가한 Menu 컴포넌트 */}
       <div className="headImg">
         <div className="slider">
           <div className="slide">
@@ -74,21 +75,22 @@ const AllMenuPage = ({ setIsMenuVisible }) => {
               </div>
             </li>
             <li className="lastBox grid6">
-	        	<div className="slider hiddenContents">
-          			<div className="slide">
-            			<h2 className="titText">별빛야행</h2>
-            			<p>경복궁의 가장 깊은 곳, 북측 권역의 문이 열립니다.</p>
-          			</div>
-          			<div className="slide">
-	            		<h2 className="titText">달빛기행</h2>
-        	    		<p>창덕궁의 가장 깊은 곳, 북측 권역의 문이 열립니다.</p>
-    	      		</div>
-	        	</div>
+              <div className="slider hiddenContents">
+                <div className="slide">
+                  <h2 className="titText">별빛야행</h2>
+                  <p>경복궁의 가장 깊은 곳, 북측 권역의 문이 열립니다.</p>
+                </div>
+                <div className="slide">
+                  <h2 className="titText">달빛기행</h2>
+                  <p>창덕궁의 가장 깊은 곳, 북측 권역의 문이 열립니다.</p>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
       </div>
     </div>
+    </>
   );
 };
 
