@@ -17,7 +17,7 @@ import { Kinfo, Cinfo, Kpro, Cpro, Kticket, Cticket } from './pages/subPages/fes
 import Gallery from "./pages/subPages/gallery/gallery";
 import DetailPage from "./pages/main/Sec7_Gallery/subGalleryDetaill";
 import GalleryReview from "./pages/subPages/gallery/galleryTourReviwe";
-import DetailPageReview from "./pages/subPages/gallery/galleryTourReviweDetail"
+import DetailPageReview from "./pages/subPages/gallery/galleryTourReviweDetail";
 import CreateGalleryPost from "./pages/subPages/gallery/galleryCreatePage";
 import Create2GalleryPost from "./pages/subPages/gallery/galleryCreacte2Page";
 import GalleryEditPage from './pages/subPages/gallery/galleryEditPage';
@@ -86,7 +86,7 @@ function App() {
         <>
             {!isMenuVisible && <Header setIsMenuVisible={setIsMenuVisible} />} {/* Header에 상태 설정 함수를 전달 */}
             {isMenuVisible ? (
-                <AllMenuPage setIsMenuVisible={setIsMenuVisible} /> // 전체 메뉴가 보이는 상태일 때 AllMenuPage를 렌더링
+                <AllMenuPage setIsMenuVisible={setIsMenuVisible} isMenuVisible={isMenuVisible} /> // 전체 메뉴가 보이는 상태일 때 AllMenuPage를 렌더링
             ) : (
                 <>
                     <ScrollToTop />
@@ -111,9 +111,9 @@ function App() {
                         <Route path='/Gallery/Detail/:id' element={<DetailPage images={images} onDelete={handleDelete} />} />
                         <Route path='/Way' element={<Way />} />
                         <Route path='/Way2' element={<Way2 />} />
-                        <Route path="/ResLi/category/:key" element={<ResList posts={resposts} setPosts={setResPosts} />} />
+                        <Route path="/ResLi/category/:key" element={<ResList posts={resposts} setResPosts={setResPosts} />} />
                         <Route path="/ResLi/create" element={<ResPost />} />
-                        <Route path="/ResLi/edit/:id" element={<ResEditPost posts={resposts} setPosts={setResPosts} />} />
+                        <Route path="/ResLi/edit/:id" element={<ResEditPost posts={resposts} setResPosts={setResPosts} />} />
                         <Route path='/ResLi/Detail/:id' element={<ResDetail posts={resposts} onDelete={ReshandleDeletePost2} />} />
                         <Route path="/HoLi/category/:key" element={<HoList posts={hoposts} setPosts={setHoPosts} />} />
                         <Route path="/HoLi/create" element={<HoPost />} />
@@ -136,5 +136,3 @@ function App() {
 }
 
 export default App;
-
-

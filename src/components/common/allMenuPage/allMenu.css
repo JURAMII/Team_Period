@@ -3,12 +3,10 @@
 	position: fixed;
 	left: 0;
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	padding: 110px 120px;
 	z-index: 999;
-  }
-
- 
+  } 
   
   .headWrap.visi {
 	display: flex;
@@ -133,7 +131,7 @@
   .menuBox ul {
 	display: flex;
 	flex-direction: column;
-	gap: 12px;
+	gap: 14px;
   }
   
   .menuBox li > a {
@@ -183,10 +181,68 @@
   
   .titText {
 	display: inline-block;
-	font-size: 38px;
+	font-size: 36px;
 	font-weight: bold;
 	color: #fff;
 	margin-bottom: 25px;
+  }
+
+  #allMenuBtn{
+	cursor: pointer;
+    position: fixed;
+	top: 35px; right: 40px;
+    z-index: 1000;
+    right: 40px;
+    width: 30px; height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+#allMenuBtn>#dotWrap{
+    width: 10px; height: 10px;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%) scale(0) rotate(-360deg);
+    animation: rollingIn .6s .6s ease-out forwards;
+}
+
+#allMenuBtn:hover>#dotWrap{
+    animation: rollingOut .6s ease-out forwards;
+}
+
+#allMenuBtn>#dotWrap>#dot{
+    width: 3px; height: 3px;
+    background: #fff;
+    position: absolute;
+}
+
+#allMenuBtn>#dotWrap>#dot:nth-child(1){
+    left: 0; top: 0;
+}
+
+#allMenuBtn>#dotWrap>#dot:nth-child(2){
+    right: 0; top: 0;
+}
+
+#allMenuBtn>#dotWrap>#dot:nth-child(3){
+    left: 0; bottom: 0;
+}
+
+#allMenuBtn>#dotWrap>#dot:nth-child(4){
+    right: 0; bottom: 0;
+}
+
+
+@media screen and (max-width : 1440px) {
+	.menuBox li > a {
+		font-size: 16px;
+	  }
+	.titText {
+	font-size: 32px;
+      }
   }
   
   @media screen and (max-width : 1280px) {
@@ -196,6 +252,22 @@
 	.hiddenContents {
 	  display: block;
 	}
+  }
+
+  @media screen and (max-width : 1024px) {
+	.headWrap {
+		padding: 65px 80px;
+	  } 
+	#allMenuBtn{
+		width: 25px; height: 25px;
+		top: 30px; right: 35px;
+	}
+	.menuBox li > a {
+		font-size: 14px;
+	  }
+    .titText {
+  	    font-size: 24px;
+  	  }
   }
   
   @media screen and (max-width : 768px) {
@@ -213,12 +285,25 @@
 		"g3 g4"
 		"g5 g6";
 	}
+	#allMenuBtn{
+		right: 28px;
+	}
+  }
+
+  @media screen and (max-width : 500px) {
+	.menuBox {
+		min-width: auto;
+	  }
   }
   
-  @media screen and (max-width : 500px) {
+  @media screen and (max-width : 360px) {
 	.headWrap {
-	  padding: 0;
-	}
+		position: relative;
+		width: 100%;
+		height: auto;
+		padding: 0;
+		z-index: 999;
+	  }
 	.headMenuNavPage {
 	  width: 100%;
 	}
@@ -235,6 +320,9 @@
 	}
 	.menuBox {
 	  padding: 28px 0;
+	}
+	#allMenuBtn{
+		right: 10px;
 	}
   }
   

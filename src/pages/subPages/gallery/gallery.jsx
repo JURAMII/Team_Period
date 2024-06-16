@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import "./gallery.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Navigation } from "swiper/modules"; // Swiper 모듈에서 Navigation 추가
 import GalleryCategoryTabs from "./galleryCategoryTabs";
 import LazyImage from "../../../LazyImg";
-import Pagination from '../../../components/SubNoti/Pagination'; // 페이지네이션 컴포넌트 import
-import GallerySearchBar from './gallerySearchBar'; // 갤러리용 서치바 컴퍼넌트 import
+import Pagination from '../../../components/SubNoti/Pagination';
+import GallerySearchBar from './gallerySearchBar';
 import "swiper/css";
 import "swiper/css/autoplay";
+import "swiper/css/navigation"; // Swiper 네비게이션 CSS 추가
 
 const Gallery = ({ images }) => {
   const { key } = useParams();
@@ -50,24 +51,19 @@ const Gallery = ({ images }) => {
       return true;
     });
     setFilteredImages(searchFilteredImages);
-    setCurrentPage(1); // 검색 후 페이지를 첫 페이지로 설정
-    setCurrentGroup(1); // 검색 후 그룹을 첫 그룹으로 설정
+    setCurrentPage(1);
+    setCurrentGroup(1);
   };
 
-  // 페이지네이션을 위한 상태를 정의
-  const postsPerPage = 12; // 한 페이지에 노출될 게시물 수
-
-  // 현재 페이지에 해당하는 게시물의 인덱스를 계산
+  const postsPerPage = 12;
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = filteredImages.slice(indexOfFirstPost, indexOfFirstPost + postsPerPage);
 
-  // 페이지 번호를 클릭했을 때 실행되는 핸들러
   const handleClick = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
 
-  // 이전 페이지 그룹으로 이동하는 핸들러
   const handlePreviousGroup = () => {
     if (currentGroup > 1) {
       setCurrentGroup(currentGroup - 1);
@@ -75,7 +71,6 @@ const Gallery = ({ images }) => {
     }
   };
 
-  // 다음 페이지 그룹으로 이동하는 핸들러
   const handleNextGroup = () => {
     if (currentGroup * pageGroupSize < Math.ceil(filteredImages.length / postsPerPage)) {
       setCurrentGroup(currentGroup + 1);
@@ -83,7 +78,6 @@ const Gallery = ({ images }) => {
     }
   };
 
-  // 총 페이지 수를 계산
   const totalPageCount = Math.ceil(filteredImages.length / postsPerPage);
 
   return (
@@ -109,12 +103,10 @@ const Gallery = ({ images }) => {
           <div className="galImgSec1_inner">
             <div className="mainImgWrap">
               <Swiper
-                modules={[Autoplay]}
+                modules={[Navigation]} // Autoplay와 Navigation 모듈 추가
                 spaceBetween={20}
-                autoplay={{
-                  delay: 0,
-                  disableOnInteraction: false,
-                }}
+                centeredSlides={true}
+                navigation // 네비게이션 활성화
                 breakpoints={{
                   768: {
                     slidesPerView: 2,
@@ -123,12 +115,10 @@ const Gallery = ({ images }) => {
                     slidesPerView: 3,
                   },
                 }}
-                loop={true}
-                loopedslides={1}
-                speed={6000}
+                loop={true} // 이미지를 추가로 복제하지 않음
                 className="mainSwiper"
               >
-                {filteredImages.slice(0, 8).map((image, index) => (
+                {filteredImages.slice(0, 5).map((image, index) => ( // 기본으로 5장만 보여줌
                   <SwiperSlide key={index} className="mainSlide">
                     <div>
                       <LazyImage
