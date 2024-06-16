@@ -54,6 +54,7 @@ article{
 .tr_txt li{
     text-align: left;
     line-height: 30px;
+    text-align: center;
 }
 .tr_txt>li:not(:first-child)::before {
     content: '•';
