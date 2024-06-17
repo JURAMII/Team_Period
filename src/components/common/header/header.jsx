@@ -22,8 +22,8 @@ const Header = ({ setIsMenuVisible }) => {
     const token = localStorage.getItem('kakao_token'); // localStorage에서 토큰 가져오기
 
     if (token) {
-      // 카카오 로그아웃 API 호출
-      fetch('https://kapi.kakao.com/v1/user/logout', {
+      // 카카오 계정 연결 해제 API 호출
+      fetch('https://kapi.kakao.com/v1/user/unlink', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -31,18 +31,18 @@ const Header = ({ setIsMenuVisible }) => {
         }
       })
       .then(response => {
-        if (response.status === 200) { // 로그아웃 성공 여부 확인
+        if (response.status === 200) { // 연결 해제 성공 여부 확인
           setUserInfo(null); // 사용자 정보 초기화
           localStorage.removeItem('kakao_token'); // 토큰 삭제
 
           // URL에서 인가 코드 제거
           window.history.pushState({}, document.title, window.location.pathname);
         } else {
-          console.error('로그아웃 실패');
+          console.error('연결 해제 실패');
         }
       })
       .catch(error => {
-        console.error('로그아웃 실패', error);
+        console.error('연결 해제 실패', error);
       });
     } else {
       console.error('토큰이 없습니다.');
