@@ -14,7 +14,7 @@ const Main = () =>{
   
     return(
         <>
-         {/* <Loadig/> */}
+         <Loadig/>
          <Three/>
          <FesInfoStart/>
          <FesInfo/>
