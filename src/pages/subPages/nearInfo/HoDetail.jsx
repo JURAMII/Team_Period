@@ -33,6 +33,7 @@ const HoDetail = ({posts ,onDelete}) => {
 
   const one = 2;
 
+
   return (
     <>
     <SupTop supTopImg={'subTourInfoTop'} supTopTit={'관광안내'}/>
