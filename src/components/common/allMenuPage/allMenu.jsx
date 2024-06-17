@@ -70,8 +70,8 @@ const AllMenuPage = ({ setIsMenuVisible, isMenuVisible }) => {
                 <div>
                   <h2 className="titText">관광안내</h2>
                   <ul>
-                    <li><Link to="/Location" onClick={toggleMenu}>오시는 길</Link></li>
-                    <li><Link to="/Attractions" onClick={toggleMenu}>주변 즐길거리</Link></li>
+                    <li><Link to="/Way" onClick={toggleMenu}>오시는 길</Link></li>
+                    <li><Link to="/ResLi/category/res" onClick={toggleMenu}>주변 즐길거리</Link></li>
                   </ul>
                 </div>
               </li>
