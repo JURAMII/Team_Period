@@ -47,7 +47,7 @@ const CreateGalleryPost = ({ images, setImages }) => {
         const isReview = location.pathname.includes('category2');
         
         const newPost = {
-            id: images.length + 1,
+            id: images.length + 2,
             title,
             content,
             author,

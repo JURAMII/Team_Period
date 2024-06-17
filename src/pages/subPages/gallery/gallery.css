@@ -180,6 +180,12 @@
 }
 
 @media screen and (max-width: 768px) {
+  .subGal > .galImgSec1 {
+    padding: 20px 0;
+  }
+  .subGal > .galImgSec2 > .gridBox {
+    gap: 20px;
+  }
   .subGal > p {
     font-size: 14px;
   }
@@ -187,6 +193,7 @@
   .subGal > .galImgSec2 > .gridBox {
     grid-template-columns: repeat(2, 1fr);
   }
+  
 }
 
 @media screen and (max-width: 480px) {
