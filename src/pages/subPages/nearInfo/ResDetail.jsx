@@ -60,7 +60,7 @@ const ResDetail = ({posts ,onDelete}) => {
           )}
         </div>
         <div className='postActions flex'>
-          <Link to={`/ResLi/category/${post.key}`} className='subBtn'>목록보기</Link>
+          <Link to={`/ResLi/category/res`} className='subBtn'>목록보기</Link>
           <div className='flex subBtnWrap'>
             <button className='subBtn' onClick={handleEdit}>수정하기</button>
             <button className='subBtn' onClick={handleDelete}>삭제하기</button>

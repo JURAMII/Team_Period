@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { useLoader, useFrame } from '@react-three/fiber';
 import { useRef } from 'react';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { Environment, useTexture } from '@react-three/drei';
 
 const Sec3D = () => {
   const gltf = useLoader(GLTFLoader, 'untitled2.glb');

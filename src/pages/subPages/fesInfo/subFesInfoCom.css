@@ -2,6 +2,7 @@
 .subInfoWrap{
     justify-content: space-between;
     gap: 40px;
+    padding-top: 65px;
 }
 .subInfoWrap>div:first-child{
     margin: 0 auto;
@@ -38,6 +39,9 @@
 }
 
 /* 프로그램 */
+.programWrap{
+    padding-top: 65px;
+}
 .pTit{
     font-weight: bold;
     text-align: center;
@@ -99,6 +103,7 @@
 .ticketWrap{
     justify-content: space-around;
     gap: 15px;
+    padding-top: 65px;
 }
 .ticketWrap h4{
     font-weight: bold;
@@ -152,6 +157,7 @@
     .subInfoWrap{
         flex-direction: column;
         gap: 28px;
+        padding-top: 28px;
     }
     .subInfoTit{
         font-size: 16px;
@@ -167,6 +173,9 @@
     }
     .progRote div{
         width: 80%;
+    }
+    .programWrap{
+        padding-top: 28px;
     }
     .pTit{
         padding-bottom: 28px;
@@ -207,6 +216,7 @@
     }
     .ticketWrap{
         flex-direction: column;
+        padding-top: 28px;
     }
     .ticketWrap h4{
        font-size: 14px;

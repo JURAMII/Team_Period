@@ -1,11 +1,15 @@
-export const Menu = ({ toggleMenu }) => {
+import React from 'react';
+
+export const Menu = ({ toggleMenu, isMenuVisible }) => {
+  const menuBtnId = isMenuVisible ? 'allMenuBtn' : 'headMenuBtn';
+
   return (
-    <li className="headMenuBtn" onClick={toggleMenu}>
-      <div className="dotWrap">
-        <div className="dot"></div>
-        <div className="dot"></div>
-        <div className="dot"></div>
-        <div className="dot"></div>
+    <li id={menuBtnId} onClick={toggleMenu}>
+      <div id="dotWrap">
+        <div id="dot"></div>
+        <div id="dot"></div>
+        <div id="dot"></div>
+        <div id="dot"></div>
       </div>
     </li>
   );

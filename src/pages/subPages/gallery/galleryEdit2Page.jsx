@@ -11,8 +11,8 @@ const formatDate = (date) => {
 
 const galleryEdit2Page = ({ images, setImages }) => {
     const { id } = useParams();
-    const navigate = useNavigate();
     const image = images.find(image => image.id === Number(id));
+    const navigate = useNavigate();
 
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');

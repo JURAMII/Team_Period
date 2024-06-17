@@ -1,3 +1,4 @@
+/* 전체 스타일링 */
 .subTop {
   margin-bottom: 65px;
 }
@@ -19,6 +20,7 @@
   border: 1px solid var(--line-silver);
 }
 
+/* Swiper 영역 스타일링 */
 .subGal > .galImgSec1 {
   width: 100%;
   padding: 30px 0;
@@ -42,29 +44,9 @@
   transition-timing-function: linear !important;
 }
 
-.mainSlide-active {
-  width: 1000px;
-}
-
-.mainSlide-inactive {
-  width: 66px;
-}
-
 .mainSlide > div {
   width: 100%;
   height: 100%;
-}
-
-.swiper-slide.mainSlide.swiper-slide-active {
-  width: 80% !important;
-}
-
-.swiper-slide.mainSlide.swiper-slide-prev {
-  width: 10% !important;
-}
-
-.swiper-slide.mainSlide.swiper-slide-next {
-  width: 10% !important;
 }
 
 .mainSlide > div > img {
@@ -76,6 +58,34 @@
   z-index: 1;
 }
 
+.swiper-slide.mainSlide.swiper-slide-active {
+  width: 80% !important;
+  }
+  
+  .swiper-slide.mainSlide.swiper-slide-prev {
+  width: 10% !important;
+  opacity: 50%;
+  }
+  
+  .swiper-slide.mainSlide.swiper-slide-next {
+  width: 10% !important;
+  opacity: 50%;
+  }
+
+/* Swiper 네비게이션 버튼 스타일링 */
+.swiper-button-next, .swiper-button-prev {
+  color: #fff; /* 네비게이션 버튼 색상 */
+}
+
+.swiper-button-next {
+  right: 20px !important; /* 오른쪽 여백 */
+}
+
+.swiper-button-prev {
+  left: 20px !important; /* 왼쪽 여백 */
+}
+
+/* 그리드 영역 스타일링 */
 .subGal > .galImgSec2 {
   width: 100%;
   overflow: hidden;
@@ -105,6 +115,7 @@
   height: 294px;
 }
 
+/* 이미지 세부 사항 스타일링 */
 .imageDetails {
   padding: 10px;
   background-color: var(--font-black);
@@ -130,6 +141,7 @@
   text-overflow: ellipsis;
 }
 
+/* 페이지 버튼 스타일링 */
 .pageBtnWrap {
   display: flex;
   justify-content: center;
@@ -141,6 +153,7 @@
   gap: 5px;
 }
 
+/* 서치바 스타일링 */
 .subSearchName {
   width: 150px;
   height: 44px;
@@ -165,8 +178,9 @@
   cursor: pointer;
 }
 
+/* 반응형 스타일링 */
 @media screen and (max-width: 1440px) {
-  .subGal{
+  .subGal {
     width: calc(100% - 30px);
   }
 }
@@ -212,5 +226,3 @@
     gap: 15px;
   }
 }
-
-  

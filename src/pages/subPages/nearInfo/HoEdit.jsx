@@ -63,12 +63,12 @@ const HoEditPost = ({ posts, setPosts }) => {
     };
 
     const handleCancel = () => {
-        navigate(`HoLi/Detail/${post.id}`);
+        navigate(`/HoLi/Detail/${post.id}`);
     };
 
     return (
         <div className="inner">
-           <SupTop supTopImg={'subTourInfoTop'} supTopTit={'맛집안내'}/>
+           <SupTop supTopImg={'subTourInfoTop'} supTopTit={'관광안내'}/>
             <div className='subDefaultContent'>
                 <div className='createCategory'>
                     <div className='createPadding'>
