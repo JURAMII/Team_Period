@@ -152,32 +152,6 @@
   display: flex;
   gap: 5px;
 }
-
-/* 서치바 스타일링 */
-.subSearchName {
-  width: 150px;
-  height: 44px;
-  border: 1px solid var(--line-silver);
-  margin-right: 10px;
-}
-
-.subSearch {
-  width: 300px;
-  height: 44px;
-  border: 1px solid var(--line-silver);
-  padding-left: 10px;
-  margin-right: 10px;
-}
-
-.subSearchBtn {
-  width: 44px;
-  height: 44px;
-  background: url('/path/to/search-icon.png') no-repeat center;
-  background-size: contain;
-  border: none;
-  cursor: pointer;
-}
-
 /* 반응형 스타일링 */
 @media screen and (max-width: 1440px) {
   .subGal {
