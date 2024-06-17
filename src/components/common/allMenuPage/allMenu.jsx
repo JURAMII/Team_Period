@@ -42,8 +42,8 @@ const AllMenuPage = ({ setIsMenuVisible, isMenuVisible }) => {
                   <h2 className="titText">공지사항</h2>
                   <ul>
                     <li><Link to="/notiList/category/noti" onClick={toggleMenu}>공지사항</Link></li>
-                    <li><Link to="/notiList/category/star" onClick={toggleMenu}>경복궁 별빛야행</Link></li>
-                    <li><Link to="/notiList/category/moon" onClick={toggleMenu}>창덕궁 달빛기행</Link></li>
+                    <li><Link to="/notiList/category/star" onClick={toggleMenu}>별빛야행 공지사항</Link></li>
+                    <li><Link to="/notiList/category/moon" onClick={toggleMenu}>달빛기행 공지사항</Link></li>
                   </ul>
                 </div>
               </li>
@@ -70,8 +70,8 @@ const AllMenuPage = ({ setIsMenuVisible, isMenuVisible }) => {
                 <div>
                   <h2 className="titText">관광안내</h2>
                   <ul>
-                    <li><Link to="/Location" onClick={toggleMenu}>오시는 길</Link></li>
-                    <li><Link to="/Attractions" onClick={toggleMenu}>주변 즐길거리</Link></li>
+                    <li><Link to="/Way" onClick={toggleMenu}>오시는 길</Link></li>
+                    <li><Link to="/ResLi/category/res" onClick={toggleMenu}>주변 즐길거리</Link></li>
                   </ul>
                 </div>
               </li>
