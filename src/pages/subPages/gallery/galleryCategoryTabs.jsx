@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams, useLocation } from 'react-router-dom';
 
 const GalleryCategoryTabs = () => {
-    const { key } = useParams();
     const location = useLocation();
 
     // 카테고리와 URL 경로를 기반으로 버튼 활성화 상태를 결정합니다.

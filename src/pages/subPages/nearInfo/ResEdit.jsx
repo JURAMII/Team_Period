@@ -27,7 +27,7 @@ const ResEditPost = ({ posts, setPosts }) => {
             setAuthor(post.author);
             setCategory(post.category);
         } else {
-            navigate('/ResLi/category/res');
+            navigate('/ResLi');
         }
     }, [post, navigate]);
 

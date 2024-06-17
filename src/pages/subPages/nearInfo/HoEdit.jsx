@@ -63,7 +63,7 @@ const HoEditPost = ({ posts, setPosts }) => {
     };
 
     const handleCancel = () => {
-        navigate(`HoLi/Detail/${post.id}`);
+        navigate(`/HoLi/Detail/${post.id}`);
     };
 
     return (
