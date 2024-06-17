@@ -37,7 +37,7 @@ const CreatePost = () => {
             '달빛기행': 'moon'
         };
         const newPost = {
-            id: posts.length + 1,
+            id: posts.length + 2,
             title,
             content,
             author,
