@@ -40,7 +40,7 @@ const Create2GalleryPost = ({ images, setImages }) => {
             '달빛기행': 'moonLight'
         };
         const newPost = {
-            id: images.length + 1,
+            id: images.length + 2,
             title,
             content,
             user,
