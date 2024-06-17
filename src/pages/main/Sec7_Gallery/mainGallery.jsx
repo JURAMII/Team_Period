@@ -17,13 +17,13 @@ const MainGallery = () => {
       <p>지금 바로 축제 사진을 확인해보세요!</p>
       <div className="galleryBtn">
         {/* 축제소개 링크: 클릭 시 축제사진 페이지로 이동 */}
-        <div className="mainBtnSalomie">
-          <Link to="/Gallery/category/starLigth">축제사진</Link>
-        </div>
+        <Link className="mainBtnSalomie" to="/Gallery/category/starLigth">
+          <span>축제사진</span>
+        </Link>
         {/* 축제후기 링크: 클릭 시 축제후기 페이지로 이동 */}
-        <div className="mainBtnSalomie">
-          <Link to="/Gallery/category2/starLigth">축제후기</Link>
-        </div>
+        <Link className="mainBtnSalomie" to="/Gallery/category2/starLigth">
+          <span>축제후기</span>
+        </Link>
       </div>
       <div className="galleryslide">
         <Swiper

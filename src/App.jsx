@@ -111,7 +111,7 @@ function App() {
                         <Route path='/Gallery/Detail/:id' element={<DetailPage images={images} onDelete={handleDelete} />} />
                         <Route path='/Way' element={<Way />} />
                         <Route path='/Way2' element={<Way2 />} />
-                         <Route path="/ResLi/category/:key" element={<ResList posts={resposts} setPosts={setResPosts} />} />
+                        <Route path="/ResLi/category/:key" element={<ResList posts={resposts} setPosts={setResPosts} />} />
                         <Route path="/ResLi/create" element={<ResPost />} />
                         <Route path="/ResLi/edit/:id" element={<ResEditPost posts={resposts} setPosts={setResPosts} />} />
                         <Route path='/ResLi/Detail/:id' element={<ResDetail posts={resposts} onDelete={ReshandleDeletePost2} />} />
