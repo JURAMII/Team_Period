@@ -107,15 +107,8 @@ const Gallery = ({ images }) => {
                 spaceBetween={20}
                 centeredSlides={true}
                 navigation // 네비게이션 활성화
-                breakpoints={{
-                  768: {
-                    slidesPerView: 2,
-                  },
-                  1280: {
-                    slidesPerView: 3,
-                  },
-                }}
-                loop={true} // 이미지를 추가로 복제하지 않음
+                slidesPerView={3}
+                loop={true}
                 className="mainSwiper"
               >
                 {filteredImages.slice(0, 5).map((image, index) => ( // 기본으로 5장만 보여줌

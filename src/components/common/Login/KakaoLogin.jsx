@@ -3,7 +3,7 @@ import icon2 from "../../../assets/icons8-account-72.png";
 
 const KakaoLogin = ({ setUserInfo, onLogout }) => {
     const Rest_api_key = '7fa0610f6442011e7212da9227bd4c8e'; // REST API KEY
-    const redirect_uri = 'https://juramii.github.io/Team_Period/'; // Redirect URI
+    const redirect_uri = 'http://localhost:5173/Team_Period/'; // Redirect URI
 
     const [isLoggedIn, setIsLoggedIn] = useState(false); // 로그인 상태
     const [userProfile, setUserProfile] = useState(null); // 사용자 프로필 정보

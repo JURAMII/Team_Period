@@ -11,11 +11,12 @@
     position: absolute;
     color: transparent;
     font-size: 700px;
-    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-width: 20px;
     -webkit-text-stroke-color: #f5efe0;
     z-index: 10;
     display: inline-block;
     animation: scroll 60s linear infinite;
+    opacity: 50%;
 }
 
 .threeDWrap{

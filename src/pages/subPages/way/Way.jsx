@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import LineTit from '../../../components/lineTit';
-import KakaoMap from './map';
+import Map from './map';
+import Map2 from './map2'
 import SupTop from '../../../components/common/supTop';
 import '../../../components/onedep.css'
 import '../../../components/twodep.css'
@@ -38,7 +39,7 @@ const Way = ()=>{
             <article>
             <LineTit subtit={'오시는길'}/>
             <div className='kakao flex'>     
-                <KakaoMap />     
+                <Map />     
                 <ul>
                     <li><img src="./icons8-location-96.png" alt="location icon" /><b>주소</b>
                     <p>(03045) 서울 종로구 사직로 161</p>
@@ -199,7 +200,7 @@ const Way2 = ()=>{
                 
             <LineTit subtit={'오시는길'}/>   
             <div className='kakao flex'>     
-                <KakaoMap />     
+                <Map2 />     
                 <ul>
                     <li><img src="./icons8-location-96.png" alt="location icon" /><b>주소</b>
                     <p>(03072) 서울 종로구 율곡로 99</p>
