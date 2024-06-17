@@ -18,7 +18,7 @@ const Sec3D = () => {
     <>
       <directionalLight color="white" intensity={1} />
       {/* <Environment files={'satara_night_4k.exr'}  background blur={0.5} /> */}
-      <Environment preset="night" background  />
+      {/* <Environment preset="night" background  /> */}
       <primitive ref={modelRef} object={gltf.scene} scale={11} position={[0,-0.2,0]}/>
     </>
   );
