@@ -60,7 +60,7 @@ const HoDetail = ({posts ,onDelete}) => {
           )}
         </div>
         <div className='postActions flex'>
-          <Link to={`/HoLi/category/${post.key}`} className='subBtn'>목록보기</Link>
+          <Link to={`/HoLi/category/hotel`} className='subBtn'>목록보기</Link>
           <div className='flex subBtnWrap'>
             <button className='subBtn' onClick={handleEdit}>수정하기</button>
             <button className='subBtn' onClick={handleDelete}>삭제하기</button>
