@@ -38,7 +38,7 @@ const QnaCreatePost = () => {
             '묻고 답하기': 'qna',
         };
         const newPost = {
-            id: posts1.length + 2,
+            id: posts1.length + 1,
             title,
             content,
             author,
