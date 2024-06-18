@@ -19,6 +19,8 @@ const Header = ({ setIsMenuVisible }) => {
   };
 
   const handleLogout = () => {
+    confirm("로그아웃 하시겠습니까?");
+
     const token = localStorage.getItem('kakao_token'); // localStorage에서 토큰 가져오기
 
     if (token) {
@@ -47,6 +49,9 @@ const Header = ({ setIsMenuVisible }) => {
     } else {
       console.error('토큰이 없습니다.');
     }
+
+    alert("로그아웃 되었습니다.");
+
   };
 
   return (

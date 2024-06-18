@@ -70,7 +70,7 @@ const MainGallery = () => {
           {galleryImages.filter(image => image.key === 'starLigth').map((image, index) => (
             <SwiperSlide key={`${image.key}-${index}`}>
               <Link to={`/Gallery/Detail/${image.id}`}>
-                <LazyImage
+                <img
                   src={image.src}
                   alt={`StarLightTour ${index + 1}`}
                 />
@@ -122,7 +122,7 @@ const MainGallery = () => {
           {galleryImages.filter(image => image.key === 'moonLight').map((image, index) => (
             <SwiperSlide key={`${image.key}-${index}`}>
               <Link to={`/Gallery/Detail/${image.id}`}>
-                <LazyImage
+                <img
                   src={image.src}
                   alt={`MoonLightTour ${index + 1}`}
                 />
