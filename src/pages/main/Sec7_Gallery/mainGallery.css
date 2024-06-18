@@ -25,12 +25,12 @@
   margin: 45px 0 60px;
 }
 
-.mainGallery>.galleryBtn>.mainBtnSalomie>a{
+.mainGallery>.galleryBtn>.mainBtnSalomie>span{
   line-height: 50px;
   color: var(--salomie);
 }
 
-.mainGallery>.galleryBtn>.mainBtnSalomie:hover>a{
+.mainGallery>.galleryBtn>.mainBtnSalomie:hover>span{
   color: var(--mirage);
   font-weight: bold;
 }
@@ -126,7 +126,7 @@
   .mainGallery > p {
     font-size: 14px;
   }
-  .mainGallery>.galleryBtn>.mainBtnSalomie>a{
+  .mainGallery>.galleryBtn>.mainBtnSalomie>span{
     line-height: 36px;
   }
 }
