@@ -127,7 +127,7 @@ const GalleryEditPage = ({ images, setImages }) => {
                             <label>제목</label>
                         </div>
                         <input
-                            className='categorySelect'
+                            className='categorySelectTitle'
                             type="text"
                             value={title}
                             onChange={(e) => setTitle(e.target.value)}
@@ -140,7 +140,7 @@ const GalleryEditPage = ({ images, setImages }) => {
                             <label>이미지</label>
                         </div>
                         <input
-                            className='categorySelect'
+                            className='categorySelectTitle'
                             type="file"
                             accept="image/*"
                             onChange={handleImageChange}
@@ -154,6 +154,9 @@ const GalleryEditPage = ({ images, setImages }) => {
                             required
                             maxLength={1500}
                         />
+					<div>
+						<p className='sFont silverText'>★1500자 이하로 작성부탁드립니다.</p>
+					</div>
                     </div>
                     <div className='flex subBtnWrap'>
                         <button className='subBtn' type="button" onClick={handleCancel}>취소</button>
