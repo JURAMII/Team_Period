@@ -100,7 +100,7 @@ const QnaEditPost = ({ posts, setPosts }) => {
                             <label>제목</label>
                         </div>
                         <input
-                            className='categorySelect'
+                            className='categorySelectTitle'
                             type="text"
                             value={title}
                             onChange={(e) => setTitle(e.target.value)}
