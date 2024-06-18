@@ -231,6 +231,10 @@
 .writeBtn{
 	position: relative;
 }
+.silverText{
+	color: var(--font-silber);
+	margin-bottom: 5px;
+}
 
 
 /* main 반응형 */

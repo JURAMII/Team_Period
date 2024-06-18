@@ -98,7 +98,7 @@ const ResPost = () => {
                     	<label>제목</label>
 					</div>
                     <input
-						className='categorySelect'
+						className='categorySelectTitle'
                         type="text"
                         value={gallTit}
                         onChange={(e) => setGallTit(e.target.value)}
@@ -111,7 +111,7 @@ const ResPost = () => {
                             <label>이미지</label>
                         </div>
                         <input
-                            className='categorySelect'
+                            className='categorySelectTitle'
                             type="file"
                             accept="image/*"
                             onChange={handleImageChange}
@@ -126,6 +126,9 @@ const ResPost = () => {
                         required
                         maxLength={1500}
                     />
+					<div>
+						<p className='sFont silverText'>★1500자 이하로 작성부탁드립니다.</p>
+					</div>
                 </div>
 				<div className='flex subBtnWrap'>
                 	<button className='subBtn' type="button" onClick={handleCancel}>취소</button>
