@@ -10,6 +10,7 @@
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![Threejs](https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white)
 
+and aos & axios & fiber & kakao & swiper
 
 # 🌙Team Period
 JURAMII(팀장) : 로딩화면, 축제소개, 고객지원(자주하는 질문)
